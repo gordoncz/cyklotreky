@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pěší treky - Cyklotreky</title>
+
+    <link href="data/favicon.png" rel="icon">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@600&text=1234567890&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="data/styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Úvodní ovládací divy nahoře na stránce -->
+    <div id="zalPageTop"></div>
+    <div id="titulka">
+        <div id="logotop"><a href="index.html"><img src="img/logo-small.png" alt="logo"></a></div>
+        <div id="nazevStranky"><a href="#zalPageTop"><h1>PĚŠÍ TREKY</h1></a></div></div>
+    <div id="filtry">
+        <div class="filtrNabidka">
+            Délka tras:
+            <select name="delkaTras" id="podleDelky" class="nabidkaContainer">
+                <option value="all" onclick="filterByDistance('all')">všechny</option>
+                <option value="S" onclick="filterByDistance('S')">krátké</option>
+                <option value="M" onclick="filterByDistance('M')">střední</option>
+                <option value="L" onclick="filterByDistance('L')">dlouhé</option>
+                <option value="XL" onclick="filterByDistance('XL')">extra dlouhé</option>
+                <option value="MD" onclick="filterByDistance('MD')">vícedenní</option>
+            </select>
+        </div>
+        <div class="filtrNabidka">
+            Region:
+            <select name="lokalitaTras" id="podleRegionu" class="nabidkaContainer">
+                <option value="all" onclick="filterByRegion('all')">všechny</option>
+                <option value="Beskydy" onclick="filterByRegion('Beskydy')">Beskydy</option>
+                <option value="Bílé Karpaty" onclick="filterByRegion('Bílé Karpaty')">Bílé Karpaty</option>
+                <option value="Brněnsko" onclick="filterByRegion('Brněnsko')">Brněnsko</option>
+                <option value="Brno" onclick="filterByRegion('Brno')">Brno</option>
+                <option value="Haná" onclick="filterByRegion('Haná')">Haná</option>
+                <option value="Jeseníky" onclick="filterByRegion('Jeseníky')">Jeseníky</option>
+                <option value="Jižní Čechy" onclick="filterByRegion('Jižní Čechy')">Jižní Čechy</option>
+                <option value="Jižní Morava" onclick="filterByRegion('Jižní Morava')">Jižní Morava</option>
+                <option value="Krkonoše" onclick="filterByRegion('Krkonoše')">Krkonoše</option>
+                <option value="Krušnohoří" onclick="filterByRegion('Krušnohoří')">Krušnohoří</option>
+                <option value="Orlické hory" onclick="filterByRegion('Orlické hory')">Orlické hory</option>
+                <option value="Polabí" onclick="filterByRegion('Polabí')">Polabí</option>
+                <option value="Rakousko" onclick="filterByRegion('Rakousko')">Rakousko</option>
+                <option value="Slezsko" onclick="filterByRegion('Slezsko')">Slezsko</option>
+                <option value="Slovensko" onclick="filterByRegion('Slovensko')">Slovensko</option>
+                <option value="Střední Čechy" onclick="filterByRegion('Střední Čechy')">Střední Čechy</option>
+                <option value="Svitavsko" onclick="filterByRegion('Svitavsko')">Svitavsko</option>
+                <option value="Šumava" onclick="filterByRegion('Šumava')">Šumava</option>
+                <option value="Vysočina" onclick="filterByRegion('Vysočina')">Vysočina</option>
+                <option value="Východní Čechy" onclick="filterByRegion('Východní Čechy')">Východní Čechy</option>
+                <option value="Západní Čechy" onclick="filterByRegion('Západní Čechy')">Západní Čechy</option>
+            </select>
+        </div>
+        <div class="filtrZatrzitko">Jen neabsolvované: <label for="onlyUnknown" class="zatrzitkoContainer"><input type="checkbox" id="onlyUnknown" onclick="filterByKnown()"><span class="zatrzitko"></span></label></div>
+        <div class="filtrZatrzitko">Jen nové: <label for="onlyNew" class="zatrzitkoContainer"><input type="checkbox" id="onlyNew" onclick="filterByNew()"><span class="zatrzitko"></span></label></div>
+        <div class="filtrText"><input type="text" id="hledatNazev" onkeyup="filterByName()" placeholder="Filtrovat podle názvu trasy..."></div>
+    </div>
+    <!-- Hlavní div s obsahem stránky, kde budou zobrazeny jednotlivé trasy -->
+    <div id="seznamTras">Loading...</div>
+
+
+    <!-- JavaScript -->
+    <script>var detekceMobilu = window.matchMedia("(any-hover: none)");</script>
+    <!-- Data pro trasy (buď cyklo nebo pěší) -->
+    <script src="data/pesi.js"></script>
+    <script>var slozka = "pesi";</script>
+    <script>var typtrasy = pesitrasy; var cyklotrasy = "";</script>
+    
+    <script src="data/trasy.js"></script>
+    <script src="data/filtry.js"></script>
+
+</body>
+
+</html>

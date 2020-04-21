@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cyklotreky</title>
+
+    <link href="data/favicon.png" rel="icon">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@600&text=1234567890&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="data/styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Div pro celou stránku ve formátu grid -->
+    <div id="uvodniStrankaContainer">
+        <!-- panel s hlavním menu vlevo (popř. na celou stránku na mobilu) -->
+        <div id="panelMenu">
+            <div id="panelMenuLogo"><img src="img/logo-full.png" alt="Cyklotreky"></div>
+            <div id="panelMenuContent">
+                <div class="menuItemWrapper menuCyklo">
+                    <a href="cyklo.html"><div class="menuItem">CYKLO</div></a>
+                </div>
+                <div class="menuItemWrapper menuPesi">
+                    <a href="pesi.html"><div class="menuItem">PĚŠÍ</div></a>
+                </div>
+                <div class="menuItemWrapper menuOdkazy">
+                    <a href="odkazy.html"><div class="menuItem">ODKAZY</div></a>
+                </div>
+                <div class="menuItemWrapper menuStatistika">
+                    <a href="statistika.html"><div class="menuItem">STATISTIKA</div></a>
+                </div>
+            </div>
+            <div id="panelMenuPatka">Cyklotreky 7.0</div>
+        </div>
+        <!-- panel s pinup girls vpravo -->
+        <div id="panelPinup"></div>
+    </div>
+
+
+    <!-- JavaScript -->
+    <script>var detekceMobilu = window.matchMedia("(any-hover: none)");</script>
+    <script src="data/pinupgenerator.js"></script>
+
+</body>
+
+</html>
