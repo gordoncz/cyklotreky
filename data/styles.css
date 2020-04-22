@@ -115,17 +115,6 @@ h1 {
     .menuItemWrapper.menuStatistika {
         background-image: url("../img/statistika.png");
     }
-    .menuItemWrapper a {
-        font-family: 'Quicksand', sans-serif;
-        font-weight: 700;
-        font-size: 1.7em;
-        color: #eff9ff;
-        filter: drop-shadow(2px 2px 3px black);
-    }
-    .menuItemWrapper a:hover {
-        font-size: 1.8em;
-        color: white;
-    }
 
 .menuItem {
     background-color: transparent;
@@ -136,8 +125,15 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 1.7em;
+    color: #eff9ff;
+    filter: drop-shadow(2px 2px 3px black);
 }
     .menuItem:hover {
+        font-size: 1.8em;
+        color: white;
         background-color: rgba(10, 127, 226, 0.05);
     }
 
