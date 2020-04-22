@@ -47,7 +47,7 @@ h1 {
 }
     /* na mobilu bude menší min pro mainmenu panel */
     /* to sice nebude vidět (díky nezobrazení pinup panelu), ale příliš velký min by způsoboval overflow-x */
-    @media (any-hover: none) or (width < 750px) {
+    @media (any-hover: none) {
         #uvodniStrankaContainer {
             width: 100%;
             height: auto;
@@ -65,7 +65,7 @@ h1 {
     grid-template-rows: 100px auto 1.7em;
 }
     /* na mobilu bude tento panel zabírat celou šířku obrazovky */
-    @media (any-hover: none) or (width < 750px) {
+    @media (any-hover: none) {
         #panelMenu {
             height: auto;
             grid-column: 1 / 3;
@@ -99,7 +99,7 @@ h1 {
     background-repeat: no-repeat;
     width: 330px;
     height: 100px;
-    margin: 25px auto 25px auto;
+    margin: 10px 0px;
     padding: 35px;
     user-select: none;
 }
@@ -159,7 +159,7 @@ h1 {
     grid-column: 2 / 3;
 }
     /* na mobilu tento panel nebude vůbec zobrazený */
-    @media (any-hover: none) or (width < 750px) {
+    @media (any-hover: none) {
         #panelPinup {
             display: none;
         }
