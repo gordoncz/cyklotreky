@@ -1,6 +1,6 @@
 :root {
     --themeColor: #0a7fe2;
-    --bgLighter: #32353b;
+    --bgLighter: #3c3f46;
     --bgLight: #282b30;
     --bgDark: #202327;
     --bgDarker: #161718;
@@ -49,6 +49,8 @@ h1 {
     /* to sice nebude vidět (díky nezobrazení pinup panelu), ale příliš velký min by způsoboval overflow-x */
     @media (any-hover: none) or (width < 750px) {
         #uvodniStrankaContainer {
+            width: 100%;
+            height: auto;
             grid-template-columns: minmax(300px, 30%) minmax(auto, 70%);
         }
     }
@@ -65,6 +67,7 @@ h1 {
     /* na mobilu bude tento panel zabírat celou šířku obrazovky */
     @media (any-hover: none) or (width < 750px) {
         #panelMenu {
+            height: auto;
             grid-column: 1 / 3;
         }
     }
@@ -85,6 +88,9 @@ h1 {
     overflow-x: hidden;
     overflow-y: auto;
     grid-row: 2 / 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .menuItemWrapper {
@@ -161,11 +167,12 @@ h1 {
 
 
 /* =================================================================================== */
-/* společný obsah pro všechny pod-stránky */
+/* horní div na každé pod-stránce pro titulní název stránky a logo */
 
 /* div s logem a názvem stránky */
 #titulka {
     background-color: var(--bgDarker);
+    border-bottom: 1px solid var(--themeColor);
     top: 0px;
     position: sticky;
     padding: 10px;
@@ -177,9 +184,14 @@ h1 {
 }
 
     #logotop {
-        background-color: transparent;
+        background-color: var(--themeColor);
         position: absolute;
-        left: 10px;
+        top: -25px;
+        width: 40px;
+        height: 40px;
+        padding: 5px;
+        border-radius: 0px 0px 50% 50%;
+        z-index: 110;
     }
         #logotop img {
             max-height: 100%;
@@ -187,16 +199,19 @@ h1 {
             max-width: 100%;
             height: auto;
             display: block;
-            filter: drop-shadow(0px 0px 15px grey);
+        }
+        #logotop:hover {
+            top: -10px;
         }
 
     #nazevStranky {
         background-color: transparent;
+        margin-top: 15px;
     }
 
 
 /* =================================================================================== */
-/* cyklo a pěší */
+/* cyklo a pěší filtry*/
 
 /* div s filtry pro trasy */
 #filtry {
@@ -313,6 +328,9 @@ h1 {
     }
 
 
+/* =================================================================================== */
+/* cyklo a pěší trasy*/
+
 /* container div s vygenerovaným seznamem tras */
 #seznamTras {
     margin: 0px auto;
@@ -326,7 +344,12 @@ h1 {
     width: 452px;
     margin: 10px;
 }
-    /* zde jsou specifické classy, které zařizují skrývání/zobrazování tras v seznamu pro každý filtr zvlášť*/
+    @media (any-hover: none) {
+        .trasaWrapper {
+            width: 352px;
+        }
+    }
+    /* zde jsou specifické classy, které zařizují skrývání/zobrazování trasaWrapper v seznamu tras pro každý filtr zvlášť*/
     /* aby se spolu tyto jednotlivé filtry mohly kombinovat */
     .filtrDelka, .filtrRegion, .filtrKnown, .filtrNew, .filtrNazev {
         display: none;
@@ -343,6 +366,12 @@ h1 {
         grid-template-rows: minmax(100px, auto);
         z-index: 5;
     }
+        @media (any-hover: none) {
+            .trasaContainer {
+                grid-template-columns: 280px 70px;
+                grid-template-rows: minmax(50px, auto);
+            }
+        }
         .trasaContainer:hover {
             filter: brightness(120%);
         }
@@ -359,6 +388,15 @@ h1 {
                 "km pic name"
                 "km pic region";
         }
+            @media (any-hover: none) {
+                .trasaUrlContainer {
+                    grid-template-columns: 50px 300px;
+                    grid-template-rows: 1fr auto;
+                    grid-template-areas: 
+                        "km name"
+                        "km region";
+                }
+            }
 
             .kmContainer {
                 color: white;
@@ -405,6 +443,11 @@ h1 {
                 padding: 0px;
                 grid-area: pic;
             }
+                @media (any-hover: none) {
+                    .pictureContainer {
+                        display: none;
+                    }
+                }
 
             .nazevContainer {
                 background-color: transparent;
@@ -425,6 +468,11 @@ h1 {
                 padding: 5px 90px 0px 12px;
                 text-align: left;
             }
+                @media (any-hover: none) {
+                    .regionContainer {
+                        padding: 5px 90px 5px 12px;
+                    }
+                }
                 .regionContainer::before {
                     content: url("../img/map-pin.png");
                     margin-right: 5px;

@@ -66,12 +66,17 @@ for (i = 0; i < typtrasy.length; i++) {
     trasaUrlDiv.appendChild(kmDiv);
 
     // vytvoření a naplnění sub-divu pro obrázek
-    var pictureDiv = document.createElement("div");
-    pictureDiv.setAttribute("class", "pictureContainer");
-    var pictureDivSoubor = typtrasy[i].picture;
-    var pictureDivCesta = "url(\"" + slozka + "/img/" + pictureDivSoubor + ".jpg\")";
-    pictureDiv.style.backgroundImage = pictureDivCesta;
-    trasaUrlDiv.appendChild(pictureDiv);
+    if (detekceMobilu.matches) {
+        // pokud je zobrazeno na mobilu, skript přeskočí generování divů pro obrázky
+        // takže se ani nebudou na mobilu načítat a ušetří jak místo na obrazovce, tak datové přenosy
+    } else {
+        var pictureDiv = document.createElement("div");
+        pictureDiv.setAttribute("class", "pictureContainer");
+        var pictureDivSoubor = typtrasy[i].picture;
+        var pictureDivCesta = "url(\"" + slozka + "/img/" + pictureDivSoubor + ".jpg\")";
+        pictureDiv.style.backgroundImage = pictureDivCesta;
+        trasaUrlDiv.appendChild(pictureDiv);
+    }
 
     // vytvoření a naplnění sub-divu pro název
     var nazevDiv = document.createElement("div");

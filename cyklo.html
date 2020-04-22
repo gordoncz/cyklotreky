@@ -26,40 +26,40 @@
     <div id="filtry">
         <div class="filtrNabidka">
             Délka tras:
-            <select name="delkaTras" id="podleDelky" class="nabidkaContainer">
-                <option value="all" onclick="filterByDistance('all')">všechny</option>
-                <option value="S" onclick="filterByDistance('S')">krátké</option>
-                <option value="M" onclick="filterByDistance('M')">střední</option>
-                <option value="L" onclick="filterByDistance('L')">dlouhé</option>
-                <option value="XL" onclick="filterByDistance('XL')">extra dlouhé</option>
-                <option value="MD" onclick="filterByDistance('MD')">vícedenní</option>
+            <select name="delkaTras" id="podleDelky" class="nabidkaContainer" onchange="filterByDistance(this.value)">
+                <option value="all">všechny</option>
+                <option value="S">krátké</option>
+                <option value="M">střední</option>
+                <option value="L">dlouhé</option>
+                <option value="XL">extra dlouhé</option>
+                <option value="MD">vícedenní</option>
             </select>
         </div>
         <div class="filtrNabidka">
             Region:
-            <select name="lokalitaTras" id="podleRegionu" class="nabidkaContainer">
-                <option value="all" onclick="filterByRegion('all')">všechny</option>
-                <option value="Beskydy" onclick="filterByRegion('Beskydy')">Beskydy</option>
-                <option value="Bílé Karpaty" onclick="filterByRegion('Bílé Karpaty')">Bílé Karpaty</option>
-                <option value="Brněnsko" onclick="filterByRegion('Brněnsko')">Brněnsko</option>
-                <option value="Brno" onclick="filterByRegion('Brno')">Brno</option>
-                <option value="Haná" onclick="filterByRegion('Haná')">Haná</option>
-                <option value="Jeseníky" onclick="filterByRegion('Jeseníky')">Jeseníky</option>
-                <option value="Jižní Čechy" onclick="filterByRegion('Jižní Čechy')">Jižní Čechy</option>
-                <option value="Jižní Morava" onclick="filterByRegion('Jižní Morava')">Jižní Morava</option>
-                <option value="Krkonoše" onclick="filterByRegion('Krkonoše')">Krkonoše</option>
-                <option value="Krušnohoří" onclick="filterByRegion('Krušnohoří')">Krušnohoří</option>
-                <option value="Orlické hory" onclick="filterByRegion('Orlické hory')">Orlické hory</option>
-                <option value="Polabí" onclick="filterByRegion('Polabí')">Polabí</option>
-                <option value="Rakousko" onclick="filterByRegion('Rakousko')">Rakousko</option>
-                <option value="Slezsko" onclick="filterByRegion('Slezsko')">Slezsko</option>
-                <option value="Slovensko" onclick="filterByRegion('Slovensko')">Slovensko</option>
-                <option value="Střední Čechy" onclick="filterByRegion('Střední Čechy')">Střední Čechy</option>
-                <option value="Svitavsko" onclick="filterByRegion('Svitavsko')">Svitavsko</option>
-                <option value="Šumava" onclick="filterByRegion('Šumava')">Šumava</option>
-                <option value="Vysočina" onclick="filterByRegion('Vysočina')">Vysočina</option>
-                <option value="Východní Čechy" onclick="filterByRegion('Východní Čechy')">Východní Čechy</option>
-                <option value="Západní Čechy" onclick="filterByRegion('Západní Čechy')">Západní Čechy</option>
+            <select name="lokalitaTras" id="podleRegionu" class="nabidkaContainer" onchange="filterByRegion(this.value)">
+                <option value="all">všechny</option>
+                <option value="Beskydy">Beskydy</option>
+                <option value="Bílé Karpaty">Bílé Karpaty</option>
+                <option value="Brněnsko">Brněnsko</option>
+                <option value="Brno">Brno</option>
+                <option value="Haná">Haná</option>
+                <option value="Jeseníky">Jeseníky</option>
+                <option value="Jižní Čechy">Jižní Čechy</option>
+                <option value="Jižní Morava">Jižní Morava</option>
+                <option value="Krkonoše">Krkonoše</option>
+                <option value="Krušnohoří">Krušnohoří</option>
+                <option value="Orlické hory">Orlické hory</option>
+                <option value="Polabí">Polabí</option>
+                <option value="Rakousko">Rakousko</option>
+                <option value="Slezsko">Slezsko</option>
+                <option value="Slovensko">Slovensko</option>
+                <option value="Střední Čechy">Střední Čechy</option>
+                <option value="Svitavsko">Svitavsko</option>
+                <option value="Šumava">Šumava</option>
+                <option value="Vysočina">Vysočina</option>
+                <option value="Východní Čechy">Východní Čechy</option>
+                <option value="Západní Čechy">Západní Čechy</option>
             </select>
         </div>
         <div class="filtrZatrzitko">Jen neabsolvované: <label for="onlyUnknown" class="zatrzitkoContainer"><input type="checkbox" id="onlyUnknown" onclick="filterByKnown()"><span class="zatrzitko"></span></label></div>
