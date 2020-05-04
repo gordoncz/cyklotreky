@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pravidla v přírodě - Cyklotreky</title>
+
+    <link href="data/favicon.png" rel="icon">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@600&text=1234567890&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="data/styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Úvodní ovládací divy nahoře na stránce -->
+    <div id="zalPageTop"></div>
+    <div id="titulka">
+        <div id="logotop"><a href="index.html"><img src="img/logo-small.png" alt="logo"></a></div>
+        <div id="nazevStranky"><a href="#zalPageTop"><h1>PRAVIDLA V PŘÍRODĚ</h1></a></div>
+    </div>
+    <!-- Hlavní div s pro obsah stránky -->
+    <div id="obsahStrankyClassic">
+
+        <p>Přehled pravidel pro pohyb v přírodě (pěšky/na kole) a pro přespání v přírodě (stanování/bivakování).</p>
+        <p>Při najetí myši na obrázek se zobrazí stručný popis.</p>
+        <p>Pro podrobnější detaily viz <a href="https://www.zakonyprolidi.cz/cs/1992-114" target="_blank">Zákon č. 114/1992 Sb, o ochraně přírody a krajiny</a>, příp. místně příslušné vyhlášky.</p>
+
+        <div class="pravidlaContainer">
+            <div class="pravidlaOblast">volná krajina</div>
+            <div class="pravidlaRules">
+                <div class="pravidloDiv pPesky pVsude" title="nápověda"></div>
+                <div class="pravidloDiv pKolo pVsude"></div>
+                <div class="pravidloDiv pStan pANO"></div>
+                <div class="pravidloDiv pBivak pANO"></div>
+            </div>
+        </div>
+
+        <div class="pravidlaContainer">
+            <div class="pravidlaOblast">les</div>
+            <div class="pravidlaRules">
+                <div class="pravidloDiv pPesky pVsude"></div>
+                <div class="pravidloDiv pKolo pCesty"></div>
+                <div class="pravidloDiv pStan pNE"></div>
+                <div class="pravidloDiv pBivak pANO"></div>
+            </div>
+        </div>
+
+        <div class="pravidlaContainer">
+            <div class="pravidlaOblast">Přírodní památka (PP)</div>
+            <div class="pravidlaRules">
+                <div class="pravidloDiv pPesky pVsude"></div>
+                <div class="pravidloDiv pKolo pCesty"></div>
+                <div class="pravidloDiv pStan pANO"></div>
+                <div class="pravidloDiv pBivak pANO"></div>
+            </div>
+        </div>
+
+        <div class="pravidlaContainer">
+            <div class="pravidlaOblast">Národní přírodní památka (NPP)</div>
+            <div class="pravidlaRules">
+                <div class="pravidloDiv pPesky pVsude"></div>
+                <div class="pravidloDiv pKolo pCesty"></div>
+                <div class="pravidloDiv pStan pLaw"></div>
+                <div class="pravidloDiv pBivak pANO"></div>
+            </div>
+        </div>
+
+        <div class="pravidlaContainer">
+            <div class="pravidlaOblast">Přírodní rezervace (PR)</div>
+            <div class="pravidlaRules">
+                <div class="pravidloDiv pPesky pVsude"></div>
+                <div class="pravidloDiv pKolo pCesty"></div>
+                <div class="pravidloDiv pStan pLaw"></div>
+                <div class="pravidloDiv pBivak pANO"></div>
+            </div>
+        </div>
+
+        <div class="pravidlaContainer">
+            <div class="pravidlaOblast">Národní přírodní rezervace (NPR)</div>
+            <div class="pravidlaRules">
+                <div class="pravidloDiv pPesky pTrasy"></div>
+                <div class="pravidloDiv pKolo pTrasy"></div>
+                <div class="pravidloDiv pStan pNE"></div>
+                <div class="pravidloDiv pBivak pNE"></div>
+            </div>
+        </div>
+
+        <div class="pravidlaContainer">
+            <div class="pravidlaOblast">Chráněná krajinná oblast (CHKO)</div>
+            <div class="pravidlaRules">
+                <div class="pravidloDiv pPesky pVsude"></div>
+                <div class="pravidloDiv pKolo pCesty"></div>
+                <div class="pravidloDiv pStan pNekde"></div>
+                <div class="pravidloDiv pBivak pANO"></div>
+            </div>
+        </div>
+
+        <div class="pravidlaContainer">
+            <div class="pravidlaOblast">Národní park (NP)</div>
+            <div class="pravidlaRules">
+                <div class="pravidloDiv pPesky pVsude"></div>
+                <div class="pravidloDiv pKolo pTrasy"></div>
+                <div class="pravidloDiv pStan pNekde"></div>
+                <div class="pravidloDiv pBivak pANO"></div>
+            </div>
+        </div>
+
+        <div class="pravidlaContainer">
+            <div class="pravidlaOblast">klidové území Národního parku (1. zóna NP)</div>
+            <div class="pravidlaRules">
+                <div class="pravidloDiv pPesky pTrasy"></div>
+                <div class="pravidloDiv pKolo pTrasy"></div>
+                <div class="pravidloDiv pStan pNE"></div>
+                <div class="pravidloDiv pBivak pNE"></div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
