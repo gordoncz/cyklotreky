@@ -79,8 +79,9 @@ h3 {
     grid-template-columns: minmax(450px, 30%) minmax(auto, 70%);
     grid-template-rows: auto;
 }
-    /* na mobilu bude menší min pro mainmenu panel */
-    /* to sice nebude vidět (díky nezobrazení pinup panelu), ale příliš velký min by způsoboval overflow-x */
+    /* na mobilu bude menší min(max) pro mainmenu panel */
+    /* to sice nebude vidět (díky nezobrazení pinup panelu a roztažení menu přes oba columns), */
+    /* ale příliš velký min by způsoboval overflow-x */
     @media (pointer: coarse) {
         #uvodniStrankaContainer {
             width: 100%;
@@ -99,7 +100,7 @@ h3 {
     grid-template-columns: auto;
     grid-template-rows: 100px auto 1.7em;
 }
-    /* na mobilu bude tento panel zabírat celou šířku obrazovky */
+    /* na mobilu bude tento panel zabírat celou šířku obrazovky (tj. oba grid-columns) */
     @media (pointer: coarse) {
         #panelMenu {
             height: auto;
@@ -410,7 +411,9 @@ h3 {
 }
     @media (pointer: coarse) {
         .trasaWrapper {
-            width: 352px;
+            width: 90%;
+            min-width: 252px;
+            max-width: 352px;
         }
     }
     /* zde jsou specifické classy, které zařizují skrývání/zobrazování trasaWrapper v seznamu tras pro každý filtr zvlášť*/
@@ -433,7 +436,7 @@ h3 {
     }
         @media (pointer: coarse) {
             .trasaContainer {
-                grid-template-columns: 280px 70px;
+                grid-template-columns: minmax(auto, 280px) 70px;
                 grid-template-rows: minmax(50px, auto);
             }
         }
@@ -456,7 +459,7 @@ h3 {
         }
             @media (pointer: coarse) {
                 .trasaUrlContainer {
-                    grid-template-columns: 50px 300px;
+                    grid-template-columns: 50px minmax(auto, 300px);
                     grid-template-rows: 1fr auto;
                     grid-template-areas: 
                         "km name"
@@ -561,20 +564,22 @@ h3 {
             grid-column: 2 / 3;
             grid-row: 1 / 2;
             z-index: 10;
-            cursor: pointer;
+            cursor: help;
             display: flex;
             flex-direction: column-reverse;
         }
 
             /* viditelná část tlačítka */
             .infoButtonVisual {
-                background-color: #ffa608;
+                background-color: #c38e4f;
                 color: black;
                 border-radius: 15px 0px 15px 0px;
+                padding: 2px 0px;
                 user-select: none;
             }
             .infoButtonVisual:hover {
-                background-color: #c38e4f;
+                background-color: #ffa608;
+                filter: brightness(80%);
             }
 
     /* container div pro content "vysouvacího" infoboxu */
@@ -588,6 +593,7 @@ h3 {
         color: black;
         border-radius: 0px 0px 15px 15px;
         z-index: 1;
+        text-align: justify;
     }
 
 
