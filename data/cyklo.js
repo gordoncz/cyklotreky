@@ -499,7 +499,7 @@ var cyklotrasy = [
         "picture": "poodri",
         "urldesktop": "https://mapy.cz/s/bofusulepa",
         "urlmobile": "https://mapy.cz/s/kutehekefe",
-        "known": false,
+        "known": true,
         "new": false,
         "infobox": ""
     },
@@ -691,7 +691,7 @@ var cyklotrasy = [
         "picture": "tynistsko-trebechovicke-poorlici",
         "urldesktop": "https://mapy.cz/s/loposudepa",
         "urlmobile": "https://mapy.cz/s/govobureju",
-        "known": false,
+        "known": true,
         "new": true,
         "infobox": ""
     },
@@ -738,7 +738,7 @@ var cyklotrasy = [
         "region": "Bílé Karpaty",
         "picture": "luhacovice",
         "urldesktop": "https://mapy.cz/s/bejabekucu",
-        "urlmobile": "https://mapy.cz/s/cudemazobu",
+        "urlmobile": "https://mapy.cz/s/codocalore",
         "known": true,
         "new": false,
         "infobox": ""
@@ -1164,15 +1164,15 @@ var cyklotrasy = [
         "infobox": "<p>Trasu lze absolvovat pouze v období od 15.7. do 15.11., protože červená turistická značka od rozcestí Gsenget (za Prášilami) k jezeru Laka je mimo toto období uzavřena z důvodu ochrany přírody.</p><p>Pro přespání pro většinu nocí (s výjimkou poslední) se počítá s přenocováním v nouzových nocovištích ve vlastním stanu.</p><p>Na začátku trasy po vystoupení z vlaku je potřeba použít <a href=\"https://www.horniplana.cz/prevoz/\" target=\"_blank\">přívoz Horní Planá - Bližší Lhota</a> k přejetí Lipenské přehrady na opačný břeh.</p><p>Trasa je na 4 dny:</p><p>Horní Planá<br>(35 km)<br>Nouzové nocoviště Nové Údolí<br>(52 km)<br>Nouzové nocoviště Modrava<br>(41 km)<br>Železná Ruda<br>(30 km)<br>Nýrsko</p>"
     },
     {
-        "km": 237,
+        "km": 218,
         "multiday": true,
         "nazev": "Třeboňsko",
         "region": "Jižní Čechy",
         "picture": "trebonsko",
-        "urldesktop": "https://mapy.cz/s/nekajosuja",
-        "urlmobile": "https://mapy.cz/s/ponamedega",
+        "urldesktop": "https://mapy.cz/s/cehuhudumu",
+        "urlmobile": "https://mapy.cz/s/lolevoramu",
         "known": false,
         "new": true,
-        "infobox": "<p>Trasa je na 5 dnů:</p><p>Jindřichův Hradec<br>(52 km)<br>Camp Paris / Autocamp U Pískovny<br>(44 km)<br>Nouzové nocoviště Nové Hrady<br>(64 km)<br>Kemp Velký rybník u Trhových Svin<br>(43 km)<br>Autokemp Třeboň<br>(34 km)<br>Veselí nad Lužnicí</p>"
+        "infobox": "<p>Trasa je na 5 dnů:</p><p>Jindřichův Hradec<br>(43 km)<br>Chlum u Třeboně<br>(49 km)<br>Nouzové nocoviště Nové Hrady<br>(49 km)<br>Kemp Hamr-Římov<br>(41 km)<br>Autokemp Třeboň<br>(36 km)<br>Veselí nad Lužnicí</p>"
     }
 ]

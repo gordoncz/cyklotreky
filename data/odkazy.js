@@ -78,8 +78,8 @@ var odkazy = [
                 "linkurl": "http://www.jizdni-rady.nanadrazi.cz/images/mapy/zeleznicni_mapa_cr_2019.gif"
             },
             {
-                "linktext": "Seznam železničních tratí obsluhovaných od roku 2020 alternativními dopravci",
-                "linkurl": "https://ct24.ceskatelevize.cz/domaci/2982998-ten-uznava-a-ten-zas-tohle-zmena-jizdniho-radu-prinese-zmatek-s-jizdnym-na-zeleznici"
+                "linktext": "Mapa železničních tratí obsluhovaných alternativními dopravci od 15.12.2019",
+                "linkurl": "img/mapa-zeleznicnich-dopravcu.jpg"
             }
         ]
     },

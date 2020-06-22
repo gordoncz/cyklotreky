@@ -65,7 +65,8 @@
         </div>
         <div class="filtrZatrzitko">Jen neabsolvované: <label for="onlyUnknown" class="zatrzitkoContainer"><input type="checkbox" id="onlyUnknown" onclick="filterByKnown()"><span class="zatrzitko"></span></label></div>
         <div class="filtrZatrzitko">Jen nové: <label for="onlyNew" class="zatrzitkoContainer"><input type="checkbox" id="onlyNew" onclick="filterByNew()"><span class="zatrzitko"></span></label></div>
-        <div class="filtrText"><input type="text" id="hledatNazev" onkeyup="filterByName()" placeholder="Filtrovat podle názvu trasy..."></div>
+        <div class="filtrText"><input type="text" id="hledatNazev" onkeyup="filterByName()" onclick="resetTextu()" placeholder="Filtrovat podle názvu trasy..."></div>
+        <div id="pocitadloTras" onclick="resetFilters()">x</div>
     </div>
     <!-- Hlavní div s obsahem stránky, kde budou zobrazeny jednotlivé trasy -->
     <div id="seznamTras">Loading...</div>

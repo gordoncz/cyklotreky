@@ -40,7 +40,22 @@ var pinupPool = [
     "pinup32",
     "pinup33",
     "pinup34",
-    "pinup35"
+    "pinup35",
+    "pinup36",
+    "pinup37",
+    "pinup38",
+    "pinup39",
+    "pinup40",
+    "pinup41",
+    "pinup42",
+    "pinup43",
+    "pinup44",
+    "pinup45",
+    "pinup46",
+    "pinup47",
+    "pinup48",
+    "pinup49",
+    "pinup50"
 ]
 
 function generatePinup() {

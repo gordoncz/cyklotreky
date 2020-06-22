@@ -1,6 +1,7 @@
 // definování variables pro hlavní elementy na stránce
 var trasy = document.getElementById("seznamTras");
 var trasa = trasy.getElementsByClassName("trasaWrapper");
+var pocitadloDiv = document.getElementById("pocitadloTras");
 
 
 // funkce pro filtrování tras podle jejich délky
@@ -13,6 +14,8 @@ function filterByDistance(x) {
 
     // zde se funkce ukončí, aby se dále neuplatňoval filtr na žádnou z tras, pokud mají být zobrazeny všechny
     if (x == "all") {
+        // vždy po aplikování filtru znovu spustit funkci na přepočet čísla v počítadle zobrazených tras
+        countTracks();
         return;
     }
 
@@ -37,6 +40,8 @@ function filterByDistance(x) {
 
     }
 
+    // vždy po aplikování filtru znovu spustit funkci na přepočet čísla v počítadle zobrazených tras
+    countTracks();
 }
 
 // funkce pro filtrování tras podle regionu
@@ -49,6 +54,8 @@ function filterByRegion(x) {
 
     // zde se funkce ukončí, aby se dále neuplatňoval filtr na žádnou z tras, pokud mají být zobrazeny všechny
     if (x == "all") {
+        // vždy po aplikování filtru znovu spustit funkci na přepočet čísla v počítadle zobrazených tras
+        countTracks();
         return;
     }
 
@@ -63,6 +70,8 @@ function filterByRegion(x) {
 
     }
 
+    // vždy po aplikování filtru znovu spustit funkci na přepočet čísla v počítadle zobrazených tras
+    countTracks();
 }
 
 // funkce zobrazení jen neabsolvovaných tras
@@ -81,6 +90,9 @@ function filterByKnown() {
             trasa[i].classList.remove("filtrKnown");
         }
     }
+
+    // vždy po aplikování filtru znovu spustit funkci na přepočet čísla v počítadle zobrazených tras
+    countTracks();
 }
 
 // funkce zobrazení jen nově přidaných tras
@@ -99,12 +111,16 @@ function filterByNew() {
             trasa[i].classList.remove("filtrNew");
         }
     }
+
+    // vždy po aplikování filtru znovu spustit funkci na přepočet čísla v počítadle zobrazených tras
+    countTracks();
 }
 
 // funkce vyhledávání/filtrování tras podle názvu
 function filterByName() {
     var input = document.getElementById("hledatNazev");
     var filter = input.value.toLowerCase();
+    var filterNorm = filter.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
     for (i = 0; i < trasa.length; i++) {
         var nazev = trasa[i].getElementsByClassName("nazevContainer")[0];
@@ -112,10 +128,62 @@ function filterByName() {
 
         // pokud v trase[i] v textu sub-divu pro název najde text zadaný do input pole na stránce, pak tu trasu zobrazí
         // pokud tam ten textový string nenajde, tak trasu skryje
-        if (nazevText.toLowerCase().indexOf(filter) > -1) {
-            trasa[i].style.display = "";
+        if (nazevText.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").indexOf(filterNorm) > -1) {
+            trasa[i].classList.remove("filtrNazev");
         } else {
-            trasa[i].style.display = "none";
+            trasa[i].classList.add("filtrNazev");
         }
     }
+
+    // vždy po aplikování filtru znovu spustit funkci na přepočet čísla v počítadle zobrazených tras
+    countTracks();
 }
+
+// funkce pro reset textového vyhledávacího pole
+function resetTextu() {
+    // nejdřív nastaví hodnotu textového pole na prázdné
+    // a potom pustí filtrovací funkci, která vše synchronizuje se zobrazenými trasami na stránce
+    document.getElementById("hledatNazev").value = "";
+    filterByName();
+}
+
+// funkce pro výpočet počtu aktuálně zobrazených tras a zobrazení tohoto čísla na stránce
+function countTracks() {
+    // variable, do níž se zapíše počet tras, které nemají žádný skrývací filtr (tj. ty, které jsou aktuálně vidět na stránce)
+    var trasyZobrazeno = document.querySelectorAll(".trasaWrapper:not(.filtrDelka):not(.filtrRegion):not(.filtrKnown):not(.filtrNew):not(.filtrNazev)").length
+
+    // funkce vezme hodnotu této variable a vloží ji jako obsah divu počítadla na stránce
+    pocitadloDiv.innerText = trasyZobrazeno;
+}
+
+// funkce pro reset všech filtrů do defaultu
+function resetFilters() {
+    // reset dropdown filtrů
+    // nejdřív se nastaví hodnota dropdown na "all"
+    // a potom se pustí na to navázaná filtrovací funkce, což zařídí elegantní reset daného filtru
+    document.getElementById("podleDelky").value = "all";
+    filterByDistance("all");
+    document.getElementById("podleRegionu").value = "all";
+    filterByRegion("all");
+
+    // reset zatržítek
+    // nejdřív se nastaví zatržítko na "off"
+    // a potom se pustí na to navázaná filtrovací funkce, což zařídí elegantní reset daného filtru
+    document.getElementById("onlyUnknown").checked = false;
+    filterByKnown();
+    document.getElementById("onlyNew").checked = false;
+    filterByNew();
+
+    // reset textového vyhledávání
+    // podobně jako předchozí dva případy...
+    // nejdřív nastaví hodnotu textového pole na prázdné
+    // a potom pustí filtrovací funkci, která vše synchronizuje se zobrazenými trasami na stránce
+    document.getElementById("hledatNazev").value = "";
+    filterByName();
+
+    // a pro jistotu ještě jednou na konci pustí funkci pro spočítání zobrazených tras
+    countTracks();
+}
+
+// toto spustí funkci pro výpočet počtu zobrazených tras hned při načtení stránky
+countTracks();
