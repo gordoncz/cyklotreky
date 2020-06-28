@@ -1,29 +1,5 @@
 var cyklotrasy = [
     {
-        "km": 13,
-        "multiday": false,
-        "nazev": "Kohoutovické lesy",
-        "region": "Brno",
-        "picture": "kohoutovicke-lesy",
-        "urldesktop": "https://mapy.cz/s/jemafelemu",
-        "urlmobile": "https://mapy.cz/s/nudacoleka",
-        "known": true,
-        "new": false,
-        "infobox": ""
-    },
-    {
-        "km": 17,
-        "multiday": false,
-        "nazev": "Myslivna",
-        "region": "Brno",
-        "picture": "myslivna",
-        "urldesktop": "https://mapy.cz/s/hakasuhubu",
-        "urlmobile": "https://mapy.cz/s/melajemevo",
-        "known": true,
-        "new": false,
-        "infobox": "<p>Na úseku 1,5 km z ulice Pisárecká k Hotelu Myslivna je třeba počítat s poměrně prudkým 9,3 % stoupáním.</p>"
-    },
-    {
         "km": 18,
         "multiday": false,
         "nazev": "Šiberná",
@@ -116,7 +92,7 @@ var cyklotrasy = [
         "urldesktop": "https://mapy.cz/s/durojurete",
         "urlmobile": "https://mapy.cz/s/kalekolure",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": ""
     },
     {
@@ -152,7 +128,7 @@ var cyklotrasy = [
         "urldesktop": "https://mapy.cz/s/gosebehonu",
         "urlmobile": "https://mapy.cz/s/cehajaneco",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": ""
     },
     {
@@ -236,7 +212,7 @@ var cyklotrasy = [
         "urldesktop": "https://mapy.cz/s/gofakamuka",
         "urlmobile": "https://mapy.cz/s/gohorefolo",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": ""
     },
     {
@@ -377,11 +353,11 @@ var cyklotrasy = [
         "nazev": "Buchlovské kopce",
         "region": "Haná",
         "picture": "buchlovske-kopce",
-        "urldesktop": "https://mapy.cz/s/focegegudu",
-        "urlmobile": "https://mapy.cz/s/javufohepo",
+        "urldesktop": "https://mapy.cz/s/cunodaloza",
+        "urlmobile": "https://mapy.cz/s/gefajutomu",
         "known": true,
         "new": false,
-        "infobox": "<p>Podél Přehrady Koryčany trasa vede po úzké silnici, které chybí krajnice a která je navíc bezprostředně u postranní čáry ohraničena betonovými zábranami, tudíž zde není manévrovací ani únikový prostor pro kola. Úsek nelze objet po účelové komunikaci na pravém břehu, protože ta je uzavřena bránami kvůli ochraně zdroje pitné vody. Nutno tedy dbát zvlášť zvýšené opatrnosti vůči vozidlům v obou směrech.</p>"
+        "infobox": ""
     },
     {
         "km": 38,
@@ -564,18 +540,6 @@ var cyklotrasy = [
         "infobox": ""
     },
     {
-        "km": 42,
-        "multiday": false,
-        "nazev": "Tovačovská jezera",
-        "region": "Haná",
-        "picture": "tovacovska-jezera",
-        "urldesktop": "https://mapy.cz/s/rebosenola",
-        "urlmobile": "https://mapy.cz/s/lufekocepa",
-        "known": true,
-        "new": false,
-        "infobox": ""
-    },
-    {
         "km": 43,
         "multiday": false,
         "nazev": "Posázaví",
@@ -644,7 +608,7 @@ var cyklotrasy = [
         "urldesktop": "https://mapy.cz/s/busarapopa",
         "urlmobile": "https://mapy.cz/s/nomunuguhu",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": ""
     },
     {
@@ -680,7 +644,7 @@ var cyklotrasy = [
         "urldesktop": "https://mapy.cz/s/hosumusebu",
         "urlmobile": "https://mapy.cz/s/gafalaraca",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": ""
     },
     {
@@ -692,7 +656,7 @@ var cyklotrasy = [
         "urldesktop": "https://mapy.cz/s/loposudepa",
         "urlmobile": "https://mapy.cz/s/govobureju",
         "known": true,
-        "new": true,
+        "new": false,
         "infobox": ""
     },
     {
@@ -776,7 +740,7 @@ var cyklotrasy = [
         "urldesktop": "https://mapy.cz/s/lamevasaru",
         "urlmobile": "https://mapy.cz/s/lorafunosu",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": ""
     },
     {
@@ -852,18 +816,6 @@ var cyklotrasy = [
         "infobox": ""
     },
     {
-        "km": 50,
-        "multiday": false,
-        "nazev": "Napříč Oslavanskou brázdou",
-        "region": "Brněnsko",
-        "picture": "napric-oslavanskou-brazdou",
-        "urldesktop": "https://mapy.cz/s/hurepapebu",
-        "urlmobile": "https://mapy.cz/s/resozecuta",
-        "known": true,
-        "new": false,
-        "infobox": ""
-    },
-    {
         "km": 51,
         "multiday": false,
         "nazev": "Krajem vína a slivovice Slovácka",
@@ -872,7 +824,7 @@ var cyklotrasy = [
         "urldesktop": "https://mapy.cz/s/ledapevove",
         "urlmobile": "https://mapy.cz/s/pevutosanu",
         "known": true,
-        "new": true,
+        "new": false,
         "infobox": ""
     },
     {
@@ -896,7 +848,7 @@ var cyklotrasy = [
         "urldesktop": "https://mapy.cz/s/hegecevevu",
         "urlmobile": "https://mapy.cz/s/hesujucala",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": "<p>Pro ozvlášťnění a zpříjemnění trasy lze ke konci využít i <a href=\"https://www.dalesickaprehrada.cz/lodni-doprava/\" target=\"_blank\">lodní přepravu parníkem po hladině Dalešické přehrady</a> a to z přístaviště Dalešice do přístaviště Kramolín.</p>"
     },
     {
@@ -908,7 +860,7 @@ var cyklotrasy = [
         "urldesktop": "https://mapy.cz/s/nalecuvono",
         "urlmobile": "https://mapy.cz/s/kubopovala",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": "<p>Na Šerlich jezdí cyklobusy Arriva z Hradce Králové a z Pardubic, a to o víkendech od června do září. Obě linky zastavují v Opočně, kde lze s koly nastoupit. O tyto cyklobusy je však v sezóně mezi cyklisty velký zájem, je tedy nutné si zajistit místa dostatečně dopředu.</p>"
     },
     {
@@ -980,7 +932,7 @@ var cyklotrasy = [
         "urldesktop": "https://mapy.cz/s/gopapajuvo",
         "urlmobile": "https://mapy.cz/s/honefevolu",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": ""
     },
     {
@@ -1016,7 +968,7 @@ var cyklotrasy = [
         "urldesktop": "https://mapy.cz/s/cubodujado",
         "urlmobile": "https://mapy.cz/s/hafojepomo",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": ""
     },
     {
@@ -1028,7 +980,7 @@ var cyklotrasy = [
         "urldesktop": "https://mapy.cz/s/pomufobone",
         "urlmobile": "https://mapy.cz/s/panenudopu",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": "<p>Mezi obcemi Haslau a Orth je nutné využít <a href=\"http://www.faehre-orth.at/\" target=\"_blank\">místní pravidelný přívoz</a>. Tato linka je v provozu od dubna do října denně mezi 9:00 a 18:00.</p>"
     },
     {
@@ -1136,20 +1088,8 @@ var cyklotrasy = [
         "urldesktop": "https://mapy.cz/s/cajofosema",
         "urlmobile": "https://mapy.cz/s/fodenulogo",
         "known": false,
-        "new": true,
-        "infobox": "<p>Před hrází vodní nádrže Seč trasa prochází velmi úzkým a na pohled ne příliš bezpečným Sečským tunelem na silnici II/343, je třeba na tomto místě být obzvlášť opatrný. Bohužel toto místo nejde jinudy objet.</p><p>Trasa je na 2 dny:</p><p>Golčův Jeníkov město<br>(51 km)<br>Kemp v obci Ústupky<br>(60 km)<br>Žďár nad Sázavou</p>"
-    },
-    {
-        "km": 142,
-        "multiday": true,
-        "nazev": "Po stopách dobrého vojáka Švejka",
-        "region": "Jižní Čechy",
-        "picture": "po-stopach-dobreho-vojaka-svejka",
-        "urldesktop": "https://mapy.cz/s/jesedagoho",
-        "urlmobile": "https://mapy.cz/s/kegazogopa",
-        "known": true,
         "new": false,
-        "infobox": "<p>Nutné mít s sebou pro přespání stan. V oblasti Přírodního parku Písecké hory východně od Písku je však stanování zakázáno vyhláškou.</p><p>Trasa je na 4 dny:</p><p>Veselí nad Lužnicí<br>(36 km)<br>Tábořiště Harrachovka<br>(48 km)<br>Tábořiště Štědronín<br>(43 km)<br>Písek<br>(15 km)<br>Protivín</p>"
+        "infobox": "<p>Před hrází vodní nádrže Seč trasa prochází velmi úzkým a na pohled ne příliš bezpečným Sečským tunelem na silnici II/343, je třeba na tomto místě být obzvlášť opatrný. Bohužel toto místo nejde jinudy objet.</p><p>Trasa je na 2 dny:</p><p>Golčův Jeníkov město<br>(51 km)<br>Kemp v obci Ústupky<br>(60 km)<br>Žďár nad Sázavou</p>"
     },
     {
         "km": 158,
@@ -1160,8 +1100,20 @@ var cyklotrasy = [
         "urldesktop": "https://mapy.cz/s/haboluvesu",
         "urlmobile": "https://mapy.cz/s/lunocudota",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": "<p>Trasu lze absolvovat pouze v období od 15.7. do 15.11., protože červená turistická značka od rozcestí Gsenget (za Prášilami) k jezeru Laka je mimo toto období uzavřena z důvodu ochrany přírody.</p><p>Pro přespání pro většinu nocí (s výjimkou poslední) se počítá s přenocováním v nouzových nocovištích ve vlastním stanu.</p><p>Na začátku trasy po vystoupení z vlaku je potřeba použít <a href=\"https://www.horniplana.cz/prevoz/\" target=\"_blank\">přívoz Horní Planá - Bližší Lhota</a> k přejetí Lipenské přehrady na opačný břeh.</p><p>Trasa je na 4 dny:</p><p>Horní Planá<br>(35 km)<br>Nouzové nocoviště Nové Údolí<br>(52 km)<br>Nouzové nocoviště Modrava<br>(41 km)<br>Železná Ruda<br>(30 km)<br>Nýrsko</p>"
+    },
+    {
+        "km": 161,
+        "multiday": true,
+        "nazev": "Po stopách dobrého vojáka Švejka",
+        "region": "Jižní Čechy",
+        "picture": "po-stopach-dobreho-vojaka-svejka",
+        "urldesktop": "https://mapy.cz/s/lafedacutu",
+        "urlmobile": "https://mapy.cz/s/jujucajeme",
+        "known": true,
+        "new": false,
+        "infobox": "<p>Nutné mít s sebou pro přespání stan. V oblasti Přírodního parku Písecké hory východně od Písku je však stanování zakázáno vyhláškou.</p><p>Trasa je na 4 dny:</p><p>Veselí nad Lužnicí<br>(39 km)<br>Tábořiště Harrachovka<br>(59 km)<br>Tábořiště Štědronín<br>(48 km)<br>Písek<br>(15 km)<br>Protivín</p>"
     },
     {
         "km": 218,
@@ -1172,7 +1124,7 @@ var cyklotrasy = [
         "urldesktop": "https://mapy.cz/s/cehuhudumu",
         "urlmobile": "https://mapy.cz/s/lolevoramu",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": "<p>Trasa je na 5 dnů:</p><p>Jindřichův Hradec<br>(43 km)<br>Chlum u Třeboně<br>(49 km)<br>Nouzové nocoviště Nové Hrady<br>(49 km)<br>Kemp Hamr-Římov<br>(41 km)<br>Autokemp Třeboň<br>(36 km)<br>Veselí nad Lužnicí</p>"
     }
 ]

@@ -5,8 +5,8 @@ var pesitrasy = [
         "nazev": "Koniklecová louka",
         "region": "Brno",
         "picture": "koniklecova-louka",
-        "urldesktop": "https://mapy.cz/s/demateduma",
-        "urlmobile": "https://mapy.cz/s/nucopegofe",
+        "urldesktop": "https://mapy.cz/s/futozocuje",
+        "urlmobile": "https://mapy.cz/s/letapujara",
         "known": true,
         "new": false,
         "infobox": ""
@@ -22,30 +22,6 @@ var pesitrasy = [
         "known": true,
         "new": false,
         "infobox": "<p>Pro zpáteční cestu lze využít také <a href=\"https://www.dpmb.cz/cs/novinky/all\" target=\"_blank\">lodní dopravu parníkem DPMB</a>.</p>"
-    },
-    {
-        "km": 8,
-        "multiday": false,
-        "nazev": "Ríšova studánka",
-        "region": "Brno",
-        "picture": "risova-studanka",
-        "urldesktop": "https://mapy.cz/s/kefutebure",
-        "urlmobile": "https://mapy.cz/s/kecusuzuga",
-        "known": true,
-        "new": false,
-        "infobox": ""
-    },
-    {
-        "km": 9,
-        "multiday": false,
-        "nazev": "Děvín",
-        "region": "Jižní Morava",
-        "picture": "devin",
-        "urldesktop": "https://mapy.cz/s/jofakedena",
-        "urlmobile": "https://mapy.cz/s/donutahume",
-        "known": true,
-        "new": false,
-        "infobox": ""
     },
     {
         "km": 9,
@@ -200,7 +176,7 @@ var pesitrasy = [
         "urldesktop": "https://mapy.cz/s/kehebetegu",
         "urlmobile": "https://mapy.cz/s/hahutujeru",
         "known": true,
-        "new": true,
+        "new": false,
         "infobox": ""
     },
     {
@@ -314,6 +290,18 @@ var pesitrasy = [
     {
         "km": 15,
         "multiday": false,
+        "nazev": "Velká Javořina",
+        "region": "Bílé Karpaty",
+        "picture": "velka-javorina",
+        "urldesktop": "https://mapy.cz/s/benupahusu",
+        "urlmobile": "https://mapy.cz/s/jopufovaze",
+        "known": false,
+        "new": true,
+        "infobox": ""
+    },
+    {
+        "km": 15,
+        "multiday": false,
         "nazev": "Žítkovské bohyně",
         "region": "Bílé Karpaty",
         "picture": "zitkovske-bohyne",
@@ -332,7 +320,7 @@ var pesitrasy = [
         "urldesktop": "https://mapy.cz/s/dugopacoho",
         "urlmobile": "https://mapy.cz/s/hatedonusa",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": ""
     },
     {
@@ -343,18 +331,6 @@ var pesitrasy = [
         "picture": "mlyny-bileho-potoka",
         "urldesktop": "https://mapy.cz/s/jolezojofu",
         "urlmobile": "https://mapy.cz/s/relotuheju",
-        "known": false,
-        "new": false,
-        "infobox": ""
-    },
-    {
-        "km": 16,
-        "multiday": false,
-        "nazev": "Nad Doubravníkem",
-        "region": "Brněnsko",
-        "picture": "nad-doubravnikem",
-        "urldesktop": "https://mapy.cz/s/laputenezo",
-        "urlmobile": "https://mapy.cz/s/jusebaheto",
         "known": false,
         "new": false,
         "infobox": ""
@@ -384,18 +360,6 @@ var pesitrasy = [
         "infobox": ""
     },
     {
-        "km": 19,
-        "multiday": true,
-        "nazev": "Velká Javořina",
-        "region": "Bílé Karpaty",
-        "picture": "velka-javorina",
-        "urldesktop": "https://mapy.cz/s/dutorukata",
-        "urlmobile": "https://mapy.cz/s/jovejelose",
-        "known": false,
-        "new": false,
-        "infobox": "<p>Trasa je na 2 dny:</p><p>Nová Lhota<br>(9 km)<br>Holubyho chata<br>(10 km)<br>Nová Lhota</p>"
-    },
-    {
         "km": 26,
         "multiday": true,
         "nazev": "Vodopády Bílé Opavy",
@@ -416,7 +380,7 @@ var pesitrasy = [
         "urldesktop": "https://mapy.cz/s/kococolabo",
         "urlmobile": "https://mapy.cz/s/luvavavozo",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": "<p>Trasa je na 2 dny:</p><p>Ostravice<br>(14 km)<br>Lysá hora<br>(13 km)<br>Ostravice</p>"
     },
     {
@@ -440,7 +404,7 @@ var pesitrasy = [
         "urldesktop": "https://mapy.cz/s/mutosatage",
         "urlmobile": "https://mapy.cz/s/coforatobo",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": "<p>Z časových důvodů je nutné na začátku treku využít <a href=\"https://www.skiareal.cz/skiareal/info/letni-provoz-lanovek\" target=\"_blank\">lanovou dráhu Medvědín</a> pro dopravu mezi Špindlerovým mlýnem a vrchem Medvědín.</p><p>Trasa je na 2 dny:</p><p>Špindlerův mlýn<br>(16 km)<br>Schronisko Odrodzenie<br>(16 km)<br>Horní Malá Úpa, Pomezní Boudy</p>"
     },
     {
@@ -464,7 +428,7 @@ var pesitrasy = [
         "urldesktop": "https://mapy.cz/s/fagapohocu",
         "urlmobile": "https://mapy.cz/s/pafojosomo",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": "<p>Nutné nést s sebou pro přespání stan. Nicméně je třeba mít na zřeteli, že v NP/CHKO Šumava lze ve stanu přespat pouze na vyhrazených nouzových nocovištích.</p><p>V informačním centru Stožec si lze prohlédnout unikátní exponát vycpaného losa evropského v životní velikosti (cca 2 m).</p><p>Intenzivní stoupání se sklonem 24 % na cca 1 km dlouhém úseku od Plešného jezera k Pomníku Adalberta Stiftera.</p><p>Trasa je na 3 dny:</p><p>Ovesná<br>(13 km)<br>Nouzové nocoviště Pod Plešným jezerem<br>(15 km)<br>Nouzové nocoviště Nové Údolí<br>(8 km)<br>Černý Kříž</p>"
     },
     {
