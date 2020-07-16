@@ -120,6 +120,18 @@ var cyklotrasy = [
         "infobox": ""
     },
     {
+        "km": 26,
+        "multiday": false,
+        "nazev": "Žebětín",
+        "region": "Brno",
+        "picture": "zebetin",
+        "urldesktop": "https://mapy.cz/s/godocurasa",
+        "urlmobile": "https://mapy.cz/s/hacolezava",
+        "known": false,
+        "new": true,
+        "infobox": ""
+    },
+    {
         "km": 27,
         "multiday": false,
         "nazev": "Peklo u Nového Města nad Metují",
@@ -154,6 +166,18 @@ var cyklotrasy = [
         "known": true,
         "new": false,
         "infobox": "<p>Cesta podél pravého břehu bojkovické přehrady je v ochranném pásmu vodního zdroje a může být zrovna zavřená. Lze ji ale v případě nutnosti objet po žluté turistické značce severozápadně od ní.</p>"
+    },
+    {
+        "km": 29,
+        "multiday": false,
+        "nazev": "Vranov",
+        "region": "Brněnsko",
+        "picture": "vranov",
+        "urldesktop": "https://mapy.cz/s/pamolelaha",
+        "urlmobile": "https://mapy.cz/s/hafodakube",
+        "known": false,
+        "new": true,
+        "infobox": "<p>V první polovině trasy jsou dvě poměrně prudká stoupání. První hned od startu do Babic nad Svitavou (7,3 % o délce 3,3 km) a druhé potom od Adamov, zastávka ke křižovatce lesních cest Coufavá a Kroucená (dokonce 10 % na 2 km).</p>"
     },
     {
         "km": 31,
@@ -201,6 +225,18 @@ var cyklotrasy = [
         "urlmobile": "https://mapy.cz/s/mokabekubu",
         "known": true,
         "new": false,
+        "infobox": ""
+    },
+    {
+        "km": 33,
+        "multiday": false,
+        "nazev": "Moravská Sahara",
+        "region": "Jižní Morava",
+        "picture": "moravska-sahara",
+        "urldesktop": "https://mapy.cz/s/nazadaseve",
+        "urlmobile": "https://mapy.cz/s/masecutege",
+        "known": false,
+        "new": true,
         "infobox": ""
     },
     {
@@ -278,6 +314,18 @@ var cyklotrasy = [
     {
         "km": 36,
         "multiday": false,
+        "nazev": "Boskovice",
+        "region": "Brněnsko",
+        "picture": "boskovice",
+        "urldesktop": "https://mapy.cz/s/debejepuhe",
+        "urlmobile": "https://mapy.cz/s/lanujahane",
+        "known": false,
+        "new": true,
+        "infobox": ""
+    },
+    {
+        "km": 36,
+        "multiday": false,
         "nazev": "Jihomoravské pohraničí",
         "region": "Jižní Morava",
         "picture": "jihomoravske-pohranici",
@@ -314,6 +362,18 @@ var cyklotrasy = [
     {
         "km": 36,
         "multiday": false,
+        "nazev": "Tanková bitva u Ořechova",
+        "region": "Brněnsko",
+        "picture": "tankova-bitva-u-orechova",
+        "urldesktop": "https://mapy.cz/s/cavejojume",
+        "urlmobile": "https://mapy.cz/s/luborufuge",
+        "known": false,
+        "new": true,
+        "infobox": ""
+    },
+    {
+        "km": 36,
+        "multiday": false,
         "nazev": "Údolí Bystřice",
         "region": "Haná",
         "picture": "udoli-bystrice",
@@ -321,6 +381,18 @@ var cyklotrasy = [
         "urlmobile": "https://mapy.cz/s/bopezudava",
         "known": true,
         "new": false,
+        "infobox": ""
+    },
+    {
+        "km": 37,
+        "multiday": false,
+        "nazev": "Blanenská hřebenovka",
+        "region": "Brněnsko",
+        "picture": "blanenska-hrebenovka",
+        "urldesktop": "https://mapy.cz/s/hobazacuko",
+        "urlmobile": "https://mapy.cz/s/cuhujokaju",
+        "known": false,
+        "new": true,
         "infobox": ""
     },
     {
@@ -369,6 +441,18 @@ var cyklotrasy = [
         "urlmobile": "https://mapy.cz/s/kalevemolo",
         "known": true,
         "new": false,
+        "infobox": ""
+    },
+    {
+        "km": 38,
+        "multiday": false,
+        "nazev": "Od řeky k řece",
+        "region": "Vysočina",
+        "picture": "od-reky-k-rece",
+        "urldesktop": "https://mapy.cz/s/kogusoduha",
+        "urlmobile": "https://mapy.cz/s/cuvaduzufa",
+        "known": false,
+        "new": true,
         "infobox": ""
     },
     {
@@ -429,6 +513,18 @@ var cyklotrasy = [
         "urlmobile": "https://mapy.cz/s/fanevoboju",
         "known": true,
         "new": false,
+        "infobox": ""
+    },
+    {
+        "km": 39,
+        "multiday": false,
+        "nazev": "Žernovník",
+        "region": "Brněnsko",
+        "picture": "zernovnik",
+        "urldesktop": "https://mapy.cz/s/recahavase",
+        "urlmobile": "https://mapy.cz/s/ratatacuco",
+        "known": false,
+        "new": true,
         "infobox": ""
     },
     {
@@ -513,6 +609,18 @@ var cyklotrasy = [
         "urlmobile": "https://mapy.cz/s/rerejeraju",
         "known": true,
         "new": false,
+        "infobox": ""
+    },
+    {
+        "km": 41,
+        "multiday": false,
+        "nazev": "Pohořelice",
+        "region": "Brněnsko",
+        "picture": "pohorelice",
+        "urldesktop": "https://mapy.cz/s/nameturuvu",
+        "urlmobile": "https://mapy.cz/s/mezajureva",
+        "known": false,
+        "new": true,
         "infobox": ""
     },
     {
@@ -609,6 +717,18 @@ var cyklotrasy = [
         "urlmobile": "https://mapy.cz/s/nomunuguhu",
         "known": false,
         "new": false,
+        "infobox": ""
+    },
+    {
+        "km": 44,
+        "multiday": false,
+        "nazev": "Zřídla Šaratice",
+        "region": "Jižní Morava",
+        "picture": "zridla-saratice",
+        "urldesktop": "https://mapy.cz/s/comuzacepu",
+        "urlmobile": "https://mapy.cz/s/jamubopego",
+        "known": false,
+        "new": true,
         "infobox": ""
     },
     {
@@ -794,6 +914,18 @@ var cyklotrasy = [
     {
         "km": 50,
         "multiday": false,
+        "nazev": "Hustopeče",
+        "region": "Jižní Morava",
+        "picture": "hustopece",
+        "urldesktop": "https://mapy.cz/s/fazopohero",
+        "urlmobile": "https://mapy.cz/s/durubumoro",
+        "known": false,
+        "new": true,
+        "infobox": ""
+    },
+    {
+        "km": 50,
+        "multiday": false,
         "nazev": "Krajinou Slovácka",
         "region": "Bílé Karpaty",
         "picture": "krajinou-slovacka",
@@ -813,6 +945,18 @@ var cyklotrasy = [
         "urlmobile": "https://mapy.cz/s/cugobazoma",
         "known": true,
         "new": false,
+        "infobox": ""
+    },
+    {
+        "km": 50,
+        "multiday": false,
+        "nazev": "Svatojakubský pivovar",
+        "region": "Brněnsko",
+        "picture": "svatojakubsky-pivovar",
+        "urldesktop": "https://mapy.cz/s/malapolalo",
+        "urlmobile": "https://mapy.cz/s/relacocovu",
+        "known": false,
+        "new": true,
         "infobox": ""
     },
     {
@@ -910,6 +1054,30 @@ var cyklotrasy = [
         "known": true,
         "new": false,
         "infobox": "<p>Jelikož značná část trasy prochází skrze Oboru Soutok, která bývá v průběhu roku podle potřeby různě nepřístupná, je vhodné si před jízdou <a href=\"https://breclav.eu/file/31286_1_1/\" target=\"_blank\">ověřit aktuální přístupnost obory podle vyhlášky</a>.</p>"
+    },
+    {
+        "km": 55,
+        "multiday": false,
+        "nazev": "Balinské a Nesměřské údolí",
+        "region": "Vysočina",
+        "picture": "balinske-a-nesmerske-udoli",
+        "urldesktop": "https://mapy.cz/s/juhepebuhe",
+        "urlmobile": "https://mapy.cz/s/nogelozese",
+        "known": false,
+        "new": true,
+        "infobox": ""
+    },
+    {
+        "km": 55,
+        "multiday": false,
+        "nazev": "Brněnská podkova",
+        "region": "Brno",
+        "picture": "brnenska-podkova",
+        "urldesktop": "https://mapy.cz/s/gakuzoleza",
+        "urlmobile": "https://mapy.cz/s/pemagutero",
+        "known": false,
+        "new": true,
+        "infobox": ""
     },
     {
         "km": 55,
@@ -1123,7 +1291,7 @@ var cyklotrasy = [
         "picture": "trebonsko",
         "urldesktop": "https://mapy.cz/s/cehuhudumu",
         "urlmobile": "https://mapy.cz/s/lolevoramu",
-        "known": false,
+        "known": true,
         "new": false,
         "infobox": "<p>Trasa je na 5 dnů:</p><p>Jindřichův Hradec<br>(43 km)<br>Chlum u Třeboně<br>(49 km)<br>Nouzové nocoviště Nové Hrady<br>(49 km)<br>Kemp Hamr-Římov<br>(41 km)<br>Autokemp Třeboň<br>(36 km)<br>Veselí nad Lužnicí</p>"
     }

@@ -42,24 +42,20 @@ var odkazy = [
     {
         "idsjmk": [
             {
-                "linktext": "Jízdní řády",
-                "linkurl": "https://www.idsjmk.cz/linky.aspx"
+                "linktext": "Linkové jízdní řády",
+                "linkurl": "https://www.idsjmk.cz/timetables/links"
             },
             {
                 "linktext": "Ceník jízdenek",
-                "linkurl": "https://www.idsjmk.cz/cenik/Cenik.pdf"
+                "linkurl": "https://content.idsjmk.cz/cenik/Cenik.pdf"
             },
             {
-                "linktext": "Plán sítě linek",
-                "linkurl": "https://www.idsjmk.cz/mapa/Plan-site-celek.pdf"
-            },
-            {
-                "linktext": "Interaktivní mapa linek",
-                "linkurl": "https://www.idsjmk.cz/Map/Map.aspx"
+                "linktext": "Plán sítě linek JMK",
+                "linkurl": "https://content.idsjmk.cz/mapa/Plan-site-celek.pdf"
             },
             {
                 "linktext": "Přeprava kol v rámci IDS JMK",
-                "linkurl": "https://www.idsjmk.cz/cyklo.aspx"
+                "linkurl": "https://www.idsjmk.cz/a/turisti-preprava-kol.html"
             }
         ]
     },
