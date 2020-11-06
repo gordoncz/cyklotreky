@@ -62,6 +62,18 @@ var pesitrasy = [
     {
         "km": 9,
         "multiday": false,
+        "nazev": "Starý Světlov",
+        "region": "Bílé Karpaty",
+        "picture": "stary-svetlov",
+        "urldesktop": "https://mapy.cz/s/hesucogubu",
+        "urlmobile": "https://mapy.cz/s/barukejesa",
+        "known": true,
+        "new": true,
+        "infobox": ""
+    },
+    {
+        "km": 9,
+        "multiday": false,
         "nazev": "Vápencové lomy nad Líšní",
         "region": "Brno",
         "picture": "vapencove-lomy-nad-lisni",
@@ -93,6 +105,18 @@ var pesitrasy = [
         "urlmobile": "https://mapy.cz/s/gedoduzodu",
         "known": true,
         "new": false,
+        "infobox": ""
+    },
+    {
+        "km": 10,
+        "multiday": false,
+        "nazev": "Rudické propadání",
+        "region": "Brněnsko",
+        "picture": "rudicke-propadani",
+        "urldesktop": "https://mapy.cz/s/fufahejeka",
+        "urlmobile": "https://mapy.cz/s/denazevuga",
+        "known": false,
+        "new": true,
         "infobox": ""
     },
     {
@@ -146,6 +170,18 @@ var pesitrasy = [
     {
         "km": 12,
         "multiday": false,
+        "nazev": "Buchlov",
+        "region": "Haná",
+        "picture": "buchlov",
+        "urldesktop": "https://mapy.cz/s/cavevuruve",
+        "urlmobile": "https://mapy.cz/s/kucukujuhe",
+        "known": true,
+        "new": true,
+        "infobox": ""
+    },
+    {
+        "km": 12,
+        "multiday": false,
         "nazev": "Mariánské údolí k Jelenovi",
         "region": "Brno",
         "picture": "marianske-udoli-k-jelenovi",
@@ -170,9 +206,9 @@ var pesitrasy = [
     {
         "km": 12,
         "multiday": false,
-        "nazev": "Rušička u Zlobic",
+        "nazev": "Rušička na Zlobici",
         "region": "Brněnsko",
-        "picture": "rusicka-u-zlobic",
+        "picture": "rusicka-na-zlobici",
         "urldesktop": "https://mapy.cz/s/kehebetegu",
         "urlmobile": "https://mapy.cz/s/hahutujeru",
         "known": true,
@@ -213,6 +249,30 @@ var pesitrasy = [
         "urlmobile": "https://mapy.cz/s/dumoluzace",
         "known": true,
         "new": false,
+        "infobox": ""
+    },
+    {
+        "km": 14,
+        "multiday": false,
+        "nazev": "Jimramov",
+        "region": "Vysočina",
+        "picture": "jimramov",
+        "urldesktop": "https://mapy.cz/s/dumujuzuna",
+        "urlmobile": "https://mapy.cz/s/nadegupuha",
+        "known": false,
+        "new": true,
+        "infobox": ""
+    },
+    {
+        "km": 14,
+        "multiday": false,
+        "nazev": "Malý a Velký Lopeník",
+        "region": "Bílé Karpaty",
+        "picture": "maly-a-velky-lopenik",
+        "urldesktop": "https://mapy.cz/s/jehojotube",
+        "urlmobile": "https://mapy.cz/s/dobazukuvu",
+        "known": false,
+        "new": true,
         "infobox": ""
     },
     {
@@ -266,6 +326,18 @@ var pesitrasy = [
     {
         "km": 15,
         "multiday": false,
+        "nazev": "Pálava",
+        "region": "Jižní Morava",
+        "picture": "palava",
+        "urldesktop": "https://mapy.cz/s/dekuzotelo",
+        "urlmobile": "https://mapy.cz/s/fujopuvoca",
+        "known": false,
+        "new": true,
+        "infobox": "<p>Předpokládá se příjezd autem do Mikulova, odtud autobusem do startu trasy v Dolních Věstonicích a z cíle trasy v Mikulově pak odjezd zpět domů zase autem.</p>"
+    },
+    {
+        "km": 15,
+        "multiday": false,
         "nazev": "Stopy Miloše Zemana na Vysočině",
         "region": "Vysočina",
         "picture": "stopy-milose-zemana-na-vysocine",
@@ -296,7 +368,7 @@ var pesitrasy = [
         "urldesktop": "https://mapy.cz/s/benupahusu",
         "urlmobile": "https://mapy.cz/s/jopufovaze",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": ""
     },
     {
@@ -336,6 +408,18 @@ var pesitrasy = [
         "infobox": ""
     },
     {
+        "km": 16,
+        "multiday": false,
+        "nazev": "Země Keltů",
+        "region": "Východní Čechy",
+        "picture": "zeme-keltu",
+        "urldesktop": "https://mapy.cz/s/nuzacekabe",
+        "urlmobile": "https://mapy.cz/s/gurocagolo",
+        "known": false,
+        "new": true,
+        "infobox": ""
+    },
+    {
         "km": 17,
         "multiday": false,
         "nazev": "Mohelensko",
@@ -358,6 +442,18 @@ var pesitrasy = [
         "known": false,
         "new": false,
         "infobox": ""
+    },
+    {
+        "km": 21,
+        "multiday": true,
+        "nazev": "Babia hora",
+        "region": "Slovensko",
+        "picture": "babia-hora",
+        "urldesktop": "https://mapy.cz/s/felahaleco",
+        "urlmobile": "https://mapy.cz/s/cutucevuke",
+        "known": false,
+        "new": true,
+        "infobox": "<p>Žlutá trasa od horské chaty Markowe Szczawiny na vrchol Babia hora (tzv. \"Perc Akademikow\") může být uzavřena, proto je potřeba zkusit toto ověřit ještě z místních zdrojů pokud možno před výletem.</p><p>Poslední úsek žluté trasy \"Perc Akademikow\" cca 950 m před vrcholem (nad úrovní lesa) má extrémně prudké stoupání o sklonu 34%. Tato část trasy je proto na několika místech zajištěna řetězy, kovovými žebříky apod.</p><p>Trasa je na 2 dny:</p><p>Chata Slaná voda<br>(10 km)<br>Schronisko na Markowych Szczawinach<br>(11 km)<br>Chata Slaná voda</p>"
     },
     {
         "km": 26,
@@ -408,6 +504,18 @@ var pesitrasy = [
         "infobox": "<p>Z časových důvodů je nutné na začátku treku využít <a href=\"https://www.skiareal.cz/skiareal/info/letni-provoz-lanovek\" target=\"_blank\">lanovou dráhu Medvědín</a> pro dopravu mezi Špindlerovým mlýnem a vrchem Medvědín.</p><p>Trasa je na 2 dny:</p><p>Špindlerův mlýn<br>(16 km)<br>Schronisko Odrodzenie<br>(16 km)<br>Horní Malá Úpa, Pomezní Boudy</p>"
     },
     {
+        "km": 32,
+        "multiday": true,
+        "nazev": "Z podhůří na vrcholy Jeseníků",
+        "region": "Jeseníky",
+        "picture": "z-podhuri-na-vrcholy-jeseniku",
+        "urldesktop": "https://mapy.cz/s/decujofabu",
+        "urlmobile": "https://mapy.cz/s/losolataku",
+        "known": false,
+        "new": true,
+        "infobox": "<p>Z důvodu úspory času a sil je potřeba využít <a href=\"http://www.bonera.cz/lanovky-vleky.php\" target=\"_blank\">lanovku Ramzová - Čerňava - Šerák</a>, aby se nemuselo převýšení více než 500 m (10%) na téměř 5 km cesty po červené turistické značce absolvovat pěšky.</p><p>Celková délka trasy je sice 35 km, ale 3 km z toho je jízda lanovkou, takže pěšky je potřeba ujít právě jen těch 32 km.</p><p>Trasa je na 2 dny:</p><p>Staré Město pod Sněžníkem<br>(17 km)<br>Ramzová<br>(15 km)<br>Branná</p>"
+    },
+    {
         "km": 34,
         "multiday": true,
         "nazev": "Králický Sněžník",
@@ -427,7 +535,7 @@ var pesitrasy = [
         "picture": "plechy-na-sumave",
         "urldesktop": "https://mapy.cz/s/fagapohocu",
         "urlmobile": "https://mapy.cz/s/pafojosomo",
-        "known": false,
+        "known": true,
         "new": false,
         "infobox": "<p>Nutné nést s sebou pro přespání stan. Nicméně je třeba mít na zřeteli, že v NP/CHKO Šumava lze ve stanu přespat pouze na vyhrazených nouzových nocovištích.</p><p>V informačním centru Stožec si lze prohlédnout unikátní exponát vycpaného losa evropského v životní velikosti (cca 2 m).</p><p>Intenzivní stoupání se sklonem 24 % na cca 1 km dlouhém úseku od Plešného jezera k Pomníku Adalberta Stiftera.</p><p>Trasa je na 3 dny:</p><p>Ovesná<br>(13 km)<br>Nouzové nocoviště Pod Plešným jezerem<br>(15 km)<br>Nouzové nocoviště Nové Údolí<br>(8 km)<br>Černý Kříž</p>"
     },
@@ -478,6 +586,18 @@ var pesitrasy = [
         "known": false,
         "new": false,
         "infobox": "<p>Trasu lze absolvovat pouze v období od 15.7. do 15.11., protože červená turistická značka od zaniklé osady Javoří Pila až k Rozhledně Poledník je mimo toto období uzavřena z důvodu ochrany přírody.</p><p>Kromě startu trasy na Kvildě je pro přenocování počítáno se stanem a jsou podle toho vyhledána vhodná místa.</p><p>Doprava tam i zpět je zajištěna autobusovou linkou. Při cestě tam je možné vystoupit o něco dříve v zastávce Borová Lada, Svinná Lada, prohlédnout si Chalupskou slať a Soví voliéry a poté večer nastoupit na další autobus stejné linky a dojet do startu trasy na Kvildě.</p><p>Trasa je na 3 dny:</p><p>Kvilda<br>(18 km)<br>Autocamping Antýgl<br>(16 km)<br>Nouzové nocoviště Poledník<br>(9 km)<br>Veřejné tábořiště Prášily</p>"
+    },
+    {
+        "km": 48,
+        "multiday": true,
+        "nazev": "Javorníky",
+        "region": "Beskydy",
+        "picture": "javorniky",
+        "urldesktop": "https://mapy.cz/s/gubokohefu",
+        "urlmobile": "https://mapy.cz/s/datotunevo",
+        "known": false,
+        "new": true,
+        "infobox": "<p>Pro snazší cestování je nejlepší přijet autem do Vsetína a odtud potom dále do startu a z cíle trasy již osobním vlakem.</p><p>Trasa je na 3 dny:</p><p>Lužná u Vsetína<br>(15 km)<br>Pulčín<br>(18 km)<br>Horský hotel Portáš<br>(15 km)<br>Velké Karlovice zastávka</p>"
     },
     {
         "km": 50,

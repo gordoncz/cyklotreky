@@ -127,7 +127,7 @@ var cyklotrasy = [
         "picture": "zebetin",
         "urldesktop": "https://mapy.cz/s/godocurasa",
         "urlmobile": "https://mapy.cz/s/hacolezava",
-        "known": false,
+        "known": true,
         "new": true,
         "infobox": ""
     },
@@ -367,7 +367,7 @@ var cyklotrasy = [
         "picture": "tankova-bitva-u-orechova",
         "urldesktop": "https://mapy.cz/s/cavejojume",
         "urlmobile": "https://mapy.cz/s/luborufuge",
-        "known": false,
+        "known": true,
         "new": true,
         "infobox": ""
     },
@@ -1111,7 +1111,7 @@ var cyklotrasy = [
         "picture": "nove-mlyny",
         "urldesktop": "https://mapy.cz/s/nuganomajo",
         "urlmobile": "https://mapy.cz/s/kumuceracu",
-        "known": false,
+        "known": true,
         "new": false,
         "infobox": ""
     },

@@ -114,10 +114,6 @@ var odkazy = [
     {
         "bikes": [
             {
-                "linktext": "Velo Hanák",
-                "linkurl": "https://www.velohanak.cz/"
-            },
-            {
                 "linktext": "RK Cyklos",
                 "linkurl": "https://www.rkcyklos.cz/"
             },
@@ -126,12 +122,16 @@ var odkazy = [
                 "linkurl": "https://www.kola-online.cz/"
             },
             {
-                "linktext": "Moxma",
-                "linkurl": "https://www.moxma.cz/"
+                "linktext": "KupKolo",
+                "linkurl": "https://www.kupkolo.cz/"
             },
             {
                 "linktext": "KoloShop",
                 "linkurl": "https://www.koloshop.cz/"
+            },
+            {
+                "linktext": "Moxma",
+                "linkurl": "https://www.moxma.cz/"
             },
             {
                 "linktext": "Cyklopoint Merida",
