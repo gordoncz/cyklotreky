@@ -1,7 +1,7 @@
 // hlavní div pro obsah přeměníme na variable pro usnadnění psaní kódu
 var seznamTras = document.getElementById("seznamTras");
 
-// obsah div obsahuje placeholder text "Loading...", takže tímto ten text smažeme
+// obsah div obsahuje placeholder text "Načítám trasy...", takže tímto ten text smažeme
 seznamTras.innerHTML = "";
 
 

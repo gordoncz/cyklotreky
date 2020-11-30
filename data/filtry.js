@@ -1,7 +1,23 @@
 // definování variables pro hlavní elementy na stránce
 var trasy = document.getElementById("seznamTras");
 var trasa = trasy.getElementsByClassName("trasaWrapper");
+var celkemTras = trasa.length;
 var pocitadloDiv = document.getElementById("pocitadloTras");
+
+// variables pro rendering kružnice do správného divu na stránce
+var kruhDiv = document.getElementById('pocitadloKruh');
+var kruznice = kruhDiv.getContext('2d');
+
+// průměr kružnice (v px) je jen pro potřeby následného výpočtu x,y souřadnic středu kruhu
+// ve skutečnosti musí být průměr kružnice definovaný přímo v html tagu <canvas> na stránce jako čtverec o stranách x=px, y=px
+// takže toto číslo je jen kopie hodnot z html tagu
+var prumerKruznice = 60;
+// poloměr kružnice je pak logicky polovina průměru
+var polomerKruznice = prumerKruznice / 2;
+// a souřadnice x a y pro střed kružnice jsou tedy stejně vzdálené od bodu wrapper divu x=0,y=0 (position: absolute) jako poloměr kružnice
+var stredX = polomerKruznice;
+var stredY = polomerKruznice;
+
 
 
 // funkce pro filtrování tras podle jejich délky
@@ -154,6 +170,62 @@ function countTracks() {
 
     // funkce vezme hodnotu této variable a vloží ji jako obsah divu počítadla na stránce
     pocitadloDiv.innerText = trasyZobrazeno;
+
+    // výpočet procenta zobrazených tras z celkového počtu (zaokrouhleno na celé číslo)
+    var procentoTras = Math.round(trasyZobrazeno / celkemTras * 100);
+    // převod tohoto procenta na stupně (*3,6), zarovnání na "sever" (-90), zaokrouhlení na celé číslo
+    // a toto číslo (variable) nám potom dá potřebnou souřadnici "x" pro výpočet konečného stupně vykreslení kruhu
+    // (příklady: 0% == -90° / 1% == -86° / 25% == 0° / 50% == 90° / 75% == 180° / 100% == 270°)
+    var konecKruhu = Math.round(procentoTras * 3.6 - 90);
+    // console.log(procentoTras + "% / " + konecKruhu);
+    // spuštění funkce pro re-rendering kružnice, aby se zobrazil oblouk xx° podle podílu aktuálně zobrazených tras
+    vykresleniKruznice(konecKruhu);
+
+    // tento IF zajistí, že při vyfiltrování 0 tras (tj. žádná nebude na stránce zobrazena)
+    // se jako pozadí stránky objeví buď text (pro mobily) nebo malý EasterEgg obrázek pinup girl (pro PC)
+    // rozlišení zobrazení mobil vs. PC se provádí už přes CSS
+    if (pocitadloDiv.innerText == 0) {
+        trasy.classList.add("noTracks");
+    } else {
+        trasy.classList.remove("noTracks");
+    }
+}
+
+// renderování kruhu okolo počtu tras podle toho, jaký je poměr zobrazených vs. celkových tras (parametr "x" převzatý z funkce countTracks)
+function vykresleniKruznice(x) {
+    // helper funkce umožňující používání stupňů pro definici rozsahu kruhu
+    // protože nativně pracuje canvas pro kružnice asi v radianech
+    function toRadians(deg) {
+        return deg * Math.PI / 180
+    }
+
+    // nutnost před re-renderingem vyčistit <canvas> od předchozí renderované kružnice
+    // jinak by byly problémy se zobrazením nové kružnice
+    // method je clearRect(x,y,width,height), kde x,y jsou souřadnice počátečního bodu <canvas>, odkud se začne mazat
+    // a width a height jsou horizontální a vertikální vzdálenosti od počátečního bodu <canvas>
+    // což dohromady definuje obdélník oblasti z <canvas>, která se bude mazat
+    kruznice.clearRect(0, 0, prumerKruznice, prumerKruznice);
+
+    // barva výplně renderované kružnice ("#0a7fe2" odpovídá --themeColor)
+    kruznice.fillStyle = "#0a7fe2";
+    // samotný rendering kružnice v rámci <canvas> elementu
+    kruznice.beginPath();
+    // začátek od středu souřadnic, které jsme definovali v předchozích variables
+    kruznice.moveTo(stredX, stredY);
+    // renderování oblouku ze středových souřadnic
+    // o vzdálenosti odpovídající poloměru kružnice
+    // z bodu "sever" (-90°, protože 0° je defaultně "východ")
+    // do bodu "x" podle počtu stupňů vypočtených z kalkulace poměru zobrazených vs. celkových tras
+    kruznice.arc(stredX, stredY, polomerKruznice, toRadians(-90), toRadians(x));
+    // pak finální čára opět do středu souřadnic
+    kruznice.lineTo(stredX, stredY);
+    // technické uzavření Path
+    kruznice.closePath();
+    // vyplnění definovanou barvou, aby to nebyla jen Path, ale Object
+    kruznice.fill();
+
+    // pozn: další kružnice či jiný prvek v tom stejném <canvas> tagu lze renderovat opakováním stejných methods na stejné variable "kruznice", jen s jinými parametry
+    // takže by to bylo znovu to stejné od kruznice.fillStyle až po kruznice.fill();
 }
 
 // funkce pro reset všech filtrů do defaultu

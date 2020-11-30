@@ -1,3 +1,7 @@
+/* ======================================================================================================== */
+/* BĚŽNÉ HTML ELEMENTY */
+
+/* global CSS variables (především tématická paleta barev webu */
 :root {
     --themeColor: #0a7fe2;
     --highlightColor: #ffa608;
@@ -6,6 +10,7 @@
     --bgLight: #282b30;
     --bgDark: #202327;
     --bgDarker: #161718;
+    --infoBox: #f6deb3;
 }
 
 html {
@@ -13,7 +18,7 @@ html {
 }
 
 body {
-    background-color: var(--bgDark);
+    background-color: var(--bgDarker);
     margin: 0px auto;
     padding: 0px;
     text-align: center;
@@ -21,6 +26,13 @@ body {
     font-size: 1em;
     font-family: 'Roboto', sans-serif;
 }
+    /* na PC je na každé stránce (kromě úvodní) vždy zobrazen vertikální posuvník, */
+    /* aby při vyfiltrování malého počtu tras horizontálně neodskakovaly prvky stránky (vč. zatržítek filtrů apod.), když se posuvník skrýval */
+    @media (pointer: fine) {
+        body:not(#prvniStranka) {
+            overflow-y: scroll;
+        }
+    }
 
 /* zamezení změny barvy u obecného odkazu (např. když a href obaluje div atd.) */
 a {
@@ -53,6 +65,7 @@ h1 {
     color: var(--themeColor);
     font-family: 'Quicksand', sans-serif;
     font-weight: 600;
+    cursor: pointer;
 }
     h1:hover {
         filter: brightness(120%);
@@ -67,7 +80,7 @@ h3 {
 
 
 /* ======================================================================================================== */
-/* index.html */
+/* ÚVODNÍ STRÁNKA S MAIN MENU */
 
 /* hlavní grid container úvodní stránky, v němž jsou další sub-divy */
 #uvodniStrankaContainer {
@@ -94,7 +107,7 @@ h3 {
 #panelMenu {
     height: 100vh;
     max-height: 100%;
-    background-color: var(--bgDark);
+    background-color: var(--bgDarker);
     grid-column: 1 / 2;
     display: grid;
     grid-template-columns: auto;
@@ -108,91 +121,106 @@ h3 {
         }
     }
 
-    /* container div jen pro samotné logo Cyklotreky */
-    #panelMenuLogo {
-        background-color: var(--bgDarker);
-        grid-row: 1 / 2;
-    }
-        #panelMenuLogo img {
-            max-height: 100%;
-            width: auto;
-            max-width: 100%;
-            height: auto;
-        }
-
-    /* container div pro hlavní menu */
-    #panelMenuContent {
-        overflow-x: hidden;
-        overflow-y: auto;
-        grid-row: 2 / 3;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-content: flex-start;
+/* container div jen pro samotné logo Cyklotreky v rámci bočního main menu panelu */
+#panelMenuLogo {
+    background-color: var(--bgDarker);
+    grid-row: 1 / 2;
+}
+    #panelMenuLogo img {
+        max-height: 100%;
+        width: auto;
+        max-width: 100%;
+        height: auto;
     }
 
-        /* jednotlivá tlačítka hlavního menu vč. unikátních obrázků na pozadí */
-        .menuItemWrapper {
-            background-color: transparent;
-            background-position: center center;
-            background-repeat: no-repeat;
-            width: 330px;
-            height: 100px;
-            margin: 10px 0px;
-            padding: 35px;
-            user-select: none;
+/* container div pro main menu items v bočním panelu */
+#panelMenuContent {
+    background-color: var(--bgDark);
+    overflow-x: hidden;
+    overflow-y: auto;
+    grid-row: 2 / 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+    /* speciální dodatečná pravidla jen pro desktopy(!), kde se bude vertikální posuvník zobrazovat jen v případě onhover */
+    @media (pointer: fine) {
+        #panelMenuContent {
+            overflow-y: hidden;
+            justify-content: flex-start;
+            padding-left: calc((100% - 400px) / 2);
         }
-            .menuItemWrapper.menuCyklo {
-                background-image: url("../img/menu-cyklo.png");
+            #panelMenuContent:hover {
+                overflow-y: auto;
             }
-            .menuItemWrapper.menuPesi {
-                background-image: url("../img/menu-pesi.png");
-            }
-            .menuItemWrapper.menuRegiony {
-                background-image: url("../img/menu-regiony.png");
-            }
-            .menuItemWrapper.menuPravidla {
-                background-image: url("../img/menu-pravidla.png");
-            }
-            .menuItemWrapper.menuOdkazy {
-                background-image: url("../img/menu-odkazy.png");
-            }
-
-        .menuItem {
-            background-color: transparent;
-            width: 320px;
-            height: 90px;
-            margin: 5px;
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Quicksand', sans-serif;
-            font-weight: 700;
-            font-size: 1.7em;
-            color: #eff9ff;
-            filter: drop-shadow(2px 2px 3px black);
-        }
-            .menuItem:hover {
-                font-size: 1.8em;
-                color: white;
-                background-color: rgba(10, 127, 226, 0.05);
-            }
-
-    /* patička pod hlavním menu obsahující číslo aktuální verze Cyklotreků */
-    #panelMenuPatka {
-        overflow: hidden;
-        background-color: var(--bgDarker);
-        font-size: 0.8em;
-        grid-row: 3 / 4;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
+
+/* jednotlivá tlačítka hlavního menu vč. unikátních obrázků na pozadí */
+/* container div pro každé main menu tlačítko */
+.menuItemWrapper {
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 330px;
+    height: 100px;
+    margin: 10px 0px;
+    padding: 35px;
+    user-select: none;
+}
+
+    /* obrázky na pozadí jednotlivých main menu tlačítek */
+    .menuItemWrapper.menuCyklo {
+        background-image: url("../img/menu-cyklo.png");
+    }
+    .menuItemWrapper.menuPesi {
+        background-image: url("../img/menu-pesi.png");
+    }
+    .menuItemWrapper.menuRegiony {
+        background-image: url("../img/menu-regiony.png");
+    }
+    .menuItemWrapper.menuPravidla {
+        background-image: url("../img/menu-pravidla.png");
+    }
+    .menuItemWrapper.menuOdkazy {
+        background-image: url("../img/menu-odkazy.png");
+    }
+
+/* klikatelný vnitřní div každého main menu tlačítka */
+.menuItem {
+    background-color: transparent;
+    width: 320px;
+    height: 90px;
+    margin: 5px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 1.7em;
+    color: #eff9ff;
+    filter: drop-shadow(2px 2px 3px black);
+}
+    .menuItem:hover {
+        font-size: 1.8em;
+        color: white;
+        background-color: rgba(10, 127, 226, 0.05);
+    }
+
+/* patička pod hlavním menu obsahující číslo aktuální verze Cyklotreků */
+#panelMenuPatka {
+    overflow: hidden;
+    background-color: var(--bgDarker);
+    font-size: 0.8em;
+    grid-row: 3 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* container div pro zobrazení random pinup bike girls */
 #panelPinup {
-    background-color: black;
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -208,7 +236,7 @@ h3 {
 
 
 /* ======================================================================================================== */
-/* společné prvky pro každou sub-stránku */
+/* SPOLEČNÉ PRVKY PRO KAŽDOU STRÁNKU (kromě úvodní stránky s main menu) */
 
 /* horní container div s logem a názvem stránky */
 #titulka {
@@ -217,41 +245,62 @@ h3 {
     top: 0px;
     position: sticky;
     padding: 10px;
-    min-height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 100;
+    min-height: 50px;
 }
 
-    #logotop {
-        background-color: var(--themeColor);
-        position: absolute;
-        top: -25px;
-        width: 40px;
-        height: 40px;
-        padding: 5px;
-        border-radius: 0px 0px 50% 50%;
-        z-index: 110;
+/* absolutně pozicovaný div pro samotné logo */
+#logotop {
+    background-color: var(--themeColor);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 50px;
+    height: 50px;
+    padding: 150px 10px 10px 10px;
+    z-index: 110;
+}
+    /* animace loga při onhover */
+    #logotop img {
+        max-height: 100%;
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.4s ease-in-out;
     }
-        #logotop img {
-            max-height: 100%;
-            width: auto;
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-        #logotop:hover {
-            top: -10px;
-        }
+    #logotop img:hover {
+        transform: rotate(-135deg);
+    }
 
-    #nazevStranky {
-        background-color: transparent;
-        margin-top: 15px;
+/* normálně float (static) pozicovaný div s názvem stránky (nadpisem) */
+#nazevStranky {
+    background-color: transparent;
+}
+
+    /* na displejích o malé šířce (např. na mobilech) se zobrazí prvky titulky trochu jinak, aby se všechny dobře vešly */
+    @media (max-width: 572px) {
+        #titulka {
+            min-height: 30px;
+        }
+        #logotop {
+            width: 30px;
+            height: 30px;
+        }
+        #nazevStranky {
+            padding: 0px 0px 0px 50px;
+        }
+        h1 {
+            font-size: 1.5em;
+        }
     }
 
 /* hlavní container div pro content stránky se zobrazením ve stylu flex containeru */
 #obsahStranky {
+    background-color: var(--bgDark);
     margin: 0px auto;
     padding: 10px 0px 30px 0px;
     display: flex;
@@ -262,6 +311,7 @@ h3 {
 
 /* hlavní container div pro content stránky s klasickým zobrazením prvků pod sebou */
 #obsahStrankyClassic {
+    background-color: var(--bgDark);
     margin: 0px auto;
     padding: 20px 0px 30px 0px;
 }
@@ -269,9 +319,9 @@ h3 {
 
 
 /* ======================================================================================================== */
-/* cyklo a pěší filtry*/
+/* CYKLO A PĚŠÍ TRASY - filtry */
 
-/* container div s filtry pro trasy */
+/* hlavní container div s filtry pro trasy */
 #filtry {
     background-color: var(--bgDarker);
     padding: 10px;
@@ -282,7 +332,7 @@ h3 {
     z-index: 50;
 }
 
-/* dropdown filtr (délka tras a region) */
+/* wrapper div pro dropdown filtry (délka tras a region) */
 .filtrNabidka {
     margin: 10px;
     display: flex;
@@ -293,6 +343,8 @@ h3 {
     width: 25%;
     max-width: 250px;
 }
+
+    /* samotný dropdown filtr - v html je to <select> tag */
     .filtrNabidka .nabidkaContainer {
         background-color: var(--bgLighter);
         font-family: inherit;
@@ -319,12 +371,14 @@ h3 {
             border: 1px solid var(--themeColor);
         }
 
-/* boolean filtr formou zatržítka (pro známé a nově přidané trasy) */
+/* wrapper div pro boolean filtr formou zatržítka (pro známé a nově přidané trasy) */
 .filtrZatrzitko {
     display: flex;
     align-items: center;
     margin: 10px;
 }
+
+    /* container <label> pro zatržítko */
     .filtrZatrzitko .zatrzitkoContainer {
         display: inline-block;
         position: relative;
@@ -333,9 +387,12 @@ h3 {
         height: 27px;
         margin-left: 5px;
     }
+
+        /* zde je nutné skrýt default vzhled systémového zatržítka <input> */
         .zatrzitkoContainer input {
             display: none;
         }
+        /* speciální formátování nového vzhledu samotného zatržítka, aby fungovalo normálně jako to systémové */
         .zatrzitkoContainer .zatrzitko {
             display: inline-block;
             width: 25px;
@@ -367,57 +424,133 @@ h3 {
                 display: block;
             }
 
-/* textový filtr hledající v názvech tras */
+/* wrapper div pro textový filtr hledající v názvech tras */
 .filtrText {
     width: 90%;
     padding: 10px 0px;
 }
-/* textový filtr hledající v názvech tras */
-#hledatNazev {
-    width: 80%;
-    max-width: 400px;
-    border: 1px solid white;
-    border-radius: 30px;
-    background-color: var(--bgLighter);
-    color: white;
-    padding: 5px 20px;
-    font-family: inherit;
-    font-size: 1em;
-    text-align: center;
+
+    /* samotný textový filtr <input> hledající v názvech tras */
+    #hledatNazev {
+        width: 80%;
+        max-width: 400px;
+        border: 1px solid white;
+        border-radius: 30px;
+        background-color: var(--bgLighter);
+        color: white;
+        padding: 5px 20px;
+        font-family: inherit;
+        font-size: 1em;
+        text-align: center;
+    }
+        #hledatNazev:focus {
+            border: 1px solid var(--themeColor);
+        }
+
+/* wrapper pro počítadlo tras (aby bylo možné zobrazit počet tras na obrazovce) */
+#pocitadloWrapper {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    bottom: -40px;
+    margin: -30px 10% 0px 10%;
+    z-index: 70;
 }
-    #hledatNazev:focus {
-        border: 1px solid var(--themeColor);
+
+    /* jeden dummy css-kruh okolo počítadla, který bude sloužit jen jako pozadí pro ten barevný dynamicky renderovaný kruh */
+    #pocitadloKruhPozadi {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 60px;
+        height: 60px;
+        margin: 0px;
+        padding: 0px;
+        background-color: var(--bgLighter);
+        border-radius: 50%;
+        font-size: 0em;
     }
 
-/* div s počítadlem tras */
-#pocitadloTras {
-    padding: 5px 20px;
-    background-color: var(--themeColor);
-    margin: 2px 10%;
-    border-radius: 15px;
-    font-family: 'Cabin', sans-serif;
-    font-weight: 600;
-    font-size: 1.3em;
-    width: 100px;
-    cursor: pointer;
-}
+    /* html kanvas pro vytvoření kruhu */
+    /* musí mít stejnou velikost a umístění, jako #pocitadloKruhPozadi, aby se tyto dva kruhy přesně překrývaly */
+    /* další parametry jsou ale stanovené pomocí javascriptu, aby se kruh generoval dynamicky podle počtu zobrazených tras na stránce */
+    #pocitadloKruh {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        /* šířka a výška musí být přímo v <canvas> tagu na html stránce, aby to fungovalo správně */
+        /* protože default poměr stran pro <canvas> je 2:1, ale pro kruh je potřeba 1:1 a přes css samotné se změna poměru neprojeví */
+        margin: 0px;
+        padding: 0px;
+    }
+
+    /* div se samotným číselným počítadlem tras */
+    #pocitadloTras {
+        position: absolute;
+        /* odsazení od top-left bodu wrapperu */
+        top: 5px;
+        left: 5px;
+        /* a tím pádem i poměrné zmenšení velikosti (aby mohl být kruh okolo vidět a nebyl překrytý celý tímto textovým divem) */
+        width: 50px;
+        height: 50px;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--bgDarker);
+        border-radius: 50%;
+        font-family: 'Cabin', sans-serif;
+        font-weight: 600;
+        font-size: 1.4em;
+        cursor: pointer;
+        user-select: none;
+        overflow: visible;
+    }
+        #pocitadloTras:hover {
+            background-color: var(--bgLight);
+        }
+        #pocitadloTras:active {
+            background-color: var(--bgDark);
+        }
 
 
 
 /* ======================================================================================================== */
-/* cyklo a pěší trasy - content stránky */
+/* CYKLO A PĚŠÍ TRASY - obsahová část speciálně jen pro tyto dvě stránky */
 
-/* container div s vygenerovaným seznamem všech tras na stránce */
+/* hlavní obsahový div s vygenerovaným seznamem všech tras na stránce */
 #seznamTras {
+    background-color: var(--bgDark);
     margin: 0px auto;
-    padding: 10px 0px 30px 0px;
+    padding: 40px 0px;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto;
 }
+    /* při zobrazení 0 tras na mobilu se zobrazí normální textový řetězec */
+    @media (pointer: coarse) {
+        #seznamTras.noTracks {
+            padding: 50px 0px 40px 0px;
+        }
+        .noTracks::before {
+            content: "žádná trasa";
+            color: var(--highlightColor);
+        }
+    }
+    /* při zobrazení 0 tras na PC se zobrazí EasterEgg pinup girl jako pozadí takto prázdné stránky */
+    @media (pointer: fine) {
+        .noTracks {
+            background-image: url("../img/notrackfound.png");
+            min-height: 300px;
+        }
+    }
 
-/* container div pro každou trasu, v němž pak jsou další části informací o trase */
-/* (včetně infoboxu) */
+/* wrapper div pro každou trasu, v němž pak jsou další části informací o trase */
+/* pozn: wrapper je včetně infoboxu */
 .trasaWrapper {
     width: 452px;
     margin: 10px;
@@ -429,7 +562,8 @@ h3 {
             max-width: 352px;
         }
     }
-    /* zde jsou specifické classy, které zařizují skrývání/zobrazování trasaWrapper v seznamu tras pro každý filtr zvlášť*/
+
+    /* zde jsou specifické classy, které zařizují skrývání/zobrazování trasaWrapper v seznamu tras pro každý filtr zvlášť */
     /* aby se spolu tyto jednotlivé filtry mohly kombinovat */
     .filtrDelka, .filtrRegion, .filtrKnown, .filtrNew, .filtrNazev {
         display: none;
@@ -447,6 +581,7 @@ h3 {
         grid-template-rows: minmax(100px, auto);
         z-index: 5;
     }
+        /* dodatečné css stylování pro mobily, reflektující fakt, že na mobilech se u tras nezobrazují miniatury reprezentujících fotek */
         @media (pointer: coarse) {
             .trasaContainer {
                 grid-template-columns: minmax(auto, 280px) 70px;
@@ -470,6 +605,7 @@ h3 {
                 "km pic name"
                 "km pic region";
         }
+            /* dodatečné css stylování pro mobily, reflektující fakt, že na mobilech se u tras nezobrazují miniatury reprezentujících fotek */
             @media (pointer: coarse) {
                 .trasaUrlContainer {
                     grid-template-columns: 50px minmax(auto, 300px);
@@ -549,7 +685,7 @@ h3 {
                 font-size: 1.3em;
             }
 
-            /* div pro zobrazení regionu, v jakém daná trasa je přiřazena */
+            /* div pro zobrazení regionu, do jakého je daná trasa přiřazena */
             .regionContainer {
                 background-color: transparent;
                 color: grey;
@@ -582,7 +718,7 @@ h3 {
             flex-direction: column-reverse;
         }
 
-            /* viditelná část tlačítka */
+            /* viditelná grafická část tlačítka */
             .infoButtonVisual {
                 background-color: #c38e4f;
                 color: black;
@@ -595,26 +731,77 @@ h3 {
                 filter: brightness(80%);
             }
 
-    /* container div pro content "vysouvacího" infoboxu */
+    /* container div pro obsah "vysouvacího" infoboxu */
     .infoboxContainer {
-        /* display: none; musí být přes JavaScript */
+        /* display: none; == musí být přes JavaScript */
         width: calc(100% - 100px);
         height: auto;
         margin: 0px auto;
         padding: 20px 35px 30px;
-        background-color: #f6deb3;
+        background-color: var(--infoBox);
         color: black;
         border-radius: 0px 0px 15px 15px;
         z-index: 1;
         text-align: justify;
     }
 
+        /* záporné odsazení prvního řádku každého odstavce s ikonkou */
+        /* (proto, aby ikonka nezasahovala do prvního řádku odstavce, ale byla před ním) */
+        .infoboxContainer p[class^="ib"] {
+            text-indent: -24px; /* tato hodnota musí být součet šířky ::before ikony (16px) a jejího odsazení (margin-right) */
+        }
+        /* speciální formátování pro odstavec bez ikonky zobrazující jednotlivé denní km a checkpointy */
+        .infoboxContainer p:not([class^="ib"]) {
+            background-color: #e8cc9d;
+            background-image: linear-gradient(90deg, #e8cc9d, var(--infoBox));
+            margin-left: -10px;
+            margin-right: -10px;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: left;
+        }
+        /* jednotlivé classy pro odstavce textu podle typu jejich sdělení v rámci infoboxu */
+        /* speciální formát pro odstavec o tom, kolik dní má trasa (pro lepší grafické rozlišení) */
+        .ibMultiday {
+            font-weight: bold;
+            text-align: left;
+        }
+        /* společné formátování všech vektorových ikonek */
+        .ibInfo::before, .ibTransport::before, .ibWarning::before, .ibTimelimit::before, .ibRestriction::before, .ibMultiday::before, .ibSleep::before, .ibSlope::before {
+            margin-right: 8px;
+        }
+        /* vektorové obrázky ikonek pro jednotlivé typy sdělení */
+        .ibInfo::before {
+            content: url("../img/ib-info.svg");
+        }
+        .ibTransport::before {
+            content: url("../img/ib-transport.svg");
+        }
+        .ibWarning::before {
+            content: url("../img/ib-warning.svg");
+        }
+        .ibTimelimit::before {
+            content: url("../img/ib-timelimit.svg");
+        }
+        .ibRestriction::before {
+            content: url("../img/ib-restriction.svg");
+        }
+        .ibMultiday::before {
+            content: url("../img/ib-multiday.svg");
+        }
+        .ibSleep::before {
+            content: url("../img/ib-sleep.svg");
+        }
+        .ibSlope::before {
+            content: url("../img/ib-slope.svg");
+        }
+
 
 
 /* ======================================================================================================== */
-/* externí odkazy */
+/* EXTERNÍ ODKAZY */
 
-/* container div obalující každou kategorii odkazů */
+/* wrapper div obalující každou skupinu odkazů */
 .linksWrapper {
     width: 90%;
     min-width: 250px;
@@ -623,47 +810,47 @@ h3 {
     margin: 30px 10px;
 }
 
-    /* div pro ikonku reprezentující kategorii odkazů */
-    .linksHeader {
-        height: 50px;
-        background-position: center top;
-        background-repeat: no-repeat;
-    }
+/* div pro title image reprezentující danou skupinu odkazů */
+.linksHeader {
+    height: 50px;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
 
-    /* div pro content kategorie odkazů (tj. jednotlivé textové odkazy na externí stránky) */
-    .linksBody {
-        padding: 5px 5px 15px;
-        border-radius: 0px 0px 15px 15px;
-        border-top: 3px solid var(--bgLight);
-    }
+/* div pro obsah skupiny odkazů (tj. jednotlivé textové odkazy na externí stránky) */
+.linksBody {
+    padding: 5px 5px 15px;
+    border-radius: 0px 0px 15px 15px;
+    border-top: 3px solid var(--bgLight);
+}
 
 
 
 /* ======================================================================================================== */
-/* mapa regionů */
+/* MAPA REGIONŮ */
 
-/* container div pro obalení a hrefu, aby nepřetékal na 100% délky řádku prohlížeče */
+/* wrapper div pro obalení a hrefu, aby nepřetékal na 100% délky řádku prohlížeče */
 .mapaRegionuWrapper {
     width: 90%;
     max-width: 600px;
     margin: 20px auto;
 }
 
-    /* stylopis pro samotné tlačítko pro každou velikost mapy regionů */
-    .mapaRegionu {
-        background-color: var(--bgLight);
-        border: 1px solid black;
-        border-radius: 15px;
-        padding: 5px 10px;
+/* stylopis pro samotná tlačítka pro jednotlivé velikosti mapy regionů */
+.mapaRegionu {
+    background-color: var(--bgLight);
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 5px 10px;
+}
+    .mapaRegionu:hover {
+        filter: brightness(120%);
     }
-        .mapaRegionu:hover {
-            filter: brightness(120%);
-        }
 
 
 
 /* ======================================================================================================== */
-/* pravidla v přírodě */
+/* PRAVIDLA V PŘÍRODĚ */
 
 /* container div pro každou z kategorií přírody */
 .pravidlaContainer {
@@ -697,7 +884,7 @@ h3 {
         }
     }
 
-/* container div pro jednotlivé ikonky pravidel v přírodě */
+/* container div pro ikonky pravidel v přírodě */
 .pravidlaRules {
     width: 40%;
     min-width: 200px;
@@ -709,7 +896,7 @@ h3 {
     box-sizing: border-box;
 }
 
-    /* čtvercový malý div každé jednotlivé ikonky pravidel v přírodě */
+    /* čtvercový malý div každou jednotlivou ikonku pravidel v přírodě */
     /* tooltip je řešený formou ::after pseudoelementu pro každé pravidlo */
     /* tento ::after pseudoelement je defaultně display:none a zobrazuje se jen při :hover akci */
     .pravidloDiv {
@@ -723,169 +910,55 @@ h3 {
             background-color: var(--highlightColor);
         }
 
+    /* vektorové obrázky pro samotné ikonky */
+    /* chození pěšky */
     .pPesky {
         background-image: url("../img/rules-pesky.svg");
     }
-
+    /* jízda na kole */
     .pKolo {
         background-image: url("../img/rules-kolo.svg");
     }
-
+    /* stanování (táboření) */
     .pStan {
         background-image: url("../img/rules-stan.svg");
     }
-
+    /* bivakování (spaní pod širákem) */
     .pBivak {
         background-image: url("../img/rules-bivak.svg");
     }
 
+    /* společné vlastnosti pro všechna zbarvení pozadí divů ikonek pravidel v přírodě */
+    .pANO, .pNE, .pVsude, .pCesty, .pTrasy, .pLaw, .pNekde {
+        position: relative;
+    }
+    /* jednotlivé barvy pozadí divů s ikonkami pravidel */
     .pANO {
         background-color: rgb(0, 102, 0);
-        position: relative;
     }
-        .pANO::after {
-            position: absolute;
-            top: -30px;
-            left: -161px;
-            width: 350px;
-            display: none;
-            padding: 2px;
-            border-radius: 10px;
-            background-color: var(--bgDarker);
-            border-bottom: 1px solid var(--highlightColor);
-            border-top: 1px solid var(--highlightColor);
-            border-left: 4px solid var(--highlightColor);
-            border-right: 4px solid var(--highlightColor);
-            content: "povoleno";
-        }
-        .pANO:hover::after {
-            display: block;
-        }
-
     .pNE {
         background-color: rgb(119, 0, 0);
-        position: relative;
     }
-        .pNE::after {
-            position: absolute;
-            top: -30px;
-            left: -161px;
-            width: 350px;
-            display: none;
-            padding: 2px;
-            border-radius: 10px;
-            background-color: var(--bgDarker);
-            border-bottom: 1px solid var(--highlightColor);
-            border-top: 1px solid var(--highlightColor);
-            border-left: 4px solid var(--highlightColor);
-            border-right: 4px solid var(--highlightColor);
-            content: "zakázáno";
-        }
-        .pNE:hover::after {
-            display: block;
-        }
-
     .pVsude {
         background-color: rgb(0, 102, 0);
-        position: relative;
     }
-        .pVsude::after {
-            position: absolute;
-            top: -30px;
-            left: -161px;
-            width: 350px;
-            display: none;
-            padding: 2px;
-            border-radius: 10px;
-            background-color: var(--bgDarker);
-            border-bottom: 1px solid var(--highlightColor);
-            border-top: 1px solid var(--highlightColor);
-            border-left: 4px solid var(--highlightColor);
-            border-right: 4px solid var(--highlightColor);
-            content: "všude v krajině";
-        }
-        .pVsude:hover::after {
-            display: block;
-        }
-
     .pCesty {
         background-color: rgb(104, 88, 0);
-        position: relative;
     }
-        .pCesty::after {
-            position: absolute;
-            top: -30px;
-            left: -161px;
-            width: 350px;
-            display: none;
-            padding: 2px;
-            border-radius: 10px;
-            background-color: var(--bgDarker);
-            border-bottom: 1px solid var(--highlightColor);
-            border-top: 1px solid var(--highlightColor);
-            border-left: 4px solid var(--highlightColor);
-            border-right: 4px solid var(--highlightColor);
-            content: "jen po cestách";
-        }
-        .pCesty:hover::after {
-            display: block;
-        }
-
     .pTrasy {
         background-color: rgb(141, 52, 0);
-        position: relative;
     }
-        .pTrasy::after {
-            position: absolute;
-            top: -30px;
-            left: -161px;
-            width: 350px;
-            display: none;
-            padding: 2px;
-            border-radius: 10px;
-            background-color: var(--bgDarker);
-            border-bottom: 1px solid var(--highlightColor);
-            border-top: 1px solid var(--highlightColor);
-            border-left: 4px solid var(--highlightColor);
-            border-right: 4px solid var(--highlightColor);
-            content: "jen po značených trasách nebo silnicích";
-        }
-        .pTrasy:hover::after {
-            display: block;
-        }
-
     .pLaw {
         background-color: rgb(0, 73, 95);
-        position: relative;
     }
-        .pLaw::after {
-            position: absolute;
-            top: -30px;
-            left: -161px;
-            width: 350px;
-            display: none;
-            padding: 2px;
-            border-radius: 10px;
-            background-color: var(--bgDarker);
-            border-bottom: 1px solid var(--highlightColor);
-            border-top: 1px solid var(--highlightColor);
-            border-left: 4px solid var(--highlightColor);
-            border-right: 4px solid var(--highlightColor);
-            content: "upraveno danou vyhláškou";
-        }
-        .pLaw:hover::after {
-            display: block;
-        }
-
     .pNekde {
         background-color: rgb(141, 52, 0);
-        position: relative;
     }
-        .pNekde::after {
+
+        /* společné vlastnosti pro tooltipy všech ikonek s pravidly v přírodě */
+        .pANO::after, .pNE::after, .pVsude::after, .pCesty::after, .pTrasy::after, .pLaw::after, .pNekde::after {
             position: absolute;
             top: -30px;
-            left: -161px;
-            width: 350px;
             display: none;
             padding: 2px;
             border-radius: 10px;
@@ -894,11 +967,78 @@ h3 {
             border-top: 1px solid var(--highlightColor);
             border-left: 4px solid var(--highlightColor);
             border-right: 4px solid var(--highlightColor);
+        }
+        /* rozměry tooltip boxu (podle délky textu v něm obsaženém */
+        /* pozn: pozice "left" se vypočítá podle vzorce ( width + 12 [což je padding + border] - 40 [šířka ikony] ) / 2 */
+        /* to následně zajistí, že bude tooltip zobrazený přesně uprostřed své šířky nad prostředkem dané ikony */
+        /* krátký */
+        .pANO::after, .pNE::after {
+            left: -61px;
+            width: 150px;
+        }
+        /* střední */
+        .pVsude::after, .pCesty::after, .pLaw::after {
+            left: -86px;
+            width: 200px;
+        }
+        /* dlouhý */
+        .pTrasy::after, .pNekde::after {
+            left: -111px;
+            width: 250px;
+        }
+        /* texty v jednotlivých typech tooltip boxů */
+        .pANO::after {
+            content: "povoleno";
+        }
+        .pNE::after {
+            content: "zakázáno";
+        }
+        .pVsude::after {
+            content: "všude v krajině";
+        }
+        .pCesty::after {
+            content: "jen po cestách";
+        }
+        .pTrasy::after {
+            content: "jen po značených trasách";
+        }
+        .pLaw::after {
+            content: "podle vyhlášky";
+        }
+        .pNekde::after {
             content: "jen na vyhrazených místech";
         }
-        .pNekde:hover::after {
-            display: block;
-        }
+
+            /* při onhover se tooltip box zobrazí, jinak je skrytý */
+            .pANO:hover::after, .pNE:hover::after, .pVsude:hover::after, .pCesty:hover::after, .pTrasy:hover::after, .pLaw:hover::after, .pNekde:hover::after {
+                display: block;
+            }
+
+
+
+/* ======================================================================================================== */
+/* PATIČKA KAŽDÉ STRÁNKY (s výjimkou úvodní stránky s main menu, která má svou vlastní specifickou patičku) */
+
+/* wrapper div patičky */
+#patkaStranky {
+    background-color: var(--bgDarker);
+    min-height: 30px;
+    font-size: 0.8em;
+    color: grey;
+    padding: 5px;
+}
+
+/* obsahový div s informacemi/copyrightem v patičce */
+.patkaInfo {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+    /* pravidla pro B&W mini-logo v patičce */
+    .patkaInfo img {
+        margin: 0px 5px;
+    }
 
 
 

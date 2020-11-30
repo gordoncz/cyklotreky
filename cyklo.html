@@ -7,23 +7,24 @@
 
     <title>Cyklovýlety - Cyklotreky</title>
 
-    <link href="data/favicon.png" rel="icon">
+    <link rel="icon" href="data/favicon.png">
 
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@600&text=1234567890&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="data/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin:wght@600&text=1234567890&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <link rel="stylesheet" href="data/styles.css">
 </head>
 
 <body>
 
     <!-- Úvodní ovládací divy nahoře na stránce -->
-    <div id="zalPageTop"></div>
     <div id="titulka">
         <div id="logotop"><a href="index.html"><img src="img/logo-small.png" alt="logo"></a></div>
-        <div id="nazevStranky"><a href="#zalPageTop"><h1>CYKLOVÝLETY</h1></a></div>
+        <div id="nazevStranky"><h1 onclick="backToTop()">CYKLOVÝLETY</h1></div>
     </div>
+
+    <!-- Container divy pro filtry tras -->
     <div id="filtry">
         <div class="filtrNabidka">
             Délka tras:
@@ -66,10 +67,18 @@
         <div class="filtrZatrzitko">Jen neabsolvované: <label for="onlyUnknown" class="zatrzitkoContainer"><input type="checkbox" id="onlyUnknown" onclick="filterByKnown()"><span class="zatrzitko"></span></label></div>
         <div class="filtrZatrzitko">Jen nové: <label for="onlyNew" class="zatrzitkoContainer"><input type="checkbox" id="onlyNew" onclick="filterByNew()"><span class="zatrzitko"></span></label></div>
         <div class="filtrText"><input type="text" id="hledatNazev" onkeyup="filterByName()" onclick="resetTextu()" placeholder="Filtrovat podle názvu trasy..."></div>
-        <div id="pocitadloTras" onclick="resetFilters()">x</div>
+        <div id="pocitadloWrapper">
+            <div id="pocitadloKruhPozadi"></div>
+            <canvas id="pocitadloKruh" width="60px" height="60px"></canvas>
+            <div id="pocitadloTras" onclick="resetFilters()">x</div>
+        </div>
     </div>
+
     <!-- Hlavní div s obsahem stránky, kde budou zobrazeny jednotlivé trasy -->
-    <div id="seznamTras">Loading...</div>
+    <div id="seznamTras">Načítám trasy...</div>
+
+    <!-- Div pro patičku stránky -->
+    <div id="patkaStranky"></div>
 
 
     <!-- JavaScript -->
@@ -78,9 +87,11 @@
     <script src="data/cyklo.js"></script>
     <script>var slozka = "cyklo";</script>
     <script>var typtrasy = cyklotrasy; var pesitrasy = "";</script>
-    
+
     <script src="data/trasy.js"></script>
     <script src="data/filtry.js"></script>
+    <script>backToTop = () => window.scroll(0, 0);</script>
+    <script src="data/patka.js"></script>
 
 </body>
 

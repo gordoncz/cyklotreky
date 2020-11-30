@@ -7,23 +7,23 @@
 
     <title>Mapa regionů - Cyklotreky</title>
 
-    <link href="data/favicon.png" rel="icon">
+    <link rel="icon" href="data/favicon.png">
 
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@600&text=1234567890&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="data/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin:wght@600&text=1234567890&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <link rel="stylesheet" href="data/styles.css">
 </head>
 
 <body>
 
     <!-- Úvodní ovládací divy nahoře na stránce -->
-    <div id="zalPageTop"></div>
     <div id="titulka">
         <div id="logotop"><a href="index.html"><img src="img/logo-small.png" alt="logo"></a></div>
-        <div id="nazevStranky"><a href="#zalPageTop"><h1>MAPA REGIONŮ</h1></a></div>
+        <div id="nazevStranky"><h1 onclick="backToTop()">MAPA REGIONŮ</h1></div>
     </div>
+
     <!-- Hlavní div s pro obsah stránky -->
     <div id="obsahStrankyClassic">
 
@@ -56,6 +56,14 @@
         </div>
 
     </div>
+
+    <!-- Div pro patičku stránky -->
+    <div id="patkaStranky"></div>
+
+
+    <!-- JavaScript -->
+    <script>backToTop = () => window.scroll(0, 0);</script>
+    <script src="data/patka.js"></script>
 
 </body>
 

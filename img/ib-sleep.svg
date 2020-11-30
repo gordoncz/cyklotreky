@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="sleep" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+<rect x="1" y="3" fill="#74008C" width="2" height="11"/>
+<rect x="2.47" y="8.749" transform="matrix(1 0.0022 -0.0022 1 0.0217 -0.0196)" fill="#74008C" width="12.761" height="2"/>
+<rect x="13.22" y="10" fill="#74008C" width="2" height="4"/>
+<circle fill="#74008C" cx="5.321" cy="6.258" r="1.742"/>
+<path fill="#74008C" d="M8,8c0,0,0-1.873,0-3.155c6,0,7.23-0.328,7.23,3.155H8z"/>
+</svg>
