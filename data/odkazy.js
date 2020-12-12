@@ -10,12 +10,8 @@ var odkazy = [
                 "linkurl": "https://mapy.cz/turisticka?planovani-trasy&x=15.5182849&y=49.8054711&z=8"
             },
             {
-                "linktext": "Zastávky rychlíků (Morava západ)",
-                "linkurl": "https://is.gd/RxZ2DU"
-            },
-            {
-                "linktext": "Zastávky rychlíků (Morava východ)",
-                "linkurl": "https://is.gd/Ew7PVM"
+                "linktext": "Zastávky a linky rychlíků a dálkových vlaků",
+                "linkurl": "https://mapy.cz/s/nuvucacoje"
             }
         ]
     },
@@ -72,6 +68,10 @@ var odkazy = [
             {
                 "linktext": "Mapa železniční sítě",
                 "linkurl": "http://www.jizdni-rady.nanadrazi.cz/images/mapy/zeleznicni_mapa_cr_2019.gif"
+            },
+            {
+                "linktext": "Linkové vedení dálkových vlaků",
+                "linkurl": "img/linky_dalkovych_vlaku.pdf"
             },
             {
                 "linktext": "Mapa železničních tratí obsluhovaných alternativními dopravci od 15.12.2019",

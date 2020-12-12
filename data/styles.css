@@ -59,6 +59,12 @@ p a {
         color: var(--linkColor);
     }
 
+em {
+    color: var(--highlightColor);
+    text-decoration: none;
+    font-style: normal;
+}
+
 /* nadpisy každé stránky */
 h1 {
     margin: 0px;
@@ -71,10 +77,37 @@ h1 {
         filter: brightness(120%);
     }
 
+/* nadpis využitý pro hlavní sekce statistiky */
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.8em;
+    color: var(--themeColor);
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: 900px;
+}
+
 /* nadpis využitý pro velikosti mapy regionů */
 h3 {
     font-family: 'Open Sans', sans-serif;
     color: var(--linkColor);
+}
+
+/* menší nadpisy, hodící se např. pro sub-sekce ve statistikách */
+h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+    font-weight: normal;
+    color: var(--highlightColor);
+    margin-top: 40px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: 900px;
 }
 
 
@@ -184,6 +217,9 @@ h3 {
     }
     .menuItemWrapper.menuOdkazy {
         background-image: url("../img/menu-odkazy.png");
+    }
+    .menuItemWrapper.menuStatistika {
+        background-image: url("../img/menu-statistika.png");
     }
 
 /* klikatelný vnitřní div každého main menu tlačítka */
@@ -308,6 +344,12 @@ h3 {
     justify-content: space-evenly;
     align-content: flex-start;
 }
+    #obsahStranky > p {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        max-width: 900px;
+    }
 
 /* hlavní container div pro content stránky s klasickým zobrazením prvků pod sebou */
 #obsahStrankyClassic {
@@ -315,6 +357,25 @@ h3 {
     margin: 0px auto;
     padding: 20px 0px 30px 0px;
 }
+    #obsahStrankyClassic > p {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        max-width: 900px;
+    }
+
+/* hlavní container div pro obsah stránky se statistikou */
+#obsahStrankyStats {
+    background-color: var(--bgDark);
+    margin: 0px auto;
+    padding: 20px 0px 30px 0px;
+}
+    #obsahStrankyStats > p {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        max-width: 900px;
+    }
 
 
 
@@ -688,7 +749,7 @@ h3 {
             /* div pro zobrazení regionu, do jakého je daná trasa přiřazena */
             .regionContainer {
                 background-color: transparent;
-                color: grey;
+                color: gray;
                 border-radius: 0px 0px 15px 0px;
                 grid-area: region;
                 padding: 5px 90px 0px 12px;
@@ -881,6 +942,7 @@ h3 {
         .pravidlaOblast {
             text-align: inherit;
             justify-content: center;
+            width: 100%;
         }
     }
 
@@ -1017,6 +1079,347 @@ h3 {
 
 
 /* ======================================================================================================== */
+/* STATISTIKA */
+
+/* hlavní container div s přepínači pro zobrazení statistik */
+#prepinace {
+    background-color: var(--bgDarker);
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+}
+
+/* wrapper div pro samotná tlačítka (aby se držela pohromadě) */
+#tlacitkaStatsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 600px;
+}
+
+    /* větší tlačítko pro celkový souhrn */
+    #tlacitkoStatsSouhrn {
+        box-sizing: border-box;
+        width: 100%;
+        height: auto;
+        min-height: 32px;
+        background-color: var(--bgDark);
+        border: 1px solid white;
+        border-radius: 10px;
+        margin: 5px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    /* menší tlačítka pro cyklo a pěší statistiky (společné formátování) */
+    #tlacitkoStatsCyklo, #tlacitkoStatsPesi {
+        box-sizing: border-box;
+        width: calc(50% - 5px);
+        height: auto;
+        min-height: 32px;
+        background-color: var(--bgDark);
+        border: 1px solid white;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+        cursor: pointer;
+    }
+    /* zvláštní formáty pro cyklo a pěší tlačítko */
+    /* (protože cyklo je vlevo a pěší je vpravo */
+    #tlacitkoStatsCyklo {
+        margin: 5px 5px 5px 0px;
+    }
+    #tlacitkoStatsPesi {
+        margin: 5px 0px 5px 5px;
+    }
+
+        /* onhover pravidla pro tlačítka */
+        #tlacitkoStatsSouhrn:hover, #tlacitkoStatsCyklo:hover, #tlacitkoStatsPesi:hover {
+            border-color: var(--themeColor);
+            background-color: var(--bgLight);
+        }
+
+        /* speciální javascriptem přidělovaná class pro zvýraznění aktuálně aktivních dat statistiky */
+        #tlacitkoStatsSouhrn.tlacitkoAktivni, #tlacitkoStatsCyklo.tlacitkoAktivni, #tlacitkoStatsPesi.tlacitkoAktivni {
+            border-color: var(--themeColor);
+            background-color: var(--themeColor);
+            cursor: default;
+        }
+
+/* CELKOVÝ SOUHRN/PŘEHLED */
+
+/* main div pro celý "celkový souhrn" */
+#statsSouhrnMain {
+    width: 100%;
+    margin: 0px auto;
+}
+
+/* wrapper div pro statistiky o počtech tras, který umožní flex zobrazení */
+.statsAmountsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 855px;
+    margin: 0px auto;
+}
+
+/* container div pro každou z položek souhrnných dat zobrazujících počty tras */
+.statsAmountsContainer {
+    width: 30%;
+    background-color: var(--bgLight);
+    border-radius: 15px;
+}
+
+/* textový popisek položky nad číselnou hodnotou */
+.statsAmountsPopisek {
+    width: 100%;
+    display: block;
+    padding: 15px;
+    box-sizing: border-box;
+    color: gray;
+}
+
+/* číselná hodnota položky ze souhrnného počtu tras */
+.statsAmountsVysledek {
+    width: 100%;
+    display: block;
+    font-family: 'Cabin', sans-serif;
+    font-size: 2em;
+    padding: 15px 15px 30px 15px;
+    box-sizing: border-box;
+}
+
+/* container div pro každou z položek souhrnných dat zobrazujících rekordní trasy */
+.statsRecordsContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 855px;
+    background-color: var(--bgLight);
+    border-radius: 15px;
+    justify-content: space-evenly;
+}
+    @media (max-width: 572px) {
+        .statsRecordsContainer {
+            flex-wrap: wrap;
+        }
+    }
+
+/* textový popisek položky */
+/* defaultně se zobrazuje vlevo od číselného výsledku */
+.statsRecordsPopisek {
+    width: 50%;
+    min-width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    text-align: right;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+    color: gray;
+}
+    /* na displejích o malé šířce (např. na mobilech) se zobrazí textový popisek nad hodnotami */
+    @media (max-width: 572px) {
+        .statsRecordsPopisek {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+            padding-bottom: 5px;
+        }
+    }
+
+/* hodnoty (názvy jednotlivých rekordních tras) */
+.statsRecordsVysledek {
+    width: 50%;
+    min-width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    text-align: left;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+}
+    /* na displejích o malé šířce (např. na mobilech) se zobrazí hodnoty pod popiskem */
+    @media (max-width: 572px) {
+        .statsRecordsVysledek {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+            padding-top: 10px;
+        }
+    }
+
+/* CYKLO / PĚŠÍ STATISTIKY */
+
+/* main div pro celý box "cyklo / pěší statistiky" */
+#statsCykloMain, #statsPesiMain {
+    width: 100%;
+    margin: 0px auto;
+}
+
+/* wrapper div pro koláčový graf */
+/* POZOR: WIDTH A HEIGHT MUSÍ VŽDY ODPOVÍDAT HODNOTÁM Z JAVASCRIPTU */
+.kolacWrapper {
+    position: relative;
+    margin: 0px auto;
+    width: 460px;
+    height: 460px;
+}
+    /* na mobilech bude menší, aby se pohodlně vešel na obrazovku */
+    @media (pointer: coarse) {
+        .kolacWrapper {
+            width: 300px;
+            height: 300px;
+        }
+    }
+
+/* toto je samotný html kanvas pro vytvoření kruhu */
+/* width a height bude určovat JS kód */
+.kolacovyGrafCyklo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /* šířka a výška musí být přímo v <canvas> tagu na html stránce, aby to fungovalo správně */
+    /* protože default poměr stran pro <canvas> je 2:1, ale pro kruh je potřeba 1:1 a přes css samotné se změna poměru neprojeví */
+    margin: 0px;
+    padding: 0px;
+}
+
+/* wrapper div pro vysvětlivky ke koláčovému grafu */
+.kolacVysvetlivky {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 1100px;
+    margin: 20px auto 50px;
+}
+
+/* container div pro každou vysvětlivku zvlášť */
+.kolacNotesContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    border-radius: 15px;
+    padding: 0px;
+    width: 18%;
+    min-width: 120px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 1%;
+}
+
+/* vysvětlivka - délková kategorie tras */
+.kolacNotesKategorie {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-right: 3px solid var(--bgDark);
+    padding: 5px;
+}
+
+/* vysvětlivka - délková kategorie procentní podíl */
+.kolacNotesProcenta {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+/* wrapper div pro grafy s počty tras v regionech */
+.pageRegionsGraf {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 855px;
+    margin: 0px auto;
+}
+
+/* řádek pro každý region v grafu */
+.pageRegionsRow {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: var(--bgLight);
+    border-radius: 15px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0px;
+}
+
+/* textový název regionu na řádku */
+.pageRegionsText {
+    width: 30%;
+    min-width: 100px;
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+    align-items: center;
+    padding: 5px 20px 5px 15px;
+    box-sizing: border-box;
+}
+
+/* vedle regionu číslo s počtem tras v tom daném regionu */
+.pageRegionsNo {
+    width: 40px;
+    height: 40px;
+    /* border-radius: 10px; */
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: 'Cabin', sans-serif;
+    background-color: var(--bgLighter);
+}
+
+/* a vedle nich wrapper div pro grafický sloupek grafu */
+.pageRegionsBarWrap {
+    /* calc počítá s odpočtem pageRegionsText width: 30%; (== 70%) */
+    /* dále pageRegionsNo width: 40px; a pageRegionsRow 2x (left & right) border-radius: 15px; (== 70px) */
+    /* to ve výsledku dá hezké zarovnání a zprava jakoby obalení každého sloupce grafu barvou pozadí pageRegionsRow */
+    width: calc(70% - 70px);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: left;
+    align-items: center;
+    height: 10px;
+}
+
+/* a v tom wrapperu i ten sloupek graficky */
+/* JEHO WIDTH MUSÍ BÝT GENEROVÁNA JAVASCRIPTEM */
+.pageRegionsBar {
+    background-color: var(--themeColor);
+    height: 100%;
+    border-radius: 0px 5px 5px 0px;
+}
+
+
+
+/* ======================================================================================================== */
 /* PATIČKA KAŽDÉ STRÁNKY (s výjimkou úvodní stránky s main menu, která má svou vlastní specifickou patičku) */
 
 /* wrapper div patičky */
@@ -1024,7 +1427,7 @@ h3 {
     background-color: var(--bgDarker);
     min-height: 30px;
     font-size: 0.8em;
-    color: grey;
+    color: gray;
     padding: 5px;
 }
 

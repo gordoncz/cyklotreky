@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Mapa regionů - Cyklotreky</title>
+    <title>Statistika tras - Cyklotreky</title>
 
     <link rel="icon" href="data/favicon.png">
 
@@ -21,46 +21,32 @@
     <!-- Úvodní ovládací divy nahoře na stránce -->
     <div id="titulka">
         <div id="logotop"><a href="index.html"><img src="img/logo-small.png" alt="logo"></a></div>
-        <div id="nazevStranky"><h1 onclick="backToTop()">MAPA REGIONŮ</h1></div>
+        <div id="nazevStranky"><h1 onclick="backToTop()">STATISTIKA TRAS</h1></div>
+    </div>
+
+    <!-- Container div pro volbu výstupních dat statistiky -->
+    <div id="prepinace">
+        <div id="tlacitkaStatsWrapper">
+            <div id="tlacitkoStatsSouhrn" onclick="prepnutiStats(this.id)">celkový přehled</div>
+            <div id="tlacitkoStatsCyklo" onclick="prepnutiStats(this.id)">cyklo</div>
+            <div id="tlacitkoStatsPesi" onclick="prepnutiStats(this.id)">pěší</div>
+        </div>
     </div>
 
     <!-- Hlavní div s pro obsah stránky -->
-    <div id="obsahStrankyClassic">
-
-        <p>Vyberte velikost mapy:<br>(obrázek s mapou se otevře v nové záložce prohlíčeče)</p>
-
-        <div class="mapaRegionuWrapper">
-        <a href="img/mapa-regionu-small.jpg" target="_blank">
-            <div class="mapaRegionu">
-                <h3>malá</h3>
-                <p>675 x 450<br>(66 kB)</p>
-            </div>
-        </a>
-        </div>
-        <div class="mapaRegionuWrapper">
-        <a href="img/mapa-regionu-medium.jpg" target="_blank">
-            <div class="mapaRegionu">
-                <h3>střední</h3>
-                <p>1350 x 900<br>(263 kB)</p>
-            </div>
-        </a>
-        </div>
-        <div class="mapaRegionuWrapper">
-        <a href="img/mapa-regionu-large.jpg" target="_blank">
-            <div class="mapaRegionu">
-                <h3>velká</h3>
-                <p>2700 x 1800<br>(965 kB)</p>
-            </div>
-        </a>
-        </div>
-
-    </div>
+    <div id="obsahStrankyStats"><p id="loading">Načítám data...</p></div>
 
     <!-- Div pro patičku stránky -->
     <div id="patkaStranky"></div>
 
 
     <!-- JavaScript -->
+    <script>var detekceMobilu = window.matchMedia("(pointer: coarse)");</script>
+    <!-- Propojení s array objekty pro trasy (cyklo a pěší) -->
+    <script src="data/cyklo.js"></script>
+    <script src="data/pesi.js"></script>
+    <!-- Samotný skript pro výpočet statistiky -->
+    <script src="data/stats.js"></script>
     <script>backToTop = () => window.scroll(0, 0);</script>
     <script src="data/patka.js"></script>
 
