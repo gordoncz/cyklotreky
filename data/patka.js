@@ -6,7 +6,7 @@ var datum = new Date();
 var tentoRok = datum.getFullYear();
 
 // silueta loga Cyklotreky
-var logoBW = "<img src=\"img/logo-small-bw.png\" alt=\"-\">";
+var logoBW = "<img src=\"img/logo-small-bw.svg\" alt=\"-\">";
 
 // div pro obsahové informace v patičce
 // aktuálně zobrazené info je rok vzniku verze 1.0, mini-logo v B&W verzi a aktuální rok podle systémového času
