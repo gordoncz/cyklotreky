@@ -53,8 +53,8 @@ var pesitrasy = [
         "nazev": "Maštale",
         "region": "Svitavsko",
         "picture": "mastale",
-        "urldesktop": "https://mapy.cz/s/kejehovuvu",
-        "urlmobile": "https://mapy.cz/s/fuvezebebu",
+        "urldesktop": "https://mapy.cz/s/lemezezodu",
+        "urlmobile": "https://mapy.cz/s/hukacakagu",
         "known": true,
         "new": false,
         "infobox": ""
@@ -98,18 +98,6 @@ var pesitrasy = [
     {
         "km": 10,
         "multiday": false,
-        "nazev": "Letiště Medlánky",
-        "region": "Brno",
-        "picture": "letiste-medlanky",
-        "urldesktop": "https://mapy.cz/s/lenadovuga",
-        "urlmobile": "https://mapy.cz/s/gedoduzodu",
-        "known": true,
-        "new": false,
-        "infobox": ""
-    },
-    {
-        "km": 10,
-        "multiday": false,
         "nazev": "Rudické propadání",
         "region": "Brněnsko",
         "picture": "rudicke-propadani",
@@ -134,6 +122,18 @@ var pesitrasy = [
     {
         "km": 11,
         "multiday": false,
+        "nazev": "Milovské Perničky",
+        "region": "Vysočina",
+        "picture": "milovske-pernicky",
+        "urldesktop": "https://mapy.cz/s/cugaluhezu",
+        "urlmobile": "https://mapy.cz/s/jeruvovasa",
+        "known": false,
+        "new": false,
+        "infobox": ""
+    },
+    {
+        "km": 11,
+        "multiday": false,
         "nazev": "Nové Město na Moravě",
         "region": "Vysočina",
         "picture": "nove-mesto-na-morave",
@@ -142,18 +142,6 @@ var pesitrasy = [
         "known": true,
         "new": false,
         "infobox": "<p class=\"ibInfo\">Části trasy v okolí Černé skály a poté ještě u sochy Buddhy jsou v terénu hůře značené.</p>"
-    },
-    {
-        "km": 11,
-        "multiday": false,
-        "nazev": "Sochy Michala Olšiaka u Žďáru",
-        "region": "Vysočina",
-        "picture": "sochy-michala-olsiaka-u-zdaru",
-        "urldesktop": "https://mapy.cz/s/korubopabo",
-        "urlmobile": "https://mapy.cz/s/fodokecudo",
-        "known": true,
-        "new": false,
-        "infobox": ""
     },
     {
         "km": 12,
@@ -194,18 +182,6 @@ var pesitrasy = [
     {
         "km": 12,
         "multiday": false,
-        "nazev": "Peřeje Kalského potoka",
-        "region": "Brněnsko",
-        "picture": "pereje-kalskeho-potoka",
-        "urldesktop": "https://mapy.cz/s/locovevugo",
-        "urlmobile": "https://mapy.cz/s/fevufeluzo",
-        "known": false,
-        "new": false,
-        "infobox": "<p class=\"ibTimelimit\">Tuto trasu je nejlepší absolvovat v zimě s vydatnou sněhovou pokrývkou (kdy se na Kalském potoku tvoří ledopády) nebo případně brzy na jaře v období jarního tání (kdy je průtok vody potokem na nejvyšších stavech). V dalších obdobích roku je totiž kvůli poměrně nízkému průtoku vody Kalským potokem tato trasa o poznání méně zajímavá.</p>"
-    },
-    {
-        "km": 12,
-        "multiday": false,
         "nazev": "Rušička na Zlobici",
         "region": "Brněnsko",
         "picture": "rusicka-na-zlobici",
@@ -218,11 +194,23 @@ var pesitrasy = [
     {
         "km": 12,
         "multiday": false,
+        "nazev": "Sochy Michala Olšiaka u Žďáru",
+        "region": "Vysočina",
+        "picture": "sochy-michala-olsiaka-u-zdaru",
+        "urldesktop": "https://mapy.cz/s/begozufuva",
+        "urlmobile": "https://mapy.cz/s/fuvuvoluha",
+        "known": true,
+        "new": false,
+        "infobox": ""
+    },
+    {
+        "km": 12,
+        "multiday": false,
         "nazev": "Těsnohlídkovo údolí",
         "region": "Brněnsko",
         "picture": "tesnohlidkovo-udoli",
-        "urldesktop": "https://mapy.cz/s/nadokageru",
-        "urlmobile": "https://mapy.cz/s/dekocaveda",
+        "urldesktop": "https://mapy.cz/s/regehenomu",
+        "urlmobile": "https://mapy.cz/s/heduzufuro",
         "known": true,
         "new": false,
         "infobox": ""
@@ -240,13 +228,25 @@ var pesitrasy = [
         "infobox": ""
     },
     {
+        "km": 13,
+        "multiday": false,
+        "nazev": "Peřeje Kalského potoka",
+        "region": "Brněnsko",
+        "picture": "pereje-kalskeho-potoka",
+        "urldesktop": "https://mapy.cz/s/nuhusunuhu",
+        "urlmobile": "https://mapy.cz/s/lehudotefe",
+        "known": false,
+        "new": false,
+        "infobox": "<p class=\"ibTimelimit\">Tuto trasu je nejlepší absolvovat v zimě s vydatnou sněhovou pokrývkou (kdy se na Kalském potoku tvoří ledopády) nebo případně brzy na jaře v období jarního tání (kdy je průtok vody potokem na nejvyšších stavech). V dalších obdobích roku je totiž kvůli poměrně nízkému průtoku vody Kalským potokem tato trasa o poznání méně zajímavá.</p>"
+    },
+    {
         "km": 14,
         "multiday": false,
         "nazev": "Devět skal",
         "region": "Vysočina",
         "picture": "devet-skal",
-        "urldesktop": "https://mapy.cz/s/najotokoda",
-        "urlmobile": "https://mapy.cz/s/dumoluzace",
+        "urldesktop": "https://mapy.cz/s/gunatafuja",
+        "urlmobile": "https://mapy.cz/s/jahorazumo",
         "known": true,
         "new": false,
         "infobox": ""
@@ -278,30 +278,6 @@ var pesitrasy = [
     {
         "km": 14,
         "multiday": false,
-        "nazev": "Milovské Perničky",
-        "region": "Vysočina",
-        "picture": "milovske-pernicky",
-        "urldesktop": "https://mapy.cz/s/bujodovula",
-        "urlmobile": "https://mapy.cz/s/danosedana",
-        "known": false,
-        "new": false,
-        "infobox": ""
-    },
-    {
-        "km": 14,
-        "multiday": false,
-        "nazev": "Mohyla míru",
-        "region": "Brněnsko",
-        "picture": "mohyla-miru",
-        "urldesktop": "https://mapy.cz/s/nadofafemu",
-        "urlmobile": "https://mapy.cz/s/colakepage",
-        "known": true,
-        "new": false,
-        "infobox": ""
-    },
-    {
-        "km": 14,
-        "multiday": false,
         "nazev": "Západní Bobrava",
         "region": "Brněnsko",
         "picture": "zapadni-bobrava",
@@ -314,10 +290,22 @@ var pesitrasy = [
     {
         "km": 15,
         "multiday": false,
+        "nazev": "Mohyla míru",
+        "region": "Brněnsko",
+        "picture": "mohyla-miru",
+        "urldesktop": "https://mapy.cz/s/deneberaba",
+        "urlmobile": "https://mapy.cz/s/majofumefa",
+        "known": true,
+        "new": false,
+        "infobox": ""
+    },
+    {
+        "km": 15,
+        "multiday": false,
         "nazev": "Okolo Pitína",
         "region": "Bílé Karpaty",
         "picture": "okolo-pitina",
-        "urldesktop": "https://mapy.cz/s/mehuhaheru",
+        "urldesktop": "https://mapy.cz/s/nosazegana",
         "urlmobile": "https://mapy.cz/s/pezenovefu",
         "known": true,
         "new": false,
@@ -389,8 +377,8 @@ var pesitrasy = [
         "nazev": "Černé kameny a Rabštejn",
         "region": "Jeseníky",
         "picture": "cerne-kameny-a-rabstejn",
-        "urldesktop": "https://mapy.cz/s/dugopacoho",
-        "urlmobile": "https://mapy.cz/s/hatedonusa",
+        "urldesktop": "https://mapy.cz/s/fusuvatoka",
+        "urlmobile": "https://mapy.cz/s/geluseleva",
         "known": false,
         "new": false,
         "infobox": ""
@@ -437,7 +425,7 @@ var pesitrasy = [
         "nazev": "Údolí Oslavy a Chvojnice",
         "region": "Vysočina",
         "picture": "udoli-oslavy-a-chvojnice",
-        "urldesktop": "https://mapy.cz/s/locubegoju",
+        "urldesktop": "https://mapy.cz/s/nofagebopa",
         "urlmobile": "https://mapy.cz/s/fohodojuva",
         "known": false,
         "new": false,
@@ -456,16 +444,16 @@ var pesitrasy = [
         "infobox": "<p class=\"ibRestriction\">Žlutá trasa od horské chaty Markowe Szczawiny na vrchol Babia hora (tzv. \"Perc Akademikow\") může být uzavřena, proto je potřeba zkusit toto ověřit ještě z místních zdrojů pokud možno před výletem.</p><p class=\"ibSlope\">Poslední úsek žluté trasy \"Perc Akademikow\" cca 950 m před vrcholem (nad úrovní lesa) má extrémně prudké stoupání o sklonu 34%. Tato část trasy je proto na několika místech zajištěna řetězy, kovovými žebříky apod.</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Chata Slaná voda<br>(10 km)<br>Schronisko na Markowych Szczawinach<br>(11 km)<br>Chata Slaná voda</p>"
     },
     {
-        "km": 26,
+        "km": 23,
         "multiday": true,
         "nazev": "Vodopády Bílé Opavy",
         "region": "Jeseníky",
         "picture": "vodopady-bile-opavy",
-        "urldesktop": "https://mapy.cz/s/naheluhazo",
-        "urlmobile": "https://mapy.cz/s/gobokezalo",
+        "urldesktop": "https://mapy.cz/s/cutososeha",
+        "urlmobile": "https://mapy.cz/s/pukaranumo",
         "known": true,
         "new": false,
-        "infobox": "<p class=\"ibRestriction\">Část trasy po žluté od rozcestí Na paloučku po rozcestí Nad vodopády Bílé Opavy je průchozí pouze po dřevěných lávkách a schodech.</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Hvězda, rozcestí<br>(10 km)<br>Praděd<br>(16 km)<br>Kouty nad Desnou</p>"
+        "infobox": "<p class=\"ibRestriction\">Část trasy po žluté od rozcestí Na paloučku po rozcestí Nad vodopády Bílé Opavy je průchozí pouze po dřevěných lávkách a schodech.</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Hvězda, rozcestí<br>(10 km)<br>Praděd<br>(13 km)<br>Kouty nad Desnou</p>"
     },
     {
         "km": 27,
@@ -473,7 +461,7 @@ var pesitrasy = [
         "nazev": "Lysá hora",
         "region": "Beskydy",
         "picture": "lysa-hora",
-        "urldesktop": "https://mapy.cz/s/kococolabo",
+        "urldesktop": "https://mapy.cz/s/pokalemocu",
         "urlmobile": "https://mapy.cz/s/luvavavozo",
         "known": false,
         "new": false,
@@ -490,6 +478,18 @@ var pesitrasy = [
         "known": false,
         "new": false,
         "infobox": "<p class=\"ibInfo\">Nutné odjet z Brna velmi brzy ráno, pokud se má výlet obejít bez extra přespání v Jindřichově Hradci z pátku na sobotu.</p><p class=\"ibTransport\"><a href=\"http://jhmd.cz/\" target=\"_blank\">Parní vlak JHMD</a> na trase Jindřichův Hradec - Kaproun jezdí pouze v sobotu.</p><p class=\"ibSleep\">Je možné absolvovat trek s přespáním ve stanu, nicméně v Malém Ratmírově lze v případě potřeby přespat i pod střechou v některém z tamních penzionů.</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Kaproun, žel. st.<br>(15 km)<br>Malý Ratmírov<br>(14 km)<br>Jindřichův Hradec</p>"
+    },
+    {
+        "km": 29,
+        "multiday": true,
+        "nazev": "Plechý na Šumavě",
+        "region": "Šumava",
+        "picture": "plechy-na-sumave",
+        "urldesktop": "https://mapy.cz/s/gojusukogo",
+        "urlmobile": "https://mapy.cz/s/humopemufa",
+        "known": true,
+        "new": false,
+        "infobox": "<p class=\"ibSleep\">Nutné nést s sebou pro přespání stan. Nicméně je třeba mít na zřeteli, že v NP/CHKO Šumava lze ve stanu přespat pouze na vyhrazených nouzových nocovištích.</p><p class=\"ibSlope\">Intenzivní stoupání se sklonem 24 % na cca 1 km dlouhém úseku od Plešného jezera k Pomníku Adalberta Stiftera.</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Ovesná<br>(13 km)<br>Nouzové nocoviště Pod Plešným jezerem<br>(16 km)<br>Nové Údolí</p>"
     },
     {
         "km": 32,
@@ -516,40 +516,16 @@ var pesitrasy = [
         "infobox": "<p class=\"ibTransport\">Z důvodu úspory času a sil je potřeba využít <a href=\"http://www.bonera.cz/lanovky-vleky.php\" target=\"_blank\">lanovku Ramzová - Čerňava - Šerák</a>, aby se nemuselo převýšení více než 500 m (10%) na téměř 5 km cesty po červené turistické značce absolvovat pěšky.</p><p class=\"ibInfo\">Celková délka trasy je sice 35 km, ale 3 km z toho je jízda lanovkou, takže pěšky je potřeba ujít právě jen těch 32 km.</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Staré Město pod Sněžníkem<br>(17 km)<br>Ramzová<br>(15 km)<br>Branná</p>"
     },
     {
-        "km": 34,
+        "km": 33,
         "multiday": true,
         "nazev": "Králický Sněžník",
         "region": "Jeseníky",
         "picture": "kralicky-sneznik",
-        "urldesktop": "https://mapy.cz/s/dolotoroke",
-        "urlmobile": "https://mapy.cz/s/dafomehajo",
+        "urldesktop": "https://mapy.cz/s/batenelupo",
+        "urlmobile": "https://mapy.cz/s/jasobaroja",
         "known": true,
         "new": false,
-        "infobox": "<p class=\"ibSleep\">Není špatné si s sebou zabalit také spacák. Ten lze pak využít pro přespání na pokoji ve Schronisku Na Sniezniku, které je zařízené v poměrně nízkém komfortu stylu hromadné turistické ubytovny, takže spacák se zde hodí zejména z hygienických důvodů. Jiná alternativa přespání v okolí Králického Sněžníku ale bohužel není.</p><p class=\"ibSlope\">Prudší stoupání o sklonu 15 % na úseku 1,4 km od Sedla Puchača na vrchol Goworek.</p><p class=\"ibMultiday\">Trasa je na 3 dny:</p><p>Prostřední Lipka<br>(8 km)<br>Agropension Chřástal<br>(14 km)<br>Schronisku Na Sniezniku<br>(12 km)<br>Staré Město pod Sněžníkem</p>"
-    },
-    {
-        "km": 36,
-        "multiday": true,
-        "nazev": "Plechý na Šumavě",
-        "region": "Šumava",
-        "picture": "plechy-na-sumave",
-        "urldesktop": "https://mapy.cz/s/fagapohocu",
-        "urlmobile": "https://mapy.cz/s/pafojosomo",
-        "known": true,
-        "new": false,
-        "infobox": "<p class=\"ibSleep\">Nutné nést s sebou pro přespání stan. Nicméně je třeba mít na zřeteli, že v NP/CHKO Šumava lze ve stanu přespat pouze na vyhrazených nouzových nocovištích.</p><p class=\"ibInfo\">V informačním centru Stožec si lze prohlédnout unikátní exponát vycpaného losa evropského v životní velikosti (cca 2 m).</p><p class=\"ibSlope\">Intenzivní stoupání se sklonem 24 % na cca 1 km dlouhém úseku od Plešného jezera k Pomníku Adalberta Stiftera.</p><p class=\"ibMultiday\">Trasa je na 3 dny:</p><p>Ovesná<br>(13 km)<br>Nouzové nocoviště Pod Plešným jezerem<br>(15 km)<br>Nouzové nocoviště Nové Údolí<br>(8 km)<br>Černý Kříž</p>"
-    },
-    {
-        "km": 38,
-        "multiday": true,
-        "nazev": "Malá Fatra",
-        "region": "Slovensko",
-        "picture": "mala-fatra",
-        "urldesktop": "https://mapy.cz/s/delujepuso",
-        "urlmobile": "https://mapy.cz/s/pavopobaru",
-        "known": false,
-        "new": false,
-        "infobox": "<p class=\"ibTimelimit\">Trasu lze projít pouze v období od 16. června do cca poloviny října. V zimě jsou totiž z důvodu bezpečnosti uzavřené Jánošíkovy diery a také hory samotné jsou příliš zasněžené a na jaře (od 1.3. do 15.6.) je každoročně zakázán výstup po červené turistické značce na Velký Rozsutec kvůli ochraně tamějších hnízdících ptáků.</p><p class=\"ibSlope\">Úsek 4,5 km od sedla Podžiar až na vrch Velký Rozsutec má velmi strmé stoupání 900 výškových metrů (což je v přepočtu 20%). Navíc je tento úsek (po rozcestí Pod Tanečnicou) výhradně jednosměrný a průchozí jen díky žebříkům, lávkám a schodům.</p><p class=\"ibSleep\">Na trase je sice možné přespat pod stanem, ale pouze na vyhrazených nocovištích, která jsou umístěna v těsné blízkosti horských chat. Jinak je v NP Malá Fatra stanování ve volné přírodě zakázáno. Pohodlnější je vzít si s sebou jen spacák, protože díky němu je pak přespání v horských chatách na trase o něco levnější (neúčtuje se potom poplatek za povlečení).</p><p class=\"ibMultiday\">Trasa je na 4 dny:</p><p>Terchová, B.Potok h.Diery<br>(4 km)<br>Dom horskej služby Štefanová<br>(15 km)<br>Chata pod Chlebom<br>(12 km)<br>Chata pod Suchým<br>(8 km)<br>Nezbudská Lúčka-Strečno</p>"
+        "infobox": "<p class=\"ibSleep\">Není špatné si s sebou přibalit také spacák. Ten lze pak využít pro přespání na pokoji ve Schronisku Na Sniezniku, které je zařízené v poměrně nízkém komfortu stylu hromadné turistické ubytovny, takže spacák se zde hodí zejména z hygienických důvodů. Jiná alternativa přespání v okolí Králického Sněžníku ale bohužel není.</p><p class=\"ibSlope\">Prudší stoupání o sklonu 15 % na úseku 1,4 km od Sedla Puchača na vrchol Goworek.</p><p class=\"ibMultiday\">Trasa je na 3 dny:</p><p>Prostřední Lipka<br>(8 km)<br>Agropension Chřástal<br>(13 km)<br>Schronisku Na Sniezniku<br>(12 km)<br>Staré Město pod Sněžníkem</p>"
     },
     {
         "km": 40,
@@ -574,6 +550,18 @@ var pesitrasy = [
         "known": true,
         "new": false,
         "infobox": "<p class=\"ibTransport\">Z důvodu úspory času a sil je potřeba využít <a href=\"http://www.bonera.cz/lanovky-vleky.php\" target=\"_blank\">lanovku Ramzová - Čerňava - Šerák</a>, aby se nemuselo převýšení více než 500 m (10%) na téměř 5 km cesty po červené turistické značce absolvovat pěšky.</p><p class=\"ibSlope\">Na krátkém úseku cca 500 m mezi vrcholem Malý Jezerník a chatou Švýcárna je prudší stoupání o sklonu 19 %.</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Ramzová<br>(20 km)<br>Hotel Ovčárna pod Pradědem<br>(21 km)<br>Sobotín</p>"
+    },
+    {
+        "km": 41,
+        "multiday": true,
+        "nazev": "Malá Fatra",
+        "region": "Slovensko",
+        "picture": "mala-fatra",
+        "urldesktop": "https://mapy.cz/s/kejuhopahu",
+        "urlmobile": "https://mapy.cz/s/joluvusahu",
+        "known": false,
+        "new": false,
+        "infobox": "<p class=\"ibTimelimit\">Trasu lze projít pouze v období od 16. června do cca poloviny října. V zimě jsou totiž z důvodu bezpečnosti uzavřené Jánošíkovy diery a také hory samotné jsou příliš zasněžené a na jaře (od 1.3. do 15.6.) je každoročně zakázán výstup po červené turistické značce na Velký Rozsutec kvůli ochraně tamějších hnízdících ptáků.</p><p class=\"ibSlope\">Úsek 4,5 km od sedla Podžiar až na vrch Velký Rozsutec má velmi strmé stoupání 900 výškových metrů (což je v přepočtu 20%). Navíc je tento úsek (po rozcestí Pod Tanečnicou) výhradně jednosměrný a průchozí jen díky žebříkům, lávkám a schodům.</p><p class=\"ibSleep\">Na trase je sice možné přespat pod stanem, ale pouze na vyhrazených nocovištích, která jsou umístěna v těsné blízkosti horských chat. Jinak je v NP Malá Fatra stanování ve volné přírodě zakázáno. Pohodlnější je vzít si s sebou jen spacák, protože díky němu je pak přespání v horských chatách na trase o něco levnější (neúčtuje se potom poplatek za povlečení).</p><p class=\"ibMultiday\">Trasa je na 4 dny:</p><p>Terchová, B.Potok h.Diery<br>(5 km)<br>Dom horskej služby Štefanová<br>(17 km)<br>Chata pod Chlebom<br>(12 km)<br>Chata pod Suchým<br>(7 km)<br>Nezbudská Lúčka-Strečno</p>"
     },
     {
         "km": 43,

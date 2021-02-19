@@ -60,6 +60,10 @@ var odkazy = [
             {
                 "linktext": "Mapa sítě linek přepravujících kola",
                 "linkurl": "https://content.idsjmk.cz/mapa/Plan-site-cyklodoprava.pdf"
+            },
+            {
+                "linktext": "Sledování provozu IDS JMK",
+                "linkurl": "https://mapa.idsjmk.cz/"
             }
         ]
     },
@@ -84,6 +88,10 @@ var odkazy = [
             {
                 "linktext": "Mapa železničních tratí obsluhovaných alternativními dopravci od 15.12.2019",
                 "linkurl": "img/mapa-zeleznicnich-dopravcu.jpg"
+            },
+            {
+                "linktext": "Grafická prezentace polohy vlaků v ČR (GRAPP)",
+                "linkurl": "https://grapp.spravazeleznic.cz/"
             }
         ]
     },
