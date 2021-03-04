@@ -26,6 +26,18 @@ var pesitrasy = [
     {
         "km": 9,
         "multiday": false,
+        "nazev": "Hády",
+        "region": "Brno",
+        "picture": "hady",
+        "urldesktop": "https://mapy.cz/s/kohodedate",
+        "urlmobile": "https://mapy.cz/s/cemugeteja",
+        "known": true,
+        "new": true,
+        "infobox": ""
+    },
+    {
+        "km": 9,
+        "multiday": false,
         "nazev": "Helenčina studánka",
         "region": "Brno",
         "picture": "helencina-studanka",
@@ -68,7 +80,7 @@ var pesitrasy = [
         "urldesktop": "https://mapy.cz/s/hesucogubu",
         "urlmobile": "https://mapy.cz/s/barukejesa",
         "known": true,
-        "new": true,
+        "new": false,
         "infobox": ""
     },
     {
@@ -104,7 +116,7 @@ var pesitrasy = [
         "urldesktop": "https://mapy.cz/s/fufahejeka",
         "urlmobile": "https://mapy.cz/s/denazevuga",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": ""
     },
     {
@@ -118,6 +130,18 @@ var pesitrasy = [
         "known": true,
         "new": false,
         "infobox": "<p class=\"ibWarning\">Soutěska Koryto je v některých částech obtížněji prostupná jen po úzkých cestách posetých kluzkými kameny (zejména v úseku okolí zříceniny hradu Sokolov).</p>"
+    },
+    {
+        "km": 11,
+        "multiday": false,
+        "nazev": "Klenoty Žďáru",
+        "region": "Vysočina",
+        "picture": "klenoty-zdaru",
+        "urldesktop": "https://mapy.cz/s/hubabenonu",
+        "urlmobile": "https://mapy.cz/s/luzarozava",
+        "known": false,
+        "new": true,
+        "infobox": "<p class=\"ibTransport\">Přepokládá se doprava autem, které je možné zaparkovat na turistickém parkovišti před Zámkem Žďár.</p>"
     },
     {
         "km": 11,
@@ -144,6 +168,18 @@ var pesitrasy = [
         "infobox": "<p class=\"ibInfo\">Části trasy v okolí Černé skály a poté ještě u sochy Buddhy jsou v terénu hůře značené.</p>"
     },
     {
+        "km": 11,
+        "multiday": false,
+        "nazev": "Veverská Bítýška",
+        "region": "Brno",
+        "picture": "veverska-bityska",
+        "urldesktop": "https://mapy.cz/s/gevecukevo",
+        "urlmobile": "https://mapy.cz/s/juhomapava",
+        "known": false,
+        "new": true,
+        "infobox": "<p class=\"ibTransport\">Pro cestu tam i zpět se počítá s využitím <a href=\"https://www.dpmb.cz/cs/novinky/all\" target=\"_blank\">lodní dopravy parníkem DPMB</a>.</p>"
+    },
+    {
         "km": 12,
         "multiday": false,
         "nazev": "Babí lom",
@@ -164,7 +200,7 @@ var pesitrasy = [
         "urldesktop": "https://mapy.cz/s/cavevuruve",
         "urlmobile": "https://mapy.cz/s/kucukujuhe",
         "known": true,
-        "new": true,
+        "new": false,
         "infobox": ""
     },
     {
@@ -230,6 +266,42 @@ var pesitrasy = [
     {
         "km": 13,
         "multiday": false,
+        "nazev": "Hraniční vrcholy Orlických hor",
+        "region": "Orlické hory",
+        "picture": "hranicni-vrcholy-orlickych-hor",
+        "urldesktop": "https://mapy.cz/s/mocudegobo",
+        "urlmobile": "https://mapy.cz/s/bulufejede",
+        "known": false,
+        "new": true,
+        "infobox": "<p class=\"ibTransport\">Jsou tři praktické možnosti dopravy do startu a z cíle trasy, všechny ale vyžadují kombinaci auta a autobusu. První možnost je přijet autem cca v 7 ráno do startu trasy v Olešnici a na konci z cíle trasy na Šerlichu odjet autobusem v 15:15 zpět k autu.</p><p class=\"ibTransport\">Druhá možnost je vyjet autem nahoru na Šerlich, odtud v 10:10 odjet autobusem do startu trasy v Olešnici a pak lze z cíle trasy volit libovolný čas návratu autem.</p><p class=\"ibTransport\">Nebo třetí možnost je zaparkovat auto buď v Dobrušce nebo v Novém Městě nad Metují, odkud ráno jezdí autobusy do Olešnice (s příjezdem cca v 8-9 ráno). Po 17.&nbsp;hodině pak ze Šerlichu jezdí poslední přestupní autobusový spoj do obou těchto výchozích měst, kde se pak lze vrátit k autu.</p>"
+    },
+    {
+        "km": 13,
+        "multiday": false,
+        "nazev": "Hřeben a Klobouky",
+        "region": "Bílé Karpaty",
+        "picture": "hreben-a-klobouky",
+        "urldesktop": "https://mapy.cz/s/duropokanu",
+        "urlmobile": "https://mapy.cz/s/dopotenumo",
+        "known": false,
+        "new": true,
+        "infobox": ""
+    },
+    {
+        "km": 13,
+        "multiday": false,
+        "nazev": "Husité u Chlumu",
+        "region": "Brněnsko",
+        "picture": "husite-u-chlumu",
+        "urldesktop": "https://mapy.cz/s/bukufurula",
+        "urlmobile": "https://mapy.cz/s/puzujugate",
+        "known": true,
+        "new": true,
+        "infobox": ""
+    },
+    {
+        "km": 13,
+        "multiday": false,
         "nazev": "Peřeje Kalského potoka",
         "region": "Brněnsko",
         "picture": "pereje-kalskeho-potoka",
@@ -238,6 +310,18 @@ var pesitrasy = [
         "known": false,
         "new": false,
         "infobox": "<p class=\"ibTimelimit\">Tuto trasu je nejlepší absolvovat v zimě s vydatnou sněhovou pokrývkou (kdy se na Kalském potoku tvoří ledopády) nebo případně brzy na jaře v období jarního tání (kdy je průtok vody potokem na nejvyšších stavech). V dalších obdobích roku je totiž kvůli poměrně nízkému průtoku vody Kalským potokem tato trasa o poznání méně zajímavá.</p>"
+    },
+    {
+        "km": 14,
+        "multiday": false,
+        "nazev": "Augšperský potok",
+        "region": "Brněnsko",
+        "picture": "augspersky-potok",
+        "urldesktop": "https://mapy.cz/s/rafudemedu",
+        "urlmobile": "https://mapy.cz/s/nucoruroco",
+        "known": false,
+        "new": true,
+        "infobox": ""
     },
     {
         "km": 14,
@@ -260,7 +344,7 @@ var pesitrasy = [
         "urldesktop": "https://mapy.cz/s/dumujuzuna",
         "urlmobile": "https://mapy.cz/s/nadegupuha",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": ""
     },
     {
@@ -272,6 +356,30 @@ var pesitrasy = [
         "urldesktop": "https://mapy.cz/s/jehojotube",
         "urlmobile": "https://mapy.cz/s/dobazukuvu",
         "known": false,
+        "new": false,
+        "infobox": ""
+    },
+    {
+        "km": 14,
+        "multiday": false,
+        "nazev": "Pěšina lesmistra Morávka",
+        "region": "Brno",
+        "picture": "pesina-lesmistra-moravka",
+        "urldesktop": "https://mapy.cz/s/gafulubagu",
+        "urlmobile": "https://mapy.cz/s/nadozanuza",
+        "known": false,
+        "new": true,
+        "infobox": ""
+    },
+    {
+        "km": 14,
+        "multiday": false,
+        "nazev": "Přítoky Ponávky",
+        "region": "Brno",
+        "picture": "pritoky-ponavky",
+        "urldesktop": "https://mapy.cz/s/ravutekema",
+        "urlmobile": "https://mapy.cz/s/jarevuseho",
+        "known": true,
         "new": true,
         "infobox": ""
     },
@@ -320,8 +428,20 @@ var pesitrasy = [
         "urldesktop": "https://mapy.cz/s/dekuzotelo",
         "urlmobile": "https://mapy.cz/s/fujopuvoca",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": "<p class=\"ibTransport\">Předpokládá se příjezd autem do Mikulova, odtud autobusem do startu trasy v Dolních Věstonicích a z cíle trasy v Mikulově pak odjezd zpět domů zase autem.</p>"
+    },
+    {
+        "km": 15,
+        "multiday": false,
+        "nazev": "Rokytenské slepence",
+        "region": "Brněnsko",
+        "picture": "rokytenske-slepence",
+        "urldesktop": "https://mapy.cz/s/pacobakuru",
+        "urlmobile": "https://mapy.cz/s/jokuzunese",
+        "known": false,
+        "new": true,
+        "infobox": ""
     },
     {
         "km": 15,
@@ -386,6 +506,30 @@ var pesitrasy = [
     {
         "km": 16,
         "multiday": false,
+        "nazev": "Hardeggské vyhlídky",
+        "region": "Jižní Morava",
+        "picture": "hardeggske-vyhlidky",
+        "urldesktop": "https://mapy.cz/s/pakorohacu",
+        "urlmobile": "https://mapy.cz/s/kovuhonafe",
+        "known": false,
+        "new": true,
+        "infobox": ""
+    },
+    {
+        "km": 16,
+        "multiday": false,
+        "nazev": "Chrudimský les",
+        "region": "Východní Čechy",
+        "picture": "chrudimsky-les",
+        "urldesktop": "https://mapy.cz/s/rocelavumu",
+        "urlmobile": "https://mapy.cz/s/hojurasohu",
+        "known": false,
+        "new": true,
+        "infobox": "<p class=\"ibTransport\">Předpokládá se příjezd a odjezd asi nejlépe autem. Lze se do startu a z cíle trasy dopravit také vlakem s přestupem v Pardubicích, nicméně v takovém případě je potřeba k trase připočítat ještě 2 km navíc (pro přechod z/na nádraží Slatiňany).</p>"
+    },
+    {
+        "km": 16,
+        "multiday": false,
         "nazev": "Mlýny Bílého potoka",
         "region": "Vysočina",
         "picture": "mlyny-bileho-potoka",
@@ -404,7 +548,7 @@ var pesitrasy = [
         "urldesktop": "https://mapy.cz/s/nuzacekabe",
         "urlmobile": "https://mapy.cz/s/gurocagolo",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": ""
     },
     {
@@ -440,7 +584,7 @@ var pesitrasy = [
         "urldesktop": "https://mapy.cz/s/felahaleco",
         "urlmobile": "https://mapy.cz/s/cutucevuke",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": "<p class=\"ibRestriction\">Žlutá trasa od horské chaty Markowe Szczawiny na vrchol Babia hora (tzv. \"Perc Akademikow\") může být uzavřena, proto je potřeba zkusit toto ověřit ještě z místních zdrojů pokud možno před výletem.</p><p class=\"ibSlope\">Poslední úsek žluté trasy \"Perc Akademikow\" cca 950 m před vrcholem (nad úrovní lesa) má extrémně prudké stoupání o sklonu 34%. Tato část trasy je proto na několika místech zajištěna řetězy, kovovými žebříky apod.</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Chata Slaná voda<br>(10 km)<br>Schronisko na Markowych Szczawinach<br>(11 km)<br>Chata Slaná voda</p>"
     },
     {
@@ -454,6 +598,18 @@ var pesitrasy = [
         "known": true,
         "new": false,
         "infobox": "<p class=\"ibRestriction\">Část trasy po žluté od rozcestí Na paloučku po rozcestí Nad vodopády Bílé Opavy je průchozí pouze po dřevěných lávkách a schodech.</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Hvězda, rozcestí<br>(10 km)<br>Praděd<br>(13 km)<br>Kouty nad Desnou</p>"
+    },
+    {
+        "km": 25,
+        "multiday": true,
+        "nazev": "Rejvíz",
+        "region": "Jeseníky",
+        "picture": "rejviz",
+        "urldesktop": "https://mapy.cz/s/curahehonu",
+        "urlmobile": "https://mapy.cz/s/fubazogema",
+        "known": false,
+        "new": true,
+        "infobox": "<p class=\"ibTransport\">Do startu trasy se předpokládá odjet vlakem v 7:18 z Brna hl.n. přes Olomouc do Krnova a odtud potom autobusem do Zlatých Hor. Lze odjet i v 9:18 čistě vlakovým spojením Brno hl.n. - Jeseník - Mikulovice - Zlaté Hory, v takovém případě ale bude trasa bez prohlídky města Zlaté Hory (a o cca 2&nbsp;km kratší).</p><p class=\"ibTransport\">Poslední zpáteční spoj je přímý rychlík Jeseník - Brno hl.n. v 17:01.</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Zlaté Hory<br>(11 km)<br>Rejvíz<br>(14 km)<br>Jeseník</p>"
     },
     {
         "km": 27,
@@ -512,7 +668,7 @@ var pesitrasy = [
         "urldesktop": "https://mapy.cz/s/decujofabu",
         "urlmobile": "https://mapy.cz/s/losolataku",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": "<p class=\"ibTransport\">Z důvodu úspory času a sil je potřeba využít <a href=\"http://www.bonera.cz/lanovky-vleky.php\" target=\"_blank\">lanovku Ramzová - Čerňava - Šerák</a>, aby se nemuselo převýšení více než 500 m (10%) na téměř 5 km cesty po červené turistické značce absolvovat pěšky.</p><p class=\"ibInfo\">Celková délka trasy je sice 35 km, ale 3 km z toho je jízda lanovkou, takže pěšky je potřeba ujít právě jen těch 32 km.</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Staré Město pod Sněžníkem<br>(17 km)<br>Ramzová<br>(15 km)<br>Branná</p>"
     },
     {
@@ -584,7 +740,7 @@ var pesitrasy = [
         "urldesktop": "https://mapy.cz/s/gubokohefu",
         "urlmobile": "https://mapy.cz/s/datotunevo",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": "<p class=\"ibTransport\">Pro snazší cestování je nejlepší přijet autem do Vsetína a odtud potom dále do startu a z cíle trasy již osobním vlakem.</p><p class=\"ibSleep\">Pro tuto trasu je lepší místo stanování raději zajistit ubytování v Pulčíně pod střechou. Druhou noc totiž není možné stan vůbec využít z důvodu zákazu stanování v CHKO Beskydy, takže jeho nošení by nebylo zrovna výhodné, jelikož v takto kopcovitém terénu je lepší mít batoh co nejlehčí.</p><p class=\"ibMultiday\">Trasa je na 3 dny:</p><p>Lužná u Vsetína<br>(15 km)<br>Pulčín<br>(18 km)<br>Horský hotel Portáš<br>(15 km)<br>Velké Karlovice zastávka</p>"
     },
     {

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="trains" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="200px" height="40px" viewBox="0 0 200 40" enable-background="new 0 0 200 40" xml:space="preserve">
+<g>
+	<path fill="#3C3F46" d="M74.708,20.498h28.132v0.982c-0.839,0.569-1.627,1.141-2.517,1.678c-7.492,5.033-14.582,9.808-25.59,9.824
+		h-0.025v7.065h50.584v-7.031H99.938v-0.974c1.469-0.99,2.902-2.005,4.371-2.987c6.821-4.59,12.711-8.557,20.976-8.557v-7.057
+		H74.708V20.498z"/>
+	<rect x="74.708" fill="#3C3F46" width="50.584" height="7.064"/>
+</g>
+</svg>

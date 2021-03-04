@@ -68,18 +68,14 @@ var odkazy = [
         ]
     },
     {
-        "cd": [
+        "trains": [
             {
-                "linktext": "Vyhledání spojení",
-                "linkurl": "https://www.cd.cz/spojeni-a-jizdenka/"
-            },
-            {
-                "linktext": "Podmínky a ceník přepravy kol",
-                "linkurl": "https://www.cd.cz/dalsi-sluzby/psi-kola-a-jina-zavazadla/-26463/"
+                "linktext": "Jednotná jízdenka na železnici (OneTicket)",
+                "linkurl": "https://oneticket.cz/#/home"
             },
             {
                 "linktext": "Mapa železniční sítě",
-                "linkurl": "http://www.jizdni-rady.nanadrazi.cz/images/mapy/zeleznicni_mapa_cr_2019.gif"
+                "linkurl": "img/mapa-zel-site.pdf"
             },
             {
                 "linktext": "Mapa linek dálkových vlaků v ČR",
@@ -92,6 +88,18 @@ var odkazy = [
             {
                 "linktext": "Grafická prezentace polohy vlaků v ČR (GRAPP)",
                 "linkurl": "https://grapp.spravazeleznic.cz/"
+            }
+        ]
+    },
+    {
+        "cd": [
+            {
+                "linktext": "Vyhledání spojení",
+                "linkurl": "https://www.cd.cz/spojeni-a-jizdenka/"
+            },
+            {
+                "linktext": "Podmínky a ceník přepravy kol",
+                "linkurl": "https://www.cd.cz/dalsi-sluzby/psi-kola-a-jina-zavazadla/-26463/"
             }
         ]
     },
