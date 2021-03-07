@@ -250,5 +250,53 @@ var odkazy = [
                 "linkurl": "http://portal.chmi.cz/files/portal/docs/meteo/rad/inca-cz/short.html"
             }
         ]
+    },
+    {
+        "hotels": [
+            {
+                "linktext": "Mapy.cz",
+                "linkurl": "https://mapy.cz/turisticka?x=15.5182849&y=49.8054711&z=8&q=Ubytov%C3%A1n%C3%AD&cat=1"
+            },
+            {
+                "linktext": "DoKempu.cz",
+                "linkurl": "https://www.dokempu.cz/"
+            },
+            {
+                "linktext": "eKempy.cz",
+                "linkurl": "https://www.ekempy.cz/"
+            },
+            {
+                "linktext": "camping.info",
+                "linkurl": "https://www.camping.info/cs"
+            },
+            {
+                "linktext": "Chaty Klubu českých turistů",
+                "linkurl": "https://kct.cz/chaty"
+            },
+            {
+                "linktext": "ČeskéHory.cz",
+                "linkurl": "https://www.ceskehory.cz/"
+            },
+            {
+                "linktext": "LevnéUbytování.net",
+                "linkurl": "https://www.levneubytovani.net/"
+            },
+            {
+                "linktext": "Ubytování.net",
+                "linkurl": "https://www.ubytovani.net/"
+            },
+            {
+                "linktext": "HotelyPenziony.cz",
+                "linkurl": "https://www.hotelypenziony.cz/"
+            },
+            {
+                "linktext": "Booking.com",
+                "linkurl": "https://www.booking.com/"
+            },
+            {
+                "linktext": "Hotel.cz",
+                "linkurl": "https://www.hotel.cz/"
+            }
+        ]
     }
 ]

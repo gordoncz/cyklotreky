@@ -73,8 +73,10 @@ for (i = 0; i < typtrasy.length; i++) {
         var pictureDiv = document.createElement("div");
         pictureDiv.setAttribute("class", "pictureContainer");
         var pictureDivSoubor = typtrasy[i].picture;
-        var pictureDivCesta = "url(\"" + slozka + "/img/" + pictureDivSoubor + ".jpg\")";
-        pictureDiv.style.backgroundImage = pictureDivCesta;
+        var pictureDivCesta = `<img src="${slozka}/img/${pictureDivSoubor}.jpg" alt="" loading="lazy">`;
+        // var pictureDivCesta = "url(\"" + slozka + "/img/" + pictureDivSoubor + ".jpg\")";
+        // pictureDiv.style.backgroundImage = pictureDivCesta;
+        pictureDiv.innerHTML = pictureDivCesta;
         trasaUrlDiv.appendChild(pictureDiv);
     }
 

@@ -188,6 +188,13 @@ h4 {
                 overflow-y: auto;
             }
     }
+    /* rozšíření pro mobily, aby se tlačítka tolik "nelepila" na hlavičku a patičku */
+    @media (pointer: coarse) {
+        #panelMenuContent {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+    }
 
 /* jednotlivá tlačítka hlavního menu vč. unikátních obrázků na pozadí */
 /* container div pro každé main menu tlačítko */
@@ -202,24 +209,33 @@ h4 {
     user-select: none;
 }
 
+    /* speciální úprava pro mobily pro zmenšení vzdálenosti mezi tlačítky menu */
+    @media (pointer: coarse) {
+        .menuItemWrapper {
+            padding: 5px;
+        }
+    }
     /* obrázky na pozadí jednotlivých main menu tlačítek */
-    .menuItemWrapper.menuCyklo {
-        background-image: url("../img/menu-cyklo.png");
-    }
-    .menuItemWrapper.menuPesi {
-        background-image: url("../img/menu-pesi.png");
-    }
-    .menuItemWrapper.menuRegiony {
-        background-image: url("../img/menu-regiony.png");
-    }
-    .menuItemWrapper.menuPravidla {
-        background-image: url("../img/menu-pravidla.png");
-    }
-    .menuItemWrapper.menuOdkazy {
-        background-image: url("../img/menu-odkazy.png");
-    }
-    .menuItemWrapper.menuStatistika {
-        background-image: url("../img/menu-statistika.png");
+    /* nově budou jen na PC, na mobilu obrázky nebudou pro ještě větší úsporu dat */
+    @media (pointer: fine) {
+        .menuItemWrapper.menuCyklo {
+            background-image: url("../img/menu-cyklo.png");
+        }
+        .menuItemWrapper.menuPesi {
+            background-image: url("../img/menu-pesi.png");
+        }
+        .menuItemWrapper.menuRegiony {
+            background-image: url("../img/menu-regiony.png");
+        }
+        .menuItemWrapper.menuPravidla {
+            background-image: url("../img/menu-pravidla.png");
+        }
+        .menuItemWrapper.menuOdkazy {
+            background-image: url("../img/menu-odkazy.png");
+        }
+        .menuItemWrapper.menuStatistika {
+            background-image: url("../img/menu-statistika.png");
+        }
     }
 
 /* klikatelný vnitřní div každého main menu tlačítka */
@@ -242,6 +258,40 @@ h4 {
         font-size: 1.8em;
         color: white;
         background-color: rgba(10, 127, 226, 0.05);
+    }
+
+    /* speciální formátování pro mobily, kde se nezobrazují obrázky na pozadí tlačítek menu */
+    /* tak aby to nějak vypadalo i bez nich... */
+    @media (pointer: coarse) {
+        .menuItem {
+            filter: unset;
+            margin: 2px;
+            border: 3px solid #052453;
+            border-radius: 15px;
+            background-color: var(--bgLight);
+        }
+        .menuItemWrapper.menuCyklo .menuItem, .menuItemWrapper.menuPesi .menuItem {
+            border: 3px solid #063984;
+        }
+        /* individuální zbarvení každého tlačítka zvlášť */
+        .menuItemWrapper.menuCyklo .menuItem {
+            background-image: linear-gradient(90deg, #15273b, #1d3d60, #15273b);
+        }
+        .menuItemWrapper.menuPesi .menuItem {
+            background-image: linear-gradient(90deg, #1b2308, #2f3c10, #1b2308);
+        }
+        .menuItemWrapper.menuRegiony .menuItem {
+            background-image: linear-gradient(90deg, #281d09, #42320f, #281d09);
+        }
+        .menuItemWrapper.menuPravidla .menuItem {
+            background-image: linear-gradient(90deg, #062011, #0d311c, #062011);
+        }
+        .menuItemWrapper.menuOdkazy .menuItem {
+            background-image: linear-gradient(90deg, #032126, #083b43, #032126);
+        }
+        .menuItemWrapper.menuStatistika .menuItem {
+            background-image: linear-gradient(90deg, #240d1d, #3b1c31, #240d1d);
+        }
     }
 
 /* patička pod hlavním menu obsahující číslo aktuální verze Cyklotreků */
@@ -725,7 +775,13 @@ h4 {
                 font-size: 0px;
                 padding: 0px;
                 grid-area: pic;
+                user-select: none;
             }
+                .pictureContainer > img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
                 /* na mobilech nebude ani vygenerovaný, takže nesmí pak zabírat žádné místo v html dokumentu */
                 /* proto je zde také display: none */
                 @media (pointer: coarse) {

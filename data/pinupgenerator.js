@@ -1,62 +1,31 @@
-// generator pro pinup girls, provede se jen při zobrazení na PC
+// automatický generátor pro pinup girls obrázky na pozadí titulní stránky, provede se jen při zobrazení na PC
 // na mobilech se z důvodu úspory přenosu dat a také úspory místa na monitoru pinup girls nebudou zobrazovat
+
+// zde stačí vložit číslo, kolik je celkem pinup souborů ve složce
+var celkemPinup = 50;
 
 // definování variable pro div ID "panelPinup" na stránce, kam se bude obrázek vkládat
 var pinupDiv = document.getElementById("panelPinup");
 
-// zde vložit názvy jednotlivých souborů obrázků ve složce s pinup girls
-var pinupPool = [
-    "pinup01",
-    "pinup02",
-    "pinup03",
-    "pinup04",
-    "pinup05",
-    "pinup06",
-    "pinup07",
-    "pinup08",
-    "pinup09",
-    "pinup10",
-    "pinup11",
-    "pinup12",
-    "pinup13",
-    "pinup14",
-    "pinup15",
-    "pinup16",
-    "pinup17",
-    "pinup18",
-    "pinup19",
-    "pinup20",
-    "pinup21",
-    "pinup22",
-    "pinup23",
-    "pinup24",
-    "pinup25",
-    "pinup26",
-    "pinup27",
-    "pinup28",
-    "pinup29",
-    "pinup30",
-    "pinup31",
-    "pinup32",
-    "pinup33",
-    "pinup34",
-    "pinup35",
-    "pinup36",
-    "pinup37",
-    "pinup38",
-    "pinup39",
-    "pinup40",
-    "pinup41",
-    "pinup42",
-    "pinup43",
-    "pinup44",
-    "pinup45",
-    "pinup46",
-    "pinup47",
-    "pinup48",
-    "pinup49",
-    "pinup50"
-]
+// na začátku vytvořit prázdný array, kam se následně budou automaticky vkládat jednotlivé pinup položky
+var pinupPool = [];
+
+// na tomto místě se kód postará o naplnění výše definovaného prázdného array příslušnými daty
+// počet vložených pinup záznamů do array se řídí číslem, které je definované výše v rámci var celkemPinup
+if (celkemPinup > 9) {
+    // tento if blok se spustí, pokud je počet pinup souborů ve složce větší než 9
+    for(i = 1; i < 10; i++) {
+        pinupPool.push(`pinup0${i}`);
+    }
+    for(i = 10; i < (celkemPinup + 1); i++) {
+        pinupPool.push(`pinup${i}`);
+    }
+} else {
+    // tento else blok se spustí jen tehdy, pokud je počet pinup souborů ve složce menší nebo roven 9
+    for(i = 1; i < (celkemPinup + 1); i++) {
+        pinupPool.push(`pinup0${i}`);
+    }
+}
 
 function generatePinup() {
 
