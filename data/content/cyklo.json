@@ -1,4 +1,4 @@
-var cyklotrasy = [
+[
     {
         "km": 18,
         "multiday": false,

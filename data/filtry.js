@@ -1,23 +1,32 @@
-// definování variables pro hlavní elementy na stránce
-var trasy = document.getElementById("seznamTras");
-var trasa = trasy.getElementsByClassName("trasaWrapper");
-var celkemTras = trasa.length;
-var pocitadloDiv = document.getElementById("pocitadloTras");
+// toto je speciální iniciační funkce, která se spustí až potom, co async funkce načte všechny trasy z JSON souboru
+// do té doby totiž nejsou skriptem vygenerované HTML elementy, které se následně přiřazují těmto variables
+// takže pokud by byly variables deklarované s hodnotami mimo funkci, tak by se tak stalo ještě předtím, než vůbec dané HTML elementy vzniknou
+// proto je nutné takovéto kostrbaté řešení, kdy se uvnitř funkce deklarují variables bez "var", aby z nich vznikly "implicit global variables"...
+// ...čímž je možné je pak použít v dalších funkcích jako kdyby to byly klasické globální variables
+function spustitFiltry() {
+    // definování variables pro hlavní elementy na stránce
+    trasy = document.getElementById("seznamTras");
+    trasa = trasy.getElementsByClassName("trasaWrapper");
+    celkemTras = trasa.length;
+    pocitadloDiv = document.getElementById("pocitadloTras");
 
-// variables pro rendering kružnice do správného divu na stránce
-var kruhDiv = document.getElementById('pocitadloKruh');
-var kruznice = kruhDiv.getContext('2d');
+    // variables pro rendering kružnice do správného divu na stránce
+    kruhDiv = document.getElementById('pocitadloKruh');
+    kruznice = kruhDiv.getContext('2d');
 
-// průměr kružnice (v px) je jen pro potřeby následného výpočtu x,y souřadnic středu kruhu
-// ve skutečnosti musí být průměr kružnice definovaný přímo v html tagu <canvas> na stránce jako čtverec o stranách x=px, y=px
-// takže toto číslo je jen kopie hodnot z html tagu
-var prumerKruznice = 60;
-// poloměr kružnice je pak logicky polovina průměru
-var polomerKruznice = prumerKruznice / 2;
-// a souřadnice x a y pro střed kružnice jsou tedy stejně vzdálené od bodu wrapper divu x=0,y=0 (position: absolute) jako poloměr kružnice
-var stredX = polomerKruznice;
-var stredY = polomerKruznice;
+    // průměr kružnice (v px) je jen pro potřeby následného výpočtu x,y souřadnic středu kruhu
+    // ve skutečnosti musí být průměr kružnice definovaný přímo v html tagu <canvas> na stránce jako čtverec o stranách x=px, y=px
+    // takže toto číslo je jen kopie hodnot z html tagu
+    prumerKruznice = 60;
+    // poloměr kružnice je pak logicky polovina průměru
+    polomerKruznice = prumerKruznice / 2;
+    // a souřadnice x a y pro střed kružnice jsou tedy stejně vzdálené od bodu wrapper divu x=0,y=0 (position: absolute) jako poloměr kružnice
+    stredX = polomerKruznice;
+    stredY = polomerKruznice;
 
+    // toto spustí funkci pro výpočet počtu zobrazených tras při načtení stránky
+    countTracks();
+}
 
 
 // funkce pro filtrování tras podle jejich délky
@@ -256,6 +265,3 @@ function resetFilters() {
     // a pro jistotu ještě jednou na konci pustí funkci pro spočítání zobrazených tras
     countTracks();
 }
-
-// toto spustí funkci pro výpočet počtu zobrazených tras hned při načtení stránky
-countTracks();
