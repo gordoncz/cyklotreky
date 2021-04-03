@@ -75,15 +75,15 @@
             },
             {
                 "linktext": "Mapa železniční sítě",
-                "linkurl": "img/mapa-zel-site.pdf"
+                "linkurl": "files/mapa-zel-site.pdf"
             },
             {
                 "linktext": "Mapa linek dálkových vlaků v ČR",
-                "linkurl": "img/linky_dalkovych_vlaku.pdf"
+                "linkurl": "files/linky_dalkovych_vlaku.pdf"
             },
             {
                 "linktext": "Mapa železničních tratí obsluhovaných alternativními dopravci od 15.12.2019",
-                "linkurl": "img/mapa-zeleznicnich-dopravcu.jpg"
+                "linkurl": "files/mapa-zeleznicnich-dopravcu.jpg"
             },
             {
                 "linktext": "Grafická prezentace polohy vlaků v ČR (GRAPP)",
@@ -100,6 +100,10 @@
             {
                 "linktext": "Podmínky a ceník přepravy kol",
                 "linkurl": "https://www.cd.cz/dalsi-sluzby/psi-kola-a-jina-zavazadla/-26463/"
+            },
+            {
+                "linktext": "Skupinová víkendová jízdenka",
+                "linkurl": "https://www.cd.cz/typy-jizdenek/vnitrostatni-jizdenky/-25923/"
             }
         ]
     },

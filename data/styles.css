@@ -6,6 +6,7 @@
     --themeColor: #0a7fe2;
     --highlightColor: #ffa608;
     --linkColor: #6cbaf9;
+    --iblinkColor: #0d83e1;
     --bgLighter: #3c3f46;
     --bgLight: #282b30;
     --bgDark: #202327;
@@ -108,6 +109,16 @@ h4 {
     margin-right: auto;
     width: 90%;
     max-width: 900px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    line-height: 1.5;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 
@@ -236,6 +247,9 @@ h4 {
         .menuItemWrapper.menuStatistika {
             background-image: url("../img/menu-statistika.png");
         }
+        .menuItemWrapper.menuInformace {
+            background-image: url("../img/menu-informace.png");
+        }
     }
 
 /* klikatelný vnitřní div každého main menu tlačítka */
@@ -291,6 +305,9 @@ h4 {
         }
         .menuItemWrapper.menuStatistika .menuItem {
             background-image: linear-gradient(90deg, #240d1d, #3b1c31, #240d1d);
+        }
+        .menuItemWrapper.menuInformace .menuItem {
+            background-image: linear-gradient(90deg, #26110d, #33201c, #26110d);
         }
     }
 
@@ -426,6 +443,29 @@ h4 {
         width: 90%;
         max-width: 900px;
     }
+
+/* hlavní container div pro content stránky s informacemi */
+#obsahStrankyInfo {
+background-color: var(--bgDark);
+margin: 0px auto;
+padding: 20px 0px 30px 0px;
+}
+    #obsahStrankyInfo > p {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        max-width: 900px;
+    }
+    #obsahStrankyInfo > div {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        max-width: 900px;
+    }
+
+.invisible {
+    display: none;
+}
 
 
 
@@ -862,6 +902,24 @@ h4 {
         text-align: justify;
     }
 
+        /* speciální stylování barvy pro odkazy v infoboxu (aby text nebyl tak světlý jako u ostatních odkazů) */
+        .infoboxContainer a {
+            text-decoration: none;
+            color: var(--iblinkColor);
+        }
+            .infoboxContainer a:link {
+                color: var(--iblinkColor);
+            }
+            .infoboxContainer a:visited {
+                color: var(--iblinkColor);
+            }
+            .infoboxContainer a:hover {
+                color: var(--iblinkColor);
+                text-decoration: underline;
+            }
+            .infoboxContainer a:active {
+                color: var(--iblinkColor);
+            }
         /* záporné odsazení prvního řádku každého odstavce s ikonkou */
         /* (proto, aby ikonka nezasahovala do prvního řádku odstavce, ale byla před ním) */
         .infoboxContainer p[class^="ib"] {
@@ -1472,6 +1530,197 @@ h4 {
     height: 100%;
     border-radius: 0px 5px 5px 0px;
 }
+
+
+
+/* ======================================================================================================== */
+/* INFORMACE */
+/* každý wrapper div je omezený na 90% (max. 900px) šířky deklarací parent divu stránky "obsahStrankyInfo" */
+/* aby mohla být na parent divu stránky deklarována barva pozadí v celé šířce, ale zároveň aby text a obsah na stránce nebyl příliš široký */
+
+/* wrapper div pro Murphyho zákony */
+#murphyLaw {
+    margin-bottom: 60px;
+}
+
+/* odstavec, kam se JavaScriptem dynamicky vepisují jednotlivé Murphyho zákony */
+#murphyLawQuote {
+    font-size: 1em;
+    font-style: italic;
+    color: lightgray;
+}
+    /* před každou citací se bude zobrazovat barevně odlišený znak uvozovky jako taková vizuální dekorace */
+    #murphyLawQuote::before {
+        content: '"';
+        color: var(--themeColor);
+        font-size: 3em;
+        line-height: 0.3;
+        font-style: normal;
+        vertical-align: text-bottom;
+        font-family: 'Quicksand', serif;
+        margin-right: 4px;
+    }
+
+/* statická annotace pod citátem Murphyho zákona */
+#murphyLawNote {
+    color: gray;
+    text-align: right;
+}
+
+
+/* wrapper div pro changelog jednotlivých updatů */
+#changelogWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+/* container div pro každý jednotlivý update */
+.changelogContainer {
+    width: 100%;
+    max-width: 650px;
+    border-top: 3px solid var(--bgLight);
+}
+    .changelogContainer:first-child {
+        border-top: unset;
+    }
+
+/* div s číslem verze updatu */
+.changelogVerze {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 600;
+    font-size: 1.5em;
+    color: var(--themeColor);
+    margin-top: 20px;
+}
+
+/* div s datem updatu */
+.changelogDatum {
+    color: gray;
+}
+
+/* div s jednořádkovým souhrnem o tom, o čem daný update je */
+.changelogSummary {
+    color: var(--highlightColor);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* div s jednotlivými body popisujícími update */
+.changelogText {
+    text-align: justify;
+}
+
+/* tlačítko pro zobrazení starších updatů (nejen toho posledního nejnovějšího) */
+#starsiUpdatyTlacitko {
+    background-color: #c38e4f;
+    color: black;
+    border-radius: 15px;
+    cursor: pointer;
+    user-select: none;
+    padding: 5px 15px;
+}
+    #starsiUpdatyTlacitko:hover {
+        background-color: #ffa608;
+        filter: brightness(80%);
+    }
+
+
+/* wrapper div pro přepínací záložky/tlačítka pro jednotlivé kategorie tipy a triky */
+#tipsTabs {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* společná pravidla pro všechny záložky/tlačítka */
+#tipsTabCyklotreky, #tipsTabMapycz, #tipsTabDopravci {
+    width: 60px;
+    height: 30px;
+    border: 1px solid white;
+    background-color: var(--bgDarker);
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    #tipsTabCyklotreky:hover, #tipsTabMapycz:hover, #tipsTabDopravci:hover {
+        border: 1px solid var(--themeColor);
+    }
+    #tipsTabCyklotreky.tabActive, #tipsTabMapycz.tabActive, #tipsTabDopravci.tabActive {
+        border: 1px solid var(--themeColor);
+        background-color: var(--themeColor);
+        cursor: default;
+    }
+
+/* wrapper div pro tipy a triky */
+#tipsWrapper {
+    text-align: justify;
+    margin-bottom: 60px;
+}
+
+/* speciálně stylovaný první řádek každého bodu tipů a triků */
+/* ostatní řádky jdou až za tagem <br> */
+/* takže první řádek slouží jako kdyby takový mini-nadpis */
+#tipsWrapper li::first-line {
+    color: var(--highlightColor);
+}
+
+/* puntíky (markery) jednotlivých bodů pro tipy a triky */
+#tipsWrapper li::marker {
+    color: var(--highlightColor);
+}
+
+
+#popisWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.popisContainer {
+    margin: 0px auto;
+    width: 100%;
+    max-width: 650px;
+}
+    .popisContainer > p {
+        text-align: justify;
+        line-height: 1.5;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-indent: 12px;
+    }
+
+/* tlačítko pro zobrazení textového bloku informací k Cyklotrekům */
+#showInfoTlacitko {
+    background-color: #c38e4f;
+    color: black;
+    border-radius: 15px;
+    cursor: pointer;
+    user-select: none;
+    padding: 5px 15px;
+}
+    #showInfoTlacitko:hover {
+        background-color: #ffa608;
+        filter: brightness(80%);
+    }
+
+
+/* wrapper div pro ikony technologií použitých při vývoji webu */
+#infoDevtools {
+    max-width: 300px !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+    #infoDevtools img {
+        cursor: help;
+    }
 
 
 

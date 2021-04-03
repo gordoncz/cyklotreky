@@ -1,0 +1,157 @@
+[
+    {
+        "verze": "15",
+        "datum": "3. dubna 2021",
+        "summary": "nová stránka informace",
+        "detaily": [
+            "Do hlavního menu byla přidána nová stránka \"Informace\", která se skládá ze tří hlavních částí",
+            "První významnou součástí této informační stránky je seznam jednotlivých updatů databáze a informace, o čem přesně ten který update byl",
+            "Druhou částí je sekce \"Víte, že...?\", v níž je uvedena nápověda např. k používání databáze Cyklotreky, aplikace Mapy.cz či specifické informace o dopravcích (resp. tipy a triky o méně známých prvcích a vychytávkách v těchto oblastech)",
+            "Třetí hlavní sekcí stránky jsou potom informace o této verzi databáze, o jejích hlavních prvcích, historii, designu či technologii, na které je postavená",
+            "Pro pobavení je nahoře hned pod nadpisem informační stránky vždy nějaká náhodně zobrazená citace z Murphyho zákonů schválnosti na téma cyklistika"
+        ]
+    },
+    {
+        "verze": "14",
+        "datum": "12. března 2021",
+        "summary": "modernizace kódu stránek pro další zrychlení načítání",
+        "detaily": [
+            "Části kódu webu byly v tomto updatu modernizovány a přepsány tak, že se určité operace při načítání dat mohou provádět paralelně s jinými procesy, takže se načítání stránek může dokončit ještě o něco rychleji než předtím",
+            "Díky tomu je nyní načítání tras z databáze v průměru o dalších 30&nbsp;% rychlejší"
+        ]
+    },
+    {
+        "verze": "13",
+        "datum": "7. března 2021",
+        "summary": "optimalizace systému obrázků pro zrychlení načítání stránek",
+        "detaily": [
+            "Na stránkách s trasami byl implementován moderní systém načítání obrázků, což při zobrazení databáze na PC zajišťuje až dvakrát rychlejší načtení stránek s trasami oproti předchozímu systému",
+            "Zároveň byla na titulní straně přepracována tlačítka tak, že při zobrazení na mobilu se již nestahují obrázky na pozadí těchto tlačítek (na PC jsou zobrazované i nadále) - tato změna umožňuje ještě větší úsporu přenášených dat (což je na mobilním připojení často důležitý požadavek) a z toho plynoucí i podstatně vyšší rychlost načtení titulní stránky (např. na připojení přes EDGE je zrychlení až čtyřnásobné oproti předchozí verzi databáze)",
+            "Mezi externí odkazy byla přidána nová sekce se seznamem webových portálů sloužících k vyhledávání ubytování"
+        ]
+    },
+    {
+        "verze": "12",
+        "datum": "4. března 2021",
+        "summary": "nové pěší treky",
+        "detaily": [
+            "Byla přidána velká sada nových pěších treků, většinou snadno a rychle dosažitelných",
+            "V odkazech se ze sekce ČD vydělila nová skupina dedikovaná vlakové dopravě obecně"
+        ]
+    },
+    {
+        "verze": "11",
+        "datum": "19. února 2021",
+        "summary": "pravidelná korekce tras v databázi před sezónou",
+        "detaily": [
+            "Zkontrolovány a opraveny odkazy na všechny trasy v databázi v rámci pravidelné každoroční revize před sezónou",
+            "Některé trasy byly dodatečně upraveny za účelem vylepšení jejich průběhu krajinou",
+            "Do externích odkazů přidány dva nové záznamy s online mapami pro sledování provozu hromadné dopravy"
+        ]
+    },
+    {
+        "verze": "10",
+        "datum": "3. ledna 2021",
+        "summary": "velký balík nových cyklotras",
+        "detaily": [
+            "Databáze byla dále rozšířena o největší balík cyklotras v historii",
+            "Historicky vůbec poprvé se nyní v databázi objevují také cyklotrasy využívající nějaký singletrail",
+            "Externí odkazy dostaly dvě nové sekce relevantních poskytovatelů vlakové dopravy - Leo Express a GW Train Regio"
+        ]
+    },
+    {
+        "verze": "9",
+        "datum": "19. prosince 2020",
+        "summary": "modernizované logo",
+        "detaily": [
+            "Hlavní logo Cyklotreky na titulní stránce dostalo novou modernizovanou podobu, která lépe sedí k tmavému motivu databáze",
+            "Odpovídajícím způsobem byly upravené i malé verze loga použité na jiných místech webu"
+        ]
+    },
+    {
+        "verze": "8",
+        "datum": "12. prosince 2020",
+        "summary": "nová sekce statistika tras",
+        "detaily": [
+            "V této nové sekci se v grafické podobě zobrazují nejrůznější statistiky všech cyklo a pěších tras v databázi",
+            "Je možné si nechat ukázat souhrnné statistiky nebo statistiky odděleně pro cyklotrasy a pro pěší treky",
+            "Tyto statistiky jsou přitom dynamicky generované, takže vždy přesně zobrazují data z aktuální verze databáze s nejnovější sadou tras",
+            "Přidáno několik dalších externích odkazů týkajících se vedení vlakových linek v ČR",
+            "Další drobné grafické úpravy a korekce"
+        ]
+    },
+    {
+        "verze": "7",
+        "datum": "30. listopadu 2020",
+        "summary": "vylepšení detailů stránek",
+        "detaily": [
+            "Speciální update zaměřený na dodatečné vylepšení a vyladění detailů grafického vzhledu stránek",
+            "Počítadlo tras ve filtrech nyní zobrazuje okolo čísla i dynamicky renderovaný barevný kruh, jehož zobrazená výseč vždy odpovídá poměru počtu zobrazených tras na stránce vůči celkovému počtu tras v databázi (bere se vždy pro aktuálně zobrazený typ tras, tedy pro cyklo a pěší zvlášť)",
+            "Pro jednotlivé odstavce textu v infoboxu byly přidány rozlišující ikonky podle typu sdělení, které text v daném odstavci reprezentuje",
+            "Upraveno rozložení prvků v nadpisu každé stránky tak, aby se zlepšila ovladatelnost těchto prvků a zamezilo se možnému nechtěnému ukliknutí vedle (což mohl být problém především na mobilech s dotykovým ovládáním, které není tak přesné jako kurzor myši)",
+            "Provedena řada dalších menších úprav grafiky a kódu, vše za účelem zkvalitnění uživatelské přívětivosti databáze",
+            "Na stránky s cyklo a pěšími výlety byl přidán malý \"Easter Egg\" pro pobavení (pouze při zobrazení na PC)"
+        ]
+    },
+    {
+        "verze": "6",
+        "datum": "14. listopadu 2020",
+        "summary": "nové pěší treky v horách",
+        "detaily": [
+            "Další obsahový update, tentokrát se soustředil na přidání většího balíku pěších treků (primárně v horských oblastech)",
+            "Byly změněny obrázky u několika existujících tras, aby lépe ikonicky reprezentovaly tyto trasy",
+            "Ze sekce Užitečné odkazy byl odstraněn eshop \"Velo Hanák\", protože bohužel ke dni 28.8.2020 ukončil veškerou činnost a dále již neexistuje (místo něj byl přidán jiný ověřený cykloshop - Kupkolo.cz)"
+        ]
+    },
+    {
+        "verze": "5",
+        "datum": "16. července 2020",
+        "summary": "nové cyklotrasy",
+        "detaily": [
+            "Obsahový update zaměřený na přidání většího balíku nových cyklotras",
+            "Primární zaměření tohoto updatu byly trasy, které jsou poměrně snadno a relativně blízko dostupné hromadou dopravou",
+            "Byly opraveny všechny externí odkazy na web IDS JMK, který byl nedávno modernizován a dosavadní odkazy tak přestaly fungovat"
+        ]
+    },
+    {
+        "verze": "4",
+        "datum": "28. června 2020",
+        "summary": "optimalizace databáze tras",
+        "detaily": [
+            "Několik pěších a cyklotras bylo částečně upraveno a optimalizován jejich průběh krajinou",
+            "Zároveň byly i některé trasy vymazány v rámci pročištění databáze od neperspektivních výletů"
+        ]
+    },
+    {
+        "verze": "3",
+        "datum": "22. června 2020",
+        "summary": "vylepšená funkcionalita filtrování tras",
+        "detaily": [
+            "Přidáno počítadlo, které zobrazuje číslo, kolik je vždy na stránce aktuálně zobrazených vyfiltrovaných tras",
+            "Tomuto počítadlu byla zároveň přidělena funkce resetu filtrů, takže díky ní je možné resetovat všechny filtry zpět na výchozí hodnoty jedním kliknutím, aniž by se musela znovu načítat celá stránka",
+            "Prostřednictvím textového filtru lze nyní hledat názvy tras bez ohledu na diakritiku",
+            "Navíc kliknutím na textový filtr lze jednoduše vymazat do něj vepsaný text a resetovat tím zobrazení takto filtrovaných tras",
+            "Opět přidány další pinup bike girls"
+        ]
+    },
+    {
+        "verze": "2",
+        "datum": "9. června 2020",
+        "summary": "nový prvek infobox pro trasy",
+        "detaily": [
+            "K trasám byl přidaný vysouvací infobox, který zobrazuje užitečné organizační informace, pokud jsou u dané trasy potřebné",
+            "Rozšířen počet pinup bike girls"
+        ]
+    },
+    {
+        "verze": "1",
+        "datum": "4. května 2020",
+        "summary": "databáze rozšířena o podpůrné sekce",
+        "detaily": [
+            "Přidána mapka s vyznačením hranic jednotlivých regionů, do nichž jsou trasy rozděleny",
+            "Přidána sekce s externími odkazy vedoucími na stránky, které souvisejí s Cyklotreky a mohou být nějak užitečné",
+            "Nová sekce \"Pravidla v přírodě\", která formou jednoduchých piktogramů zobrazuje úrovně omezení různých aktivit v přírodě (pro pohyb pěšky, jízdu na kole a pro přespání v přírodě pod stanem nebo jako bivak pod širákem), a to podle typu ochrany daného území (NP, CHKO, NPR atd.)",
+            "Ikonky použité na stránkách byly převedeny do vektorové SVG grafiky"
+        ]
+    }
+]

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Informace - Cyklotreky</title>
+
+    <link rel="icon" href="data/favicon.png">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin:wght@600&text=1234567890&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <link rel="stylesheet" href="data/styles.css">
+</head>
+
+<body>
+
+    <!-- Úvodní ovládací divy nahoře na stránce -->
+    <div id="titulka">
+        <div id="logotop"><a href="index.html"><img src="img/logo-small.svg" alt="logo"></a></div>
+        <div id="nazevStranky"><h1 onclick="backToTop()">INFORMACE</h1></div>
+    </div>
+
+    <!-- Hlavní div s pro obsah stránky -->
+    <div id="obsahStrankyInfo">
+
+        <!-- Murphyho zákony -->
+        <div id="murphyLaw">
+            <p id="murphyLawQuote"></p>
+            <p id="murphyLawNote">Murphyho zákony schválnosti... na téma cyklistika</p>
+        </div>
+
+        <!-- Stručný changelog jednotlivých verzí -->
+        <h2>Novinky</h2>
+        <p>Stručné informace o obsahu jednotlivých updatů databáze Cyklotreky</p>
+        <div id="changelogWrapper"><p id="loadingChangelog">Načítám data...</p></div>
+
+        <!-- Nápověda pro používání Cyklotreků a aplikace Mapy.cz -->
+        <!-- Při přidání dalšího tlačítka stačí jen vytvořit SVG obrázek, přidat html tag zde do stránky a příslušný záznam do howto.json -->
+        <!-- Automatická funkce v info.js pak zajistí, že se tlačítka zde správně spárují s příslušnými dynamicky generovanými divy s obsahem -->
+        <!-- Stačí jen dodržet zde nastavený vzorec pojmenování prvků -->
+        <h2>Víte, že...?</h2>
+        <p>Nápověda a tipy k různým funkcím a vychytávkám</p>
+        <div id="tipsTabs">
+            <div id="tipsTabCyklotreky" onclick="tipsPrepnuti(this.id)" title="Tipy pro databázi Cyklotreky"><img src="img/tips-cyklotreky.svg" alt="Cyklotreky"></div>
+            <div id="tipsTabMapycz" onclick="tipsPrepnuti(this.id)" title="Tipy pro aplikaci Mapy.cz"><img src="img/tips-mapycz.svg" alt="Mapy.cz"></div>
+            <div id="tipsTabDopravci" onclick="tipsPrepnuti(this.id)" title="Tipy pro hromadnou dopravu"><img src="img/tips-dopravci.svg" alt="Dopravci"></div>
+        </div>
+        <div id="tipsWrapper"><p id="loadingTips">Načítám data...</p></div>
+
+        <!-- Credits -->
+        <h2>Cyklotreky</h2>
+        <p>Databáze cyklovýletů a pěších treků v ČR a blízkém zahraničí</p>
+        <p>Založeno roku 2014</p>
+
+        <div id="popisWrapper">
+            <div id="showInfoTlacitko" onclick="zobrazitInfo(this)">zobrazit popis</div>
+            <div class="popisContainer invisible">
+                <h4>Historie</h4>
+                <p>První databáze cyklistických výletů vznikla už v roce 2014 a od té doby prošla mnoha proměnami a vylepšeními.</p>
+                <p>Několik úvodních verzí databáze bylo zaměřeno na jednoduché sdílení základních dat o naplánovaných cyklotrasách, takto sdružených na jednom místě. Jejich offline distribuce ale byla brzdou dynamiky dalšího vylepšování a vyžadovala po uživatelích přímé stahování aktualizací na jejich PC. Navíc spoléhání se výhradně na Plánovač Mapy.cz způsobovalo každoroční problémy s nečekanými změnami tras, způsobovanými úpravami skriptů ze strany Seznamu na pozadí jejich map.</p>
+                <p>Komplexní redesign a přechod databáze do online prostoru o několik let později sice tyto problémy odstranil, ale snaha o zakomponování co nejvíce nových funkcí přinesla řadu dalších problémů. Přechod na webový formát nicméně konečně zajistil neustálou dostupnost databáze online bez nutnosti aktualizací přímo na PC uživatelů, čímž umožnil i nesrovnatelně vyšší dynamiku dalšího vylepšování. Hlavním trumfem ale bylo využití api.mapy.cz, díky němuž bylo poprvé možné zobrazovat trasy z databáze v GPX formátu, tudíž nezávisle na změnách skriptů Seznamu v jejich Plánovači na Mapy.cz.</p>
+                <p>Nicméně prioritní zaměření Seznamu na vylepšování jejich aplikací Mapy.cz pro web a pro mobily způsobovalo postupné zastarávání funkcí jejich API. Původní výhody API se tak ve srovnání s konstantně vylepšovanými nativními aplikacemi Seznamu neustále zmenšovaly, až se vytratily docela, zejména pak s ohledem na srovnání možností optimalizace databáze pro mobilní telefony. Navíc neustálé rozrůstání databáze o další trasy a její současné zaměření na co nejvíce detailů ke všem zajímavostem na každé jednotlivé trase v konečném důsledku učinilo databázi příliš těžkopádnou a náročnou na údržbu. Opět tak vznikla potřeba dalšího komplexního přepracování formátu databáze úplně od základů...</p>
+
+                <h4>Verze 7</h4>
+                <p>Aktuální verze 7 vzniká v dubnu 2020 a jejím cílem je spojit v sobě výhody a nejlepší prvky z různých předchozích verzí do jedné.</p>
+                <p>Z úvodních offline verzí si bere myšlenku jednoduchosti a přehlednosti zobrazovaných dat k trasám. Z následných online verzí zase neustálou dostupnost databáze, flexibilitu pro nová vylepšení a schopnost zobrazovat v mapě trasy ve stabilním GPX formátu.</p>
+                <p>A tuto synergii díky implementaci JavaScriptu může rozvinout ještě dále přidáním nových vylepšení, jako je plně optimalizovaný design zároveň pro PC i pro mobily, integrace s aplikacemi Mapy.cz a usnadnění budoucí správy databáze.</p>
+
+                <h4>Plná optimalizace pro PC i pro mobilní telefony</h4>
+                <p>Nejvýraznější novinkou díky implementaci moderních standardů JavaScriptu je schopnost databáze generovat a zobrazovat různý obsah v různých situacích.</p>
+                <p>Takže doma na PC, kde je prioritou plánování výletů a kde se lze spolehnout na rychlý internet, je databáze zobrazena s plnými vizuálními prvky a trasy ukazuje ve formě Plánovače Mapy.cz (ve kterém lze klikat na ikony a prozkoumávat nejrůznější zajímavosti na mapě).</p>
+                <p>Na druhou stranu na mobilních telefonech v terénu je primárním požadavkem přesné trasování a co nejvyšší rychlost načítání i na pomalých datových připojeních přes mobilní sítě (jako např. EDGE). Proto se na mobilech databáze zobrazuje ve vizuálně a datově úsporném režimu a trasy ukazuje ve formátu GPX uvnitř mobilní aplikace Mapy.cz (GPX trasa je totiž neměnná v čase, precizní při trasování v terénu a rychlejší při načítání).</p>
+
+                <h4>Integrace s aplikacemi Mapy.cz</h4>
+                <p>Další výhodou nynější verze databáze je plné využití nativních aplikací Mapy.cz pro PC a pro mobily, což umožňuje mnohem větší efektivitu při zobrazování tras v různých podmínkách ve srovnání s předchozím API řešením.</p>
+                <p>Doma na PC je tedy pro zobrazení tras využita klasická webová stránka Mapy.cz, takže na rozdíl od API rozhraní jsou klikatelné všechny zajímavosti a ikony na mapě. A jelikož Seznam upřednostňuje vylepšování svých nativních aplikací před API rozhraním, lze v nich využívat jejich nejnovějších funkcí hned jak se objeví.</p>
+                <p>Na mobilních telefonech se trasy zobrazují přímo v mobilní aplikaci Mapy.cz, což má obrovskou výhodu v možnosti využívat tam stažené offline mapové podklady. Tím pádem je pak mobilní datová náročnost v terénu naprosto minimální. A při předchozím uložení trasy do "Batůžku (Moje Mapy)" lze dokonce zajistit použitelnost v terénu i zcela offline (tedy úplně bez nutnosti jakéhokoliv připojení k mobilní síti).</p>
+
+                <h4>Jednodušší údržba databáze</h4>
+                <p>Jestliže se předchozí verze snažila prostřednictvím API Mapy.cz zobrazit přímo v databázi co nejvíce informací o všech zajímavostech na každé trase, aktuální verze se svým designem opět soustředí primárně na zobrazování pouze skutečně potřebných informací k trasám jako celkům. Počítá se totiž s tím, že si uživatel může informace k zajímavostem zobrazit spolu s vykreslenou trasou až přímo v aplikaci Mapy.cz. V ní již pravidelné aktualizace informací k zajímavostem zajišťuje tým Seznamu, takže není třeba jejich práci zbytečně duplikovat.</p>
+                <p>Tato změna přináší do databáze vyšší přehlednost dat a mnohem nižší časovou náročnost na správu a údržbu tras. Čas původně věnovaný psaní popisků jednotlivých zajímavostí je tedy možné nyní věnovat ještě preciznějšímu vyladění samotných tras nebo programování dalších vylepšení databáze.</p>
+
+                <h4>Další rozšíření</h4>
+                <p>Možnosti filtrování zobrazených tras byly dále rozšířeny o řadu nových pokročilých filtrů, postavených právě na moderním JavaScript kódu. Je nyní možné trasy zobrazovat i s obrázky ve vizuálně atraktivnějším a moderním formátu a zároveň mít nadále možnost je libovolně filtrovat podle potřeby.</p>
+                <p>Populární náhodné zobrazování pinup bike girls na titulní straně zůstalo zachováno a navíc díky vylepšenému designu databáze je nyní na výběr ještě více cyklistek než kdykoliv předtím.</p>
+                <p>V neposlední řadě ještě stojí za to zmínit, že zvolený webový online formát databáze, nově postavený primárně na JavaScriptu, umožní další postupné vylepšování a aktualizace Cyklotreků, neustálou dostupnost vždy nejnovější verze databáze pro všechny uživatele a kontinuální přidávání nových tras i funkcionalit.</p>
+            </div>
+        </div>
+
+        <h4>Použitá technologie</h4>
+
+        <div id="infoDevtools">
+            <img src="img/dev-html5.svg" alt="html5" title="HyperText Markup Language v5">
+            <img src="img/dev-css3.svg" alt="css3" title="Cascading Style Sheets v3">
+            <img src="img/dev-js.svg" alt="js" title="JavaScript">
+            <img src="img/dev-json.svg" alt="json" title="JavaScript Object Notation">
+            <img src="img/dev-svg.svg" alt="svg" title="Scalable Vector Graphics">
+            <img src="img/dev-mapy.svg" alt="mapy" title="Aplikace Mapy.cz">
+        </div>
+
+    </div>
+
+    <!-- Div pro patičku stránky -->
+    <div id="patkaStranky"></div>
+
+
+    <!-- JavaScript -->
+    <script>var detekceMobilu = window.matchMedia("(pointer: coarse)");</script>
+    <script>backToTop = () => window.scroll(0, 0);</script>
+    <script src="data/patka.js"></script>
+    <!-- Samotný skript pro vložení obsahu stránky z JSON dat -->
+    <script src="data/info.js"></script>
+
+</body>
+
+</html>
