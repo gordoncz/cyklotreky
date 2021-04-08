@@ -1,5 +1,15 @@
 [
     {
+        "verze": "16",
+        "datum": "8. dubna 2021",
+        "summary": "nové cyklo a pěší trasy",
+        "detaily": [
+            "Do databáze bylo přidáno několik nových cyklo a pěších tras",
+            "Průběh pár tras byl mírně upraven za účelem optimalizace jejich průběhu krajinou",
+            "K některým trasám byly do infoboxu doplněny rozšiřující informace"
+        ]
+    },
+    {
         "verze": "15",
         "datum": "3. dubna 2021",
         "summary": "nová stránka informace",

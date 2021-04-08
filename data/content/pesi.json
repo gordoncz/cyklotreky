@@ -9,7 +9,7 @@
         "urlmobile": "https://mapy.cz/s/letapujara",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "<p class=\"ibTimelimit\">Ideální je trasu projít v druhé polovině března, kdy koniklece na Kamenném vrchu kvetou.</p>"
     },
     {
         "km": 8,
@@ -32,7 +32,7 @@
         "urldesktop": "https://mapy.cz/s/kohodedate",
         "urlmobile": "https://mapy.cz/s/cemugeteja",
         "known": true,
-        "new": true,
+        "new": false,
         "infobox": ""
     },
     {
@@ -140,7 +140,7 @@
         "urldesktop": "https://mapy.cz/s/hubabenonu",
         "urlmobile": "https://mapy.cz/s/luzarozava",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": "<p class=\"ibTransport\">Přepokládá se doprava autem, které je možné zaparkovat na turistickém parkovišti před Zámkem Žďár.</p>"
     },
     {
@@ -176,7 +176,7 @@
         "urldesktop": "https://mapy.cz/s/gevecukevo",
         "urlmobile": "https://mapy.cz/s/juhomapava",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": "<p class=\"ibTransport\">Pro cestu tam i zpět se počítá s využitím <a href=\"https://www.dpmb.cz/cs/novinky/all\" target=\"_blank\">lodní dopravy parníkem DPMB</a>.</p>"
     },
     {
@@ -272,8 +272,8 @@
         "urldesktop": "https://mapy.cz/s/mocudegobo",
         "urlmobile": "https://mapy.cz/s/bulufejede",
         "known": false,
-        "new": true,
-        "infobox": "<p class=\"ibTransport\">Jsou tři praktické možnosti dopravy do startu a z cíle trasy, všechny ale vyžadují kombinaci auta a autobusu. První možnost je přijet autem cca v 7 ráno do startu trasy v Olešnici a na konci z cíle trasy na Šerlichu odjet autobusem v 15:15 zpět k autu.</p><p class=\"ibTransport\">Druhá možnost je vyjet autem nahoru na Šerlich, odtud v 10:10 odjet autobusem do startu trasy v Olešnici a pak lze z cíle trasy volit libovolný čas návratu autem.</p><p class=\"ibTransport\">Nebo třetí možnost je zaparkovat auto buď v Dobrušce nebo v Novém Městě nad Metují, odkud ráno jezdí autobusy do Olešnice (s příjezdem cca v 8-9 ráno). Po 17.&nbsp;hodině pak ze Šerlichu jezdí poslední přestupní autobusový spoj do obou těchto výchozích měst, kde se pak lze vrátit k autu.</p>"
+        "new": false,
+        "infobox": "<p class=\"ibTransport\">Jsou tři praktické možnosti dopravy do startu a z cíle trasy, všechny ale vyžadují kombinaci auta a autobusu. První možnost je přijet autem cca v 7 ráno do startu trasy v Olešnici a na konci z cíle trasy na Šerlichu odjet autobusem v 15:15 zpět k autu.</p><p class=\"ibTransport\">Druhá možnost je vyjet autem nahoru na Šerlich, odtud v 10:10 odjet autobusem do startu trasy v Olešnici (příjezd 10:45). V takovém případě je ale nutné počítat s pozdějším odjezdem zpět z Šerlichu, a to zhruba v 7 večer.</p><p class=\"ibTransport\">Nebo třetí možnost je zaparkovat auto buď v Dobrušce nebo v Novém Městě nad Metují, odkud ráno jezdí autobusy do Olešnice (s příjezdem cca v 8-9 ráno). Po 17.&nbsp;hodině pak ze Šerlichu jezdí poslední přestupní autobusový spoj do obou těchto výchozích měst, kde se pak lze vrátit k autu.</p>"
     },
     {
         "km": 13,
@@ -284,7 +284,7 @@
         "urldesktop": "https://mapy.cz/s/duropokanu",
         "urlmobile": "https://mapy.cz/s/dopotenumo",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": ""
     },
     {
@@ -296,7 +296,7 @@
         "urldesktop": "https://mapy.cz/s/bukufurula",
         "urlmobile": "https://mapy.cz/s/puzujugate",
         "known": true,
-        "new": true,
+        "new": false,
         "infobox": ""
     },
     {
@@ -320,7 +320,7 @@
         "urldesktop": "https://mapy.cz/s/rafudemedu",
         "urlmobile": "https://mapy.cz/s/nucoruroco",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": ""
     },
     {
@@ -368,7 +368,7 @@
         "urldesktop": "https://mapy.cz/s/gafulubagu",
         "urlmobile": "https://mapy.cz/s/nadozanuza",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": ""
     },
     {
@@ -380,8 +380,20 @@
         "urldesktop": "https://mapy.cz/s/ravutekema",
         "urlmobile": "https://mapy.cz/s/jarevuseho",
         "known": true,
-        "new": true,
+        "new": false,
         "infobox": ""
+    },
+    {
+        "km": 14,
+        "multiday": false,
+        "nazev": "Údolí Chlébského potoka",
+        "region": "Svitavsko",
+        "picture": "udoli-chlebskeho-potoka",
+        "urldesktop": "https://mapy.cz/s/pehocotopu",
+        "urlmobile": "https://mapy.cz/s/colamaloma",
+        "known": false,
+        "new": true,
+        "infobox": "<p class=\"ibTimelimit\">Tato trasa je zamýšlena primárně pro absolvování během března, kdy v údolí kvetou doslova celé koberce chráněné bledule jarní. A vzhledem k opravdu vysoké návštěvnosti této krásy o víkendech je lepší si pro trasu vybrat raději všední den.</p>"
     },
     {
         "km": 14,
@@ -440,7 +452,7 @@
         "urldesktop": "https://mapy.cz/s/pacobakuru",
         "urlmobile": "https://mapy.cz/s/jokuzunese",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": ""
     },
     {
@@ -453,7 +465,7 @@
         "urlmobile": "https://mapy.cz/s/fulumuduge",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "<p class=\"ibInfo\">Trasa je vedena po místech, na nichž zanechal své stopy \"velikán české politiky\", který dokázal povýšit primitivní buranství, neomalenost a lži na životní styl. Lze si tak prohlédnout pramen řeky Oslavy (který údajně objevil), kótu 575 u Matějovského rybníka (kde v únoru 2017 slavně stanul na běžkách), Veselský rybník (na němž s oblibou tráví letní dovolené, veslujíc ve svém žlutém nafukovacím člunu), Zámek Nové Veselí (který využívá jako letní \"daču\") nebo bývalou Restauraci U Prezidenta (s jeho papírovou podobiznou).</p>"
     },
     {
         "km": 15,
@@ -512,7 +524,7 @@
         "urldesktop": "https://mapy.cz/s/pakorohacu",
         "urlmobile": "https://mapy.cz/s/kovuhonafe",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": ""
     },
     {
@@ -524,7 +536,7 @@
         "urldesktop": "https://mapy.cz/s/rocelavumu",
         "urlmobile": "https://mapy.cz/s/hojurasohu",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": "<p class=\"ibTransport\">Předpokládá se příjezd a odjezd asi nejlépe autem. Lze se do startu a z cíle trasy dopravit také vlakem s přestupem v Pardubicích, nicméně v takovém případě je potřeba k trase připočítat ještě 2 km navíc (pro přechod z/na nádraží Slatiňany).</p>"
     },
     {
@@ -537,7 +549,7 @@
         "urlmobile": "https://mapy.cz/s/relotuheju",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "<p class=\"ibInfo\">Trasa provede okolo desítky bývalých vodních mlýnů na Bílém potoce. Žádný z nich již neslouží původnímu účelu, přičemž je příznačné, že většina z nich přestala plnit funkci mlýna nuceně v 50.&nbsp;letech 20.&nbsp;století během nástupu komunismu.</p>"
     },
     {
         "km": 16,
@@ -562,6 +574,18 @@
         "known": false,
         "new": false,
         "infobox": ""
+    },
+    {
+        "km": 21,
+        "multiday": false,
+        "nazev": "Rakovecké údolí",
+        "region": "Brněnsko",
+        "picture": "rakovecke-udoli",
+        "urldesktop": "https://mapy.cz/s/cajurudoba",
+        "urlmobile": "https://mapy.cz/s/pepolutevu",
+        "known": false,
+        "new": true,
+        "infobox": "<p class=\"ibTimelimit\">Nejlepší je projít trasu buď v březnu, kdy je údolí poseté záplavou bílých květů bledulí, nebo v říjnu, kdy se zase okolní listnaté lesy rozehrají všemi barvami.</p>"
     },
     {
         "km": 27,
@@ -608,7 +632,7 @@
         "urldesktop": "https://mapy.cz/s/curahehonu",
         "urlmobile": "https://mapy.cz/s/fubazogema",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": "<p class=\"ibTransport\">Do startu trasy se předpokládá odjet vlakem v 7:18 z Brna hl.n. přes Olomouc do Krnova a odtud potom autobusem do Zlatých Hor. Lze odjet i v 9:18 čistě vlakovým spojením Brno hl.n. - Jeseník - Mikulovice - Zlaté Hory, v takovém případě ale bude trasa bez prohlídky města Zlaté Hory (a o cca 2&nbsp;km kratší).</p><p class=\"ibTransport\">Poslední zpáteční spoj je přímý rychlík Jeseník - Brno hl.n. v 17:01.</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Zlaté Hory<br>(11 km)<br>Rejvíz<br>(14 km)<br>Jeseník</p>"
     },
     {
@@ -645,7 +669,7 @@
         "urlmobile": "https://mapy.cz/s/humopemufa",
         "known": true,
         "new": false,
-        "infobox": "<p class=\"ibSleep\">Nutné nést s sebou pro přespání stan. Nicméně je třeba mít na zřeteli, že v NP/CHKO Šumava lze ve stanu přespat pouze na vyhrazených nouzových nocovištích.</p><p class=\"ibSlope\">Intenzivní stoupání se sklonem 24 % na cca 1 km dlouhém úseku od Plešného jezera k Pomníku Adalberta Stiftera.</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Ovesná<br>(13 km)<br>Nouzové nocoviště Pod Plešným jezerem<br>(16 km)<br>Nové Údolí</p>"
+        "infobox": "<p class=\"ibSleep\">Nutné nést s sebou pro přespání stan. Nicméně je třeba mít na zřeteli, že v NP/CHKO Šumava lze ve stanu přespat pouze na vyhrazených nouzových nocovištích.</p><p class=\"ibSlope\">Intenzivní stoupání se sklonem 24 % na cca 1 km dlouhém úseku od Plešného jezera k Pomníku Adalberta Stiftera.</p><p class=\"ibInfo\">Trasa je unikátní tím, že prochází hned třemi státy najednou.</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Ovesná<br>(13 km)<br>Nouzové nocoviště Pod Plešným jezerem<br>(16 km)<br>Nové Údolí</p>"
     },
     {
         "km": 32,
@@ -682,6 +706,18 @@
         "known": true,
         "new": false,
         "infobox": "<p class=\"ibSleep\">Není špatné si s sebou přibalit také spacák. Ten lze pak využít pro přespání na pokoji ve Schronisku Na Sniezniku, které je zařízené v poměrně nízkém komfortu stylu hromadné turistické ubytovny, takže spacák se zde hodí zejména z hygienických důvodů. Jiná alternativa přespání v okolí Králického Sněžníku ale bohužel není.</p><p class=\"ibSlope\">Prudší stoupání o sklonu 15 % na úseku 1,4 km od Sedla Puchača na vrchol Goworek.</p><p class=\"ibMultiday\">Trasa je na 3 dny:</p><p>Prostřední Lipka<br>(8 km)<br>Agropension Chřástal<br>(13 km)<br>Schronisku Na Sniezniku<br>(12 km)<br>Staré Město pod Sněžníkem</p>"
+    },
+    {
+        "km": 34,
+        "multiday": true,
+        "nazev": "Království nebeské",
+        "region": "Střední Čechy",
+        "picture": "kralovstvi-nebeske",
+        "urldesktop": "https://mapy.cz/s/pebunugona",
+        "urlmobile": "https://mapy.cz/s/jakanofahu",
+        "known": false,
+        "new": true,
+        "infobox": "<p class=\"ibInfo\">Inspirací pro trasu byla úspěšná česká PC hra Kingdom Come (v překladu \"Přijď království tvé\" - z modlitby Otčenáš). Hra je zasazená do pozdního středověku v období před husitskými válkami a odehrává se právě <a href=\"https://www.centralbohemia.cz/filemanager/files/file.php?file=412720\" target=\"_blank\">v této části malebné krajiny Posázaví</a>. Lze si tak osobně projít vybraná místa stejně jako hlavní hrdina hry Jindřich - Rataje, Ledečko, Samopše či Sázavu.</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Kácov<br>(19 km)<br>Rataje nad Sázavou<br>(15 km)<br>Sázava</p>"
     },
     {
         "km": 40,
