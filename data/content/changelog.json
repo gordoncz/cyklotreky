@@ -1,5 +1,14 @@
 [
     {
+        "verze": "17",
+        "datum": "13. dubna 2021",
+        "summary": "nová možnost zobrazení GPX trasy i na PC",
+        "detaily": [
+            "Do zobrazení Cyklotreků na PC byla přidána nová možnost nechat si vykreslit trasu na mapě nejen ve formě Plánovače Mapy.cz, ale také ve formě GPX trasování",
+            "Stačí jednoduše najet myší nad obrázek jakékoliv trasy a zobrazí se tlačítko s odkazem na trasu ve formátu GPX (při kliknutí kamkoliv jinam na položku trasy se ale stále zobrazí trasa ve formě Plánovače)"
+        ]
+    },
+    {
         "verze": "16",
         "datum": "8. dubna 2021",
         "summary": "nové cyklo a pěší trasy",

@@ -106,6 +106,26 @@ function naplnitHTML(typtrasy) {
         regionDiv.setAttribute("class", "regionContainer");
         regionDiv.innerHTML = typtrasy[i].region;
         trasaUrlDiv.appendChild(regionDiv);
+
+        // vytvoření a naplnění sub-divu pro GPX tlačítko na PC (zobrazování onhover v místě přes obrázky)
+        if (detekceMobilu.matches) {
+            // pokud je zobrazeno na mobilu, skript přeskočí generování divů pro GPX tlačítka
+            // takže se ani nebudou na mobilu načítat (protože tam nejsou ani potřeba a ani by se neměly kde zobrazit)
+        } else {
+            // vytvořit container div pro gpx tlačítko (jako přesný wrapper pro anchor tag uvnitř nadřazeného gridu, aby anchor nepřetékal)
+            var gpxContainerDiv = document.createElement("div");
+            gpxContainerDiv.setAttribute("class", "pcGPXcontainer");
+            trasaDiv.appendChild(gpxContainerDiv);
+            // anchor tag uvnitř gpx containeru utvářející odkaz samotného tlačítka
+            var gpxAnchorTag = document.createElement("a");
+            gpxAnchorTag.setAttribute("class", "pcGPXanchor");
+            var gpxUrlLink = typtrasy[i].urlmobile;
+            gpxAnchorTag.href = gpxUrlLink;
+            gpxAnchorTag.target = "_blank";
+            var gpxButtonPicCesta = '<img src="img/pcgpx.svg" alt="GPX">';
+            gpxAnchorTag.innerHTML = gpxButtonPicCesta;
+            gpxContainerDiv.appendChild(gpxAnchorTag);
+        }
     
         // podmíněné vytvoření tlačítka pro otevírání/zavírání infoboxu
         // toto tlačítko se vygeneruje jen pokud má infobox dané trasy vůbec nějaký obsah

@@ -732,7 +732,7 @@ padding: 20px 0px 30px 0px;
         border: 1px solid black;
         border-radius: 15px;
         display: grid;
-        grid-template-columns: 380px 70px;
+        grid-template-columns: 50px 100px 230px 70px;
         grid-template-rows: minmax(100px, auto);
         z-index: 5;
     }
@@ -750,7 +750,7 @@ padding: 20px 0px 30px 0px;
         /* stylovaný a href obalující všechny sub-divy v trasaContainer divu, aby byl klikatelný celý blok */
         .trasaUrlContainer {
             text-decoration: none;
-            grid-column: 1 / 3;
+            grid-column: 1 / 5;
             grid-row: 1 / 2;
             display: grid;
             grid-template-columns: 50px 100px 300px;
@@ -763,6 +763,7 @@ padding: 20px 0px 30px 0px;
             /* dodatečné css stylování pro mobily, reflektující fakt, že na mobilech se u tras nezobrazují miniatury reprezentujících fotek */
             @media (pointer: coarse) {
                 .trasaUrlContainer {
+                    grid-column: 1 / 3;
                     grid-template-columns: 50px minmax(auto, 300px);
                     grid-template-rows: 1fr auto;
                     grid-template-areas: 
@@ -867,17 +868,57 @@ padding: 20px 0px 30px 0px;
                     margin-right: 5px;
                 }
 
+        /* tlačítko pro zobrazení trasy v GPX formátu i na PC */
+        .pcGPXcontainer {
+            /* pozadí je themeColor, ale s 80% opacity */
+            /* (aby nebyla změnou opacity celého elementu při onhover ovlivněna případná opacity i obrázku tlačítka */
+            background-color: rgba(10, 127, 226, 0.8);
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            user-select: none;
+            opacity: 0.0;
+        }
+            .pcGPXcontainer:hover {
+                opacity: 1.0;
+                /* filter: brightness(80%); */
+            }
+            /* na mobilech nebude ani vygenerovaný, takže nesmí pak zabírat žádné místo v html dokumentu */
+            /* proto je zde také display: none */
+            @media (pointer: coarse) {
+                .pcGPXcontainer {
+                    display: none;
+                }
+            }
+
+            /* odkaz (anchor) pro GPX trasu, vytvářející funkčnost tlačítka */
+            .pcGPXanchor {
+                text-decoration: none;
+                flex-grow: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
         /* tlačítko pro zobrazení/skrytí infoboxu pod kartou trasy */
         .infoButtonContainer {
             background-color: transparent;
             border-radius: 0px 15px 15px 0px;
-            grid-column: 2 / 3;
+            grid-column: 4 / 5;
             grid-row: 1 / 2;
             z-index: 10;
             cursor: help;
             display: flex;
             flex-direction: column-reverse;
         }
+            @media (pointer: coarse) {
+                .infoButtonContainer {
+                    grid-column: 2 / 3;
+                }
+            }
 
             /* viditelná grafická část tlačítka */
             .infoButtonVisual {
