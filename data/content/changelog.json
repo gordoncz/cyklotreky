@@ -1,5 +1,15 @@
 [
     {
+        "verze": "18",
+        "datum": "15. května 2021",
+        "summary": "modernizace starších tras v databázi",
+        "detaily": [
+            "Díky postupným vylepšením Mapy.cz během posledních let a také díky nedávnému jarnímu updatu jejich mapových podkladů, kdy do map přibyla spousta nově zaznačených cest a pěšin, bylo nyní možné modernizovat některé staré trasy v databázi, které lze nově trasovat po atraktivnějších cestách, jež v době tvorby těchto tras na mapách ještě vůbec neexistovaly",
+            "U spousty dalších tras byly provedeny menší úpravy vedení terénem v rámci letos výjimečně druhé předsezónní korekce tras v databázi",
+            "Zároveň byla databáze rozšířena o několik nových cyklo a pěších tras"
+        ]
+    },
+    {
         "verze": "17",
         "datum": "13. dubna 2021",
         "summary": "nová možnost zobrazení GPX trasy i na PC",

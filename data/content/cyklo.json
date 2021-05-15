@@ -12,25 +12,13 @@
         "infobox": ""
     },
     {
-        "km": 18,
-        "multiday": false,
-        "nazev": "Trabant",
-        "region": "Brno",
-        "picture": "trabant",
-        "urldesktop": "https://mapy.cz/s/duhetozume",
-        "urlmobile": "https://mapy.cz/s/kasosanada",
-        "known": true,
-        "new": false,
-        "infobox": ""
-    },
-    {
-        "km": 19,
+        "km": 20,
         "multiday": false,
         "nazev": "Bosonohy",
         "region": "Brno",
         "picture": "bosonohy",
-        "urldesktop": "https://mapy.cz/s/katagokeja",
-        "urlmobile": "https://mapy.cz/s/momakupovo",
+        "urldesktop": "https://mapy.cz/s/nupujuloga",
+        "urlmobile": "https://mapy.cz/s/bovudofaru",
         "known": true,
         "new": false,
         "infobox": ""
@@ -41,8 +29,8 @@
         "nazev": "Hostěnice",
         "region": "Brno",
         "picture": "hostenice",
-        "urldesktop": "https://mapy.cz/s/ratolasecu",
-        "urlmobile": "https://mapy.cz/s/pevacopuka",
+        "urldesktop": "https://mapy.cz/s/dejozojefu",
+        "urlmobile": "https://mapy.cz/s/jegehehoco",
         "known": true,
         "new": false,
         "infobox": ""
@@ -74,11 +62,23 @@
     {
         "km": 24,
         "multiday": false,
+        "nazev": "Trabant",
+        "region": "Brno",
+        "picture": "trabant",
+        "urldesktop": "https://mapy.cz/s/gecodubazu",
+        "urlmobile": "https://mapy.cz/s/bosameduca",
+        "known": true,
+        "new": false,
+        "infobox": ""
+    },
+    {
+        "km": 24,
+        "multiday": false,
         "nazev": "Velká a Malá Baba",
         "region": "Brno",
         "picture": "velka-a-mala-baba",
-        "urldesktop": "https://mapy.cz/s/burofusaso",
-        "urlmobile": "https://mapy.cz/s/kanofoseke",
+        "urldesktop": "https://mapy.cz/s/gosahesote",
+        "urlmobile": "https://mapy.cz/s/nogopumego",
         "known": true,
         "new": false,
         "infobox": ""
@@ -89,8 +89,8 @@
         "nazev": "Kalvárie do Studánky",
         "region": "Orlické hory",
         "picture": "kalvarie-do-studanky",
-        "urldesktop": "https://mapy.cz/s/durojurete",
-        "urlmobile": "https://mapy.cz/s/kalekolure",
+        "urldesktop": "https://mapy.cz/s/jucenahebu",
+        "urlmobile": "https://mapy.cz/s/kacurusuku",
         "known": false,
         "new": false,
         "infobox": ""
@@ -152,7 +152,7 @@
         "urldesktop": "https://mapy.cz/s/pafesukuze",
         "urlmobile": "https://mapy.cz/s/nevabalama",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": ""
     },
     {
@@ -163,6 +163,18 @@
         "picture": "peklo-u-noveho-mesta-nad-metuji",
         "urldesktop": "https://mapy.cz/s/gosebehonu",
         "urlmobile": "https://mapy.cz/s/cehajaneco",
+        "known": false,
+        "new": false,
+        "infobox": ""
+    },
+    {
+        "km": 28,
+        "multiday": false,
+        "nazev": "Moravská Sahara",
+        "region": "Jižní Morava",
+        "picture": "moravska-sahara",
+        "urldesktop": "https://mapy.cz/s/pehosodeto",
+        "urlmobile": "https://mapy.cz/s/perehutuve",
         "known": false,
         "new": false,
         "infobox": ""
@@ -185,20 +197,20 @@
         "nazev": "Slavičín",
         "region": "Bílé Karpaty",
         "picture": "slavicin",
-        "urldesktop": "https://mapy.cz/s/matafeloga",
-        "urlmobile": "https://mapy.cz/s/pocefakoto",
+        "urldesktop": "https://mapy.cz/s/dagenevuhe",
+        "urlmobile": "https://mapy.cz/s/gorenatove",
         "known": true,
         "new": false,
         "infobox": "<p class=\"ibRestriction\">Cesta podél pravého břehu bojkovické přehrady je v ochranném pásmu vodního zdroje a může být zrovna zavřená. Lze ji ale v případě nutnosti objet po žluté turistické značce severozápadně od ní.</p>"
     },
     {
-        "km": 29,
+        "km": 30,
         "multiday": false,
         "nazev": "Vranov",
         "region": "Brněnsko",
         "picture": "vranov",
-        "urldesktop": "https://mapy.cz/s/pamolelaha",
-        "urlmobile": "https://mapy.cz/s/hafodakube",
+        "urldesktop": "https://mapy.cz/s/netukogepu",
+        "urlmobile": "https://mapy.cz/s/nadelelune",
         "known": false,
         "new": false,
         "infobox": "<p class=\"ibSlope\">V první polovině trasy jsou dvě poměrně prudká stoupání. První hned od startu do Babic nad Svitavou (7,3 % o délce 3,3 km) a druhé potom od \"Adamov, zastávka\" ke křižovatce lesních cest Coufavá a Kroucená (dokonce 10 % na 2 km).</p>"
@@ -221,8 +233,8 @@
         "nazev": "Malé brněnské kolečko",
         "region": "Brno",
         "picture": "male-brnenske-kolecko",
-        "urldesktop": "https://mapy.cz/s/davulokosa",
-        "urlmobile": "https://mapy.cz/s/hahetugora",
+        "urldesktop": "https://mapy.cz/s/nefogocujo",
+        "urlmobile": "https://mapy.cz/s/matosehugu",
         "known": true,
         "new": false,
         "infobox": "<p class=\"ibWarning\">Cyklostezka podél řeky Svitavy na třech místech protíná frekventované silnice (ulice Hladíkova, Křenová a Cejl), avšak bez existence jakéhokoliv oficiálního přechodu či přejezdu pro cyklisty. Je nutné tedy přecházet s nejvyšší opatrností.</p>"
@@ -242,14 +254,14 @@
     {
         "km": 32,
         "multiday": false,
-        "nazev": "Čtyři zámky",
-        "region": "Brněnsko",
-        "picture": "ctyri-zamky",
-        "urldesktop": "https://mapy.cz/s/barenohenu",
-        "urlmobile": "https://mapy.cz/s/hakuropula",
-        "known": true,
+        "nazev": "Baťův plavební kanál",
+        "region": "Jižní Morava",
+        "picture": "batuv-plavebni-kanal",
+        "urldesktop": "https://mapy.cz/s/calesudolo",
+        "urlmobile": "https://mapy.cz/s/megedukedo",
+        "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "<p class=\"ibTransport\">Na trase je možné využít i <a href=\"https://www.batacanal.cz/pravidelne-plavby.html\" target=\"_blank\">plavbu lodí po Baťově kanálu</a>, nejlépe asi na úseku z přístaviště Strážnice do přístaviště Petrov, kde trasa stejně vede přímo podél kanálu.</p>"
     },
     {
         "km": 33,
@@ -260,18 +272,6 @@
         "urldesktop": "https://mapy.cz/s/govunufuno",
         "urlmobile": "https://mapy.cz/s/mokabekubu",
         "known": true,
-        "new": false,
-        "infobox": ""
-    },
-    {
-        "km": 33,
-        "multiday": false,
-        "nazev": "Moravská Sahara",
-        "region": "Jižní Morava",
-        "picture": "moravska-sahara",
-        "urldesktop": "https://mapy.cz/s/jelutasagu",
-        "urlmobile": "https://mapy.cz/s/masecutege",
-        "known": false,
         "new": false,
         "infobox": ""
     },
@@ -290,11 +290,11 @@
     {
         "km": 34,
         "multiday": false,
-        "nazev": "Jedovnice",
+        "nazev": "Čtyři zámky",
         "region": "Brněnsko",
-        "picture": "jedovnice",
-        "urldesktop": "https://mapy.cz/s/pefudehaku",
-        "urlmobile": "https://mapy.cz/s/lamevepoho",
+        "picture": "ctyri-zamky",
+        "urldesktop": "https://mapy.cz/s/kehoveguco",
+        "urlmobile": "https://mapy.cz/s/kugohebodo",
         "known": true,
         "new": false,
         "infobox": ""
@@ -329,23 +329,11 @@
         "nazev": "Stezka permoníků",
         "region": "Brněnsko",
         "picture": "stezka-permoniku",
-        "urldesktop": "https://mapy.cz/s/fapomaramo",
-        "urlmobile": "https://mapy.cz/s/metecozege",
+        "urldesktop": "https://mapy.cz/s/ferurucolu",
+        "urlmobile": "https://mapy.cz/s/gevojetuha",
         "known": true,
         "new": false,
         "infobox": "<p class=\"ibInfo\">Úsek cyklotrasy v lese mezi Zbýšovem a Ketkovicemi je velmi špatně značený (značky na spoustě odboček zcela chybí nebo nejsou zřetelně vidět).</p>"
-    },
-    {
-        "km": 36,
-        "multiday": false,
-        "nazev": "Baťův plavební kanál",
-        "region": "Jižní Morava",
-        "picture": "batuv-plavebni-kanal",
-        "urldesktop": "https://mapy.cz/s/junoradato",
-        "urlmobile": "https://mapy.cz/s/datutucaro",
-        "known": false,
-        "new": false,
-        "infobox": "<p class=\"ibTransport\">Na trase je možné využít i <a href=\"https://www.batacanal.cz/pravidelne-plavby.html\" target=\"_blank\">plavbu lodí po Baťově kanálu</a>, nejlépe asi na úseku z přístaviště Strážnice do přístaviště Petrov, kde trasa stejně vede přímo podél kanálu.</p>"
     },
     {
         "km": 36,
@@ -362,36 +350,24 @@
     {
         "km": 36,
         "multiday": false,
+        "nazev": "Dlouhé Stráně",
+        "region": "Jeseníky",
+        "picture": "dlouhe-strane",
+        "urldesktop": "https://mapy.cz/s/gororevacu",
+        "urlmobile": "https://mapy.cz/s/domasocamu",
+        "known": false,
+        "new": false,
+        "infobox": "<p class=\"ibTransport\">Na začátku trasy se počítá s využitím <a href=\"https://kouty.cz/lanovka/\" target=\"_blank\">lanovky Kouty nad Desnou - Medvědí hora</a>.</p><p class=\"ibInfo\">Prohlídku přečerpávací vodní elektrárny Dlouhé Stráně je nutno <a href=\"https://www.dlouhe-strane.cz/strane/exkurze\" target=\"_blank\">předem rezervovat online</a>.</p>"
+    },
+    {
+        "km": 36,
+        "multiday": false,
         "nazev": "Jihomoravské pohraničí",
         "region": "Jižní Morava",
         "picture": "jihomoravske-pohranici",
         "urldesktop": "https://mapy.cz/s/kobararavu",
         "urlmobile": "https://mapy.cz/s/lemebakevu",
         "known": true,
-        "new": false,
-        "infobox": ""
-    },
-    {
-        "km": 36,
-        "multiday": false,
-        "nazev": "Kunětická hora a Lázně Bohdaneč",
-        "region": "Východní Čechy",
-        "picture": "kuneticka-hora-a-lazne-bohdanec",
-        "urldesktop": "https://mapy.cz/s/pupelavora",
-        "urlmobile": "https://mapy.cz/s/jekururoze",
-        "known": true,
-        "new": false,
-        "infobox": "<p class=\"ibRestriction\">Krátký úsek neoznačené pěšiny lesem za areálem Explosie (od osady Boudy, kde trasa uhýbá z cyklotrasy č. 4039, až ke golfovému hřišti u silnice II/333) vede poměrně těžkým nerovným terénem a blízko bažinatého území, takže po deštích je lepší tento úsek raději objet od osady Boudy po cyklotrase č. 4200 k rybníku Hrádek a poté ke golfovému hřišti silnicí II/333.</p>"
-    },
-    {
-        "km": 36,
-        "multiday": false,
-        "nazev": "Podél řeky Bečvy",
-        "region": "Haná",
-        "picture": "podel-reky-becvy",
-        "urldesktop": "https://mapy.cz/s/ludozagebo",
-        "urlmobile": "https://mapy.cz/s/gekagojefe",
-        "known": false,
         "new": false,
         "infobox": ""
     },
@@ -434,6 +410,18 @@
     {
         "km": 37,
         "multiday": false,
+        "nazev": "Jedovnice",
+        "region": "Brněnsko",
+        "picture": "jedovnice",
+        "urldesktop": "https://mapy.cz/s/cagucemela",
+        "urlmobile": "https://mapy.cz/s/bemokelogo",
+        "known": true,
+        "new": false,
+        "infobox": ""
+    },
+    {
+        "km": 37,
+        "multiday": false,
         "nazev": "Kalečník",
         "region": "Brno",
         "picture": "kalecnik",
@@ -446,12 +434,12 @@
     {
         "km": 37,
         "multiday": false,
-        "nazev": "Meandry horního toku Sázavy",
-        "region": "Vysočina",
-        "picture": "meandry-horniho-toku-sazavy",
-        "urldesktop": "https://mapy.cz/s/rabupunara",
-        "urlmobile": "https://mapy.cz/s/noruteguhu",
-        "known": false,
+        "nazev": "Kunětická hora a Lázně Bohdaneč",
+        "region": "Východní Čechy",
+        "picture": "kuneticka-hora-a-lazne-bohdanec",
+        "urldesktop": "https://mapy.cz/s/pekafopuro",
+        "urlmobile": "https://mapy.cz/s/nunokarufu",
+        "known": true,
         "new": false,
         "infobox": ""
     },
@@ -464,7 +452,7 @@
         "urldesktop": "https://mapy.cz/s/cadubepato",
         "urlmobile": "https://mapy.cz/s/cazucofuvo",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": "<p class=\"ibSlope\">Prudší stoupání 6,6&nbsp;% na 3&nbsp;km mezi rybníčky na Havránkově potoce za Popovem a modrou turistickou cestou na Kujalce.</p><p class=\"ibSlope\">Intenzivní stoupání 6,5&nbsp;% na dlouhém úseku 6,2&nbsp;km mezi řekou Vlárou v obci Svatý Štěpán a vrstevnicí 700&nbsp;m pod vrcholem Javorníku.</p>"
     },
     {
@@ -530,18 +518,6 @@
     {
         "km": 38,
         "multiday": false,
-        "nazev": "Šmelcovna",
-        "region": "Brno",
-        "picture": "smelcovna",
-        "urldesktop": "https://mapy.cz/s/pafametunu",
-        "urlmobile": "https://mapy.cz/s/pafoserovu",
-        "known": true,
-        "new": false,
-        "infobox": ""
-    },
-    {
-        "km": 38,
-        "multiday": false,
         "nazev": "Ždánický les",
         "region": "Jižní Morava",
         "picture": "zdanicky-les",
@@ -554,11 +530,35 @@
     {
         "km": 39,
         "multiday": false,
+        "nazev": "Podél řeky Bečvy",
+        "region": "Haná",
+        "picture": "podel-reky-becvy",
+        "urldesktop": "https://mapy.cz/s/bukufenegu",
+        "urlmobile": "https://mapy.cz/s/patonodube",
+        "known": false,
+        "new": false,
+        "infobox": ""
+    },
+    {
+        "km": 39,
+        "multiday": false,
         "nazev": "Přírodní park Říčky",
         "region": "Brněnsko",
         "picture": "prirodni-park-ricky",
         "urldesktop": "https://mapy.cz/s/dohomeheju",
         "urlmobile": "https://mapy.cz/s/fanevoboju",
+        "known": true,
+        "new": false,
+        "infobox": ""
+    },
+    {
+        "km": 39,
+        "multiday": false,
+        "nazev": "Šmelcovna",
+        "region": "Brno",
+        "picture": "smelcovna",
+        "urldesktop": "https://mapy.cz/s/covucekale",
+        "urlmobile": "https://mapy.cz/s/nabohojehu",
         "known": true,
         "new": false,
         "infobox": ""
@@ -593,7 +593,7 @@
         "nazev": "Moravský kras",
         "region": "Brněnsko",
         "picture": "moravsky-kras",
-        "urldesktop": "https://mapy.cz/s/cafopefoho",
+        "urldesktop": "https://mapy.cz/s/decuraluze",
         "urlmobile": "https://mapy.cz/s/negaragedo",
         "known": true,
         "new": false,
@@ -608,7 +608,7 @@
         "urldesktop": "https://mapy.cz/s/mobolesege",
         "urlmobile": "https://mapy.cz/s/goponovoco",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": ""
     },
     {
@@ -617,8 +617,8 @@
         "nazev": "Poodří",
         "region": "Slezsko",
         "picture": "poodri",
-        "urldesktop": "https://mapy.cz/s/hujehefaro",
-        "urlmobile": "https://mapy.cz/s/kutehekefe",
+        "urldesktop": "https://mapy.cz/s/novasatafu",
+        "urlmobile": "https://mapy.cz/s/lubedebene",
         "known": true,
         "new": false,
         "infobox": ""
@@ -674,23 +674,11 @@
     {
         "km": 41,
         "multiday": false,
-        "nazev": "Dlouhé Stráně",
-        "region": "Jeseníky",
-        "picture": "dlouhe-strane",
-        "urldesktop": "https://mapy.cz/s/hagucotehu",
-        "urlmobile": "https://mapy.cz/s/judotenada",
-        "known": false,
-        "new": false,
-        "infobox": "<p class=\"ibTransport\">Na začátku trasy se počítá s využitím <a href=\"https://kouty.cz/lanovka/\" target=\"_blank\">lanovky Kouty nad Desnou - Medvědí hora</a>.</p><p class=\"ibInfo\">Prohlídku přečerpávací vodní elektrárny Dlouhé Stráně je nutno <a href=\"https://www.dlouhe-strane.cz/strane/exkurze\" target=\"_blank\">předem rezervovat online</a>.</p>"
-    },
-    {
-        "km": 41,
-        "multiday": false,
         "nazev": "Horňácko a Dolňácko",
         "region": "Jižní Morava",
         "picture": "hornacko-a-dolnacko",
-        "urldesktop": "https://mapy.cz/s/bupolujeka",
-        "urlmobile": "https://mapy.cz/s/gosafutudo",
+        "urldesktop": "https://mapy.cz/s/pelosajusu",
+        "urlmobile": "https://mapy.cz/s/kubejugene",
         "known": false,
         "new": false,
         "infobox": "<p class=\"ibInfo\">Pro sjezd z kopce Travičná (380&nbsp;m) byl vybrán jednoduchý modrý singletrail <a href=\"https://www.trailoflife.cz/traily/\" target=\"_blank\">Trail of Life - Lipinka</a>, který je vhodný pro cyklisty každého věku. Alternativně lze do vsi Tvarožná Lhota sjet i po paralelně vedoucí cyklotrase \"Oskerušový okruh\".</p>"
@@ -729,7 +717,7 @@
         "urlmobile": "https://mapy.cz/s/kecuzudaku",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "<p class=\"ibRestriction\">Do zámeckého parku Častolovice je vjezd kol zakázán, takže je nutné před branou sesednout a vést kolo skrz park pěšky.</p>"
     },
     {
         "km": 42,
@@ -758,13 +746,13 @@
     {
         "km": 43,
         "multiday": false,
-        "nazev": "Posázaví",
-        "region": "Vysočina",
-        "picture": "posazavi",
-        "urldesktop": "https://mapy.cz/s/dutegonupe",
-        "urlmobile": "https://mapy.cz/s/huvogemenu",
+        "nazev": "Kříby",
+        "region": "Bílé Karpaty",
+        "picture": "kriby",
+        "urldesktop": "https://mapy.cz/s/lovemocelo",
+        "urlmobile": "https://mapy.cz/s/mosasejofa",
         "known": false,
-        "new": false,
+        "new": true,
         "infobox": ""
     },
     {
@@ -806,6 +794,18 @@
     {
         "km": 44,
         "multiday": false,
+        "nazev": "Nové Mlýny",
+        "region": "Jižní Morava",
+        "picture": "nove-mlyny",
+        "urldesktop": "https://mapy.cz/s/dunehotoma",
+        "urlmobile": "https://mapy.cz/s/bebulakepu",
+        "known": true,
+        "new": false,
+        "infobox": ""
+    },
+    {
+        "km": 44,
+        "multiday": false,
         "nazev": "Štramberk",
         "region": "Beskydy",
         "picture": "stramberk",
@@ -818,23 +818,11 @@
     {
         "km": 44,
         "multiday": false,
-        "nazev": "Tichá Orlice",
-        "region": "Svitavsko",
-        "picture": "ticha-orlice",
-        "urldesktop": "https://mapy.cz/s/lofebobusa",
-        "urlmobile": "https://mapy.cz/s/furamezemo",
-        "known": true,
-        "new": false,
-        "infobox": ""
-    },
-    {
-        "km": 44,
-        "multiday": false,
         "nazev": "Třebíčské kolečko",
         "region": "Vysočina",
         "picture": "trebicske-kolecko",
-        "urldesktop": "https://mapy.cz/s/bupasesapu",
-        "urlmobile": "https://mapy.cz/s/nomunuguhu",
+        "urldesktop": "https://mapy.cz/s/jerahepele",
+        "urlmobile": "https://mapy.cz/s/hetodetaha",
         "known": false,
         "new": false,
         "infobox": ""
@@ -890,6 +878,18 @@
     {
         "km": 45,
         "multiday": false,
+        "nazev": "Tichá Orlice",
+        "region": "Svitavsko",
+        "picture": "ticha-orlice",
+        "urldesktop": "https://mapy.cz/s/berurugoju",
+        "urlmobile": "https://mapy.cz/s/gofupoceza",
+        "known": true,
+        "new": false,
+        "infobox": ""
+    },
+    {
+        "km": 45,
+        "multiday": false,
         "nazev": "Vojenský újezd Březina",
         "region": "Brněnsko",
         "picture": "vojensky-ujezd-brezina",
@@ -914,26 +914,14 @@
     {
         "km": 46,
         "multiday": false,
-        "nazev": "Týnišťsko-třebechovické Poorličí",
-        "region": "Východní Čechy",
-        "picture": "tynistsko-trebechovicke-poorlici",
-        "urldesktop": "https://mapy.cz/s/loposudepa",
-        "urlmobile": "https://mapy.cz/s/govobureju",
-        "known": true,
-        "new": false,
-        "infobox": ""
-    },
-    {
-        "km": 47,
-        "multiday": false,
-        "nazev": "Betonová hranice",
-        "region": "Orlické hory",
-        "picture": "betonova-hranice",
-        "urldesktop": "https://mapy.cz/s/hukerogaze",
-        "urlmobile": "https://mapy.cz/s/fudecekuja",
+        "nazev": "Posázaví",
+        "region": "Vysočina",
+        "picture": "posazavi",
+        "urldesktop": "https://mapy.cz/s/baruzozupu",
+        "urlmobile": "https://mapy.cz/s/denemenage",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibInfo\">Trasa od Kramářovy chaty po klesajících serpentýnách na rozcestí \"Pod Suchým vrchem 1\" ostře točí vpravo dolů (o téměř 180 stupňů) z asfaltové silnice na nenápadnou štěrkovou cestu. Tuto odbočku lze v rychlé jízdě snadno přehlédnout, není totiž u ní žádný významný bod, ale jen relativně nenápadný cyklo rozcestník na stromě po pravé straně silnice.</p><p class=\"ibWarning\">Mezi Letohradem a Ústím nad Orlicí je za obcí Červená mezi rozcestníky \"Valdštejn - odb. k žst.\" a \"Valdštejn - odb. k rybníku\" klesající pravotočivá velmi úzká a nepřehledná zatáčka vedoucí po asfaltové cestě s místním automobilovým provozem. Nebezpečí náhodného auta v protisměru, sjíždět tuto zatáčku tedy raději pomalu a opatrně.</p>"
+        "infobox": ""
     },
     {
         "km": 47,
@@ -944,7 +932,7 @@
         "urldesktop": "https://mapy.cz/s/kocejusuza",
         "urlmobile": "https://mapy.cz/s/kobagujuto",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": ""
     },
     {
@@ -962,12 +950,12 @@
     {
         "km": 47,
         "multiday": false,
-        "nazev": "Nad Zlínem",
-        "region": "Bílé Karpaty",
-        "picture": "nad-zlinem",
-        "urldesktop": "https://mapy.cz/s/mehaveluhe",
-        "urlmobile": "https://mapy.cz/s/jesefabehu",
-        "known": false,
+        "nazev": "Týnišťsko-třebechovické Poorličí",
+        "region": "Východní Čechy",
+        "picture": "tynistsko-trebechovicke-poorlici",
+        "urldesktop": "https://mapy.cz/s/ravahovafa",
+        "urlmobile": "https://mapy.cz/s/cacevebunu",
+        "known": true,
         "new": false,
         "infobox": ""
     },
@@ -1028,7 +1016,7 @@
         "urldesktop": "https://mapy.cz/s/nacepuloze",
         "urlmobile": "https://mapy.cz/s/gosutododo",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": ""
     },
     {
@@ -1042,6 +1030,18 @@
         "known": false,
         "new": false,
         "infobox": "<p class=\"ibTransport\">Pro přepravu do startu trasy lze o víkendech a vybraných svátcích v období od poloviny dubna do konce září využít speciálního cyklobusu linky 108, kterému přímá jízda Brno - Znojmo trvá jen necelou hodinu (odjezdy z Brna-Zvonařky 8:25 a 10:25).</p>"
+    },
+    {
+        "km": 49,
+        "multiday": false,
+        "nazev": "Meandry horního toku Sázavy",
+        "region": "Vysočina",
+        "picture": "meandry-horniho-toku-sazavy",
+        "urldesktop": "https://mapy.cz/s/pojevafodu",
+        "urlmobile": "https://mapy.cz/s/dalarepena",
+        "known": false,
+        "new": false,
+        "infobox": ""
     },
     {
         "km": 49,
@@ -1061,8 +1061,8 @@
         "nazev": "Rozmanitosti hodonínska",
         "region": "Jižní Morava",
         "picture": "rozmanitosti-hodoninska",
-        "urldesktop": "https://mapy.cz/s/gapobagago",
-        "urlmobile": "https://mapy.cz/s/mopagozero",
+        "urldesktop": "https://mapy.cz/s/makedateza",
+        "urlmobile": "https://mapy.cz/s/mukebazotu",
         "known": false,
         "new": false,
         "infobox": ""
@@ -1169,8 +1169,8 @@
         "nazev": "Krajem vína a slivovice Slovácka",
         "region": "Bílé Karpaty",
         "picture": "krajem-vina-a-slivovice-slovacka",
-        "urldesktop": "https://mapy.cz/s/ledapevove",
-        "urlmobile": "https://mapy.cz/s/pevutosanu",
+        "urldesktop": "https://mapy.cz/s/lucalulure",
+        "urlmobile": "https://mapy.cz/s/kezazuzusa",
         "known": true,
         "new": false,
         "infobox": ""
@@ -1181,8 +1181,8 @@
         "nazev": "Neusiedler See",
         "region": "Rakousko",
         "picture": "neusiedler-see",
-        "urldesktop": "https://mapy.cz/s/marulemaka",
-        "urlmobile": "https://mapy.cz/s/foluvupefa",
+        "urldesktop": "https://mapy.cz/s/pavagudede",
+        "urlmobile": "https://mapy.cz/s/lecesuhulo",
         "known": false,
         "new": false,
         "infobox": "<p class=\"ibTransport\">Pro absolvování trasy je bezpodmínečně nutné využít služeb <a href=\"http://drescher-touristik.at/drescher-line/fahrplan/\" target=\"_blank\">pravidelné lodní přepravy Drescher</a> pro překonání Nesiderského jezera mezi rakouskými městy Mörbisch am See a Illmitz.</p>"
@@ -1304,7 +1304,7 @@
         "urldesktop": "https://mapy.cz/s/honetopoge",
         "urlmobile": "https://mapy.cz/s/hemufutupa",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": "<p class=\"ibSlope\">Velmi prudké stoupání 11,7&nbsp;% na úseku 1,5&nbsp;km mezi koncem obce Valašská Polanka a turistický přístřeškem nad Prlovem.</p>"
     },
     {
@@ -1332,18 +1332,6 @@
         "infobox": ""
     },
     {
-        "km": 58,
-        "multiday": false,
-        "nazev": "Slovenská ropná pole",
-        "region": "Slovensko",
-        "picture": "slovenska-ropna-pole",
-        "urldesktop": "https://mapy.cz/s/bujelehala",
-        "urlmobile": "https://mapy.cz/s/gufezunedo",
-        "known": false,
-        "new": false,
-        "infobox": "<p class=\"ibInfo\">V lese Holíčský háj na slovenské straně hranice je zelená turistická trasa poměrně špatně vyznačená. Už odbočka od cyklotrasy poblíž silničního mostu přes řeku Moravu není vůbec označena. Zhruba ve dvou třetinách délky zelené trasy podél řeky končí pěšina a trasa pak vede jen po říčním náspu bez jakékoliv pozemní komunikace prakticky až k odbočce u informační tabule. A nakonec trasa skrze les samotný je vyznačena přinejlepším sporadicky.</p><p class=\"ibInfo\">Ve 3. patře budovy <a href=\"https://mapy.cz/s/babofereso\" target=\"_blank\">ZUŠ Gbely</a> (ulice Československej armády 1207) si lze prohlédnout <a href=\"https://www.gbely.sk/mesto/navstevnik/mestska-a-naftarska-expozicia/\" target=\"_blank\">expozici o historii těžby ropy a zemního plynu</a> na Slovensku. Zdejší výstava je ale zpřístupňována pouze na základě předchozí domluvy po telefonu.</p><p class=\"ibInfo\">Před bývalým sídlem společnosti Nafta&nbsp;a.s. (Naftárska 965, Gbely) je k vidění <a href=\"https://mapy.cz/s/dohuzeropa\" target=\"_blank\">historická ropná těžební věž</a>.</p>"
-    },
-    {
         "km": 59,
         "multiday": false,
         "nazev": "Dyje",
@@ -1354,6 +1342,18 @@
         "known": false,
         "new": false,
         "infobox": "<p class=\"ibTransport\">Pro přepravu do startu trasy lze o víkendech a vybraných svátcích v období od poloviny dubna do konce září využít speciálního cyklobusu linky 108, kterému přímá jízda Brno - Znojmo trvá jen necelou hodinu (odjezdy z Brna-Zvonařky 8:25 a 10:25).</p>"
+    },
+    {
+        "km": 59,
+        "multiday": false,
+        "nazev": "Jesenické Hanušovicko",
+        "region": "Jeseníky",
+        "picture": "jesenicke-hanusovicko",
+        "urldesktop": "https://mapy.cz/s/pocopobavo",
+        "urlmobile": "https://mapy.cz/s/gupucaduna",
+        "known": false,
+        "new": true,
+        "infobox": ""
     },
     {
         "km": 60,
@@ -1370,14 +1370,14 @@
     {
         "km": 61,
         "multiday": false,
-        "nazev": "Nové Mlýny",
-        "region": "Jižní Morava",
-        "picture": "nove-mlyny",
-        "urldesktop": "https://mapy.cz/s/nuganomajo",
-        "urlmobile": "https://mapy.cz/s/kumuceracu",
-        "known": true,
+        "nazev": "Slovenská ropná pole",
+        "region": "Slovensko",
+        "picture": "slovenska-ropna-pole",
+        "urldesktop": "https://mapy.cz/s/gozupupone",
+        "urlmobile": "https://mapy.cz/s/garogaleno",
+        "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "<p class=\"ibInfo\">V lese Holíčský háj na slovenské straně hranice je zelená turistická trasa poměrně špatně vyznačená. Už odbočka od cyklotrasy poblíž silničního mostu přes řeku Moravu není vůbec označena. Zhruba ve dvou třetinách délky zelené trasy podél řeky končí pěšina a trasa pak vede jen po říčním náspu bez jakékoliv pozemní komunikace prakticky až k odbočce u informační tabule. A nakonec trasa skrze les samotný je vyznačena přinejlepším sporadicky.</p><p class=\"ibInfo\">Ve 3. patře budovy <a href=\"https://mapy.cz/s/babofereso\" target=\"_blank\">ZUŠ Gbely</a> si lze prohlédnout <a href=\"https://www.gbely.sk/mesto/navstevnik/mestska-a-naftarska-expozicia/\" target=\"_blank\">expozici o historii těžby ropy a zemního plynu</a> na Slovensku. Zdejší výstava je ale zpřístupňována pouze na základě předchozí domluvy po telefonu.</p><p class=\"ibInfo\">Před bývalým sídlem společnosti Nafta&nbsp;a.s. je k vidění <a href=\"https://mapy.cz/s/dohuzeropa\" target=\"_blank\">historická ropná těžební věž</a>.</p><p class=\"ibInfo\">V lese za expedičním skladem dřeva je místo <a href=\"https://mapy.cz/s/regohamasu\" target=\"_blank\">prvního ropného vrtu na území ČSR</a> z roku 1913.</p><p class=\"ibInfo\">Na české straně hranic jsou za obcemi Kostice a Tvrdonice četné vrty sloužící dodnes k těžbě zemního plynu.</p>"
     },
     {
         "km": 62,
@@ -1409,8 +1409,8 @@
         "nazev": "Hrady a zámky pod Orlickými horami",
         "region": "Orlické hory",
         "picture": "hrady-a-zamky-pod-orlickymi-horami",
-        "urldesktop": "https://mapy.cz/s/jetobolola",
-        "urlmobile": "https://mapy.cz/s/honolenace",
+        "urldesktop": "https://mapy.cz/s/gapopepomo",
+        "urlmobile": "https://mapy.cz/s/behebudoga",
         "known": false,
         "new": false,
         "infobox": "<p class=\"ibTransport\">Jediný dopolední přímý vlak do Rychnova nad Kněžnou odjíždí z Očelic v 8:04, a tudíž je nezbytně nutné stihnout právě tento spoj, aby vše časově vycházelo.</p>"
@@ -1545,7 +1545,7 @@
         "urlmobile": "https://mapy.cz/s/bemaluhovo",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibSleep\">Předpokládá se přespání ve stanu v okolí Čachtic.</p><p class=\"ibSlope\">Nebezpečně prudké klesání (17%) v úseku mezi Vyškovcem a státní hranicí. Nebezpečí poškození brzd nebo úrazu!</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Pitín<br>(48 km)<br>Čachtice<br>(40 km)<br>Velká nad Veličkou</p>"
+        "infobox": "<p class=\"ibSlope\">Nebezpečně prudké klesání (17%) v úseku mezi Vyškovcem a státní hranicí. Nebezpečí poškození brzd nebo úrazu!</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Pitín<br>(48 km)<br>Čachtice<br>(40 km)<br>Velká nad Veličkou</p>"
     },
     {
         "km": 93,
