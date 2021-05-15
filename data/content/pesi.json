@@ -117,7 +117,7 @@
         "urlmobile": "https://mapy.cz/s/gubonahavo",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibInfo\">Části trasy v okolí Černé skály a poté ještě u sochy Buddhy jsou v terénu hůře značené.</p>"
+        "infobox": ""
     },
     {
         "km": 10,
@@ -153,7 +153,7 @@
         "urlmobile": "https://mapy.cz/s/nekojubune",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibTransport\">Přepokládá se doprava autem, které je možné zaparkovat na turistickém parkovišti před Zámkem Žďár.</p><p class=\"ibRestriction\">Průchod přes Nový hřbitov na Zelené hoře je omezen platnou otevírací dobou, která je v zimě 8-17, v létě 7-20.</p>"
+        "infobox": "<p class=\"ibTransport\">Předpokládá se doprava autem, které je možné zaparkovat na turistickém parkovišti před Zámkem Žďár.</p><p class=\"ibRestriction\">Průchod přes Nový hřbitov na Zelené hoře je omezen platnou otevírací dobou, která je v zimě 8-17, v létě 7-20.</p>"
     },
     {
         "km": 11,
