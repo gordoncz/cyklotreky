@@ -153,7 +153,7 @@
         "urlmobile": "https://mapy.cz/s/nekojubune",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibTransport\">Předpokládá se doprava autem, které je možné zaparkovat na turistickém parkovišti před Zámkem Žďár.</p><p class=\"ibRestriction\">Průchod přes Nový hřbitov na Zelené hoře je omezen platnou otevírací dobou, která je v zimě 8-17, v létě 7-20.</p>"
+        "infobox": "<p class=\"ibRestriction\">Průchod přes Nový hřbitov na Zelené hoře je omezen platnou otevírací dobou, která je v zimě 8-17, v létě 7-20.</p>"
     },
     {
         "km": 11,
@@ -273,7 +273,7 @@
         "urlmobile": "https://mapy.cz/s/hadulokeka",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibTransport\">Jsou tři praktické možnosti dopravy do startu a z cíle trasy, všechny ale vyžadují kombinaci auta a autobusu. První možnost je přijet autem cca v 7 ráno do startu trasy v Olešnici a na konci z cíle trasy na Šerlichu odjet autobusem v 15:15 zpět k autu.</p><p class=\"ibTransport\">Druhá možnost je vyjet autem nahoru na Šerlich, odtud v 10:10 odjet autobusem do startu trasy v Olešnici (příjezd 10:45). V takovém případě je ale nutné počítat s pozdějším odjezdem zpět z Šerlichu, a to zhruba v 7 večer.</p><p class=\"ibTransport\">Nebo třetí možnost je zaparkovat auto buď v Dobrušce nebo v Novém Městě nad Metují, odkud ráno jezdí autobusy do Olešnice (s příjezdem cca v 8-9 ráno). Po 17.&nbsp;hodině pak ze Šerlichu jezdí poslední přestupní autobusový spoj do obou těchto výchozích měst, kde se pak lze vrátit k autu.</p>"
+        "infobox": "<p class=\"ibTransport\">Jsou tři praktické možnosti dopravy do startu a z cíle trasy, všechny ale vyžadují kombinaci auta a autobusu. První možnost je přijet autem cca v 8 ráno do startu trasy v Olešnici a na konci z cíle trasy na Šerlichu odjet autobusem v 16:20 zpět k autu.</p><p class=\"ibTransport\">Druhá možnost je vyjet autem nahoru na Šerlich, odtud v 10:20 odjet autobusem do startu trasy v Olešnici (příjezd 10:45). V takovém případě je ale nutné počítat s pozdějším odjezdem zpět z Šerlichu, a to zhruba v 7 večer.</p><p class=\"ibTransport\">Nebo třetí možnost je zaparkovat auto buď v Dobrušce nebo v Novém Městě nad Metují, odkud po 7.&nbsp;hodině ráno jezdí autobusy do Olešnice (s příjezdem cca v 9 ráno). Po 17.&nbsp;hodině pak ze Šerlichu jezdí poslední přestupní autobusový spoj do obou těchto výchozích měst, kde se pak lze vrátit k autu.</p>"
     },
     {
         "km": 13,
@@ -446,18 +446,6 @@
     {
         "km": 15,
         "multiday": false,
-        "nazev": "Pálava",
-        "region": "Jižní Morava",
-        "picture": "palava",
-        "urldesktop": "https://mapy.cz/s/fatunaluhu",
-        "urlmobile": "https://mapy.cz/s/nubotuguce",
-        "known": false,
-        "new": false,
-        "infobox": "<p class=\"ibTransport\">Předpokládá se příjezd autem do Mikulova, odtud autobusem do startu trasy v Dolních Věstonicích a z cíle trasy v Mikulově pak odjezd zpět domů zase autem.</p>"
-    },
-    {
-        "km": 15,
-        "multiday": false,
         "nazev": "Súlovské skály",
         "region": "Slovensko",
         "picture": "sulovske-skaly",
@@ -550,6 +538,18 @@
         "known": false,
         "new": false,
         "infobox": "<p class=\"ibInfo\">Trasa provede okolo desítky bývalých vodních mlýnů na Bílém potoce. Žádný z nich již neslouží původnímu účelu, přičemž je příznačné, že většina z nich přestala plnit funkci mlýna nuceně v 50.&nbsp;letech 20.&nbsp;století během nástupu komunismu.</p>"
+    },
+    {
+        "km": 16,
+        "multiday": false,
+        "nazev": "Pálava",
+        "region": "Jižní Morava",
+        "picture": "palava",
+        "urldesktop": "https://mapy.cz/s/hojebugoda",
+        "urlmobile": "https://mapy.cz/s/mevafuhulu",
+        "known": false,
+        "new": false,
+        "infobox": ""
     },
     {
         "km": 16,
@@ -657,7 +657,7 @@
         "urlmobile": "https://mapy.cz/s/fubazogema",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibTransport\">Do startu trasy se předpokládá odjet vlakem v 7:18 z Brna hl.n. přes Olomouc do Krnova a odtud potom autobusem do Zlatých Hor. Lze odjet i v 9:18 čistě vlakovým spojením Brno hl.n. - Jeseník - Mikulovice - Zlaté Hory, v takovém případě ale bude trasa bez prohlídky města Zlaté Hory (a o cca 2&nbsp;km kratší).</p><p class=\"ibTransport\">Poslední zpáteční spoj je přímý rychlík Jeseník - Brno hl.n. v 17:01.</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Zlaté Hory<br>(11 km)<br>Rejvíz<br>(14 km)<br>Jeseník</p>"
+        "infobox": "<p class=\"ibTransport\">Do startu trasy se předpokládá odjet vlakem v 7:18 z Brna hl.n. přes Olomouc do Krnova a odtud potom autobusem do Zlatých Hor. Lze odjet i v 9:18 čistě vlakovým spojením Brno hl.n. - Jeseník - Mikulovice - Zlaté Hory, v takovém případě ale bude trasa bez prohlídky města Zlaté Hory (a o cca 2&nbsp;km kratší).</p><p class=\"ibTransport\">Poslední přímý zpáteční vlak je rychlík Jeseník - Brno hl.n. v 17:01.</p><p class=\"ibInfo\">Vstup do <a href=\"http://www.jeseniky.net/naucna-stezka-rejviz-mechove-jezirko\" target=\"_blank\">Rašeliniště Rejvíz</a> k Mechovému jezírku je zpoplatněn.</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Zlaté Hory<br>(11 km)<br>Rejvíz<br>(14 km)<br>Jeseník</p>"
     },
     {
         "km": 27,
@@ -681,7 +681,7 @@
         "urlmobile": "https://mapy.cz/s/pukahelomo",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibInfo\">Nutné odjet z Brna velmi brzy ráno, pokud se má výlet obejít bez extra přespání v Jindřichově Hradci z pátku na sobotu.</p><p class=\"ibTransport\"><a href=\"http://jhmd.cz/\" target=\"_blank\">Parní vlak JHMD</a> na trase Jindřichův Hradec - Kaproun jezdí pouze v sobotu.</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Kaproun, žel. st.<br>(15 km)<br>Malý Ratmírov<br>(14 km)<br>Jindřichův Hradec</p>"
+        "infobox": "<p class=\"ibInfo\">Unikátním lákadlem tohoto pěšího treku je možnost svézt se historickým parním vlakem na úzkokolejné trati v úseku Jindřichův Hradec - Kaproun. Nyní je ale tato atrakce výrazně dražší než v době vzniku treku, a to kvůli radikální změně systému jízdného JHMD. Nově totiž pro parní vlaky neplatí úsekové jízdenky, ale pouze celodenní jízdenka za 540&nbsp;Kč (podle předchozího úsekového tarifu přitom vycházela jízda na 270&nbsp;Kč). Pro srovnání, přeprava úzkokolejným motoráčkem na tomto úseku stojí 26&nbsp;Kč.</p><p class=\"ibTransport\"><a href=\"http://jhmd.cz/ceny-jizdenek/parni-vlaky\" target=\"_blank\">Parní vlak JHMD</a> jezdí pravidelně od května do září jen jednou denně a pouze v sobotu (v červenci a srpnu pak každý den).</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Kaproun, žel. st.<br>(15 km)<br>Malý Ratmírov<br>(14 km)<br>Jindřichův Hradec</p>"
     },
     {
         "km": 29,
@@ -693,7 +693,7 @@
         "urlmobile": "https://mapy.cz/s/humopemufa",
         "known": true,
         "new": false,
-        "infobox": "<p class=\"ibSleep\">Nutné nést s sebou pro přespání stan. Nicméně je třeba mít na zřeteli, že v NP/CHKO Šumava lze ve stanu přespat pouze na vyhrazených nouzových nocovištích.</p><p class=\"ibSlope\">Intenzivní stoupání se sklonem 24 % na cca 1 km dlouhém úseku od Plešného jezera k Pomníku Adalberta Stiftera.</p><p class=\"ibInfo\">Trasa je unikátní tím, že prochází hned třemi státy najednou.</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Ovesná<br>(13 km)<br>Nouzové nocoviště Pod Plešným jezerem<br>(16 km)<br>Nové Údolí</p>"
+        "infobox": "<p class=\"ibTransport\">Pro zkrácení a zjednodušení cesty do startu a z cíle trasy je možné dojet autem do Horní Plané a odtud teprve pokračovat vlakem.</p><p class=\"ibSleep\">Nutné nést s sebou stan pro přespání v nouzovém nocovišti Pod Plešným jezerem.</p><p class=\"ibSlope\">Intenzivní stoupání se sklonem 24 % na cca 1 km dlouhém úseku od Plešného jezera k Pomníku Adalberta Stiftera.</p><p class=\"ibInfo\">Trasa je unikátní tím, že prochází hned třemi státy najednou.</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Ovesná<br>(13 km)<br>Nouzové nocoviště Pod Plešným jezerem<br>(16 km)<br>Nové Údolí</p>"
     },
     {
         "km": 32,
@@ -717,7 +717,7 @@
         "urlmobile": "https://mapy.cz/s/coforatobo",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibTransport\">Z časových důvodů je nutné na začátku treku využít <a href=\"https://www.skiareal.cz/skiareal/info/letni-provoz-lanovek\" target=\"_blank\">lanovou dráhu Medvědín</a> pro dopravu mezi Špindlerovým mlýnem a vrchem Medvědín.</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Špindlerův mlýn<br>(16 km)<br>Schronisko Odrodzenie<br>(16 km)<br>Horní Malá Úpa, Pomezní Boudy</p>"
+        "infobox": "<p class=\"ibTransport\">Předpokládá se příjezd autem do Trutnova a odtud potom do startu a z cíle trasy autobusem.</p><p class=\"ibTransport\">Z časových důvodů je nutné na začátku treku využít <a href=\"https://www.skiareal.cz/leto/lanove-drahy\" target=\"_blank\">lanovou dráhu Medvědín</a>, která mezi Špindlerovým mlýnem a vrchem Medvědín jezdí každou půlhodinu.</p><p class=\"ibInfo\">Do polské části Krkonošského národního parku je vstup placený, to se však nevztahuje na červenou hřebenovku <a href=\"https://www.krnap.cz/tiskove-zpravy/nezapomente-ze-do-polskeho-krkonosskeho-narodniho-parku-se-plati-vstupne/\" target=\"_blank\">\"Cesta česko-polského přátelství\"</a>, jejíž průchod je zdarma.</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Špindlerův mlýn<br>(16 km)<br>Schronisko Odrodzenie<br>(16 km)<br>Horní Malá Úpa, Pomezní Boudy</p>"
     },
     {
         "km": 32,
@@ -741,7 +741,7 @@
         "urlmobile": "https://mapy.cz/s/jasobaroja",
         "known": true,
         "new": false,
-        "infobox": "<p class=\"ibSleep\">Není špatné si s sebou přibalit také spacák. Ten lze pak využít pro přespání na pokoji ve Schronisku Na Sniezniku, které je zařízené v poměrně nízkém komfortu stylu hromadné turistické ubytovny, takže spacák se zde hodí zejména z hygienických důvodů. Jiná alternativa přespání v okolí Králického Sněžníku ale bohužel není.</p><p class=\"ibSlope\">Prudší stoupání o sklonu 15 % na úseku 1,4 km od Sedla Puchača na vrchol Goworek.</p><p class=\"ibMultiday\">Trasa je na 3 dny:</p><p>Prostřední Lipka<br>(8 km)<br>Agropension Chřástal<br>(13 km)<br>Schronisku Na Sniezniku<br>(12 km)<br>Staré Město pod Sněžníkem</p>"
+        "infobox": "<p class=\"ibSleep\">Není špatné si s sebou přibalit také spacák. Ten lze pak využít při přenocování v horské chatě Schronisko Na Sniezniku, která je zařízená v poměrně nízkém komfortu stylu hromadné turistické ubytovny, takže spacák se zde hodí zejména z hygienických důvodů. Jiná alternativa přespání v okolí vrcholu Králického Sněžníku bohužel není.</p><p class=\"ibSlope\">Prudší stoupání o sklonu 15 % na úseku 1,4 km od Sedla Puchača na vrchol Goworek.</p><p class=\"ibMultiday\">Trasa je na 3 dny:</p><p>Prostřední Lipka<br>(8 km)<br>Agropension Chřástal<br>(13 km)<br>Schronisku Na Sniezniku<br>(12 km)<br>Staré Město pod Sněžníkem</p>"
     },
     {
         "km": 34,
@@ -765,7 +765,7 @@
         "urlmobile": "https://mapy.cz/s/coreharale",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibSleep\">Vzhledem k omezeným možnostem přespání pod střechou během druhé noci (jen jediný hotel nevalné kvality pod hradem Landštejn) je lepší mít s sebou na přespání stan. Podle pravidel přírodního parku Česká Kanada je v něm stanování povoleno (samozřejmě ale s výjimkou lesa, kde se nesmí stanovat nikdy).</p><p class=\"ibMultiday\">Trasa je na 3 dny:</p><p>Slavonice<br>(12 km)<br>Český Rudolec<br>(15 km)<br>Vitíněves<br>(13 km)<br>Slavonice</p>"
+        "infobox": "<p class=\"ibSleep\">Vzhledem k omezeným možnostem přespání pod střechou během druhé noci (jen jediný hotel nevalné kvality pod hradem Landštejn) je lepší mít s sebou na přespání stan. Podle pravidel přírodního parku Česká Kanada je v něm stanování povoleno (samozřejmě s výjimkou lesa, ve kterém se obecně nesmí stanovat nikde).</p><p class=\"ibMultiday\">Trasa je na 3 dny:</p><p>Slavonice<br>(12 km)<br>Český Rudolec<br>(15 km)<br>Vitíněves<br>(13 km)<br>Slavonice</p>"
     },
     {
         "km": 41,
@@ -777,7 +777,7 @@
         "urlmobile": "https://mapy.cz/s/joluvusahu",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibTimelimit\">Trasu lze projít pouze v období od 16. června do cca poloviny října. V zimě jsou totiž z důvodu bezpečnosti uzavřené Jánošíkovy diery a také hory samotné jsou příliš zasněžené a na jaře (od 1.3. do 15.6.) je každoročně zakázán výstup po červené turistické značce na Velký Rozsutec kvůli ochraně tamějších hnízdících ptáků.</p><p class=\"ibSlope\">Úsek 4,5 km od sedla Podžiar až na vrch Velký Rozsutec má velmi strmé stoupání 900 výškových metrů (což je v přepočtu 20%). Navíc je tento úsek (po rozcestí Pod Tanečnicou) výhradně jednosměrný a průchozí jen díky žebříkům, lávkám a schodům.</p><p class=\"ibSleep\">Na trase je sice možné přespat pod stanem, ale pouze na vyhrazených nocovištích, která jsou umístěna v těsné blízkosti horských chat. Jinak je v NP Malá Fatra stanování ve volné přírodě zakázáno. Pohodlnější je vzít si s sebou jen spacák, protože díky němu je pak přespání v horských chatách na trase o něco levnější (neúčtuje se potom poplatek za povlečení).</p><p class=\"ibMultiday\">Trasa je na 4 dny:</p><p>Terchová, B.Potok h.Diery<br>(5 km)<br>Dom horskej služby Štefanová<br>(17 km)<br>Chata pod Chlebom<br>(12 km)<br>Chata pod Suchým<br>(7 km)<br>Nezbudská Lúčka-Strečno</p>"
+        "infobox": "<p class=\"ibTimelimit\">Trasu lze projít pouze v období od 16. června do cca poloviny října. V zimě jsou totiž z důvodu bezpečnosti uzavřené Jánošíkovy diery a také hory samotné jsou příliš zasněžené a na jaře (od 1.3. do 15.6.) je každoročně zakázán výstup po červené turistické značce na Velký Rozsutec kvůli ochraně tamějších hnízdících ptáků.</p><p class=\"ibTimelimit\">Začátek trasy je potřeba naplánovat na všední den, protože o víkendech odpoledne nejezdí žádný spoj z Žiliny do startu trasy v Terchové.</p><p class=\"ibSlope\">Úsek 4,5 km od sedla Podžiar až na vrch Velký Rozsutec má velmi strmé stoupání 900 výškových metrů (což je v přepočtu 20%). Navíc je tento úsek (po rozcestí Pod Tanečnicou) výhradně jednosměrný a průchozí jen díky žebříkům, lávkám a schodům.</p><p class=\"ibSleep\">Na trase je sice možné přespat pod stanem, ale pouze na vyhrazených nocovištích, která jsou umístěna v těsné blízkosti horských chat. Jinak je v NP Malá Fatra stanování ve volné přírodě zakázáno. Pohodlnější je vzít si s sebou jen spacák, protože díky němu je pak přespání v horských chatách na trase o něco levnější (neúčtuje se potom poplatek za povlečení).</p><p class=\"ibMultiday\">Trasa je na 4 dny:</p><p>Terchová, B.Potok h.Diery<br>(5 km)<br>Dom horskej služby Štefanová<br>(17 km)<br>Chata pod Chlebom<br>(12 km)<br>Chata pod Suchým<br>(7 km)<br>Nezbudská Lúčka-Strečno</p>"
     },
     {
         "km": 43,
@@ -789,7 +789,7 @@
         "urlmobile": "https://mapy.cz/s/nedakahuva",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibTimelimit\">Trasu lze absolvovat pouze v období od 15.7. do 15.11., protože červená turistická značka od zaniklé osady Javoří Pila až k Rozhledně Poledník je mimo toto období uzavřena z důvodu ochrany přírody.</p><p class=\"ibSleep\">Kromě startu trasy na Kvildě je pro přenocování počítáno se stanem a jsou podle toho vyhledána vhodná místa.</p><p class=\"ibTransport\">Doprava tam i zpět je zajištěna autobusovou linkou. Při cestě tam je možné vystoupit o něco dříve v zastávce \"Borová Lada, Svinná Lada\", prohlédnout si Chalupskou slať a Soví voliéry a poté večer nastoupit na další autobus stejné linky a dojet do startu trasy na Kvildě.</p><p class=\"ibMultiday\">Trasa je na 3 dny:</p><p>Kvilda<br>(18 km)<br>Autocamping Antýgl<br>(16 km)<br>Nouzové nocoviště Poledník<br>(9 km)<br>Veřejné tábořiště Prášily</p>"
+        "infobox": "<p class=\"ibTimelimit\">Trasu lze absolvovat pouze v období od 15.7. do 15.11., protože červená turistická značka od zaniklé osady Javoří Pila až k Rozhledně Poledník je mimo toto období uzavřena z důvodu ochrany přírody.</p><p class=\"ibTimelimit\">Vzhledem ke značné komplikovanosti spojů je nejvýhodnější mít úterý jako příjezdový den, středu až pátek pro samotný trek a sobotu jako návratový den.</p><p class=\"ibTransport\">Pro snížení počtu přestupů na minimum je potřeba přijet autem do Vimperku, odtud potom odjet 11:35 busem směr Kvilda. Zpět z Prášil odjíždí v 10:29 bus přes Kvildu do Vimperku.</p><p class=\"ibInfo\">Při cestě tam je možné vystoupit 12:09 v zastávce \"Borová Lada, Svinná Lada\", prohlédnout si Chalupskou slať a Soví voliéry a poté v 18:01 z obce Borová Lada dojet na Kvildu.</p><p class=\"ibSleep\">Kromě první noci na Kvildě se pro přenocování počítá se stanem.</p><p class=\"ibMultiday\">Trasa je na 3 dny:</p><p>Kvilda<br>(18 km)<br>Autocamping Antýgl<br>(16 km)<br>Nouzové nocoviště Poledník<br>(9 km)<br>Veřejné tábořiště Prášily</p>"
     },
     {
         "km": 48,
@@ -801,7 +801,7 @@
         "urlmobile": "https://mapy.cz/s/datotunevo",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibTransport\">Pro snazší cestování je nejlepší přijet autem do Vsetína a odtud potom dále do startu a z cíle trasy již osobním vlakem.</p><p class=\"ibSleep\">Pro tuto trasu je lepší místo stanování raději zajistit ubytování v Pulčíně pod střechou. Druhou noc totiž není možné stan vůbec využít z důvodu zákazu stanování v CHKO Beskydy, takže jeho nošení by nebylo zrovna výhodné, jelikož v takto kopcovitém terénu je lepší mít batoh co nejlehčí.</p><p class=\"ibMultiday\">Trasa je na 3 dny:</p><p>Lužná u Vsetína<br>(15 km)<br>Pulčín<br>(18 km)<br>Horský hotel Portáš<br>(15 km)<br>Velké Karlovice zastávka</p>"
+        "infobox": "<p class=\"ibTransport\">Pro snazší cestování je nejlepší přijet autem do Vsetína a odtud potom do startu a z cíle trasy již vlakem.</p><p class=\"ibSleep\">Pro tuto trasu je lepší místo stanování raději zajistit ubytování v Pulčíně pod střechou. Druhou noc totiž není možné stan vůbec využít z důvodu zákazu stanování v CHKO Beskydy, takže jeho nošení by nebylo zrovna výhodné, jelikož v takto kopcovitém terénu je lepší mít batoh co nejlehčí.</p><p class=\"ibMultiday\">Trasa je na 3 dny:</p><p>Lužná u Vsetína<br>(15 km)<br>Pulčín<br>(18 km)<br>Horský hotel Portáš<br>(15 km)<br>Velké Karlovice zastávka</p>"
     },
     {
         "km": 48,
@@ -813,7 +813,7 @@
         "urlmobile": "https://mapy.cz/s/gocacajedu",
         "known": false,
         "new": true,
-        "infobox": "<p class=\"ibTransport\">Pro cestu tam je nutno dojet autem do Vrchlabí a odtud v 8:33 autobusem do Pece pod Sněžkou. Pro cestu zpět pak z Kořenova v 16:44 odjíždí jediný přímý autobusový spoj do Vrchlabí, kde se lze zase vrátit k autu.</p><p class=\"ibTransport\">Jako alternativní cestu zpět lze volit i jízdu <a href=\"http://www.zubacka.cz/\" target=\"_blank\">historickým ozubnicovým motorovým vlakem</a> z železniční stanice Kořenov do Tanvaldu a teprve odtud 16:32 tím stejným přímým busem do Vrchlabí.</p><p class=\"ibSleep\">Jelikož jsou Krkonoše vyhlášené svými vysokými cenami, a to zejména za ubytovací služby, počítá se v obou městech (Špindlerův Mlýn i Harrachov) s přespáním v místních kempech. V obou jsou k dispozici kromě míst pro stany také chatky.</p><p class=\"ibSlope\">Prudké stoupání o sklonu 17&nbsp;% na 2,6&nbsp;km dlouhém úseku od \"Kaple v Obřím dole\" po Slezský dům.</p><p class=\"ibSlope\">Prudké stoupání přes 15&nbsp;% na úseku 1,3&nbsp;km od řeky Labe po rozcestník Labský vodopád.</p><p class=\"ibMultiday\">Trasa je na 3 dny:</p><p>Pec pod Sněžkou<br>(17 km)<br>Autokemp Špindlerův Mlýn<br>(20 km)<br>Camping Jiskra Harrachov<br>(11 km)<br>Kořenov</p>"
+        "infobox": "<p class=\"ibTimelimit\">Začátek trasy je možné naplánovat jen na čtvrtek nebo pátek, protože zpáteční přímý autobusový spoj jezdí pouze o víkendech.</p><p class=\"ibTransport\">Pro cestu tam je nutné dojet autem do Vrchlabí a odtud v 9:22 autobusem do Pece pod Sněžkou. Pro cestu zpět pak z Kořenova v 16:44 odjíždí jediný přímý autobusový spoj do Vrchlabí, kde se lze zase vrátit k autu.</p><p class=\"ibTransport\">Jako alternativní cestu zpět lze volit i jízdu <a href=\"http://www.zubacka.cz/\" target=\"_blank\">historickým ozubnicovým motorovým vlakem</a> z železniční stanice Kořenov do Tanvaldu a odtud pak v 16:32 tím stejným přímým busem do Vrchlabí.</p><p class=\"ibSleep\">Jelikož jsou Krkonoše vyhlášené svými vysokými cenami, a to zejména za ubytovací služby, počítá se v obou městech (Špindlerův Mlýn i Harrachov) s přespáním v místních kempech. V obou jsou k dispozici kromě míst pro stany také chatky.</p><p class=\"ibSlope\">Prudké stoupání o sklonu 17&nbsp;% na 2,6&nbsp;km dlouhém úseku od \"Kaple v Obřím dole\" po Slezský dům.</p><p class=\"ibSlope\">Prudké stoupání přes 15&nbsp;% na úseku 1,3&nbsp;km od řeky Labe po rozcestník Labský vodopád.</p><p class=\"ibMultiday\">Trasa je na 3 dny:</p><p>Pec pod Sněžkou<br>(17 km)<br>Autokemp Špindlerův Mlýn<br>(20 km)<br>Camping Jiskra Harrachov<br>(11 km)<br>Kořenov</p>"
     },
     {
         "km": 50,
@@ -825,6 +825,6 @@
         "urlmobile": "https://mapy.cz/s/jakukezogo",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibTimelimit\">Nejlepší je trasu jít v období od cca poloviny června do konce listopadu. V zimě totiž nemusí být kvůli sněhu a ledu průchozí Vlčí rokle (která je průchozí jen díky dřevěným povalovým lávkám, schodům a žebříkům) a na jaře od března do cca poloviny června bývá část Teplických skal uzavřena z důvodu ochrany hnízdících sokolů.</p><p class=\"ibSleep\">Nelze přespat ve stanu. Na trase nejsou žádná nocoviště ani kempy a stanování je v CHKO Broumovsko zakázáno. Je ale možnost vzít si s sebou alespoň spacák, přinejmenším na zámku Skály (Bischofstein) je díky tomu pak přespání levnější (neúčtují v takovém případě poplatek za povlečení).</p><p class=\"ibTransport\">Do a z Hronova se předpokládá doprava autem (aby se vše dalo časově stíhat).</p><p class=\"ibMultiday\">Trasa je na 4 dny:</p><p>Adršpach<br>(13 km)<br>Zámek Skály-Bischofstein<br>(14 km)<br>Hlavňov<br>(18 km)<br>Machov<br>(5 km)<br>Vysoká Srbská, obecní úřad</p>"
+        "infobox": "<p class=\"ibTimelimit\">Nejlepší je trasu jít v období od cca poloviny června do konce listopadu. V zimě totiž nemusí být kvůli sněhu a ledu průchozí Vlčí rokle (která je průchozí jen díky dřevěným povalovým lávkám, schodům a žebříkům) a na jaře od března do cca poloviny června bývá část Teplických skal uzavřena z důvodu ochrany hnízdících sokolů.</p><p class=\"ibSleep\">Nelze přespat ve stanu. Na trase nejsou žádná nocoviště ani kempy a stanování je v CHKO Broumovsko zakázáno. Je ale možnost vzít si s sebou alespoň spacák, přinejmenším na zámku Skály (Bischofstein) je díky tomu pak přespání levnější (neúčtují v takovém případě poplatek za povlečení).</p><p class=\"ibInfo\">Vstup do <a href=\"https://www.adrspasskeskaly.cz/\" target=\"_blank\">Adršpašských skal</a> i do <a href=\"https://www.teplickeskaly.eu/\" target=\"_blank\">Teplických skal</a> je zpoplatněn. Pro vstup do obou skalních měst ale stačí koupit vstupenku pouze do jednoho z nich, vstupenka pak platí ve stejný den i pro přístup do druhého skalního města.</p><p class=\"ibMultiday\">Trasa je na 4 dny:</p><p>Adršpach<br>(13 km)<br>Zámek Skály-Bischofstein<br>(14 km)<br>Hlavňov<br>(18 km)<br>Machov<br>(5 km)<br>Vysoká Srbská, obecní úřad</p>"
     }
 ]

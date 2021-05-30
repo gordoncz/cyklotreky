@@ -1,5 +1,15 @@
 [
     {
+        "verze": "19",
+        "datum": "30. května 2021",
+        "summary": "aktualizace dopravních informací",
+        "detaily": [
+            "Byly aktualizovány informace o dopravních spojeních, které jsou uvedené v rámci infoboxu u některých tras",
+            "Optimalizace několika málo tras za účelem dosažení jejich lepší ucelenosti",
+            "Na informační stránku byly doplněny další tipy pro hromadnou dopravu"
+        ]
+    },
+    {
         "verze": "18",
         "datum": "15. května 2021",
         "summary": "modernizace starších tras v databázi",
