@@ -26,11 +26,11 @@
     {
         "km": 8,
         "multiday": false,
-        "nazev": "Hrad Veveří",
+        "nazev": "Brněnská přehrada",
         "region": "Brno",
-        "picture": "hrad-veveri",
-        "urldesktop": "https://mapy.cz/s/lutejezuhu",
-        "urlmobile": "https://mapy.cz/s/depagofame",
+        "picture": "brnenska-prehrada",
+        "urldesktop": "https://mapy.cz/s/dupovoruba",
+        "urlmobile": "https://mapy.cz/s/hohocaguje",
         "known": true,
         "new": false,
         "infobox": "<p class=\"ibTransport\">Pro zpáteční cestu lze využít také <a href=\"https://www.dpmb.cz/cs/novinky/all\" target=\"_blank\">lodní dopravu parníkem DPMB</a>.</p>"
@@ -43,18 +43,6 @@
         "picture": "hady",
         "urldesktop": "https://mapy.cz/s/mufomonuce",
         "urlmobile": "https://mapy.cz/s/guzedonaro",
-        "known": true,
-        "new": false,
-        "infobox": ""
-    },
-    {
-        "km": 9,
-        "multiday": false,
-        "nazev": "Helenčina studánka",
-        "region": "Brno",
-        "picture": "helencina-studanka",
-        "urldesktop": "https://mapy.cz/s/defubaloma",
-        "urlmobile": "https://mapy.cz/s/lovanaveda",
         "known": true,
         "new": false,
         "infobox": ""
@@ -91,6 +79,18 @@
         "picture": "vildenberk",
         "urldesktop": "https://mapy.cz/s/cozoherovo",
         "urlmobile": "https://mapy.cz/s/gezusuneka",
+        "known": true,
+        "new": false,
+        "infobox": ""
+    },
+    {
+        "km": 10,
+        "multiday": false,
+        "nazev": "Helenčina studánka",
+        "region": "Brno",
+        "picture": "helencina-studanka",
+        "urldesktop": "https://mapy.cz/s/defubaloma",
+        "urlmobile": "https://mapy.cz/s/lovanaveda",
         "known": true,
         "new": false,
         "infobox": ""
@@ -161,8 +161,8 @@
         "nazev": "Milovské Perničky",
         "region": "Vysočina",
         "picture": "milovske-pernicky",
-        "urldesktop": "https://mapy.cz/s/cugaluhezu",
-        "urlmobile": "https://mapy.cz/s/jeruvovasa",
+        "urldesktop": "https://mapy.cz/s/fuhufojosa",
+        "urlmobile": "https://mapy.cz/s/lelucohohu",
         "known": false,
         "new": false,
         "infobox": ""
@@ -187,18 +187,6 @@
         "picture": "buchlov",
         "urldesktop": "https://mapy.cz/s/cavevuruve",
         "urlmobile": "https://mapy.cz/s/kucukujuhe",
-        "known": true,
-        "new": false,
-        "infobox": ""
-    },
-    {
-        "km": 12,
-        "multiday": false,
-        "nazev": "Mariánské údolí k Jelenovi",
-        "region": "Brno",
-        "picture": "marianske-udoli-k-jelenovi",
-        "urldesktop": "https://mapy.cz/s/luzabotenu",
-        "urlmobile": "https://mapy.cz/s/basupukola",
         "known": true,
         "new": false,
         "infobox": ""
@@ -235,18 +223,6 @@
         "picture": "tesnohlidkovo-udoli",
         "urldesktop": "https://mapy.cz/s/regehenomu",
         "urlmobile": "https://mapy.cz/s/heduzufuro",
-        "known": true,
-        "new": false,
-        "infobox": ""
-    },
-    {
-        "km": 12,
-        "multiday": false,
-        "nazev": "Z Nedvědice do Bystřice",
-        "region": "Vysočina",
-        "picture": "z-nedvedice-do-bystrice",
-        "urldesktop": "https://mapy.cz/s/lupuzefebu",
-        "urlmobile": "https://mapy.cz/s/fosazezezu",
         "known": true,
         "new": false,
         "infobox": ""
@@ -302,6 +278,18 @@
     {
         "km": 13,
         "multiday": false,
+        "nazev": "Mariánské údolí k Jelenovi",
+        "region": "Brno",
+        "picture": "marianske-udoli-k-jelenovi",
+        "urldesktop": "https://mapy.cz/s/luzabotenu",
+        "urlmobile": "https://mapy.cz/s/basupukola",
+        "known": true,
+        "new": false,
+        "infobox": ""
+    },
+    {
+        "km": 13,
+        "multiday": false,
         "nazev": "Peřeje Kalského potoka",
         "region": "Brněnsko",
         "picture": "pereje-kalskeho-potoka",
@@ -310,6 +298,18 @@
         "known": false,
         "new": false,
         "infobox": "<p class=\"ibTimelimit\">Tuto trasu je nejlepší absolvovat v zimě s vydatnou sněhovou pokrývkou (kdy se na Kalském potoku tvoří ledopády) nebo případně brzy na jaře v období jarního tání (kdy je průtok vody potokem na nejvyšších stavech). V dalších obdobích roku je totiž kvůli poměrně nízkému průtoku vody Kalským potokem tato trasa o poznání méně zajímavá.</p>"
+    },
+    {
+        "km": 13,
+        "multiday": false,
+        "nazev": "Z Nedvědice do Bystřice",
+        "region": "Vysočina",
+        "picture": "z-nedvedice-do-bystrice",
+        "urldesktop": "https://mapy.cz/s/lupuzefebu",
+        "urlmobile": "https://mapy.cz/s/fosazezezu",
+        "known": true,
+        "new": false,
+        "infobox": ""
     },
     {
         "km": 13,
@@ -452,7 +452,7 @@
         "urldesktop": "https://mapy.cz/s/covududeru",
         "urlmobile": "https://mapy.cz/s/bofohekucu",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": ""
     },
     {
@@ -596,7 +596,7 @@
         "urldesktop": "https://mapy.cz/s/pazegafope",
         "urlmobile": "https://mapy.cz/s/nalonupeke",
         "known": false,
-        "new": true,
+        "new": false,
         "infobox": ""
     },
     {
@@ -720,18 +720,6 @@
         "infobox": "<p class=\"ibTransport\">Předpokládá se příjezd autem do Trutnova a odtud potom do startu a z cíle trasy autobusem.</p><p class=\"ibTransport\">Z časových důvodů je nutné na začátku treku využít <a href=\"https://www.skiareal.cz/leto/lanove-drahy\" target=\"_blank\">lanovou dráhu Medvědín</a>, která mezi Špindlerovým mlýnem a vrchem Medvědín jezdí každou půlhodinu.</p><p class=\"ibInfo\">Do polské části Krkonošského národního parku je vstup placený, to se však nevztahuje na červenou hřebenovku <a href=\"https://www.krnap.cz/tiskove-zpravy/nezapomente-ze-do-polskeho-krkonosskeho-narodniho-parku-se-plati-vstupne/\" target=\"_blank\">\"Cesta česko-polského přátelství\"</a>, jejíž průchod je zdarma.</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Špindlerův mlýn<br>(16 km)<br>Schronisko Odrodzenie<br>(16 km)<br>Horní Malá Úpa, Pomezní Boudy</p>"
     },
     {
-        "km": 32,
-        "multiday": true,
-        "nazev": "Z podhůří na vrcholy Jeseníků",
-        "region": "Jeseníky",
-        "picture": "z-podhuri-na-vrcholy-jeseniku",
-        "urldesktop": "https://mapy.cz/s/decujofabu",
-        "urlmobile": "https://mapy.cz/s/losolataku",
-        "known": false,
-        "new": false,
-        "infobox": "<p class=\"ibTransport\">Z důvodu úspory času a sil je potřeba využít <a href=\"http://www.bonera.cz/lanovky-vleky.php\" target=\"_blank\">lanovku Ramzová - Čerňava - Šerák</a>, aby se nemuselo převýšení více než 500 m (10%) na téměř 5 km cesty po červené turistické značce absolvovat pěšky.</p><p class=\"ibInfo\">Celková délka trasy je sice 35 km, ale 3 km z toho je jízda lanovkou, takže pěšky je potřeba ujít právě jen těch 32 km.</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Staré Město pod Sněžníkem<br>(17 km)<br>Ramzová<br>(15 km)<br>Branná</p>"
-    },
-    {
         "km": 33,
         "multiday": true,
         "nazev": "Králický Sněžník",
@@ -754,6 +742,18 @@
         "known": false,
         "new": false,
         "infobox": "<p class=\"ibInfo\">Inspirací pro trasu byla úspěšná česká PC hra Kingdom Come (v překladu \"Přijď království tvé\" - z modlitby Otčenáš). Hra je zasazená do pozdního středověku v období před husitskými válkami a odehrává se právě <a href=\"https://www.centralbohemia.cz/filemanager/files/file.php?file=412720\" target=\"_blank\">v této části malebné krajiny Posázaví</a>. Lze si tak osobně projít vybraná místa stejně jako hlavní hrdina hry Jindřich - Rataje, Ledečko, Samopše či Sázavu.</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Kácov<br>(19 km)<br>Rataje nad Sázavou<br>(15 km)<br>Sázava</p>"
+    },
+    {
+        "km": 35,
+        "multiday": true,
+        "nazev": "Z podhůří na vrcholy Jeseníků",
+        "region": "Jeseníky",
+        "picture": "z-podhuri-na-vrcholy-jeseniku",
+        "urldesktop": "https://mapy.cz/s/decujofabu",
+        "urlmobile": "https://mapy.cz/s/losolataku",
+        "known": false,
+        "new": false,
+        "infobox": "<p class=\"ibTransport\">Z důvodu úspory času a sil je potřeba využít <a href=\"http://www.bonera.cz/lanovky-vleky.php\" target=\"_blank\">lanovku Ramzová - Čerňava - Šerák</a>, aby se nemuselo převýšení více než 500 m (10%) na téměř 5 km cesty po červené turistické značce absolvovat pěšky.</p><p class=\"ibInfo\">Druhý den trasy zahrnuje jízdu lanovkou, takže ve skutečnosti je pěší trek ten den o 3 km kratší.</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Staré Město pod Sněžníkem<br>(17 km)<br>Ramzová<br>(18 km)<br>Branná</p>"
     },
     {
         "km": 40,
@@ -794,6 +794,18 @@
     {
         "km": 48,
         "multiday": true,
+        "nazev": "Říční tepny Krkonoš",
+        "region": "Krkonoše",
+        "picture": "ricni-tepny-krkonos",
+        "urldesktop": "https://mapy.cz/s/napedanuno",
+        "urlmobile": "https://mapy.cz/s/gocacajedu",
+        "known": false,
+        "new": false,
+        "infobox": "<p class=\"ibTimelimit\">Začátek trasy je možné naplánovat jen na čtvrtek nebo pátek, protože zpáteční přímý autobusový spoj jezdí pouze o víkendech.</p><p class=\"ibTransport\">Pro cestu tam je nutné dojet autem do Vrchlabí a odtud v 9:22 autobusem do Pece pod Sněžkou. Pro cestu zpět pak z Kořenova v 16:44 odjíždí jediný přímý autobusový spoj do Vrchlabí, kde se lze zase vrátit k autu.</p><p class=\"ibTransport\">Jako alternativní cestu zpět lze volit i jízdu <a href=\"http://www.zubacka.cz/\" target=\"_blank\">historickým ozubnicovým motorovým vlakem</a> z železniční stanice Kořenov do Tanvaldu a odtud pak v 16:32 tím stejným přímým busem do Vrchlabí.</p><p class=\"ibSleep\">Jelikož jsou Krkonoše vyhlášené svými vysokými cenami, a to zejména za ubytovací služby, počítá se v obou městech (Špindlerův Mlýn i Harrachov) s přespáním v místních kempech. V obou jsou k dispozici kromě míst pro stany také chatky.</p><p class=\"ibSlope\">Prudké stoupání o sklonu 17&nbsp;% na 2,6&nbsp;km dlouhém úseku od \"Kaple v Obřím dole\" po Slezský dům.</p><p class=\"ibSlope\">Prudké stoupání přes 15&nbsp;% na úseku 1,3&nbsp;km od řeky Labe po rozcestník Labský vodopád.</p><p class=\"ibMultiday\">Trasa je na 3 dny:</p><p>Pec pod Sněžkou<br>(17 km)<br>Autokemp Špindlerův Mlýn<br>(20 km)<br>Camping Jiskra Harrachov<br>(11 km)<br>Kořenov</p>"
+    },
+    {
+        "km": 49,
+        "multiday": true,
         "nazev": "Javorníky",
         "region": "Beskydy",
         "picture": "javorniky",
@@ -801,19 +813,7 @@
         "urlmobile": "https://mapy.cz/s/datotunevo",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibTransport\">Pro snazší cestování je nejlepší přijet autem do Vsetína a odtud potom do startu a z cíle trasy již vlakem.</p><p class=\"ibSleep\">Pro tuto trasu je lepší místo stanování raději zajistit ubytování v Pulčíně pod střechou. Druhou noc totiž není možné stan vůbec využít z důvodu zákazu stanování v CHKO Beskydy, takže jeho nošení by nebylo zrovna výhodné, jelikož v takto kopcovitém terénu je lepší mít batoh co nejlehčí.</p><p class=\"ibMultiday\">Trasa je na 3 dny:</p><p>Lužná u Vsetína<br>(15 km)<br>Pulčín<br>(18 km)<br>Horský hotel Portáš<br>(15 km)<br>Velké Karlovice zastávka</p>"
-    },
-    {
-        "km": 48,
-        "multiday": true,
-        "nazev": "Říční tepny Krkonoš",
-        "region": "Krkonoše",
-        "picture": "ricni-tepny-krkonos",
-        "urldesktop": "https://mapy.cz/s/napedanuno",
-        "urlmobile": "https://mapy.cz/s/gocacajedu",
-        "known": false,
-        "new": true,
-        "infobox": "<p class=\"ibTimelimit\">Začátek trasy je možné naplánovat jen na čtvrtek nebo pátek, protože zpáteční přímý autobusový spoj jezdí pouze o víkendech.</p><p class=\"ibTransport\">Pro cestu tam je nutné dojet autem do Vrchlabí a odtud v 9:22 autobusem do Pece pod Sněžkou. Pro cestu zpět pak z Kořenova v 16:44 odjíždí jediný přímý autobusový spoj do Vrchlabí, kde se lze zase vrátit k autu.</p><p class=\"ibTransport\">Jako alternativní cestu zpět lze volit i jízdu <a href=\"http://www.zubacka.cz/\" target=\"_blank\">historickým ozubnicovým motorovým vlakem</a> z železniční stanice Kořenov do Tanvaldu a odtud pak v 16:32 tím stejným přímým busem do Vrchlabí.</p><p class=\"ibSleep\">Jelikož jsou Krkonoše vyhlášené svými vysokými cenami, a to zejména za ubytovací služby, počítá se v obou městech (Špindlerův Mlýn i Harrachov) s přespáním v místních kempech. V obou jsou k dispozici kromě míst pro stany také chatky.</p><p class=\"ibSlope\">Prudké stoupání o sklonu 17&nbsp;% na 2,6&nbsp;km dlouhém úseku od \"Kaple v Obřím dole\" po Slezský dům.</p><p class=\"ibSlope\">Prudké stoupání přes 15&nbsp;% na úseku 1,3&nbsp;km od řeky Labe po rozcestník Labský vodopád.</p><p class=\"ibMultiday\">Trasa je na 3 dny:</p><p>Pec pod Sněžkou<br>(17 km)<br>Autokemp Špindlerův Mlýn<br>(20 km)<br>Camping Jiskra Harrachov<br>(11 km)<br>Kořenov</p>"
+        "infobox": "<p class=\"ibTransport\">Pro snazší cestování je nejlepší přijet autem do Vsetína a odtud potom do startu a z cíle trasy již vlakem.</p><p class=\"ibSleep\">Pro tuto trasu je lepší místo stanování raději zajistit ubytování v Pulčíně pod střechou. Druhou noc totiž není možné stan vůbec využít z důvodu zákazu stanování v CHKO Beskydy, takže jeho nošení by nebylo zrovna výhodné, jelikož v takto kopcovitém terénu je lepší mít batoh co nejlehčí.</p><p class=\"ibMultiday\">Trasa je na 3 dny:</p><p>Lužná u Vsetína<br>(15 km)<br>Pulčín<br>(19 km)<br>Horský hotel Portáš<br>(15 km)<br>Velké Karlovice zastávka</p>"
     },
     {
         "km": 50,

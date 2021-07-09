@@ -2,7 +2,7 @@
 // na mobilech se z důvodu úspory přenosu dat a také úspory místa na monitoru pinup girls nebudou zobrazovat
 
 // zde stačí vložit číslo, kolik je celkem pinup souborů ve složce
-var celkemPinup = 50;
+var celkemPinup = 47;
 
 // definování variable pro div ID "panelPinup" na stránce, kam se bude obrázek vkládat
 var pinupDiv = document.getElementById("panelPinup");
