@@ -8,7 +8,7 @@
             "Trasy lze také podle autorů i filtrovat",
             "Filtr pro ještě neabsolvované trasy byl změněn ze zatržítka na toggle, takže nyní lze filtrovat nejen neabsolvované trasy, ale také již známé trasy",
             "U vícedenních tras je teď na první pohled vidět, kolik dní taková trasa zabere, aniž by se musel rozklikávat infobox (místo map pinu vedle názvu regionu se zobrazuje dynamická ikonka s číslem počtu dnů každé vícedenní trasy - u jednodenních tras map pin zůstal zachován)",
-            "Filtr pro délku tras byl podle toho rozšířen, takže je nově možné filtrovat nejen vícedenní trasy jako celek, ale také je možné si zvolit filtr vícedenních tras přesně podle daného počtu dnů",
+            "Ve filtru pro délku tras je nově možné filtrovat nejen vícedenní trasy jako celek, ale také si zvolit vícedenní trasy přesně podle počtu dnů",
             "Denní příděly kilometrů u vícedenních tras jsou nyní v infoboxu barevně podbarvené stejnou barevnou škálou jako u jednodenních tras",
             "Textové popisky filtrů tras byly změněny na ikonky",
             "V hlavním menu byl změněn vzhled tlačítek pro pomocné stránky (aby více vynikla graficky zpracovaná tlačítka pro stránky s cyklo a pěšími trasami)"
