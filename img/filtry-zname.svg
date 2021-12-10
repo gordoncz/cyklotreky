@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px"
+	 height="30px" viewBox="0 0 40 30" enable-background="new 0 0 40 30" xml:space="preserve">
+<g id="zname">
+	<path fill="#B5BDC6" d="M20,3C12.27,3,5.14,8.27,2,15c3.14,6.73,10.27,12,18,12c7.73,0,14.86-5.27,18-12C34.86,8.27,27.73,3,20,3z
+		 M20,24c-4.97,0-9-4.029-9-9c0-4.97,4.03-9,9-9c4.971,0,9,4.03,9,9C29,19.971,24.971,24,20,24z"/>
+	<path fill="#B5BDC6" d="M24.398,12.669C24.104,13.723,23.147,14.5,22,14.5c-1.381,0-2.5-1.119-2.5-2.5
+		c0-0.796,0.378-1.496,0.958-1.954C20.305,10.032,20.157,10,20,10c-2.761,0-5,2.239-5,5c0,2.762,2.239,5,5,5c2.762,0,5-2.238,5-5
+		C25,14.153,24.77,13.368,24.398,12.669z"/>
+</g>
+</svg>

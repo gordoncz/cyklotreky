@@ -18,27 +18,27 @@
 
 <body>
 
-    <!-- Úvodní ovládací divy nahoře na stránce -->
+    <!-- SUB Úvodní ovládací divy nahoře na stránce -->
     <div id="titulka">
         <div id="logotop"><a href="index.html"><img src="img/logo-small.svg" alt="logo"></a></div>
         <div id="nazevStranky"><h1 onclick="backToTop()">INFORMACE</h1></div>
     </div>
 
-    <!-- Hlavní div s pro obsah stránky -->
+    <!-- CHAPTER Hlavní div s obsahem stránky -->
     <div id="obsahStrankyInfo">
 
-        <!-- Murphyho zákony -->
+        <!-- SUB Murphyho zákony -->
         <div id="murphyLaw">
             <p id="murphyLawQuote"></p>
             <p id="murphyLawNote">Murphyho zákony schválnosti... na téma cyklistika</p>
         </div>
 
-        <!-- Stručný changelog jednotlivých verzí -->
+        <!-- SUB Stručný changelog jednotlivých verzí -->
         <h2>Novinky</h2>
         <p class="podtitul">Stručné informace o obsahu jednotlivých updatů databáze Cyklotreky</p>
         <div id="changelogWrapper"><p id="loadingChangelog">Načítám data...</p></div>
 
-        <!-- Nápověda pro používání Cyklotreků a aplikace Mapy.cz -->
+        <!-- SUB Nápověda pro používání Cyklotreků a aplikace Mapy.cz -->
         <!-- Při přidání dalšího tlačítka stačí jen vytvořit SVG obrázek, přidat html tag zde do stránky a příslušný záznam do howto.json -->
         <!-- Automatická funkce v info.js pak zajistí, že se tlačítka zde správně spárují s příslušnými dynamicky generovanými divy s obsahem -->
         <!-- Stačí jen dodržet zde nastavený vzorec pojmenování prvků -->
@@ -51,11 +51,12 @@
         </div>
         <div id="tipsWrapper"><p id="loadingTips">Načítám data...</p></div>
 
-        <!-- Credits -->
+        <!-- SUB Credits -->
         <h2>Cyklotreky</h2>
         <p>Databáze cyklovýletů a pěších treků v ČR a blízkém zahraničí</p>
         <p>Založeno roku 2014</p>
 
+        <!-- SUB Historie databáze -->
         <div id="popisWrapper">
             <div id="showInfoTlacitko" onclick="zobrazitInfo(this)">zobrazit popis</div>
             <div class="popisContainer invisible">
@@ -91,6 +92,7 @@
             </div>
         </div>
 
+        <!-- SUB Technologie, na které Cyklotreky běží -->
         <h4>Použitá technologie</h4>
 
         <div id="infoDevtools">
@@ -103,12 +105,13 @@
         </div>
 
     </div>
+    <!-- !CHAPTER -->
 
-    <!-- Div pro patičku stránky -->
+    <!-- SUB Div pro patičku stránky -->
     <div id="patkaStranky"></div>
 
 
-    <!-- JavaScript -->
+    <!-- SUB JavaScript -->
     <script>var detekceMobilu = window.matchMedia("(pointer: coarse)");</script>
     <script>backToTop = () => window.scroll(0, 0);</script>
     <script src="data/patka.js"></script>

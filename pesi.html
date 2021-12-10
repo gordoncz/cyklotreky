@@ -18,54 +18,128 @@
 
 <body>
 
-    <!-- Úvodní ovládací divy nahoře na stránce -->
+    <!-- SUB Úvodní ovládací divy nahoře na stránce -->
     <div id="titulka">
         <div id="logotop"><a href="index.html"><img src="img/logo-small.svg" alt="logo"></a></div>
         <div id="nazevStranky"><h1 onclick="backToTop()">PĚŠÍ TREKY</h1></div>
     </div>
 
-    <!-- Container divy pro filtry tras -->
+    <!-- SUB Container divy pro filtry tras -->
     <div id="filtry">
         <div class="filtrNabidka">
-            Délka tras:
+            <img class="filtrySVG" src="img/filtry-delka.svg" alt="Délka tras" title="Délka tras">
             <select name="delkaTras" id="podleDelky" class="nabidkaContainer" onchange="filterByDistance(this.value)">
-                <option value="all">všechny</option>
-                <option value="S">krátké</option>
-                <option value="M">střední</option>
-                <option value="L">dlouhé</option>
-                <option value="XL">extra dlouhé</option>
-                <option value="MD">vícedenní</option>
+                <!-- zde jsou javascriptem dynamicky naplněny jednotlivé hodnoty -->
             </select>
         </div>
         <div class="filtrNabidka">
-            Region:
+            <img class="filtrySVG" src="img/filtry-region.svg" alt="Region" title="Region">
             <select name="lokalitaTras" id="podleRegionu" class="nabidkaContainer" onchange="filterByRegion(this.value)">
-                <option value="all">všechny</option>
-                <option value="Beskydy">Beskydy</option>
-                <option value="Bílé Karpaty">Bílé Karpaty</option>
-                <option value="Brněnsko">Brněnsko</option>
-                <option value="Brno">Brno</option>
-                <option value="Haná">Haná</option>
-                <option value="Jeseníky">Jeseníky</option>
-                <option value="Jižní Čechy">Jižní Čechy</option>
-                <option value="Jižní Morava">Jižní Morava</option>
-                <option value="Krkonoše">Krkonoše</option>
-                <option value="Krušnohoří">Krušnohoří</option>
-                <option value="Orlické hory">Orlické hory</option>
-                <option value="Polabí">Polabí</option>
-                <option value="Rakousko">Rakousko</option>
-                <option value="Slezsko">Slezsko</option>
-                <option value="Slovensko">Slovensko</option>
-                <option value="Střední Čechy">Střední Čechy</option>
-                <option value="Svitavsko">Svitavsko</option>
-                <option value="Šumava">Šumava</option>
-                <option value="Vysočina">Vysočina</option>
-                <option value="Východní Čechy">Východní Čechy</option>
-                <option value="Západní Čechy">Západní Čechy</option>
+                <!-- zde jsou javascriptem dynamicky naplněny jednotlivé hodnoty -->
             </select>
         </div>
-        <div class="filtrZatrzitko">Jen neabsolvované: <label for="onlyUnknown" class="zatrzitkoContainer"><input type="checkbox" id="onlyUnknown" onclick="filterByKnown()"><span class="zatrzitko"></span></label></div>
-        <div class="filtrZatrzitko">Jen nové: <label for="onlyNew" class="zatrzitkoContainer"><input type="checkbox" id="onlyNew" onclick="filterByNew()"><span class="zatrzitko"></span></label></div>
+        <div class="filtrRadioToggle">
+            <img class="filtrySVG" src="img/filtry-neabsolvovane.svg" alt="Dosud neabsolvované" title="Dosud neabsolvované trasy">
+            <label for="onlyUnknown" class="radioContainer"><input type="radio" id="onlyUnknown" name="toggleKnown" value="onlyUnknown" onclick="filterByKnown(this.value)"><span class="radiocheck rLeft firstRadio"></span></label>
+            <label for="onlyUnknownKnown" class="radioContainer"><input type="radio" id="onlyUnknownKnown" name="toggleKnown" value="onlyUnknownKnown" onclick="filterByKnown(this.value)"><span class="radiocheck"></span></label>
+            <label for="onlyKnown" class="radioContainer"><input type="radio" id="onlyKnown" name="toggleKnown" value="onlyKnown" onclick="filterByKnown(this.value)"><span class="radiocheck rRight lastRadio"></span></label>
+            <img class="filtrySVG" src="img/filtry-zname.svg" alt="Již známé trasy" title="Již známé trasy">
+        </div>
+        <div class="filtrZatrzitko">
+            <img class="filtrySVG" src="img/filtry-nove.svg" alt="Jen nové" title="Jen nově přidané trasy">
+            <label for="onlyNew" class="zatrzitkoContainer"><input type="checkbox" id="onlyNew" onclick="filterByNew()"><span class="zatrzitko"></span></label>
+        </div>
+        <div class="filtrRadioToggle">
+            <img class="filtrySVG" src="img/filtry-autori.svg" alt="Autoři tras" title="Autor a nebo spoluautor tras">
+            <label for="onlyAuthorAny" class="radioContainer" title="kdokoliv"><input type="radio" id="onlyAuthorAny" name="toggleAuthors" value="onlyAuthorAny" onclick="filterByAuthors(this.value)"><span class="authors radiocheck firstRadio">
+                <svg id="onlyAuthorAnysvg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
+                    <g>
+                        <g>
+                            <g>
+                                <path d="M23.391,14.003c0-0.37,0.264-0.677,0.609-0.747c-0.031-0.38-0.075-0.753-0.148-1.117c-0.352,0.02-0.68-0.209-0.781-0.566
+                                    c-0.094-0.358,0.078-0.723,0.398-0.881c-0.125-0.359-0.264-0.705-0.43-1.043c-0.336,0.116-0.719-0.02-0.906-0.342
+                                    c-0.182-0.322-0.11-0.718,0.156-0.953c-0.211-0.312-0.442-0.609-0.685-0.893c-0.296,0.194-0.698,0.162-0.958-0.098
+                                    c-0.264-0.264-0.295-0.664-0.1-0.961c-0.289-0.245-0.578-0.475-0.891-0.689c-0.234,0.268-0.637,0.342-0.961,0.156
+                                    c-0.314-0.186-0.45-0.566-0.336-0.906c-0.338-0.162-0.686-0.305-1.043-0.432c-0.159,0.322-0.525,0.495-0.887,0.4
+                                    c-0.353-0.098-0.586-0.43-0.561-0.786C15.501,4.076,15.127,4.027,14.746,4C14.68,4.346,14.368,4.608,14,4.608
+                                    S13.323,4.346,13.254,4c-0.38,0.027-0.754,0.075-1.119,0.145c0.022,0.357-0.209,0.688-0.565,0.784
+                                    c-0.359,0.096-0.723-0.078-0.882-0.397c-0.356,0.125-0.704,0.266-1.041,0.43C9.761,5.3,9.625,5.683,9.306,5.867
+                                    c-0.321,0.185-0.72,0.111-0.954-0.154C8.041,5.925,7.743,6.152,7.458,6.399c0.195,0.297,0.162,0.699-0.099,0.959
+                                    c-0.261,0.261-0.663,0.294-0.96,0.1C6.155,7.742,5.925,8.037,5.712,8.35c0.264,0.234,0.339,0.635,0.156,0.955
+                                    C5.683,9.625,5.3,9.76,4.961,9.646c-0.163,0.335-0.304,0.686-0.43,1.041c0.319,0.158,0.493,0.524,0.398,0.882
+                                    c-0.094,0.355-0.428,0.587-0.785,0.563C4.076,12.5,4.028,12.871,4,13.252c0.348,0.071,0.609,0.38,0.609,0.746
+                                    c0,0.369-0.261,0.676-0.609,0.752c0.027,0.375,0.075,0.748,0.145,1.113c0.357-0.02,0.691,0.211,0.785,0.566
+                                    c0.094,0.357-0.079,0.723-0.398,0.879c0.126,0.357,0.267,0.703,0.43,1.043c0.338-0.111,0.722,0.021,0.906,0.344
+                                    c0.185,0.318,0.109,0.719-0.156,0.955c0.212,0.311,0.441,0.607,0.688,0.891c0.296-0.195,0.699-0.166,0.958,0.098
+                                    C7.617,20.9,7.651,21.303,7.457,21.6c0.286,0.24,0.583,0.475,0.895,0.688c0.234-0.271,0.631-0.34,0.952-0.154
+                                    c0.319,0.184,0.455,0.566,0.341,0.904c0.335,0.164,0.686,0.307,1.041,0.43c0.158-0.318,0.524-0.494,0.881-0.396
+                                    c0.358,0.096,0.587,0.43,0.562,0.781c0.369,0.072,0.742,0.117,1.122,0.146c0.07-0.344,0.379-0.609,0.746-0.609
+                                    c0.371,0.002,0.678,0.266,0.75,0.611c0.376-0.031,0.746-0.076,1.121-0.148c-0.024-0.352,0.205-0.684,0.562-0.781
+                                    c0.353-0.098,0.722,0.078,0.884,0.396c0.354-0.123,0.703-0.264,1.037-0.43c-0.113-0.338,0.021-0.719,0.344-0.904
+                                    c0.32-0.184,0.718-0.111,0.955,0.156c0.311-0.215,0.607-0.443,0.891-0.686c-0.194-0.297-0.164-0.701,0.099-0.959
+                                    c0.263-0.262,0.662-0.295,0.96-0.1c0.246-0.287,0.48-0.582,0.688-0.893c-0.27-0.234-0.34-0.635-0.155-0.957
+                                    c0.185-0.318,0.573-0.451,0.901-0.34c0.168-0.336,0.311-0.686,0.43-1.041c-0.313-0.162-0.484-0.525-0.391-0.885
+                                    c0.095-0.354,0.428-0.586,0.781-0.566c0.07-0.361,0.117-0.736,0.146-1.111C23.654,14.676,23.391,14.371,23.391,14.003z
+                                    M14,22.422c-4.651,0-8.42-3.77-8.42-8.422c0-4.651,3.769-8.42,8.42-8.42s8.422,3.769,8.422,8.42
+                                    C22.422,18.652,18.651,22.422,14,22.422z"/>
+                            </g>
+                            <g>
+                                <g>
+                                    <path d="M13.021,12.292c0.437,1.246,1.319,2.284,2.456,2.931l3.146-5.848L13.021,12.292z"/>
+                                    <path d="M12.559,12.822L9.5,18.5l5.479-2.852C13.905,14.986,13.051,13.998,12.559,12.822z"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </span></label>
+            <label for="onlyAuthorK" class="radioContainer" title="autor K"><input type="radio" id="onlyAuthorK" name="toggleAuthors" value="onlyAuthorK" onclick="filterByAuthors(this.value)"><span class="authors radiocheck">
+                <svg id="onlyAuthorKsvg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px"
+                height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
+                    <g>
+                        <g>
+                            <path d="M14,4C8.475,4,4,8.475,4,14c0,2.675,1.051,5.1,2.763,6.898C8.588,22.812,11.149,24,14,24s5.412-1.188,7.239-3.102
+                                C22.949,19.1,24,16.675,24,14C24,8.475,19.525,4,14,4z M20.425,19.924c-1.576-1.748-3.863-2.837-6.425-2.837
+                                s-4.851,1.089-6.425,2.837C6.126,18.361,5.25,16.301,5.25,14c0-4.837,3.913-8.75,8.75-8.75c4.839,0,8.75,3.913,8.75,8.75
+                                C22.75,16.301,21.874,18.361,20.425,19.924z"/>
+                            <circle cx="14" cy="11.5" r="2.5"/>
+                        </g>
+                    </g>
+                </svg>
+            </span></label>
+            <label for="onlyAuthorV" class="radioContainer" title="autor V"><input type="radio" id="onlyAuthorV" name="toggleAuthors" value="onlyAuthorV" onclick="filterByAuthors(this.value)"><span class="authors radiocheck">
+                <svg id="onlyAuthorVsvg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px"
+                height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
+                    <g>
+                        <g>
+                            <path d="M14,4C8.475,4,4,8.475,4,14c0,2.675,1.051,5.1,2.763,6.898C8.588,22.812,11.149,24,14,24s5.412-1.188,7.239-3.102
+                                C22.949,19.1,24,16.675,24,14C24,8.475,19.525,4,14,4z M20.425,19.924c-1.576-1.748-3.863-2.837-6.425-2.837
+                                s-4.851,1.089-6.425,2.837C6.126,18.361,5.25,16.301,5.25,14c0-4.837,3.913-8.75,8.75-8.75c4.839,0,8.75,3.913,8.75,8.75
+                                C22.75,16.301,21.874,18.361,20.425,19.924z"/>
+                            <circle cx="14" cy="11.5" r="2.5"/>
+                        </g>
+                    </g>
+                </svg>
+            </span></label>
+            <label for="onlyAuthorD" class="radioContainer" title="autor D"><input type="radio" id="onlyAuthorD" name="toggleAuthors" value="onlyAuthorD" onclick="filterByAuthors(this.value)"><span class="authors radiocheck lastRadio">
+                <svg id="onlyAuthorDsvg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px"
+                height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
+                    <g>
+                        <g>
+                            <path d="M14,4C8.475,4,4,8.475,4,14c0,2.675,1.051,5.1,2.763,6.898C8.588,22.812,11.149,24,14,24s5.412-1.188,7.239-3.102
+                                C22.949,19.1,24,16.675,24,14C24,8.475,19.525,4,14,4z M20.425,19.924c-1.576-1.748-3.863-2.837-6.425-2.837
+                                s-4.851,1.089-6.425,2.837C6.126,18.361,5.25,16.301,5.25,14c0-4.837,3.913-8.75,8.75-8.75c4.839,0,8.75,3.913,8.75,8.75
+                                C22.75,16.301,21.874,18.361,20.425,19.924z"/>
+                            <circle cx="14" cy="11.5" r="2.5"/>
+                        </g>
+                    </g>
+                </svg>
+            </span></label>
+        </div>
+        <div class="filtrZatrzitko">
+            <img class="filtrySVG" src="img/filtry-original.svg" alt="Jen originální autor" title="Pouze jako originální autor tras (ne jako spoluautor)">
+            <label for="originalAuthor" class="zatrzitkoContainer"><input type="checkbox" id="originalAuthor" onclick="filterByOriginalAuthor()"><span class="zatrzitko"></span></label>
+        </div>
         <div class="filtrText"><input type="text" id="hledatNazev" onkeyup="filterByName()" onclick="resetTextu()" placeholder="Filtrovat podle názvu trasy..."></div>
         <div id="pocitadloWrapper">
             <div id="pocitadloKruhPozadi"></div>
@@ -74,20 +148,21 @@
         </div>
     </div>
 
-    <!-- Hlavní div s obsahem stránky, kde budou zobrazeny jednotlivé trasy -->
+    <!-- SUB Hlavní div s obsahem stránky, kde budou zobrazeny jednotlivé trasy -->
     <div id="seznamTras">Načítám trasy...</div>
 
-    <!-- Div pro patičku stránky -->
+    <!-- SUB Div pro patičku stránky -->
     <div id="patkaStranky"></div>
 
 
-    <!-- JavaScript -->
+    <!-- SUB JavaScript -->
     <script>var detekceMobilu = window.matchMedia("(pointer: coarse)");</script>
     <!-- Data pro trasy (buď cyklo nebo pěší) -->
     <script>var slozka = "pesi";</script>
 
     <script>backToTop = () => window.scroll(0, 0);</script>
     <script src="data/patka.js"></script>
+    <script src="data/hodnoty.js"></script>
     <script src="data/trasy.js"></script>
     <script src="data/filtry.js"></script>
 

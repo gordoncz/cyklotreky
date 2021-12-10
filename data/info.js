@@ -1,5 +1,7 @@
+// DESC Skripty pro stránku informace.html
+
 /* ================================================================================================================================== */
-/* základní variables */
+// CHAPTER základní variables
 /* ================================================================================================================================== */
 
 
@@ -14,10 +16,12 @@ var tipsWrapper = document.getElementById("tipsWrapper");
 // global array objekt, kde budou uloženy key-value pairs pro potřebné zpárování tlačítek a obsahu jednotlivých tipů a triků
 var tipsPairs = [];
 
+// !CHAPTER
+
 
 
 /* ================================================================================================================================== */
-/* sekce načítání changelogu updatů */
+/* CHAPTER sekce načítání changelogu updatů */
 /* ================================================================================================================================== */
 
 
@@ -94,10 +98,12 @@ changelog()
     .then((fileJson) => { naplnitChangelog(fileJson); })
     .catch((err) => { console.log(err); changelogWrapper.innerHTML = "chyba při načítání dat"; });
 
+// !CHAPTER
+
 
 
 /* ================================================================================================================================== */
-/* sekce tipy a triky */
+/* CHAPTER sekce tipy a triky */
 /* ================================================================================================================================== */
 
 
@@ -187,10 +193,12 @@ function tipsPrepnuti(x) {
     }
 }
 
+// !CHAPTER
+
 
 
 /* ================================================================================================================================== */
-/* sekce Murphyho zákony */
+/* CHAPTER sekce Murphyho zákony */
 /* ================================================================================================================================== */
 
 
@@ -206,7 +214,7 @@ const murphy = async () => {
 function zobrazitMurphyLaw(laws) {
     // vygenerování náhodného čísla od 0 do pinupPool.length-1
     // to vybere číslo pro index v rámci výše definovaného array
-    var random = Math.floor (Math.random() * laws.length);
+    var random = Math.floor(Math.random() * laws.length);
 
     // a nakonec se na základě takto náhodně vygenerovaného čísla vybere jeden z citátů v array
     // a vloží se jako textový obsah do definovaného odstavce
@@ -219,10 +227,12 @@ murphy()
     .then((fileJson) => { zobrazitMurphyLaw(fileJson); })
     .catch((err) => { console.log(err); murphyLawQuote.innerText = "Co se může pokazit, to se pokazí."; });
 
+// !CHAPTER
+
 
 
 /* ================================================================================================================================== */
-/* tlačítko pro zobrazení textového bloku informací k Cyklotrekům */
+/* CHAPTER tlačítko pro zobrazení textového bloku informací k Cyklotrekům */
 /* ================================================================================================================================== */
 
 
@@ -235,3 +245,5 @@ function zobrazitInfo(btn) {
     // a odstranit ze stránky tlačítko
     btn.remove();
 }
+
+// !CHAPTER

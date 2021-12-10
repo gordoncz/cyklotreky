@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg id="onlyAuthorXsvg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px"
+	 height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
+<g>
+	<g>
+		<path d="M14,4C8.475,4,4,8.475,4,14c0,2.675,1.051,5.1,2.763,6.898C8.588,22.812,11.149,24,14,24s5.412-1.188,7.239-3.102
+			C22.949,19.1,24,16.675,24,14C24,8.475,19.525,4,14,4z M20.425,19.924c-1.576-1.748-3.863-2.837-6.425-2.837
+			s-4.851,1.089-6.425,2.837C6.126,18.361,5.25,16.301,5.25,14c0-4.837,3.913-8.75,8.75-8.75c4.839,0,8.75,3.913,8.75,8.75
+			C22.75,16.301,21.874,18.361,20.425,19.924z"/>
+		<circle cx="14" cy="11.5" r="2.5"/>
+	</g>
+</g>
+</svg>

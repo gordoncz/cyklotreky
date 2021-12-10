@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px"
+	 height="30px" viewBox="0 0 40 30" enable-background="new 0 0 40 30" xml:space="preserve">
+<g id="original">
+	<g>
+		<g>
+			<path fill="#B5BDC6" d="M20,5c-3.865,0-7,3.134-7,7c0,2.79,2.5,4.994,2.5,4.994c0.825,0.728,1.5,2.151,1.5,3.164
+				C17,21.172,17.9,22,19,22h2c1.1,0,2-0.828,2-1.842c0-1.013,0.675-2.437,1.5-3.164c0,0,2.5-2.204,2.5-4.994
+				C27,8.134,23.866,5,20,5z M24,12c0-2.206-1.794-4-4-4V7c2.762,0,5,2.239,5,5H24z"/>
+			<rect x="17" y="23" fill="#B5BDC6" width="6" height="1"/>
+			<rect x="17" y="25" fill="#B5BDC6" width="6" height="1"/>
+			<path fill="#B5BDC6" d="M22,27v1c0,0.55-0.9,1-2,1c-0.55,0-1.05-0.11-1.41-0.29C18.22,28.52,18,28.28,18,28v-1H22z"/>
+		</g>
+		
+			<rect x="12.164" y="2.984" transform="matrix(0.7477 -0.6641 0.6641 0.7477 0.2189 9.5413)" fill="#B5BDC6" width="0.999" height="2.998"/>
+		<polygon fill="#B5BDC6" points="11.043,11.479 10.987,12.475 7.992,12.31 8.048,11.308 		"/>
+		<polygon fill="#B5BDC6" points="13.325,17.979 13.988,18.73 11.753,20.733 11.084,19.981 		"/>
+		<polygon fill="#B5BDC6" points="26.039,18.684 26.781,18.02 28.785,20.254 28.037,20.918 		"/>
+		<polygon fill="#B5BDC6" points="29.016,12.473 29.072,11.474 32.068,11.634 32.01,12.638 		"/>
+		
+			<rect x="27.012" y="3.095" transform="matrix(0.6675 0.7446 -0.7446 0.6675 12.5706 -18.9576)" fill="#B5BDC6" width="1.001" height="3.004"/>
+		
+			<rect x="19.593" y="-0.028" transform="matrix(0.9985 0.0548 -0.0548 0.9985 0.1109 -1.0992)" fill="#B5BDC6" width="0.998" height="3"/>
+	</g>
+</g>
+</svg>

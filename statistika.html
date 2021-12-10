@@ -18,13 +18,13 @@
 
 <body>
 
-    <!-- Úvodní ovládací divy nahoře na stránce -->
+    <!-- SUB Úvodní ovládací divy nahoře na stránce -->
     <div id="titulka">
         <div id="logotop"><a href="index.html"><img src="img/logo-small.svg" alt="logo"></a></div>
         <div id="nazevStranky"><h1 onclick="backToTop()">STATISTIKA TRAS</h1></div>
     </div>
 
-    <!-- Container div pro volbu výstupních dat statistiky -->
+    <!-- SUB Container div pro volbu výstupních dat statistiky -->
     <div id="prepinace">
         <div id="tlacitkaStatsWrapper">
             <div id="tlacitkoStatsSouhrn" onclick="prepnutiStats(this.id)">celkový přehled</div>
@@ -33,18 +33,19 @@
         </div>
     </div>
 
-    <!-- Hlavní div s pro obsah stránky -->
+    <!-- SUB Hlavní div s obsahem stránky -->
     <div id="obsahStrankyStats"><p id="loading">Načítám data...</p></div>
 
-    <!-- Div pro patičku stránky -->
+    <!-- SUB Div pro patičku stránky -->
     <div id="patkaStranky"></div>
 
 
-    <!-- JavaScript -->
+    <!-- SUB JavaScript -->
     <script>var detekceMobilu = window.matchMedia("(pointer: coarse)");</script>
     <script>backToTop = () => window.scroll(0, 0);</script>
     <script src="data/patka.js"></script>
     <!-- Samotný skript pro výpočet statistiky -->
+    <script src="data/hodnoty.js"></script>
     <script src="data/stats.js"></script>
 
 </body>

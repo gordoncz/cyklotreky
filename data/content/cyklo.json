@@ -9,7 +9,10 @@
         "urlmobile": "https://mapy.cz/s/mujabugaba",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [18],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 20,
@@ -21,7 +24,10 @@
         "urlmobile": "https://mapy.cz/s/bovudofaru",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [20],
+        "stops": [],
+        "authors": ["d"]
     },
     {
         "km": 21,
@@ -33,7 +39,10 @@
         "urlmobile": "https://mapy.cz/s/jegehehoco",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [21],
+        "stops": [],
+        "authors": ["v", "k"]
     },
     {
         "km": 21,
@@ -45,7 +54,10 @@
         "urlmobile": "https://mapy.cz/s/gekevoboso",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [21],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 22,
@@ -57,7 +69,10 @@
         "urlmobile": "https://mapy.cz/s/fumanepodu",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [22],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 24,
@@ -69,7 +84,10 @@
         "urlmobile": "https://mapy.cz/s/bosameduca",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [24],
+        "stops": [],
+        "authors": ["v", "k", "d"]
     },
     {
         "km": 24,
@@ -81,7 +99,10 @@
         "urlmobile": "https://mapy.cz/s/nogopumego",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [24],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 25,
@@ -91,9 +112,12 @@
         "picture": "kalvarie-do-studanky",
         "urldesktop": "https://mapy.cz/s/jucenahebu",
         "urlmobile": "https://mapy.cz/s/kacurusuku",
-        "known": false,
+        "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [25],
+        "stops": [],
+        "authors": ["d"]
     },
     {
         "km": 26,
@@ -105,7 +129,10 @@
         "urlmobile": "https://mapy.cz/s/lofuperoce",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [26],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 26,
@@ -117,7 +144,10 @@
         "urlmobile": "https://mapy.cz/s/monujocome",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [26],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 26,
@@ -129,7 +159,10 @@
         "urlmobile": "https://mapy.cz/s/posajekovo",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [26],
+        "stops": [],
+        "authors": ["k", "v", "d"]
     },
     {
         "km": 26,
@@ -141,7 +174,10 @@
         "urlmobile": "https://mapy.cz/s/hacolezava",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [26],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 27,
@@ -153,7 +189,10 @@
         "urlmobile": "https://mapy.cz/s/nevabalama",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [27],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 27,
@@ -165,7 +204,10 @@
         "urlmobile": "https://mapy.cz/s/cehajaneco",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [27],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 28,
@@ -175,9 +217,12 @@
         "picture": "moravska-sahara",
         "urldesktop": "https://mapy.cz/s/pehosodeto",
         "urlmobile": "https://mapy.cz/s/perehutuve",
-        "known": false,
+        "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [28],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 29,
@@ -189,7 +234,10 @@
         "urlmobile": "https://mapy.cz/s/favugavuce",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [29],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 29,
@@ -201,7 +249,10 @@
         "urlmobile": "https://mapy.cz/s/gorenatove",
         "known": true,
         "new": false,
-        "infobox": "<p class=\"ibRestriction\">Cesta podél pravého břehu bojkovické přehrady je v ochranném pásmu vodního zdroje a může být zrovna zavřená. Lze ji ale v případě nutnosti objet po žluté turistické značce severozápadně od ní.</p>"
+        "infobox": "<p class=\"ibRestriction\">Cesta podél pravého břehu bojkovické přehrady je v ochranném pásmu vodního zdroje a může být zrovna zavřená. Lze ji ale v případě nutnosti objet po žluté turistické značce severozápadně od ní.</p>",
+        "kmpd": [29],
+        "stops": [],
+        "authors": ["d"]
     },
     {
         "km": 30,
@@ -213,7 +264,10 @@
         "urlmobile": "https://mapy.cz/s/nadelelune",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibSlope\">V první polovině trasy jsou dvě poměrně prudká stoupání. První hned od startu do Babic nad Svitavou (7,3 % o délce 3,3 km) a druhé potom od \"Adamov, zastávka\" ke křižovatce lesních cest Coufavá a Kroucená (dokonce 10 % na 2 km).</p>"
+        "infobox": "<p class=\"ibSlope\">V první polovině trasy jsou dvě poměrně prudká stoupání. První hned od startu do Babic nad Svitavou (7,3 % o délce 3,3 km) a druhé potom od \"Adamov, zastávka\" ke křižovatce lesních cest Coufavá a Kroucená (dokonce 10 % na 2 km).</p>",
+        "kmpd": [30],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 31,
@@ -225,7 +279,10 @@
         "urlmobile": "https://mapy.cz/s/jojozujome",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [31],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 31,
@@ -237,7 +294,10 @@
         "urlmobile": "https://mapy.cz/s/matosehugu",
         "known": true,
         "new": false,
-        "infobox": "<p class=\"ibWarning\">Cyklostezka podél řeky Svitavy na třech místech protíná frekventované silnice (ulice Hladíkova, Křenová a Cejl), avšak bez existence jakéhokoliv oficiálního přechodu či přejezdu pro cyklisty. Je nutné tedy přecházet s nejvyšší opatrností.</p>"
+        "infobox": "<p class=\"ibWarning\">Cyklostezka podél řeky Svitavy na třech místech protíná frekventované silnice (ulice Hladíkova, Křenová a Cejl), avšak bez existence jakéhokoliv oficiálního přechodu či přejezdu pro cyklisty. Je nutné tedy přecházet s nejvyšší opatrností.</p>",
+        "kmpd": [31],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 31,
@@ -249,7 +309,10 @@
         "urlmobile": "https://mapy.cz/s/fuzasaguso",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibTransport\">Z Rousínova jezdí do Brna na Zvonařku během víkendů a svátků linka cyklobusu č.&nbsp;602, a to v období cyklistické sezóny (duben až září). Poslední cyklobus odjíždí v 16:35.</p><p class=\"ibInfo\">Na trase je k vidění několik symbolů dnes již zašlé slávy \"zlatých devadesátek\". V Drnovicích si lze prohlédnout <a href=\"https://mapy.cz/s/cogepafule\" target=\"_blank\">fotbalový stadion kdysi slavného klubu 1.&nbsp;FK Drnovice</a>, kterého proslavil nejen jeho nevídaný vzestup krok za krokem z 1.B třídy až do nejvyšší fotbalové soutěže (1982 - 1993), ale zejména následující dekáda působení tohoto vesnického klubu v čele s reprezentačním útočníkem Radkem Drulákem mezi nejlepšími fotbalovými týmy ČR.</p><p class=\"ibInfo\">Ve vesnici Olšany natočila v roce 1992 Věra Chytilová části dnes již kultovního filmu \"Dědictví aneb Kurvahošigutntág\" s Bolkem Polívkou v hlavní roli. Na autobusové zastávce na tamním náměstíčku byl na připomínku této slávy zbudovaný <a href=\"https://mapy.cz/s/ducosusupa\" target=\"_blank\">infopanel \"Olšany - Po stopách Dědictví\"</a> s výpisem objektů ve vesnici, které jsou s tímto filmem nějak spojené.</p><p class=\"ibInfo\">Na okraji Olšan též Bolek Polívka v roce 1991 koupil malou farmu a s vidinou přilákání davů turistů ji v 90. letech přebudoval na megalomanské dílo <a href=\"https://mapy.cz/s/bahekerupa\" target=\"_blank\">\"Farma Bolka Polívky\"</a>. Farma však kvůli Polívkově nevalným podnikatelským schopnostem místo rozkvětu čím dál více upadala do dluhů, až v roce 2013 nakonec zkrachovala docela. Dnes mají objekty jiného vlastníka, jsou nově zrekonstruované a fungují pod novým názvem \"Statek Olšany\".</p>"
+        "infobox": "<p class=\"ibTransport\">Z Rousínova jezdí do Brna na Zvonařku během víkendů a svátků linka cyklobusu č.&nbsp;602, a to v období cyklistické sezóny (duben až září). Poslední cyklobus odjíždí v 16:35.</p><p class=\"ibInfo\">Na trase je k vidění několik symbolů dnes již zašlé slávy \"zlatých devadesátek\". V Drnovicích si lze prohlédnout <a href=\"https://mapy.cz/s/cogepafule\" target=\"_blank\">fotbalový stadion kdysi slavného klubu 1.&nbsp;FK Drnovice</a>, kterého proslavil nejen jeho nevídaný vzestup krok za krokem z 1.B třídy až do nejvyšší fotbalové soutěže (1982 - 1993), ale zejména následující dekáda působení tohoto vesnického klubu v čele s reprezentačním útočníkem Radkem Drulákem mezi nejlepšími fotbalovými týmy ČR.</p><p class=\"ibInfo\">Ve vesnici Olšany natočila v roce 1992 Věra Chytilová části dnes již kultovního filmu \"Dědictví aneb Kurvahošigutntág\" s Bolkem Polívkou v hlavní roli. Na autobusové zastávce na tamním náměstíčku byl na připomínku této slávy zbudovaný <a href=\"https://mapy.cz/s/ducosusupa\" target=\"_blank\">infopanel \"Olšany - Po stopách Dědictví\"</a> s výpisem objektů ve vesnici, které jsou s tímto filmem nějak spojené.</p><p class=\"ibInfo\">Na okraji Olšan též Bolek Polívka v roce 1991 koupil malou farmu a s vidinou přilákání davů turistů ji v 90. letech přebudoval na megalomanské dílo <a href=\"https://mapy.cz/s/bahekerupa\" target=\"_blank\">\"Farma Bolka Polívky\"</a>. Farma však kvůli Polívkově nevalným podnikatelským schopnostem místo rozkvětu čím dál více upadala do dluhů, až v roce 2013 nakonec zkrachovala docela. Dnes mají objekty jiného vlastníka, jsou nově zrekonstruované a fungují pod novým názvem \"Statek Olšany\".</p>",
+        "kmpd": [31],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 33,
@@ -261,7 +324,10 @@
         "urlmobile": "https://mapy.cz/s/megedukedo",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibTransport\">Na trase je možné využít i <a href=\"https://www.batacanal.cz/pravidelne-plavby.html\" target=\"_blank\">plavbu lodí po Baťově kanálu</a>, nejlépe asi na úseku z přístaviště Strážnice do přístaviště Petrov, kde trasa stejně vede přímo podél kanálu.</p>"
+        "infobox": "<p class=\"ibTransport\">Na trase je možné využít i <a href=\"https://www.batacanal.cz/pravidelne-plavby.html\" target=\"_blank\">plavbu lodí po Baťově kanálu</a>, nejlépe asi na úseku z přístaviště Strážnice do přístaviště Petrov, kde trasa stejně vede přímo podél kanálu.</p>",
+        "kmpd": [33],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 33,
@@ -273,7 +339,10 @@
         "urlmobile": "https://mapy.cz/s/mokabekubu",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [33],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 33,
@@ -285,7 +354,10 @@
         "urlmobile": "https://mapy.cz/s/gohorefolo",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [33],
+        "stops": [],
+        "authors": ["d"]
     },
     {
         "km": 34,
@@ -297,7 +369,10 @@
         "urlmobile": "https://mapy.cz/s/kugohebodo",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [34],
+        "stops": [],
+        "authors": ["k", "d"]
     },
     {
         "km": 34,
@@ -309,7 +384,10 @@
         "urlmobile": "https://mapy.cz/s/falebonela",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [34],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 35,
@@ -319,9 +397,12 @@
         "picture": "hustopece",
         "urldesktop": "https://mapy.cz/s/jukalozaba",
         "urlmobile": "https://mapy.cz/s/bazudoguna",
-        "known": false,
+        "known": true,
         "new": false,
-        "infobox": "<p class=\"ibTimelimit\">Pro spatření mandloňových sadů nad Hustopečemi v plné kráse by bylo třeba trasu projet již na přelomu března a dubna, kdy jsou tamější mandloně v plném květu.</p>"
+        "infobox": "<p class=\"ibTimelimit\">Pro spatření mandloňových sadů nad Hustopečemi v plné kráse by bylo třeba trasu projet již na přelomu března a dubna, kdy jsou tamější mandloně v plném květu.</p>",
+        "kmpd": [35],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 35,
@@ -333,7 +414,10 @@
         "urlmobile": "https://mapy.cz/s/gevojetuha",
         "known": true,
         "new": false,
-        "infobox": "<p class=\"ibInfo\">Úsek cyklotrasy v lese mezi Zbýšovem a Ketkovicemi je velmi špatně značený (značky na spoustě odboček zcela chybí nebo nejsou zřetelně vidět).</p>"
+        "infobox": "<p class=\"ibInfo\">Úsek cyklotrasy v lese mezi Zbýšovem a Ketkovicemi je velmi špatně značený (značky na spoustě odboček zcela chybí nebo nejsou zřetelně vidět).</p>",
+        "kmpd": [35],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 36,
@@ -345,7 +429,10 @@
         "urlmobile": "https://mapy.cz/s/lanujahane",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [36],
+        "stops": [],
+        "authors": ["d", "k"]
     },
     {
         "km": 36,
@@ -357,7 +444,10 @@
         "urlmobile": "https://mapy.cz/s/domasocamu",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibTransport\">Na začátku trasy se počítá s využitím <a href=\"https://kouty.cz/lanovka/\" target=\"_blank\">lanovky Kouty nad Desnou - Medvědí hora</a>.</p><p class=\"ibInfo\">Prohlídku přečerpávací vodní elektrárny Dlouhé Stráně je nutno <a href=\"https://www.dlouhe-strane.cz/strane/exkurze\" target=\"_blank\">předem rezervovat online</a>.</p>"
+        "infobox": "<p class=\"ibTransport\">Na začátku trasy se počítá s využitím <a href=\"https://kouty.cz/lanovka/\" target=\"_blank\">lanovky Kouty nad Desnou - Medvědí hora</a>.</p><p class=\"ibInfo\">Prohlídku přečerpávací vodní elektrárny Dlouhé Stráně je nutno <a href=\"https://www.dlouhe-strane.cz/strane/exkurze\" target=\"_blank\">předem rezervovat online</a>.</p>",
+        "kmpd": [36],
+        "stops": [],
+        "authors": ["v", "k"]
     },
     {
         "km": 36,
@@ -369,7 +459,10 @@
         "urlmobile": "https://mapy.cz/s/losojumasa",
         "known": true,
         "new": false,
-        "infobox": "<p class=\"ibRestriction\">Do Podzámecké zahrady v Kroměříži je vjezd kol zakázán. Je tedy nutné sesednout a kolo zahradou pouze vést vedle sebe.</p>"
+        "infobox": "<p class=\"ibRestriction\">Do Podzámecké zahrady v Kroměříži je vjezd kol zakázán. Je tedy nutné sesednout a kolo zahradou pouze vést vedle sebe.</p>",
+        "kmpd": [36],
+        "stops": [],
+        "authors": ["d"]
     },
     {
         "km": 36,
@@ -381,7 +474,10 @@
         "urlmobile": "https://mapy.cz/s/luborufuge",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [36],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 36,
@@ -393,7 +489,10 @@
         "urlmobile": "https://mapy.cz/s/bopezudava",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [36],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 37,
@@ -405,7 +504,10 @@
         "urlmobile": "https://mapy.cz/s/cuhujokaju",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [37],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 37,
@@ -417,7 +519,10 @@
         "urlmobile": "https://mapy.cz/s/golemosene",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [37],
+        "stops": [],
+        "authors": ["k", "d"]
     },
     {
         "km": 37,
@@ -429,7 +534,10 @@
         "urlmobile": "https://mapy.cz/s/lomozabalo",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [37],
+        "stops": [],
+        "authors": ["v", "k"]
     },
     {
         "km": 37,
@@ -441,7 +549,10 @@
         "urlmobile": "https://mapy.cz/s/nunokarufu",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [37],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 37,
@@ -453,7 +564,10 @@
         "urlmobile": "https://mapy.cz/s/cazucofuvo",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibSlope\">Prudší stoupání 6,6&nbsp;% na 3&nbsp;km mezi rybníčky na Havránkově potoce za Popovem a modrou turistickou cestou na Kujalce.</p><p class=\"ibSlope\">Intenzivní stoupání 6,5&nbsp;% na dlouhém úseku 6,2&nbsp;km mezi řekou Vlárou v obci Svatý Štěpán a vrstevnicí 700&nbsp;m pod vrcholem Javorníku.</p>"
+        "infobox": "<p class=\"ibSlope\">Prudší stoupání 6,6&nbsp;% na 3&nbsp;km mezi rybníčky na Havránkově potoce za Popovem a modrou turistickou cestou na Kujalce.</p><p class=\"ibSlope\">Intenzivní stoupání 6,5&nbsp;% na dlouhém úseku 6,2&nbsp;km mezi řekou Vlárou v obci Svatý Štěpán a vrstevnicí 700&nbsp;m pod vrcholem Javorníku.</p>",
+        "kmpd": [37],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 37,
@@ -465,7 +579,10 @@
         "urlmobile": "https://mapy.cz/s/rajosazuhe",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [37],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 38,
@@ -477,7 +594,10 @@
         "urlmobile": "https://mapy.cz/s/mafakajabo",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [38],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 38,
@@ -489,7 +609,10 @@
         "urlmobile": "https://mapy.cz/s/gefajutomu",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [38],
+        "stops": [],
+        "authors": ["d"]
     },
     {
         "km": 38,
@@ -501,7 +624,10 @@
         "urlmobile": "https://mapy.cz/s/bemokelogo",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [38],
+        "stops": [],
+        "authors": ["k", "v"]
     },
     {
         "km": 38,
@@ -513,7 +639,10 @@
         "urlmobile": "https://mapy.cz/s/modubovadu",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [38],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 38,
@@ -525,7 +654,10 @@
         "urlmobile": "https://mapy.cz/s/cuvaduzufa",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [38],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 39,
@@ -537,7 +669,10 @@
         "urlmobile": "https://mapy.cz/s/patonodube",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [39],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 39,
@@ -549,7 +684,10 @@
         "urlmobile": "https://mapy.cz/s/fanevoboju",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [39],
+        "stops": [],
+        "authors": ["k", "v"]
     },
     {
         "km": 39,
@@ -561,7 +699,10 @@
         "urlmobile": "https://mapy.cz/s/nabohojehu",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [39],
+        "stops": [],
+        "authors": ["v", "k"]
     },
     {
         "km": 39,
@@ -573,7 +714,10 @@
         "urlmobile": "https://mapy.cz/s/hofelufuje",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [39],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 39,
@@ -585,7 +729,10 @@
         "urlmobile": "https://mapy.cz/s/ratatacuco",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [39],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 40,
@@ -597,7 +744,10 @@
         "urlmobile": "https://mapy.cz/s/buzelugaro",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [40],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 40,
@@ -607,9 +757,12 @@
         "picture": "lednicko",
         "urldesktop": "https://mapy.cz/s/dajokuvapo",
         "urlmobile": "https://mapy.cz/s/gopozuzahe",
-        "known": false,
+        "known": true,
         "new": false,
-        "infobox": "<p class=\"ibRestriction\">Do zámeckého parku Lednice je vjezd kol zakázán, takže je nutné před branou sesednout a kolo podél zámku pouze vést pěšky.</p>"
+        "infobox": "<p class=\"ibRestriction\">Do zámeckého parku Lednice je vjezd kol zakázán, takže je nutné před branou sesednout a kolo podél zámku pouze vést pěšky.</p>",
+        "kmpd": [40],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 40,
@@ -621,7 +774,10 @@
         "urlmobile": "https://mapy.cz/s/negaragedo",
         "known": true,
         "new": false,
-        "infobox": "<p class=\"ibTransport\">Od Punkevní jeskyně se předpokládá doprava i s koly <a href=\"https://www.smk.cz/vlacek-a-lanovka/\" target=\"_blank\">lanovkou</a> nahoru k propasti Macocha. Bez ní by nebylo možné projet Suchým žlebem, ale dalo by se jet pouze kratší a přímější cestou skrz Pustý žleb přímo ke Skalnímu mlýnu. Důvodem je, že pěšina od Punkevní jeskyně k propasti Macocha se nachází v NPR Vývěry Punkvy, kde je jízda na kole mimo cyklostezky zakázána.</p>"
+        "infobox": "<p class=\"ibTransport\">Od Punkevní jeskyně se předpokládá doprava i s koly <a href=\"https://www.smk.cz/vlacek-a-lanovka/\" target=\"_blank\">lanovkou</a> nahoru k propasti Macocha. Bez ní by nebylo možné projet Suchým žlebem, ale dalo by se jet pouze kratší a přímější cestou skrz Pustý žleb přímo ke Skalnímu mlýnu. Důvodem je, že pěšina od Punkevní jeskyně k propasti Macocha se nachází v NPR Vývěry Punkvy, kde je jízda na kole mimo cyklostezky zakázána.</p>",
+        "kmpd": [40],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 40,
@@ -633,7 +789,10 @@
         "urlmobile": "https://mapy.cz/s/goponovoco",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [40],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 40,
@@ -645,7 +804,10 @@
         "urlmobile": "https://mapy.cz/s/lubedebene",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [40],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 40,
@@ -657,7 +819,10 @@
         "urlmobile": "https://mapy.cz/s/corerafeto",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [40],
+        "stops": [],
+        "authors": ["k", "d"]
     },
     {
         "km": 41,
@@ -669,7 +834,10 @@
         "urlmobile": "https://mapy.cz/s/rerejeraju",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [41],
+        "stops": [],
+        "authors": ["k", "v"]
     },
     {
         "km": 41,
@@ -681,7 +849,10 @@
         "urlmobile": "https://mapy.cz/s/funaluramu",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibRestriction\">Do zámeckého parku Napajedla je vjezd kol zakázán, takže je nutné před branou sesednout a kolo podél zámku pouze vést pěšky.</p>"
+        "infobox": "<p class=\"ibRestriction\">Do zámeckého parku Napajedla je vjezd kol zakázán, takže je nutné před branou sesednout a kolo podél zámku pouze vést pěšky.</p>",
+        "kmpd": [41],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 41,
@@ -693,7 +864,10 @@
         "urlmobile": "https://mapy.cz/s/kubejugene",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibInfo\">Pro sjezd z kopce Travičná (380&nbsp;m) byl vybrán jednoduchý modrý singletrail <a href=\"https://www.trailoflife.cz/traily/\" target=\"_blank\">Trail of Life - Lipinka</a>, který je vhodný pro cyklisty každého věku. Alternativně lze do vsi Tvarožná Lhota sjet i po paralelně vedoucí cyklotrase \"Oskerušový okruh\".</p>"
+        "infobox": "<p class=\"ibInfo\">Pro sjezd z kopce Travičná (380&nbsp;m) byl vybrán jednoduchý modrý singletrail <a href=\"https://www.trailoflife.cz/traily/\" target=\"_blank\">Trail of Life - Lipinka</a>, který je vhodný pro cyklisty každého věku. Alternativně lze do vsi Tvarožná Lhota sjet i po paralelně vedoucí cyklotrase \"Oskerušový okruh\".</p>",
+        "kmpd": [41],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 41,
@@ -705,19 +879,25 @@
         "urlmobile": "https://mapy.cz/s/fapacuruzo",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibInfo\">Na zpáteční cestě vlakem je sice nutné počkat na přestup v Prostějově téměř 2 hodiny, ale toho lze využít pro ochutnávku regionálních piv v <a href=\"https://www.pivariumhlavak.cz/\" target=\"_blank\">Piváriu Hlavák</a> přímo v budově nádraží.</p>"
+        "infobox": "<p class=\"ibInfo\">Na zpáteční cestě vlakem je sice nutné počkat na přestup v Prostějově téměř 2 hodiny, ale toho lze využít pro ochutnávku regionálních piv v <a href=\"https://www.pivariumhlavak.cz/\" target=\"_blank\">Piváriu Hlavák</a> přímo v budově nádraží.</p>",
+        "kmpd": [41],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 41,
         "multiday": false,
-        "nazev": "Pohořelice",
+        "nazev": "Niva Jihlavy",
         "region": "Brněnsko",
-        "picture": "pohorelice",
-        "urldesktop": "https://mapy.cz/s/nameturuvu",
-        "urlmobile": "https://mapy.cz/s/mezajureva",
-        "known": false,
+        "picture": "niva-jihlavy",
+        "urldesktop": "https://mapy.cz/s/kecumovaze",
+        "urlmobile": "https://mapy.cz/s/kokagohure",
+        "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [41],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 41,
@@ -729,7 +909,10 @@
         "urlmobile": "https://mapy.cz/s/kocesanula",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibInfo\">V říčce Brtnice, kterou trasa na několika místech protíná, se v minulosti skutečně rýžovalo zlato. Nejstarší písemné prameny o rýžování zlata na řece Brtnici pochází již z roku 1345.</p>"
+        "infobox": "<p class=\"ibInfo\">V říčce Brtnice, kterou trasa na několika místech protíná, se v minulosti skutečně rýžovalo zlato. Nejstarší písemné prameny o rýžování zlata na řece Brtnici pochází již z roku 1345.</p>",
+        "kmpd": [41],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 42,
@@ -741,7 +924,10 @@
         "urlmobile": "https://mapy.cz/s/kecuzudaku",
         "known": true,
         "new": false,
-        "infobox": "<p class=\"ibRestriction\">Do zámeckého parku Častolovice je vjezd kol zakázán, takže je nutné před branou sesednout a vést kolo skrz park pěšky.</p>"
+        "infobox": "<p class=\"ibRestriction\">Do zámeckého parku Častolovice je vjezd kol zakázán, takže je nutné před branou sesednout a vést kolo skrz park pěšky.</p>",
+        "kmpd": [42],
+        "stops": [],
+        "authors": ["d"]
     },
     {
         "km": 42,
@@ -753,7 +939,10 @@
         "urlmobile": "https://mapy.cz/s/dezojosenu",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [42],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 43,
@@ -765,7 +954,10 @@
         "urlmobile": "https://mapy.cz/s/mosasejofa",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [43],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 43,
@@ -777,7 +969,10 @@
         "urlmobile": "https://mapy.cz/s/fosetepulu",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [43],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 43,
@@ -789,7 +984,10 @@
         "urlmobile": "https://mapy.cz/s/jalalepozu",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [43],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 44,
@@ -801,7 +999,10 @@
         "urlmobile": "https://mapy.cz/s/parurupuvu",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [44],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 44,
@@ -813,7 +1014,10 @@
         "urlmobile": "https://mapy.cz/s/desakokolu",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [44],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 44,
@@ -825,7 +1029,10 @@
         "urlmobile": "https://mapy.cz/s/kamegafedo",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [44],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 44,
@@ -837,7 +1044,10 @@
         "urlmobile": "https://mapy.cz/s/pubuludaca",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [44],
+        "stops": [],
+        "authors": ["v", "k"]
     },
     {
         "km": 44,
@@ -849,7 +1059,10 @@
         "urlmobile": "https://mapy.cz/s/hetodetaha",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [44],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 44,
@@ -861,7 +1074,10 @@
         "urlmobile": "https://mapy.cz/s/jamubopego",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [44],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 45,
@@ -873,7 +1089,10 @@
         "urlmobile": "https://mapy.cz/s/hozezamama",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [45],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 45,
@@ -885,7 +1104,10 @@
         "urlmobile": "https://mapy.cz/s/hobupavozo",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibTransport\">Pro přepravu do startu a z cíle trasy lze jednou denně během víkendů a svátků v období od května do září využít speciálního expresního cyklobusu linky 108 (odjezd z Brna-Zvonařky 8:55 a zpět ze Znojma 17:52). Ve Znojmě se tento spoj přečísluje na linku 817 a v 10:00 odjíždí již jako běžný cyklobus směr Vranov nad Dyjí (v době červen až září).</p><p class=\"ibSlope\">Velmi prudké stoupání (12,8 %) na úseku zhruba 1,2 km od konce zpevněné cesty u Dyje až po křižovatku cyklotrasy se žlutou turistickou trasou na kopci.</p>"
+        "infobox": "<p class=\"ibTransport\">Pro přepravu do startu a z cíle trasy lze jednou denně během víkendů a svátků v období od května do září využít speciálního expresního cyklobusu linky 108 (odjezd z Brna-Zvonařky 8:55 a zpět ze Znojma 17:52). Ve Znojmě se tento spoj přečísluje na linku 817 a v 10:00 odjíždí již jako běžný cyklobus směr Vranov nad Dyjí (v době červen až září).</p><p class=\"ibSlope\">Velmi prudké stoupání (12,8 %) na úseku zhruba 1,2 km od konce zpevněné cesty u Dyje až po křižovatku cyklotrasy se žlutou turistickou trasou na kopci.</p>",
+        "kmpd": [45],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 45,
@@ -897,7 +1119,10 @@
         "urlmobile": "https://mapy.cz/s/modukufahu",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [45],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 45,
@@ -909,7 +1134,10 @@
         "urlmobile": "https://mapy.cz/s/gofupoceza",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [45],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 45,
@@ -921,7 +1149,10 @@
         "urlmobile": "https://mapy.cz/s/furobelepe",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibTimelimit\">Všechny cesty, po kterých je tato trasa vedena, jsou podle <a href=\"http://www.vojujezd-brezina.cz/assets/File.ashx?id_org=1412&id_dokumenty=1395\" target=\"_blank\">Nařízení Újezdního úřadu č. 7/2017</a> trvale přístupné bez omezení, takže je možné tuto trasu jet kdykoliv (nejen o víkendech či svátcích).</p>"
+        "infobox": "<p class=\"ibTimelimit\">Všechny cesty, po kterých je tato trasa vedena, jsou podle <a href=\"http://www.vojujezd-brezina.cz/assets/File.ashx?id_org=1412&id_dokumenty=1395\" target=\"_blank\">Nařízení Újezdního úřadu č. 7/2017</a> trvale přístupné bez omezení, takže je možné tuto trasu jet kdykoliv (nejen o víkendech či svátcích).</p>",
+        "kmpd": [45],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 46,
@@ -933,7 +1164,10 @@
         "urlmobile": "https://mapy.cz/s/gafalaraca",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [46],
+        "stops": [],
+        "authors": ["k", "d"]
     },
     {
         "km": 46,
@@ -945,7 +1179,10 @@
         "urlmobile": "https://mapy.cz/s/denemenage",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [46],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 47,
@@ -957,7 +1194,10 @@
         "urlmobile": "https://mapy.cz/s/kobagujuto",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [47],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 47,
@@ -969,7 +1209,10 @@
         "urlmobile": "https://mapy.cz/s/cenajusebe",
         "known": true,
         "new": false,
-        "infobox": "<p class=\"ibSlope\">Nebezpečně prudké klesání (16%) v úseku mezi rozcestím Boky a Starým Hrozenkovem. Nebezpečí poškození brzd nebo úrazu!</p>"
+        "infobox": "<p class=\"ibSlope\">Nebezpečně prudké klesání (16%) v úseku mezi rozcestím Boky a Starým Hrozenkovem. Nebezpečí poškození brzd nebo úrazu!</p>",
+        "kmpd": [47],
+        "stops": [],
+        "authors": ["d"]
     },
     {
         "km": 47,
@@ -981,7 +1224,10 @@
         "urlmobile": "https://mapy.cz/s/cacevebunu",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [47],
+        "stops": [],
+        "authors": ["d"]
     },
     {
         "km": 48,
@@ -993,7 +1239,10 @@
         "urlmobile": "https://mapy.cz/s/codocalore",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [48],
+        "stops": [],
+        "authors": ["d", "k"]
     },
     {
         "km": 48,
@@ -1005,7 +1254,10 @@
         "urlmobile": "https://mapy.cz/s/negopuhemo",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [48],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 48,
@@ -1017,7 +1269,10 @@
         "urlmobile": "https://mapy.cz/s/fosufutasu",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [48],
+        "stops": [],
+        "authors": ["d"]
     },
     {
         "km": 48,
@@ -1027,9 +1282,12 @@
         "picture": "rozkos",
         "urldesktop": "https://mapy.cz/s/lamevasaru",
         "urlmobile": "https://mapy.cz/s/lorafunosu",
-        "known": false,
+        "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "<p class=\"ibWarning\">Část cyklotrasy 4325 podél Bačetínského potoka v úseku vedeném souběžně se zelenou trasou až po asfaltovou silnici v osadě Valské doly na 4 místech překračuje potok za využití brodů. Při zvýšené hladině potoka tak může být tato část trasy neprůjezdná.</p>",
+        "kmpd": [48],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 48,
@@ -1041,7 +1299,10 @@
         "urlmobile": "https://mapy.cz/s/gosutododo",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [48],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 48,
@@ -1053,7 +1314,10 @@
         "urlmobile": "https://mapy.cz/s/mogadabaja",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibTransport\">Pro přepravu do startu trasy lze jednou denně během víkendů a svátků v období od května do září využít speciálního expresního cyklobusu linky 108 (odjezd z Brna-Zvonařky 8:55).</p>"
+        "infobox": "<p class=\"ibTransport\">Pro přepravu do startu trasy lze jednou denně během víkendů a svátků v období od května do září využít speciálního expresního cyklobusu linky 108 (odjezd z Brna-Zvonařky 8:55).</p>",
+        "kmpd": [48],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 49,
@@ -1065,7 +1329,10 @@
         "urlmobile": "https://mapy.cz/s/dalarepena",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [49],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 49,
@@ -1077,7 +1344,10 @@
         "urlmobile": "https://mapy.cz/s/notulazelu",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [49],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 49,
@@ -1089,7 +1359,10 @@
         "urlmobile": "https://mapy.cz/s/mukebazotu",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [49],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 49,
@@ -1101,7 +1374,10 @@
         "urlmobile": "https://mapy.cz/s/durasesosa",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibTransport\">Do startu trasy v obci Suchý jezdí z Blanska linka cyklobusu IDS JMK č.&nbsp;233, a to o víkendech a svátcích v období od dubna do září.</p><p class=\"ibTimelimit\">Hráz Vodní nádrže Boskovice je přístupná pěším a cykloturistům pouze v období od dubna do září. Případná objízdná trasa by vedla stále z kopce dál po cyklotrase 5226 k Arboretu Šmelcovna a odtud stále po stejné cyklotrase a žluté značce vpravo do kopce a zpět k přehradě z druhé strany hráze.</p>"
+        "infobox": "<p class=\"ibTransport\">Do startu trasy v obci Suchý jezdí z Blanska linka cyklobusu IDS JMK č.&nbsp;233, a to o víkendech a svátcích v období od dubna do září.</p><p class=\"ibTimelimit\">Hráz Vodní nádrže Boskovice je přístupná pěším a cykloturistům pouze v období od dubna do září. Případná objízdná trasa by vedla stále z kopce dál po cyklotrase 5226 k Arboretu Šmelcovna a odtud stále po stejné cyklotrase a žluté značce vpravo do kopce a zpět k přehradě z druhé strany hráze.</p>",
+        "kmpd": [49],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 50,
@@ -1113,7 +1389,10 @@
         "urlmobile": "https://mapy.cz/s/lamojojeta",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [50],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 50,
@@ -1125,7 +1404,10 @@
         "urlmobile": "https://mapy.cz/s/nocajecesu",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibTransport\">Konec trasy lze mít buď na naplánované zastávce Brankovice, odkud jezdí osobní vlaky do Brna každé 2 hodiny (ale kde jsou také dvě restaurace poblíž), nebo v případě potřeby na zastávce Nemotice o cca 1,5&nbsp;km jižněji, odkud jezdí (osobní i spěšné) vlaky každou hodinu, ale zase si zde nelze čekání zpříjemnit v žádné restauraci.</p>"
+        "infobox": "<p class=\"ibTransport\">Konec trasy lze mít buď na naplánované zastávce Brankovice, odkud jezdí osobní vlaky do Brna každé 2 hodiny (ale kde jsou také dvě restaurace poblíž), nebo v případě potřeby na zastávce Nemotice o cca 1,5&nbsp;km jižněji, odkud jezdí (osobní i spěšné) vlaky každou hodinu, ale zase si zde nelze čekání zpříjemnit v žádné restauraci.</p>",
+        "kmpd": [50],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 50,
@@ -1137,7 +1419,10 @@
         "urlmobile": "https://mapy.cz/s/hejasamahu",
         "known": true,
         "new": false,
-        "infobox": "<p class=\"ibSlope\">Relativně krátké (1,6 km), ale zato intenzivní stoupání (7%) z Blatnice pod Svatým Antonínkem ke kostelu sv. Antonínka na kopci.</p>"
+        "infobox": "<p class=\"ibSlope\">Relativně krátké (1,6 km), ale zato intenzivní stoupání (7%) z Blatnice pod Svatým Antonínkem ke kostelu sv. Antonínka na kopci.</p>",
+        "kmpd": [50],
+        "stops": [],
+        "authors": ["k", "d"]
     },
     {
         "km": 50,
@@ -1149,7 +1434,10 @@
         "urlmobile": "https://mapy.cz/s/gukozurege",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [50],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 50,
@@ -1161,7 +1449,10 @@
         "urlmobile": "https://mapy.cz/s/cugobazoma",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [50],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 50,
@@ -1173,7 +1464,10 @@
         "urlmobile": "https://mapy.cz/s/relacocovu",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [50],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 51,
@@ -1185,7 +1479,10 @@
         "urlmobile": "https://mapy.cz/s/kezazuzusa",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [51],
+        "stops": [],
+        "authors": ["d"]
     },
     {
         "km": 51,
@@ -1197,7 +1494,10 @@
         "urlmobile": "https://mapy.cz/s/lecesuhulo",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibTransport\">Pro absolvování trasy je bezpodmínečně nutné využít služeb <a href=\"http://drescher-touristik.at/drescher-line/fahrplan/\" target=\"_blank\">pravidelné lodní přepravy Drescher</a> pro překonání Nesiderského jezera mezi rakouskými městy Mörbisch am See a Illmitz.</p>"
+        "infobox": "<p class=\"ibTransport\">Pro absolvování trasy je bezpodmínečně nutné využít služeb <a href=\"http://drescher-touristik.at/drescher-line/fahrplan/\" target=\"_blank\">pravidelné lodní přepravy Drescher</a> pro překonání Nesiderského jezera mezi rakouskými městy Mörbisch am See a Illmitz.</p>",
+        "kmpd": [51],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 53,
@@ -1209,7 +1509,10 @@
         "urlmobile": "https://mapy.cz/s/hesujucala",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibTransport\">Pro ozvlášťnění a zpříjemnění trasy lze ke konci využít i <a href=\"https://www.dalesickaprehrada.cz/lodni-doprava/\" target=\"_blank\">lodní přepravu parníkem po hladině Dalešické přehrady</a>, a to z přístaviště Dalešice do přístaviště Kramolín.</p>"
+        "infobox": "<p class=\"ibTransport\">Pro ozvlášťnění a zpříjemnění trasy lze ke konci využít i <a href=\"https://www.dalesickaprehrada.cz/lodni-doprava/\" target=\"_blank\">lodní přepravu parníkem po hladině Dalešické přehrady</a>, a to z přístaviště Dalešice do přístaviště Kramolín.</p>",
+        "kmpd": [53],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 53,
@@ -1221,7 +1524,10 @@
         "urlmobile": "https://mapy.cz/s/kubopovala",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibTransport\">Na Šerlich jezdí přes Opočno od června do září během víkendů a svátků BusLine cyklobus linka 611193 (v 8:15) a Arriva cyklobus linka 620717 (v 9:00).</p>"
+        "infobox": "<p class=\"ibTransport\">Na Šerlich jezdí přes Opočno od června do září během víkendů a svátků BusLine cyklobus linka 611193 (v 8:15) a Arriva cyklobus linka 620717 (v 9:00).</p>",
+        "kmpd": [53],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 53,
@@ -1233,7 +1539,10 @@
         "urlmobile": "https://mapy.cz/s/gurokejala",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [53],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 53,
@@ -1245,7 +1554,10 @@
         "urlmobile": "https://mapy.cz/s/debeludupu",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [53],
+        "stops": [],
+        "authors": ["v"]
     },
     {
         "km": 54,
@@ -1257,7 +1569,10 @@
         "urlmobile": "https://mapy.cz/s/cucuhococo",
         "known": true,
         "new": false,
-        "infobox": "<p class=\"ibTimelimit\">Jelikož značná část trasy prochází skrze Oboru Soutok, která bývá v průběhu roku podle potřeby různě nepřístupná, je vhodné si před jízdou <a href=\"https://breclav.eu/file/31286_1_1/\" target=\"_blank\">ověřit aktuální přístupnost obory podle vyhlášky</a>.</p><p class=\"ibInfo\">Trasa je unikátní tím, že prochází hned třemi státy najednou.</p>"
+        "infobox": "<p class=\"ibTimelimit\">Jelikož značná část trasy prochází skrze Oboru Soutok, která bývá v průběhu roku podle potřeby různě nepřístupná, je vhodné si před jízdou <a href=\"https://breclav.eu/file/31286_1_1/\" target=\"_blank\">ověřit aktuální přístupnost obory podle vyhlášky</a>.</p><p class=\"ibInfo\">Trasa je unikátní tím, že prochází hned třemi státy najednou.</p>",
+        "kmpd": [54],
+        "stops": [],
+        "authors": ["d", "v"]
     },
     {
         "km": 54,
@@ -1269,7 +1584,10 @@
         "urlmobile": "https://mapy.cz/s/ranezazeme",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibInfo\">Celý severní oblouk trasy (od osady Nowy Dwor u řeky Piotrówka směrem na Jastrzebie-Zdrój a dále na okraj Godówa k ulici 1 Maja) je vedený po zbrusu nově vybudované cyklostezce (dokončena v září 2020). Tato cyklostezka vznikla na místě kolejí někdejší železniční tratě z 19. století, která sloužila k dopravě vytěženého uhlí z této části Slezska a tomuto účelu sloužila až do 90. let 20. století.</p>"
+        "infobox": "<p class=\"ibInfo\">Celý severní oblouk trasy (od osady Nowy Dwor u řeky Piotrówka směrem na Jastrzebie-Zdrój a dále na okraj Godówa k ulici 1 Maja) je vedený po zbrusu nově vybudované cyklostezce (dokončena v září 2020). Tato cyklostezka vznikla na místě kolejí někdejší železniční tratě z 19. století, která sloužila k dopravě vytěženého uhlí z této části Slezska a tomuto účelu sloužila až do 90. let 20. století.</p>",
+        "kmpd": [54],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 55,
@@ -1281,7 +1599,10 @@
         "urlmobile": "https://mapy.cz/s/nogelozese",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [55],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 55,
@@ -1293,7 +1614,10 @@
         "urlmobile": "https://mapy.cz/s/pemagutero",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [55],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 56,
@@ -1305,7 +1629,10 @@
         "urlmobile": "https://mapy.cz/s/hemufutupa",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibSlope\">Velmi prudké stoupání 11,7&nbsp;% na úseku 1,5&nbsp;km mezi koncem obce Valašská Polanka a turistický přístřeškem nad Prlovem.</p>"
+        "infobox": "<p class=\"ibSlope\">Velmi prudké stoupání 11,7&nbsp;% na úseku 1,5&nbsp;km mezi koncem obce Valašská Polanka a turistický přístřeškem nad Prlovem.</p>",
+        "kmpd": [56],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 57,
@@ -1317,7 +1644,10 @@
         "urlmobile": "https://mapy.cz/s/degofuloha",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibTransport\">Do startu trasy v Benešově jezdí z Blanska linka cyklobusu IDS JMK č.&nbsp;233, a to o víkendech a svátcích v období od dubna do září.</p>"
+        "infobox": "<p class=\"ibTransport\">Do startu trasy v Benešově jezdí z Blanska linka cyklobusu IDS JMK č.&nbsp;233, a to o víkendech a svátcích v období od dubna do září.</p>",
+        "kmpd": [57],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 58,
@@ -1329,7 +1659,10 @@
         "urlmobile": "https://mapy.cz/s/jotokudacu",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [58],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 59,
@@ -1341,7 +1674,10 @@
         "urlmobile": "https://mapy.cz/s/gegocetugo",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibTransport\">Pro přepravu do startu trasy lze jednou denně během víkendů a svátků v období od května do září využít speciálního expresního cyklobusu linky 108 (odjezd z Brna-Zvonařky 8:55).</p>"
+        "infobox": "<p class=\"ibTransport\">Pro přepravu do startu trasy lze jednou denně během víkendů a svátků v období od května do září využít speciálního expresního cyklobusu linky 108 (odjezd z Brna-Zvonařky 8:55).</p>",
+        "kmpd": [59],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 59,
@@ -1353,7 +1689,10 @@
         "urlmobile": "https://mapy.cz/s/gupucaduna",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [59],
+        "stops": [],
+        "authors": ["v"]
     },
     {
         "km": 60,
@@ -1365,7 +1704,10 @@
         "urlmobile": "https://mapy.cz/s/honefevolu",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [60],
+        "stops": [],
+        "authors": ["d"]
     },
     {
         "km": 61,
@@ -1377,7 +1719,10 @@
         "urlmobile": "https://mapy.cz/s/garogaleno",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibInfo\">V lese Holíčský háj na slovenské straně hranice je zelená turistická trasa poměrně špatně vyznačená. Už odbočka od cyklotrasy poblíž silničního mostu přes řeku Moravu není vůbec označena. Zhruba ve dvou třetinách délky zelené trasy podél řeky končí pěšina a trasa pak vede jen po říčním náspu bez jakékoliv pozemní komunikace prakticky až k odbočce u informační tabule. A nakonec trasa skrze les samotný je vyznačena přinejlepším sporadicky.</p><p class=\"ibInfo\">Ve 3. patře budovy <a href=\"https://mapy.cz/s/babofereso\" target=\"_blank\">ZUŠ Gbely</a> si lze prohlédnout <a href=\"https://www.gbely.sk/mesto/navstevnik/mestska-a-naftarska-expozicia/\" target=\"_blank\">expozici o historii těžby ropy a zemního plynu</a> na Slovensku. Zdejší výstava je ale zpřístupňována pouze na základě předchozí domluvy po telefonu.</p><p class=\"ibInfo\">Před bývalým sídlem společnosti Nafta&nbsp;a.s. je k vidění <a href=\"https://mapy.cz/s/dohuzeropa\" target=\"_blank\">historická ropná těžební věž</a>.</p><p class=\"ibInfo\">V lese za expedičním skladem dřeva je místo <a href=\"https://mapy.cz/s/regohamasu\" target=\"_blank\">prvního ropného vrtu na území ČSR</a> z roku 1913.</p><p class=\"ibInfo\">Na české straně hranic jsou za obcemi Kostice a Tvrdonice četné vrty sloužící dodnes k těžbě zemního plynu.</p>"
+        "infobox": "<p class=\"ibInfo\">V lese Holíčský háj na slovenské straně hranice je zelená turistická trasa poměrně špatně vyznačená. Už odbočka od cyklotrasy poblíž silničního mostu přes řeku Moravu není vůbec označena. Zhruba ve dvou třetinách délky zelené trasy podél řeky končí pěšina a trasa pak vede jen po říčním náspu bez jakékoliv pozemní komunikace prakticky až k odbočce u informační tabule. A nakonec trasa skrze les samotný je vyznačena přinejlepším sporadicky.</p><p class=\"ibInfo\">Ve 3. patře budovy <a href=\"https://mapy.cz/s/babofereso\" target=\"_blank\">ZUŠ Gbely</a> si lze prohlédnout <a href=\"https://www.gbely.sk/mesto/navstevnik/mestska-a-naftarska-expozicia/\" target=\"_blank\">expozici o historii těžby ropy a zemního plynu</a> na Slovensku. Zdejší výstava je ale zpřístupňována pouze na základě předchozí domluvy po telefonu.</p><p class=\"ibInfo\">Před bývalým sídlem společnosti Nafta&nbsp;a.s. je k vidění <a href=\"https://mapy.cz/s/dohuzeropa\" target=\"_blank\">historická ropná těžební věž</a>.</p><p class=\"ibInfo\">V lese za expedičním skladem dřeva je místo <a href=\"https://mapy.cz/s/regohamasu\" target=\"_blank\">prvního ropného vrtu na území ČSR</a> z roku 1913.</p><p class=\"ibInfo\">Na české straně hranic jsou za obcemi Kostice a Tvrdonice četné vrty sloužící dodnes k těžbě zemního plynu.</p>",
+        "kmpd": [61],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 62,
@@ -1389,7 +1734,10 @@
         "urlmobile": "https://mapy.cz/s/jamehetepu",
         "known": true,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [62],
+        "stops": [],
+        "authors": ["v"]
     },
     {
         "km": 64,
@@ -1401,7 +1749,10 @@
         "urlmobile": "https://mapy.cz/s/hafojepomo",
         "known": false,
         "new": false,
-        "infobox": ""
+        "infobox": "",
+        "kmpd": [64],
+        "stops": [],
+        "authors": ["v"]
     },
     {
         "km": 67,
@@ -1413,7 +1764,10 @@
         "urlmobile": "https://mapy.cz/s/behebudoga",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibTransport\">Jediný ranní přímý vlak do Rychnova nad Kněžnou odjíždí z Očelic v 8:04, a tudíž je nezbytně nutné stihnout právě tento spoj, aby vše časově vycházelo.</p>"
+        "infobox": "<p class=\"ibTransport\">Jediný ranní přímý vlak do Rychnova nad Kněžnou odjíždí z Očelic v 8:04, a tudíž je nezbytně nutné stihnout právě tento spoj, aby vše časově vycházelo.</p>",
+        "kmpd": [67],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 77,
@@ -1425,7 +1779,10 @@
         "urlmobile": "https://mapy.cz/s/panenudopu",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibTransport\">Mezi obcemi Haslau a Orth je nutné využít <a href=\"http://www.faehre-orth.at/\" target=\"_blank\">místní pravidelný přívoz</a>. Tato linka je v provozu od dubna do října denně mezi 9:00 a 18:00.</p>"
+        "infobox": "<p class=\"ibTransport\">Mezi obcemi Haslau a Orth je nutné využít <a href=\"http://www.faehre-orth.at/\" target=\"_blank\">místní pravidelný přívoz</a>. Tato linka je v provozu od dubna do října denně mezi 9:00 a 18:00.</p>",
+        "kmpd": [77],
+        "stops": [],
+        "authors": ["k"]
     },
     {
         "km": 59,
@@ -1437,7 +1794,10 @@
         "urlmobile": "https://mapy.cz/s/denofecuro",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibSlope\">Velmi dlouhé (9 km) intenzivní vrcholové stoupání (7 %) v úseku od hotelu Hubertus až po značku \"Praděd, rozcestí\".</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Milotice nad Opavou<br>(27 km)<br>Vrbno pod Pradědem<br>(32 km)<br>Kouty nad Desnou</p>"
+        "infobox": "<p class=\"ibSlope\">Velmi dlouhé (9 km) intenzivní vrcholové stoupání (7 %) v úseku od hotelu Hubertus až po značku \"Praděd, rozcestí\".</p>",
+        "kmpd": [27, 32],
+        "stops": ["Milotice nad Opavou", "Vrbno pod Pradědem", "Kouty nad Desnou"],
+        "authors": ["v", "k"]
     },
     {
         "km": 66,
@@ -1449,7 +1809,10 @@
         "urlmobile": "https://mapy.cz/s/nezarapabe",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibSlope\">Intenzivní stoupání 8% na 3&nbsp;km dlouhém úseku od rozcestí \"Pod Starým kopcem\" po vrstevnici 810mnm.</p><p class=\"ibSlope\">Prudké stoupání 9% na 2&nbsp;km dlouhém úseku od odbočky ze silnice podél Kunčického potoka po rozcestí \"Kunčická hora\".</p><p class=\"ibSlope\">Prudké stoupání 9% na 1,5&nbsp;km dlouhém úseku od rozcestí \"Kladská brána - hájovna\" k cyklorozcestníku \"Na Rampě\".</p><p class=\"ibSlope\">Velmi prudké stoupání 12% na 2&nbsp;km dlouhém úseku od odbočky z cyklotrasy 4071 za bodem záchrany SU 068 až po přemostění levého přítoku Prudkého potoka před rozcestím Mokřiny.</p><p class=\"ibInfo\">Pro sjezd od Chaty Slaměnka je vybrán modrý (nejlehčí) singletrail <a href=\"https://eresort.dolnimorava.cz/trasa/selsky-flow-trail-44/\" target=\"_blank\">\"Selský flow trail\"</a> o délce 6&nbsp;km, který končí u dolní stanice lanovky Ski areálu Dolní Morava.</p><p class=\"ibTransport\">Při vyhledání zpátečního vlakového spojení nabídne IDOS s největší pravděpodobností jen spoje přes Ústí nad Orlicí. Manuálně lze ale zvolit také spoj přes Hanušovice, kde si lze čekání na přestup zpříjemnit v tamní pivovarské restauraci vzdálené od nádražní budovy pouhých 600&nbsp;m.</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Staré Město pod Sněžníkem<br>(37 km)<br>Horská Chata Návrší<br>(29 km)<br>Červený Potok</p>"
+        "infobox": "<p class=\"ibSlope\">Intenzivní stoupání 8% na 3&nbsp;km dlouhém úseku od rozcestí \"Pod Starým kopcem\" po vrstevnici 810mnm.</p><p class=\"ibSlope\">Prudké stoupání 9% na 2&nbsp;km dlouhém úseku od odbočky ze silnice podél Kunčického potoka po rozcestí \"Kunčická hora\".</p><p class=\"ibSlope\">Prudké stoupání 9% na 1,5&nbsp;km dlouhém úseku od rozcestí \"Kladská brána - hájovna\" k cyklorozcestníku \"Na Rampě\".</p><p class=\"ibSlope\">Velmi prudké stoupání 12% na 2&nbsp;km dlouhém úseku od odbočky z cyklotrasy 4071 za bodem záchrany SU 068 až po přemostění levého přítoku Prudkého potoka před rozcestím Mokřiny.</p><p class=\"ibInfo\">Pro sjezd od Chaty Slaměnka je vybrán modrý (nejlehčí) singletrail <a href=\"https://eresort.dolnimorava.cz/trasa/selsky-flow-trail-44/\" target=\"_blank\">\"Selský flow trail\"</a> o délce 6&nbsp;km, který končí u dolní stanice lanovky Ski areálu Dolní Morava.</p><p class=\"ibTransport\">Při vyhledání zpátečního vlakového spojení nabídne IDOS s největší pravděpodobností jen spoje přes Ústí nad Orlicí. Manuálně lze ale zvolit také spoj přes Hanušovice, kde si lze čekání na přestup zpříjemnit v tamní pivovarské restauraci vzdálené od nádražní budovy pouhých 600&nbsp;m.</p>",
+        "kmpd": [37, 29],
+        "stops": ["Staré Město pod Sněžníkem", "Horská Chata Návrší", "Červený Potok"],
+        "authors": ["k"]
     },
     {
         "km": 66,
@@ -1461,7 +1824,10 @@
         "urlmobile": "https://mapy.cz/s/lacolocugu",
         "known": true,
         "new": false,
-        "infobox": "<p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Polička<br>(37 km)<br>Hlinsko<br>(29 km)<br>Chotěboř</p>"
+        "infobox": "",
+        "kmpd": [37, 29],
+        "stops": ["Polička", "Hlinsko", "Chotěboř"],
+        "authors": ["k"]
     },
     {
         "km": 69,
@@ -1473,7 +1839,10 @@
         "urlmobile": "https://mapy.cz/s/farogacule",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibSleep\">Předpokládá se přespání pod stanem v okolí obce Krumvíř, která je zhruba v polovině trasy. Nicméně v případě nutnosti je v této obci k dispozici hned několik možností ubytování pod střechou.</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Podivín<br>(37 km)<br>Krumvíř<br>(32 km)<br>Bučovice</p>"
+        "infobox": "<p class=\"ibSleep\">Předpokládá se přespání pod stanem v okolí obce Krumvíř, která je zhruba v polovině trasy. Nicméně v případě nutnosti je v této obci k dispozici hned několik možností ubytování pod střechou.</p>",
+        "kmpd": [37, 32],
+        "stops": ["Podivín", "Krumvíř", "Bučovice"],
+        "authors": ["k"]
     },
     {
         "km": 71,
@@ -1485,7 +1854,10 @@
         "urlmobile": "https://mapy.cz/s/ragobegege",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibTransport\">Druhý den trasy se počítá s využitím lanovky <a href=\"http://www.czantoria.net/\" target=\"_blank\">Kolej linowa Czantoria</a>, která mezi městem Ustroň a kótou 855 \"Polana Stoklosica\" přepravuje i jízdní kola a umožňuje pohodlně překonat vražedné převýšení téměř 30% na tomto 2&nbsp;km dlouhém úseku.</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Český Těšín<br>(39 km)<br>Wisla<br>(32 km)<br>Český Těšín</p>"
+        "infobox": "<p class=\"ibTransport\">Druhý den trasy se počítá s využitím lanovky <a href=\"http://www.czantoria.net/\" target=\"_blank\">Kolej linowa Czantoria</a>, která mezi městem Ustroň a kótou 855 \"Polana Stoklosica\" přepravuje i jízdní kola a umožňuje pohodlně překonat vražedné převýšení téměř 30% na tomto 2&nbsp;km dlouhém úseku.</p>",
+        "kmpd": [39, 32],
+        "stops": ["Český Těšín", "Wisla", "Český Těšín"],
+        "authors": ["d"]
     },
     {
         "km": 76,
@@ -1497,7 +1869,10 @@
         "urlmobile": "https://mapy.cz/s/nematugasa",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibInfo\">Tato trasa využívá v terénu okolo kopce Smolný vrch (oblast mezi obcemi Černá Voda a Velká Kraš) hned <a href=\"http://www.rychlebskestezky.cz/\" target=\"_blank\">3 singletraily</a> (\"Podél Černého potoka\", \"Trail LČR\" a \"Dětský okruh\"), všechny jsou ale v nejlehčí modré kategorii, a tudíž primárně na zpestření jízdy.</p><p class=\"ibWarning\">Jelikož Rychlebské hory patří k oblastem s nejvydatnějšími dešťovými úhrny v ČR, nemusí být singletrail \"Podél Černého potoka\" po případných silných deštích i přes pravidelnou údržbu dostatečně dobře sjízdný. Jako náhradní objízdnou trasu lze v takovém případě využít buď zpevněné cesty na opačném břehu potoka podél Obory Rokliny nebo i bezpečnější variantu ve formě klasické cyklotrasy č.&nbsp;6047 mezi Černou Vodou a Velkou Kraší.</p><p class=\"ibSleep\">Přestože se druhou noc počítá s přespáním v <a href=\"https://www.taborcernypotok.cz/cs/\" target=\"_blank\">Cyklokempu (Táboru) Černý Potok</a>, není nutné s sebou vůbec brát stan, jelikož jsou v tomto kempu mj. i speciální \"cyklosruby\" (tj. chatky pro potřeby cyklistů).</p><p class=\"ibMultiday\">Trasa je na 3 dny:</p><p>Ramzová<br>(26 km)<br>Jeseník<br>(34 km)<br>Cyklokemp Černý Potok<br>(16 km)<br>Žulová</p>"
+        "infobox": "<p class=\"ibInfo\">Tato trasa využívá v terénu okolo kopce Smolný vrch (oblast mezi obcemi Černá Voda a Velká Kraš) hned <a href=\"http://www.rychlebskestezky.cz/\" target=\"_blank\">3 singletraily</a> (\"Podél Černého potoka\", \"Trail LČR\" a \"Dětský okruh\"), všechny jsou ale v nejlehčí modré kategorii, a tudíž primárně na zpestření jízdy.</p><p class=\"ibWarning\">Jelikož Rychlebské hory patří k oblastem s nejvydatnějšími dešťovými úhrny v ČR, nemusí být singletrail \"Podél Černého potoka\" po případných silných deštích i přes pravidelnou údržbu dostatečně dobře sjízdný. Jako náhradní objízdnou trasu lze v takovém případě využít buď zpevněné cesty na opačném břehu potoka podél Obory Rokliny nebo i bezpečnější variantu ve formě klasické cyklotrasy č.&nbsp;6047 mezi Černou Vodou a Velkou Kraší.</p><p class=\"ibSleep\">Přestože se druhou noc počítá s přespáním v <a href=\"https://www.taborcernypotok.cz/cs/\" target=\"_blank\">Cyklokempu (Táboru) Černý Potok</a>, není nutné s sebou vůbec brát stan, jelikož jsou v tomto kempu mj. i speciální \"cyklosruby\" (tj. chatky pro potřeby cyklistů).</p>",
+        "kmpd": [26, 34, 16],
+        "stops": ["Ramzová", "Jeseník", "Cyklokemp Černý Potok", "Žulová"],
+        "authors": ["k"]
     },
     {
         "km": 78,
@@ -1509,7 +1884,10 @@
         "urlmobile": "https://mapy.cz/s/felohevaze",
         "known": true,
         "new": false,
-        "infobox": "<p class=\"ibTimelimit\">Všechny cesty uvnitř Vojenského újezdu Březina, po kterých je tato trasa vedena, jsou podle <a href=\"http://www.vojujezd-brezina.cz/assets/File.ashx?id_org=1412&id_dokumenty=1395\" target=\"_blank\">Nařízení Újezdního úřadu č. 7/2017</a> trvale přístupné bez omezení, takže je možné tuto trasu jet kdykoliv (nejen o víkendech či svátcích).</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Prostějov<br>(45 km)<br>Jedovnice<br>(33 km)<br>Líšeň, Mariánské údolí</p>"
+        "infobox": "<p class=\"ibTimelimit\">Všechny cesty uvnitř Vojenského újezdu Březina, po kterých je tato trasa vedena, jsou podle <a href=\"http://www.vojujezd-brezina.cz/assets/File.ashx?id_org=1412&id_dokumenty=1395\" target=\"_blank\">Nařízení Újezdního úřadu č. 7/2017</a> trvale přístupné bez omezení, takže je možné tuto trasu jet kdykoliv (nejen o víkendech či svátcích).</p>",
+        "kmpd": [45, 33],
+        "stops": ["Prostějov", "Jedovnice", "Líšeň, Mariánské údolí"],
+        "authors": ["v"]
     },
     {
         "km": 84,
@@ -1521,7 +1899,10 @@
         "urlmobile": "https://mapy.cz/s/padozotecu",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Valšov<br>(48 km)<br>Rekreační centrum Bílá Holubice<br>(36 km)<br>Opava východ</p>"
+        "infobox": "",
+        "kmpd": [48, 36],
+        "stops": ["Valšov", "Rekreační centrum Bílá Holubice", "Opava východ"],
+        "authors": ["k"]
     },
     {
         "km": 84,
@@ -1533,7 +1914,10 @@
         "urlmobile": "https://mapy.cz/s/gezujosode",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibSleep\">Přespání se předpokládá zhruba v polovině trasy. Vzhledem k vysokým cenám ubytování v Angern, zákazu volného stanování v celých Dolních Rakousích, neexistenci žádného decentního ubytování v Záhorské Vsi a díky možnosti přespávat na Slovensku pod stanem i v CHKO (mimo les), se jako nejlepší východisko nabízí přespání pod stanem v okolí Záhorské Vsi.</p><p class=\"ibTransport\">K překročení řeky Moravy je nutné využít <a href=\"https://www.zahorskaves.sk/web/src/index.php?lg=sk&pgid=235\" target=\"_blank\">přívoz Angern - Záhorská Ves</a>.</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Bratislava hlavná stanica<br>(46 km)<br>Záhorská Ves<br>(38 km)<br>Hohenau</p>"
+        "infobox": "<p class=\"ibSleep\">Přespání se předpokládá zhruba v polovině trasy. Vzhledem k vysokým cenám ubytování v Angern, zákazu volného stanování v celých Dolních Rakousích, neexistenci žádného decentního ubytování v Záhorské Vsi a díky možnosti přespávat na Slovensku pod stanem i v CHKO (mimo les), se jako nejlepší východisko nabízí přespání pod stanem v okolí Záhorské Vsi.</p><p class=\"ibTransport\">K překročení řeky Moravy je nutné využít <a href=\"https://www.zahorskaves.sk/web/src/index.php?lg=sk&pgid=235\" target=\"_blank\">přívoz Angern - Záhorská Ves</a>.</p>",
+        "kmpd": [46, 38],
+        "stops": ["Bratislava hlavná stanica", "Záhorská Ves", "Hohenau"],
+        "authors": ["k"]
     },
     {
         "km": 88,
@@ -1545,7 +1929,10 @@
         "urlmobile": "https://mapy.cz/s/bemaluhovo",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibSlope\">Nebezpečně prudké klesání (17%) v úseku mezi Vyškovcem a státní hranicí. Nebezpečí poškození brzd nebo úrazu!</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Pitín<br>(48 km)<br>Čachtice<br>(40 km)<br>Velká nad Veličkou</p>"
+        "infobox": "<p class=\"ibSlope\">Nebezpečně prudké klesání (17%) v úseku mezi Vyškovcem a státní hranicí. Nebezpečí poškození brzd nebo úrazu!</p>",
+        "kmpd": [48, 40],
+        "stops": ["Pitín", "Čachtice", "Velká nad Veličkou"],
+        "authors": ["k"]
     },
     {
         "km": 93,
@@ -1557,7 +1944,10 @@
         "urlmobile": "https://mapy.cz/s/refefogeno",
         "known": true,
         "new": false,
-        "infobox": "<p class=\"ibSlope\">Velmi prudké stoupání na úseku 1,3 km mezi hájovnou Chrastková a vrchem Damachová (739 m) o sklonu 14 %.</p><p class=\"ibSlope\">Nebezpečně prudké klesání (18%) od rozcestí \"Sedlo Chotuč\" zakončený ostrou pravotočivou zatáčkou před božími mukami. Nebezpečí poškození brzd nebo úrazu!</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Pitín<br>(55 km)<br>Chata Gilianka<br>(38 km)<br>Bylnice</p>"
+        "infobox": "<p class=\"ibSlope\">Velmi prudké stoupání na úseku 1,3 km mezi hájovnou Chrastková a vrchem Damachová (739 m) o sklonu 14 %.</p><p class=\"ibSlope\">Nebezpečně prudké klesání (18%) od rozcestí \"Sedlo Chotuč\" zakončený ostrou pravotočivou zatáčkou před božími mukami. Nebezpečí poškození brzd nebo úrazu!</p>",
+        "kmpd": [55, 38],
+        "stops": ["Pitín", "Chata Gilianka", "Bylnice"],
+        "authors": ["d", "k"]
     },
     {
         "km": 105,
@@ -1569,7 +1959,10 @@
         "urlmobile": "https://mapy.cz/s/gemaregelo",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Bohumín<br>(59 km)<br>Slezský pivovar Karviná<br>(46 km)<br>Ostrava-Svinov</p>"
+        "infobox": "",
+        "kmpd": [59, 46],
+        "stops": ["Bohumín", "Slezský pivovar Karviná", "Ostrava-Svinov"],
+        "authors": ["k"]
     },
     {
         "km": 109,
@@ -1581,7 +1974,10 @@
         "urlmobile": "https://mapy.cz/s/fucojavolo",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibInfo\">Nové Údolí leží na hranici s Německem, takže při krátké zajížďce ze startu přes hraniční mostek je možné na této trase v podstatě navštívit až tři státy.</p><p class=\"ibInfo\">V informačním centru Stožec si lze prohlédnout unikátní exponát vycpaného losa evropského v životní velikosti (cca 2 m).</p><p class=\"ibTransport\">V pořadí první přívoz <a href=\"http://cyklotrasy-sumava.cz/\" target=\"_blank\">Dolní Vltavice - Kyselov</a> jezdí každou celou hodinu od 9:00.</p><p class=\"ibTransport\">Druhý přívoz <a href=\"https://privozfrymburk.cz/\" target=\"_blank\">Frymburk - Frýdava</a> jezdí taktéž každou celou hodinu, přičemž v letní sezóně až do 20:00.</p><p class=\"ibWarning\">Hraniční přechod pro pěší do Rakouska přes Hraniční potok je pravděpodobně realizován pouze přes říční brod, žádný most alespoň nebyl na první pohled na dostupných materiálech nikde vidět (bylo by ale dobré tuto skutečnost ověřit přímo na místě). Pokud by se trasa jela někdy po období výraznějších dešťových srážek, je možné, že by nebylo možné realizovat část trasy přes Rakousko. Alternativou by v takovém případě byl odklon trasy od křižovatky za rozcestníkem \"Mnichovice\" po zelené přes vesnici Studánky a dále pak podél Mlýneckého potoka.</p><p class=\"ibMultiday\">Trasa je na 3 dny:</p><p>Nové Údolí<br>(31 km)<br>Jenišov, Horní Planá<br>(52 km)<br>Vyšší Brod<br>(26 km)<br>Horní Dvořiště</p>"
+        "infobox": "<p class=\"ibInfo\">Nové Údolí leží na hranici s Německem, takže při krátké zajížďce ze startu přes hraniční mostek je možné na této trase v podstatě navštívit až tři státy.</p><p class=\"ibInfo\">V informačním centru Stožec si lze prohlédnout unikátní exponát vycpaného losa evropského v životní velikosti (cca 2 m).</p><p class=\"ibTransport\">V pořadí první přívoz <a href=\"http://cyklotrasy-sumava.cz/\" target=\"_blank\">Dolní Vltavice - Kyselov</a> jezdí každou celou hodinu od 9:00.</p><p class=\"ibTransport\">Druhý přívoz <a href=\"https://privozfrymburk.cz/\" target=\"_blank\">Frymburk - Frýdava</a> jezdí taktéž každou celou hodinu, přičemž v letní sezóně až do 20:00.</p><p class=\"ibWarning\">Hraniční přechod pro pěší do Rakouska přes Hraniční potok je pravděpodobně realizován pouze přes říční brod, žádný most alespoň nebyl na první pohled na dostupných materiálech nikde vidět (bylo by ale dobré tuto skutečnost ověřit přímo na místě). Pokud by se trasa jela někdy po období výraznějších dešťových srážek, je možné, že by nebylo možné realizovat část trasy přes Rakousko. Alternativou by v takovém případě byl odklon trasy od křižovatky za rozcestníkem \"Mnichovice\" po zelené přes vesnici Studánky a dále pak podél Mlýneckého potoka.</p>",
+        "kmpd": [31, 52, 26],
+        "stops": ["Nové Údolí", "Jenišov, Horní Planá", "Vyšší Brod", "Horní Dvořiště"],
+        "authors": ["k"]
     },
     {
         "km": 111,
@@ -1593,7 +1989,10 @@
         "urlmobile": "https://mapy.cz/s/fodenulogo",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibWarning\">Před hrází vodní nádrže Seč trasa prochází velmi úzkým a na pohled ne příliš bezpečným Sečským tunelem na silnici II/343, je třeba na tomto místě být obzvlášť opatrný. Bohužel toto místo nejde jinudy objet.</p><p class=\"ibMultiday\">Trasa je na 2 dny:</p><p>Golčův Jeníkov město<br>(51 km)<br>Kemp v obci Ústupky<br>(60 km)<br>Žďár nad Sázavou</p>"
+        "infobox": "<p class=\"ibWarning\">Před hrází vodní nádrže Seč trasa prochází velmi úzkým a na pohled ne příliš bezpečným Sečským tunelem na silnici II/343, je třeba na tomto místě být obzvlášť opatrný. Bohužel toto místo nejde jinudy objet.</p>",
+        "kmpd": [51, 60],
+        "stops": ["Golčův Jeníkov město", "Kemp v obci Ústupky", "Žďár nad Sázavou"],
+        "authors": ["k"]
     },
     {
         "km": 119,
@@ -1605,7 +2004,10 @@
         "urlmobile": "https://mapy.cz/s/gosozejaku",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibMultiday\">Trasa je na 3 dny:</p><p>České Budějovice<br>(39 km)<br>Holašovice<br>(43 km)<br>Břehov<br>(37 km)<br>Číčenice</p>"
+        "infobox": "",
+        "kmpd": [39, 43, 37],
+        "stops": ["České Budějovice", "Holašovice", "Břehov", "Číčenice"],
+        "authors": ["k"]
     },
     {
         "km": 158,
@@ -1617,7 +2019,10 @@
         "urlmobile": "https://mapy.cz/s/lunocudota",
         "known": false,
         "new": false,
-        "infobox": "<p class=\"ibTimelimit\">Trasu lze absolvovat pouze v období od 15.7. do 15.11., protože červená turistická značka od rozcestí Gsenget (za Prášilami) k jezeru Laka je mimo toto období uzavřena z důvodu ochrany přírody.</p><p class=\"ibSleep\">Pro přespání pro většinu nocí (s výjimkou poslední) se počítá s přenocováním v nouzových nocovištích ve vlastním stanu.</p><p class=\"ibTransport\">Na začátku trasy po vystoupení z vlaku je potřeba použít <a href=\"https://www.horniplana.cz/prevoz/\" target=\"_blank\">přívoz Horní Planá - Bližší Lhota</a> k přejetí Lipenské přehrady na opačný břeh.</p><p class=\"ibMultiday\">Trasa je na 4 dny:</p><p>Horní Planá<br>(35 km)<br>Nouzové nocoviště Nové Údolí<br>(52 km)<br>Nouzové nocoviště Modrava<br>(41 km)<br>Železná Ruda<br>(30 km)<br>Nýrsko</p>"
+        "infobox": "<p class=\"ibTimelimit\">Trasu lze absolvovat pouze v období od 15.7. do 15.11., protože červená turistická značka od rozcestí Gsenget (za Prášilami) k jezeru Laka je mimo toto období uzavřena z důvodu ochrany přírody.</p><p class=\"ibSleep\">Pro přespání pro většinu nocí (s výjimkou poslední) se počítá s přenocováním v nouzových nocovištích ve vlastním stanu.</p><p class=\"ibTransport\">Na začátku trasy po vystoupení z vlaku je potřeba použít <a href=\"https://www.horniplana.cz/prevoz/\" target=\"_blank\">přívoz Horní Planá - Bližší Lhota</a> k přejetí Lipenské přehrady na opačný břeh.</p>",
+        "kmpd": [35, 52, 41, 30],
+        "stops": ["Horní Planá", "Nouzové nocoviště Nové Údolí", "Nouzové nocoviště Modrava", "Železná Ruda", "Nýrsko"],
+        "authors": ["k"]
     },
     {
         "km": 161,
@@ -1629,7 +2034,10 @@
         "urlmobile": "https://mapy.cz/s/jujucajeme",
         "known": true,
         "new": false,
-        "infobox": "<p class=\"ibSleep\">Nutné mít s sebou pro přespání stan. V oblasti Přírodního parku Písecké hory východně od Písku je však stanování zakázáno vyhláškou.</p><p class=\"ibInfo\">Trasa volně sleduje Švejkovo putování z Tábora do Putimi a Písku. Ona slavná budějovická anabáze začíná na nádraží v Táboře, kde Švejka \"stihla ta nehoda, že pil za stolem jedno pivo za druhým.\" A nebyl by to Švejk, aby do Budějovic místo na jih nevyrazil rozhodným krokem na západ... Cestou prochází Milevsko, Květov, Zvíkov, Čížovou, Putim, Kestřany a znovu Putim, kde je zatčen místními četníky jako špión. Nakonec je závodčím odveden na okresní četnické velitelství do Písku, kde jej má vyslechnout rytmistr König...</p><p class=\"ibMultiday\">Trasa je na 4 dny:</p><p>Veselí nad Lužnicí<br>(39 km)<br>Tábořiště Harrachovka<br>(59 km)<br>Tábořiště Štědronín<br>(48 km)<br>Písek<br>(15 km)<br>Protivín</p>"
+        "infobox": "<p class=\"ibSleep\">Nutné mít s sebou pro přespání stan. V oblasti Přírodního parku Písecké hory východně od Písku je však stanování zakázáno vyhláškou.</p><p class=\"ibInfo\">Trasa volně sleduje Švejkovo putování z Tábora do Putimi a Písku. Ona slavná budějovická anabáze začíná na nádraží v Táboře, kde Švejka \"stihla ta nehoda, že pil za stolem jedno pivo za druhým.\" A nebyl by to Švejk, aby do Budějovic místo na jih nevyrazil rozhodným krokem na západ... Cestou prochází Milevsko, Květov, Zvíkov, Čížovou, Putim, Kestřany a znovu Putim, kde je zatčen místními četníky jako špión. Nakonec je závodčím odveden na okresní četnické velitelství do Písku, kde jej má vyslechnout rytmistr König...</p>",
+        "kmpd": [39, 59, 48, 15],
+        "stops": ["Veselí nad Lužnicí", "Tábořiště Harrachovka", "Tábořiště Štědronín", "Písek", "Protivín"],
+        "authors": ["k", "d"]
     },
     {
         "km": 218,
@@ -1641,6 +2049,9 @@
         "urlmobile": "https://mapy.cz/s/lolevoramu",
         "known": true,
         "new": false,
-        "infobox": "<p class=\"ibSleep\">Vzhledem k využití nouzových nocovišť a kempů je potřeba si s sebou vzít na přespání stan.</p><p class=\"ibMultiday\">Trasa je na 5 dnů:</p><p>Jindřichův Hradec<br>(43 km)<br>Chlum u Třeboně<br>(49 km)<br>Nouzové nocoviště Nové Hrady<br>(49 km)<br>Kemp Hamr-Římov<br>(41 km)<br>Autokemp Třeboň<br>(36 km)<br>Veselí nad Lužnicí</p>"
+        "infobox": "<p class=\"ibSleep\">Vzhledem k využití nouzových nocovišť a kempů je potřeba si s sebou vzít na přespání stan.</p>",
+        "kmpd": [43, 49, 49, 41, 36],
+        "stops": ["Jindřichův Hradec", "Chlum u Třeboně", "Nouzové nocoviště Nové Hrady", "Kemp Hamr-Římov", "Autokemp Třeboň", "Veselí nad Lužnicí"],
+        "authors": ["k", "d"]
     }
 ]

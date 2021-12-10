@@ -1,27 +1,10 @@
-// array s jednotlivými regiony
-var regiony = [
-    "Beskydy",
-    "Bílé Karpaty",
-    "Brněnsko",
-    "Brno",
-    "Haná",
-    "Jeseníky",
-    "Jižní Čechy",
-    "Jižní Morava",
-    "Krkonoše",
-    "Krušnohoří",
-    "Orlické hory",
-    "Polabí",
-    "Rakousko",
-    "Slezsko",
-    "Slovensko",
-    "Střední Čechy",
-    "Svitavsko",
-    "Šumava",
-    "Vysočina",
-    "Východní Čechy",
-    "Západní Čechy"
-];
+// DESC Skripty pro zobrazování statistik tras
+
+
+/* ================================================================================================================================== */
+/* CHAPTER úvodní variables */
+/* ================================================================================================================================== */
+
 
 // generický div pro obsah stránky
 var page = document.getElementById("obsahStrankyStats");
@@ -40,10 +23,12 @@ var souhrnPage;
 var cykloPage;
 var pesiPage;
 
+// !CHAPTER
+
 
 
 /* ================================================================================================================================== */
-/* asynchronní část pro načtení dat cyklo a pěších tras SOUČASNĚ */
+/* CHAPTER asynchronní část pro načtení dat cyklo a pěších tras SOUČASNĚ */
 /* ================================================================================================================================== */
 
 
@@ -81,6 +66,8 @@ collectData()
     // zachycení případného erroru při načítání JSON dat
     .catch((err) => { console.log(err); page.innerHTML = "chyba při načítání dat"; });
 
+// !CHAPTER
+
 
 
 /* ================================================================================================================================== */
@@ -91,12 +78,12 @@ collectData()
 function processData() {
 
     /* ================================================================================================================================== */
-    /* interní výpočty, jejichž výsledky se pak budou moct použít při vykreslování jednotlivých elementů na html stránce */
+    /* CHAPTER interní výpočty, jejichž výsledky se pak budou moct použít při vykreslování jednotlivých elementů na html stránce */
     /* ================================================================================================================================== */
 
 
     /* -------------------------------------------------------- */
-    /* elementární výpočty počtů tras v databázi */
+    /* SUB elementární výpočty počtů tras v databázi */
 
 
     // počet cyklotras
@@ -140,7 +127,7 @@ function processData() {
 
 
     /* -------------------------------------------------------- */
-    /* nejkratší a nejdelší trasy */
+    /* SUB nejkratší a nejdelší trasy */
 
 
     // funkce sloužící pro Array.filter() "method" níže
@@ -183,11 +170,10 @@ function processData() {
     var nejkratsiVicePesiKm = vicedenniPesi[0].km;
     var nejdelsiVicePesi = vicedenniPesi[vicedenniPesi.length - 1].nazev;
     var nejdelsiVicePesiKm = vicedenniPesi[vicedenniPesi.length - 1].km;
-    // console.log(`${nejkratsiJednoCyklo}, ${nejkratsiJednoCykloKm} km`);
 
 
     /* -------------------------------------------------------- */
-    /* počty tras v jednotlivých regionech */
+    /* SUB počty tras v jednotlivých regionech */
 
 
     // vytvořit nový Array, který bude sloužit pro tabulku/graf s počtem tras pro jednotlivé regiony
@@ -231,7 +217,7 @@ function processData() {
 
 
     /* -------------------------------------------------------- */
-    /* podíl tras podle jejich délky */
+    /* SUB podíl tras podle jejich délky */
 
 
     // definování prázdných (s úvodní hodnotou 0) variables pro počty jednotlivých délek tras
@@ -276,47 +262,17 @@ function processData() {
     pesiLongest = pesiLongest / pocetPesich * 100;
     pesiMulti = pesiMulti / pocetPesich * 100;
 
-    /* 
-    I have an array of JavaScript objects:
-
-    var objs = [ 
-        { first_nom: 'Lazslo', last_nom: 'Jamf'     },
-        { first_nom: 'Pig',    last_nom: 'Bodine'   },
-        { first_nom: 'Pirate', last_nom: 'Prentice' }
-    ];
-
-    How can I sort them by the value of last_nom in JavaScript?
-
-    // 
-
-    It's easy enough to write your own comparison function:
-
-    function compare( a, b ) {
-    if ( a.last_nom < b.last_nom ){
-        return -1;
-    }
-    if ( a.last_nom > b.last_nom ){
-        return 1;
-    }
-    return 0;
-    }
-
-    objs.sort( compare );
-
-    Or inline (c/o Marco Demaio):
-
-    objs.sort((a,b) => (a.last_nom > b.last_nom) ? 1 : ((b.last_nom > a.last_nom) ? -1 : 0)); 
-    */
+    // !CHAPTER
 
 
 
     /* ================================================================================================================================== */
-    /* samotné vykreslování jednotlivých elementů na html stránce */
+    /* CHAPTER samotné vykreslování jednotlivých elementů na html stránce */
     /* ================================================================================================================================== */
 
 
     /* -------------------------------------------------------- */
-    /* variables */
+    /* SUB variables */
 
 
     // přepínací tlačítka
@@ -350,7 +306,7 @@ function processData() {
 
 
     /* -------------------------------------------------------- */
-    /* sekce: celkový souhrn/přehled */
+    /* SUB sekce: celkový souhrn/přehled */
 
 
     // funkce pro vytvoření nadpisů jednotlivých pod-oddílů
@@ -436,7 +392,7 @@ function processData() {
 
 
     /* -------------------------------------------------------- */
-    /* koláčový graf pro počty tras podle délky */
+    /* SUB koláčový graf pro počty tras podle délky */
 
 
     // funkce na tvorbu koláčového grafu o jednotlivých segmentech pro každou kategorii délky tras
@@ -535,7 +491,7 @@ function processData() {
 
 
     /* -------------------------------------------------------- */
-    /* vysvětlivky ke koláčovému grafu */
+    /* SUB vysvětlivky ke koláčovému grafu */
 
 
     // wrapper div pro celé vysvětlivky (první pro cyklotrasy)
@@ -660,7 +616,7 @@ function processData() {
 
 
     /* -------------------------------------------------------- */
-    /* sloupcový graf pro počty tras podle regionů */
+    /* SUB sloupcový graf pro počty tras podle regionů */
 
 
     // zjištění hodnoty regionu s nejvyšším počtem tras pro potřeby následné definice 100% width grafu
@@ -721,10 +677,12 @@ function processData() {
 
 }
 
+// !CHAPTER
+
 
 
 /* ================================================================================================================================== */
-/* finální přepínání viditelnosti html elementů pomocí tlačítek */
+/* CHAPTER finální přepínání viditelnosti html elementů pomocí tlačítek */
 /* ================================================================================================================================== */
 
 
@@ -765,3 +723,5 @@ function prepnutiStats(x) {
             break;
     }
 }
+
+// !CHAPTER

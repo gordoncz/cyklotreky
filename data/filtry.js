@@ -1,3 +1,38 @@
+// DESC Skripty pro filtry zobrazovaných tras
+
+// =========================================================================================================
+// CHAPTER naplnění dropdown menus v html stránce hodnotami pro délky tras a regiony
+// =========================================================================================================
+
+
+// naplnění dropdown pro délky tras
+var delkyDropdown = document.getElementById("podleDelky");
+// speciální první řádek s hodnotou "všechny"
+delkyDropdown.appendChild(new Option(vsechnyName, vsechnyID));
+// zbytek hodnot pro dropdown
+for (let i = 0; i < delkyIDs.length; i++) {
+    delkyDropdown.appendChild(new Option(delkyNames[i], delkyIDs[i]))
+}
+
+// naplnění dropdown pro regiony
+var regionyDropdown = document.getElementById("podleRegionu");
+// speciální první řádek s hodnotou "všechny"
+regionyDropdown.appendChild(new Option(vsechnyName, vsechnyID));
+// zbytek hodnot pro dropdown
+regiony.forEach(region => {
+    regionyDropdown.appendChild(new Option(region, region));
+});
+
+// !CHAPTER
+
+
+
+// =========================================================================================================
+// CHAPTER funkce pro jednotlivé filtry
+// =========================================================================================================
+
+
+// ITEM Iniciační funkce pro finální spuštění filtrů
 // toto je speciální iniciační funkce, která se spustí až potom, co async funkce načte všechny trasy z JSON souboru
 // do té doby totiž nejsou skriptem vygenerované HTML elementy, které se následně přiřazují těmto variables
 // takže pokud by byly variables deklarované s hodnotami mimo funkci, tak by se tak stalo ještě předtím, než vůbec dané HTML elementy vzniknou
@@ -9,6 +44,7 @@ function spustitFiltry() {
     trasa = trasy.getElementsByClassName("trasaWrapper");
     celkemTras = trasa.length;
     pocitadloDiv = document.getElementById("pocitadloTras");
+    limitAuthorsToOnlyOriginal = false;
 
     // variables pro rendering kružnice do správného divu na stránce
     kruhDiv = document.getElementById('pocitadloKruh');
@@ -24,12 +60,14 @@ function spustitFiltry() {
     stredX = polomerKruznice;
     stredY = polomerKruznice;
 
+    // reset filtrů při načtení stránky
+    resetFilters();
     // toto spustí funkci pro výpočet počtu zobrazených tras při načtení stránky
     countTracks();
 }
 
 
-// funkce pro filtrování tras podle jejich délky
+// ITEM funkce pro filtrování tras podle jejich délky
 function filterByDistance(x) {
 
     // nejprve je nutné smazat délkový filtr ze všech tras, kde mohl být uplatněn předchozí volbou
@@ -56,6 +94,14 @@ function filterByDistance(x) {
             var delka = trasa[i].getElementsByClassName("longest")[0];
         } else if (x == "MD") {
             var delka = trasa[i].getElementsByClassName("multi")[0];
+        } else if (x == "MD2") {
+            var delka = trasa[i].querySelectorAll(".multi.days2")[0];
+        } else if (x == "MD3") {
+            var delka = trasa[i].querySelectorAll(".multi.days3")[0];
+        } else if (x == "MD4") {
+            var delka = trasa[i].querySelectorAll(".multi.days4")[0];
+        } else if (x == "MD5") {
+            var delka = trasa[i].querySelectorAll(".multi.days5")[0];
         }
 
         // a zde se nastaví skrývací class pro všechny trasy, jejichž délka NEodpovídá výběru v dropdown
@@ -69,7 +115,7 @@ function filterByDistance(x) {
     countTracks();
 }
 
-// funkce pro filtrování tras podle regionu
+// ITEM funkce pro filtrování tras podle regionu
 function filterByRegion(x) {
 
     // nejprve je nutné smazat regionální filtr ze všech tras, kde mohl být uplatněn předchozí volbou
@@ -99,28 +145,54 @@ function filterByRegion(x) {
     countTracks();
 }
 
-// funkce zobrazení jen neabsolvovaných tras
-function filterByKnown() {
-    var checkbox = document.getElementById("onlyUnknown");
-
+// ITEM funkce zobrazení jen neabsolvovaných tras
+function filterByKnown(x) {
+    // nejprve je nutné smazat filtr ze všech tras, kde mohl být uplatněn předchozí volbou
     for (i = 0; i < trasa.length; i++) {
-        var known = trasa[i].getElementsByClassName("known")[0];
+        trasa[i].classList.remove("filtrKnown");
+    }
 
-        // pokud je checkbox zaškrtnutý, tak skryje každou trasu[i], která nemá v žádném sub-divu class "known"
-        if ((checkbox.checked == true) && (known != undefined)) {
-            trasa[i].classList.add("filtrKnown");
-        }
+    // zde se funkce ukončí, aby se dále neuplatňoval filtr na žádnou z tras, pokud mají být zobrazeny všechny
+    if (x == "onlyUnknownKnown") {
+        // vždy po aplikování filtru znovu spustit funkci na přepočet čísla v počítadle zobrazených tras
+        countTracks();
+        return;
+    }
 
-        if (checkbox.checked == false) {
-            trasa[i].classList.remove("filtrKnown");
-        }
+
+    switch (x) {
+        case "onlyUnknown":
+            for (i = 0; i < trasa.length; i++) {
+                var known = trasa[i].getElementsByClassName("known")[0];
+
+                // pokud je kliknuto na volbu "Dosud neabsolvované trasy"
+                // tak se skryjí všechny trasy s class "known" v html tagu
+                if (known != undefined) {
+                    trasa[i].classList.add("filtrKnown");
+                }
+            }
+            break;
+        case "onlyKnown":
+            for (i = 0; i < trasa.length; i++) {
+                var known = trasa[i].getElementsByClassName("known")[0];
+
+                // pokud je kliknuto na volbu "Již známé trasy"
+                // tak se skryjí všechny trasy, které class "known" v html tagu nemají
+                if (known == undefined) {
+                    trasa[i].classList.add("filtrKnown");
+                }
+            }
+            break;
+        default:
+            console.log("neznámý input pro filtr neabsolvovaných/známých tras");
+            break;
     }
 
     // vždy po aplikování filtru znovu spustit funkci na přepočet čísla v počítadle zobrazených tras
     countTracks();
 }
 
-// funkce zobrazení jen nově přidaných tras
+// ITEM funkce zobrazení jen nově přidaných tras
 function filterByNew() {
     var checkbox = document.getElementById("onlyNew");
 
@@ -141,7 +213,93 @@ function filterByNew() {
     countTracks();
 }
 
-// funkce vyhledávání/filtrování tras podle názvu
+// ITEM funkce pro filtrování tras podle jejich autorů
+function filterByAuthors(x) {
+
+    // nejprve je nutné smazat filtr autorů ze všech tras, kde mohl být uplatněn předchozí volbou
+    for (i = 0; i < trasa.length; i++) {
+        trasa[i].classList.remove("filtrAuthors");
+    }
+
+    // zde se funkce ukončí, aby se dále neuplatňoval filtr na žádnou z tras, pokud mají být zobrazeny všechny
+    if (x == "onlyAuthorAny") {
+        // vždy po aplikování filtru znovu spustit funkci na přepočet čísla v počítadle zobrazených tras
+        countTracks();
+        return;
+    }
+
+    // kontrola, jestli je nastavené omezení pro zobrazování pouze originálních autorů tras
+    if (limitAuthorsToOnlyOriginal) {
+        // pak se nastaví variable autor podle toho, co za volbu se zvolí v inputu
+        for (i = 0; i < trasa.length; i++) {
+            // speciální variable pro detekci, kdo je uvedený jako autor na prvním místě u dané trasy (tj. jako originální autor)
+            let y = trasa[i].getElementsByClassName("authorsContainer")[0].classList.item(1);
+            // a také na začátku každého loop iteration je nutné resetovat variable autor (aby pak správně filtrovala trasy)
+            var autor = undefined;
+
+            if (x == "onlyAuthorK" && y == "authorK") {
+                var autor = trasa[i].getElementsByClassName("authorK")[0];
+            } else if (x == "onlyAuthorV" && y == "authorV") {
+                var autor = trasa[i].getElementsByClassName("authorV")[0];
+            } else if (x == "onlyAuthorD" && y == "authorD") {
+                var autor = trasa[i].getElementsByClassName("authorD")[0];
+            }
+
+            // a zde se nastaví skrývací class pro všechny trasy, jejichž délka NEodpovídá výběru výše
+            if (autor == undefined) {
+                trasa[i].classList.add("filtrAuthors");
+            }
+        }
+    } else {
+        // pak se nastaví variable autor podle toho, co za volbu se zvolí v inputu
+        for (i = 0; i < trasa.length; i++) {
+            if (x == "onlyAuthorK") {
+                var autor = trasa[i].getElementsByClassName("authorK")[0];
+            } else if (x == "onlyAuthorV") {
+                var autor = trasa[i].getElementsByClassName("authorV")[0];
+            } else if (x == "onlyAuthorD") {
+                var autor = trasa[i].getElementsByClassName("authorD")[0];
+            }
+
+            // a zde se nastaví skrývací class pro všechny trasy, jejichž délka NEodpovídá výběru výše
+            if (autor == undefined) {
+                trasa[i].classList.add("filtrAuthors");
+            }
+        }
+    }
+
+    // vždy po aplikování filtru znovu spustit funkci na přepočet čísla v počítadle zobrazených tras
+    countTracks();
+}
+
+// ITEM funkce pro zatržítko, které kontroluje/nastavuje filtrování striktně jen pro originální autory tras
+function filterByOriginalAuthor() {
+    var originalCheckbox = document.getElementById("originalAuthor");
+
+    if (document.getElementById("onlyAuthorAny").checked) {
+        var preservedAuthor = "onlyAuthorAny";
+    } else if (document.getElementById("onlyAuthorK").checked) {
+        var preservedAuthor = "onlyAuthorK";
+    } else if (document.getElementById("onlyAuthorV").checked) {
+        var preservedAuthor = "onlyAuthorV";
+    } else if (document.getElementById("onlyAuthorD").checked) {
+        var preservedAuthor = "onlyAuthorD";
+    }
+
+    if (originalCheckbox.checked == true) {
+        limitAuthorsToOnlyOriginal = true;
+    }
+
+    if (originalCheckbox.checked == false) {
+        limitAuthorsToOnlyOriginal = false;
+    }
+
+    // po nastavení zatržítka je nutné spustit znovu funkci pro filtrování podle autorů
+    // aby se mohlo aktualizovat zobrazení na stránce
+    filterByAuthors(preservedAuthor);
+}
+
+// ITEM funkce vyhledávání/filtrování tras podle názvu
 function filterByName() {
     var input = document.getElementById("hledatNazev");
     var filter = input.value.toLowerCase();
@@ -164,7 +322,7 @@ function filterByName() {
     countTracks();
 }
 
-// funkce pro reset textového vyhledávacího pole
+// ITEM funkce pro reset textového vyhledávacího pole
 function resetTextu() {
     // nejdřív nastaví hodnotu textového pole na prázdné
     // a potom pustí filtrovací funkci, která vše synchronizuje se zobrazenými trasami na stránce
@@ -172,10 +330,10 @@ function resetTextu() {
     filterByName();
 }
 
-// funkce pro výpočet počtu aktuálně zobrazených tras a zobrazení tohoto čísla na stránce
+// ITEM funkce pro výpočet počtu aktuálně zobrazených tras a zobrazení tohoto čísla na stránce
 function countTracks() {
     // variable, do níž se zapíše počet tras, které nemají žádný skrývací filtr (tj. ty, které jsou aktuálně vidět na stránce)
-    var trasyZobrazeno = document.querySelectorAll(".trasaWrapper:not(.filtrDelka):not(.filtrRegion):not(.filtrKnown):not(.filtrNew):not(.filtrNazev)").length
+    var trasyZobrazeno = document.querySelectorAll(".trasaWrapper:not(.filtrDelka):not(.filtrRegion):not(.filtrKnown):not(.filtrNew):not(.filtrNazev):not(.filtrAuthors)").length
 
     // funkce vezme hodnotu této variable a vloží ji jako obsah divu počítadla na stránce
     pocitadloDiv.innerText = trasyZobrazeno;
@@ -200,7 +358,7 @@ function countTracks() {
     }
 }
 
-// renderování kruhu okolo počtu tras podle toho, jaký je poměr zobrazených vs. celkových tras (parametr "x" převzatý z funkce countTracks)
+// ITEM renderování kruhu okolo počtu tras podle toho, jaký je poměr zobrazených vs. celkových tras (parametr "x" převzatý z funkce countTracks)
 function vykresleniKruznice(x) {
     // helper funkce umožňující používání stupňů pro definici rozsahu kruhu
     // protože nativně pracuje canvas pro kružnice asi v radianech
@@ -237,7 +395,7 @@ function vykresleniKruznice(x) {
     // takže by to bylo znovu to stejné od kruznice.fillStyle až po kruznice.fill();
 }
 
-// funkce pro reset všech filtrů do defaultu
+// ITEM funkce pro reset všech filtrů do defaultu
 function resetFilters() {
     // reset dropdown filtrů
     // nejdřív se nastaví hodnota dropdown na "all"
@@ -247,13 +405,19 @@ function resetFilters() {
     document.getElementById("podleRegionu").value = "all";
     filterByRegion("all");
 
+    // reset radio buttons togglů
+    document.getElementById("onlyUnknownKnown").checked = true;
+    filterByKnown("onlyUnknownKnown");
+    document.getElementById("onlyAuthorAny").checked = true;
+    filterByAuthors("onlyAuthorAny");
+
     // reset zatržítek
     // nejdřív se nastaví zatržítko na "off"
     // a potom se pustí na to navázaná filtrovací funkce, což zařídí elegantní reset daného filtru
-    document.getElementById("onlyUnknown").checked = false;
-    filterByKnown();
     document.getElementById("onlyNew").checked = false;
     filterByNew();
+    document.getElementById("originalAuthor").checked = false;
+    filterByOriginalAuthor();
 
     // reset textového vyhledávání
     // podobně jako předchozí dva případy...
@@ -265,3 +429,5 @@ function resetFilters() {
     // a pro jistotu ještě jednou na konci pustí funkci pro spočítání zobrazených tras
     countTracks();
 }
+
+// !CHAPTER
