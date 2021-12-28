@@ -228,7 +228,7 @@ function naplnitHTMLRegionem(regionNazev) {
             panelContainer.appendChild(panelHeader);
             var poisLink = document.createElement("div");
             poisLink.setAttribute("class", "regionyDetailsGrafika");
-            poisLink.innerHTML = `<a href="${dataRegionu[i].pois}" target="_blank"><img src="../img/dev-mapy.svg" alt="zajímavosti v regionu"></a>`;
+            poisLink.innerHTML = `<a href="${dataRegionu[i].pois}" target="_blank"><img src="img/dev-mapy.svg" alt="zajímavosti v regionu"></a>`;
             panelContainer.appendChild(poisLink);
             var panelDesc = document.createElement("div");
             panelDesc.setAttribute("class", "regionyDetailsPodrobnosti");
