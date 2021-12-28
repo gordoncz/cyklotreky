@@ -280,6 +280,7 @@ li {
         }
         .menuMainItemWrapper.menuCyklo .menuMainItem, .menuMainItemWrapper.menuPesi .menuMainItem {
             border: 3px solid #063984;
+            filter: drop-shadow(0px 0px 3px var(--bgDarker));
         }
         /* individuální zbarvení každého tlačítka zvlášť */
         .menuMainItemWrapper.menuCyklo .menuMainItem {
@@ -479,6 +480,7 @@ li {
         margin-right: auto;
         width: 90%;
         max-width: 900px;
+        line-height: 1.5;
     }
 
 /* hlavní container div pro obsah stránky se statistikou */
@@ -1057,19 +1059,19 @@ padding: 20px 0px 30px 0px;
                 }
                 /* speciální ikonky pro vícedenní trasy místo map-pinu */
                 /* aby díky nim šlo na první pohled poznat, na kolik dní daná trasa je */
-                .kmContainer.multi.days2 ~ .pictureContainer ~ .nazevContainer ~ .regionContainer::before {
+                .kmContainer.multi.days2 ~ .regionContainer::before {
                     content: url("../img/map-pin2.svg");
                     margin-right: 5px;
                 }
-                .kmContainer.multi.days3 ~ .pictureContainer ~ .nazevContainer ~ .regionContainer::before {
+                .kmContainer.multi.days3 ~ .regionContainer::before {
                     content: url("../img/map-pin3.svg");
                     margin-right: 5px;
                 }
-                .kmContainer.multi.days4 ~ .pictureContainer ~ .nazevContainer ~ .regionContainer::before {
+                .kmContainer.multi.days4 ~ .regionContainer::before {
                     content: url("../img/map-pin4.svg");
                     margin-right: 5px;
                 }
-                .kmContainer.multi.days5 ~ .pictureContainer ~ .nazevContainer ~ .regionContainer::before {
+                .kmContainer.multi.days5 ~ .regionContainer::before {
                     content: url("../img/map-pin5.svg");
                     margin-right: 5px;
                 }
@@ -1285,22 +1287,124 @@ padding: 20px 0px 30px 0px;
 /* ======================================================================================================== */
 /* MAPA REGIONŮ */
 
-/* wrapper div pro obalení a hrefu, aby nepřetékal na 100% délky řádku prohlížeče */
-.mapaRegionuWrapper {
-    width: 90%;
-    max-width: 600px;
-    margin: 20px auto;
+/* wrapper div pro mapu regionů */
+#mapaRegionuWrapper {
+    height: 50vh;
+    min-height: 300px;
+    padding-bottom: 20px;
+}
+    @media (max-width: 572px) {
+        #mapaRegionuWrapper {
+            height: 300px;
+            min-height: unset;
+        }
+    }
+
+/* vektorový SVG inline element mapy regionů */
+#mapa-regionu {
+    width: 100%;
+    height: 100%;
+    fill: var(--bgLighter);
+}
+#mapa-regionu > * {
+    cursor: pointer;
+}
+#mapa-regionu > *:hover {
+    fill: var(--highlightColor);
 }
 
-/* stylopis pro samotná tlačítka pro jednotlivé velikosti mapy regionů */
-.mapaRegionu {
-    background-color: var(--bgLight);
-    border: 1px solid black;
-    border-radius: 15px;
-    padding: 5px 10px;
+/* speciální zbarvení vybraného regionu */
+.selectedSVGRegion {
+    fill: var(--themeColor) !important;
 }
-    .mapaRegionu:hover {
-        filter: brightness(120%);
+
+
+/* DETAILY K REGIONŮM */
+
+/* container wrapper pro jednotlivé divy s různými typy detailů k regionům */
+.regionyDetailsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 855px;
+    background-color: var(--bgLight);
+    border-radius: 15px;
+    justify-content: space-evenly;
+}
+
+/* popisek v horní části container divu o tom, o jaký typ informací v tom divu jde */
+.regionyDetailsPopisek {
+    width: 100%;
+    display: block;
+    padding: 15px;
+    box-sizing: border-box;
+    color: gray;
+}
+    .regionyDetailsPopisek > h4 {
+        margin: 0px auto;
+        padding-top: 5px;
+    }
+
+/* prostřední část v divu, kam se vkládá případná grafika jako SVG ikony nebo rating hvězdiček apod. */
+.regionyDetailsGrafika {
+    width: 100%;
+    display: block;
+    padding: 15px;
+    box-sizing: border-box;
+    color: white;
+    font-size: 2.7em;
+}
+
+    /* zbarvení hvězdiček ratingu podle toho, kolik jich je (1-5) */
+    .starRatingFiller {
+        color: gray;
+    }
+    .starRating-1 {
+        color: rgb(165, 0, 0);
+    }
+    .starRating-2 {
+        color: rgb(218, 69, 0);
+    }
+    .starRating-3 {
+        color: rgb(255, 166, 0);
+    }
+    .starRating-4 {
+        color: rgb(121, 148, 0);
+    }
+    .starRating-5 {
+        color: rgb(0, 129, 22);
+    }
+
+/* spodní část divu, která je vyhrazená pro případný textový popis informací v dané kategorii */
+.regionyDetailsPodrobnosti {
+    width: 100%;
+    display: block;
+    padding: 15px;
+    box-sizing: border-box;
+    color: white;
+    line-height: 1.5;
+}
+
+/* speciální část divu pro štítky (tagy) doporučených délek tras v regionu */
+.regionyDetailsTagy {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px 15px 15px 15px;
+    box-sizing: border-box;
+    color: white;
+}
+
+    /* malý tag div společné vlastnosti */
+    .tagDiv {
+        margin: 5px;
+        color: white;
+        padding: 3px 10px;
+        border-radius: 5px;
+        width: fit-content;
     }
 
 

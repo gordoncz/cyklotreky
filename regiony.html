@@ -24,45 +24,24 @@
         <div id="nazevStranky"><h1 onclick="backToTop()">MAPA REGIONŮ</h1></div>
     </div>
 
+    <!-- SUB Div s SVG mapou regionů, která je sem vložena pomocí JavaScriptu -->
+    <div id="mapaRegionuWrapper"></div>
+
     <!-- SUB Hlavní div s obsahem stránky -->
-    <div id="obsahStrankyClassic">
-
-        <p>Vyberte velikost mapy:<br>(obrázek s mapou se otevře v nové záložce prohlíčeče)</p>
-
-        <div class="mapaRegionuWrapper">
-        <a href="img/mapa-regionu-small.jpg" target="_blank">
-            <div class="mapaRegionu">
-                <h3>malá</h3>
-                <p>675 x 450<br>(66 kB)</p>
-            </div>
-        </a>
-        </div>
-        <div class="mapaRegionuWrapper">
-        <a href="img/mapa-regionu-medium.jpg" target="_blank">
-            <div class="mapaRegionu">
-                <h3>střední</h3>
-                <p>1350 x 900<br>(263 kB)</p>
-            </div>
-        </a>
-        </div>
-        <div class="mapaRegionuWrapper">
-        <a href="img/mapa-regionu-large.jpg" target="_blank">
-            <div class="mapaRegionu">
-                <h3>velká</h3>
-                <p>2700 x 1800<br>(965 kB)</p>
-            </div>
-        </a>
-        </div>
-
-    </div>
+    <div id="obsahStrankyClassic">Načítám data...</div>
 
     <!-- SUB Div pro patičku stránky -->
     <div id="patkaStranky"></div>
 
 
     <!-- SUB JavaScript -->
+    <script>var detekceMobilu = window.matchMedia("(pointer: coarse)");</script>
     <script>backToTop = () => window.scroll(0, 0);</script>
     <script src="data/patka.js"></script>
+    <!-- Samotný skript pro vygenerování dat pro informace o regionech -->
+    <script src="data/hodnoty.js"></script>
+    <script src="data/mapaRegionu.js"></script>
+    <script src="data/regiony.js"></script>
 
 </body>
 

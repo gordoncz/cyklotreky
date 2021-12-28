@@ -1,5 +1,14 @@
 [
     {
+        "verze": "22",
+        "datum": "28. prosince 2021",
+        "summary": "modernizována a rozšířena sekce mapy regionů",
+        "detaily": [
+            "Mapa regionů je nově klikatelná a ke každému regionu je díky tomu možné si zobrazit doplňující informace",
+            "V informacích o každém regionu je uvedeno hodnocení dopravní dostupnosti, vhodnost pro cyklo vs. pěší výlety a seznam zajímavostí, takže lze tuto sekci nyní efektivně využít i jako pomocníka pro další plánování nových tras"
+        ]
+    },
+    {
         "verze": "21",
         "datum": "10. prosince 2021",
         "summary": "vylepšené zobrazení dat tras a filtrů",

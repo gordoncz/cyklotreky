@@ -1,0 +1,233 @@
+[
+    {
+        "nazev": "Beskydy",
+        "popis": "Charakter regionu udávají horské masivy odlehlých Beskyd, které tvoří jeho nejvýznamnější část rozlohy. Krásná příroda, nicméně poměrně špatně dostupná jak hromadnou dopravou, tak autem. Beskydy tak vybízejí spíše k pěším než cyklo výletům",
+        "transportRating": 2,
+        "transportDesc": "Obtížné spojení s delší dobou dojezdu a větším množstvím nutných přestupů.",
+        "cykloRating": 2,
+        "cykloTypes": ["M", "L", "MD"],
+        "pesiRating": 3,
+        "pesiTypes": ["MD"],
+        "pois": "https://mapy.cz/s/davovumeda"
+    },
+    {
+        "nazev": "Bílé Karpaty",
+        "popis": "Západní část tvoří nížiny okolo řeky Moravy, kde tamní cyklotrasy nabízí spoustu možností plánování cyklovýletů. Východní část potom tvoří vrcholy Bílých Karpat, které jsou vhodné jak pro cyklo tak pěší turistiku.",
+        "transportRating": 3,
+        "transportDesc": "Jižní část regionu má poměrně dobrou dopravní dostupnost v rámci zaintegrovaných spojů IDS JMK. Střední část je obsluhována poměrně slušně rychlíky, jelikož oblasti okolo Uherského Hradiště a Otrokovic leží na jedné z hlavních vlakových spojnic. Východní hornatá část má již spojení poněkud horší s delším dojezdem, nicméně lze nalézt příhodné spoje v určitých denních časech.",
+        "cykloRating": 4,
+        "cykloTypes": ["M", "L", "XL", "MD"],
+        "pesiRating": 4,
+        "pesiTypes": ["M", "L"],
+        "pois": "https://mapy.cz/s/porusugara"
+    },
+    {
+        "nazev": "Brněnsko",
+        "popis": "Kopcovitý terén v severní části regionu nabízí spoustu příležitostí jak k cyklistickým tak pěším výletům. Rovinatý charakter terénu na jihu a jihovýchodě pak spíše podporuje cykloturistiku.",
+        "transportRating": 5,
+        "transportDesc": "Velmi dobrá dostupnost dopravních spojení v rámci IDS JMK, o něco horší jsou možnosti v západní části regionu, kde neexistují žádné vlakové tratě.",
+        "cykloRating": 5,
+        "cykloTypes": ["S", "M", "L"],
+        "pesiRating": 4,
+        "pesiTypes": ["S", "M", "L"],
+        "pois": "https://mapy.cz/s/nafecuneva"
+    },
+    {
+        "nazev": "Brno",
+        "popis": "Zastavěné části v centru města a okolí neposkytují příliš možností ani pro cyklistickou ani pro pěší turistiku. Jisté možnosti pro aktivity v přírodě pak skýtá několik oblastí na okrajích zastavěného území, které jsou stále ještě v dosahu MHD. Hodí se tak především pro kratší a tréningové trasy.",
+        "transportRating": 5,
+        "transportDesc": "Vynikající dopravní obslužnost po Brně spoji DPMB, které přepravují i jízdní kola. Problémy mohou být v pracovní dny během ranních a odpoledních špiček, kdy mohou být některé spoje příliš přeplněné ke komfortní přepravě kola.",
+        "cykloRating": 4,
+        "cykloTypes": ["S", "M"],
+        "pesiRating": 3,
+        "pesiTypes": ["S", "M"],
+        "pois": "https://mapy.cz/s/bupesarutu"
+    },
+    {
+        "nazev": "Haná",
+        "popis": "S výjimkou Chřibů na jihu je tento region téměř výhradně položený v nížině okolo významných vodních toků Morava, Haná a Bečva. Je tak ideální pro cyklovýlety, naopak pro pěší treky zde moc zajímavých oblastí není.",
+        "transportRating": 4,
+        "transportDesc": "Slušná dostupnost hromadné dopravy jak vlakové rychlíky tak dálkové autobusy směrem na Olomoucko i Přerovsko. Nicméně rychlíky Regiojetu mají mírně omezené možnosti přepravy jízdních kol oproti vlakům ČD.",
+        "cykloRating": 4,
+        "cykloTypes": ["M", "L", "XL"],
+        "pesiRating": 1,
+        "pesiTypes": ["M", "L"],
+        "pois": "https://mapy.cz/s/lumederoru"
+    },
+    {
+        "nazev": "Jeseníky",
+        "popis": "I přes obtížný hornatý terén poskytuje tento region poměrně vyrovnané možnosti pro cyklo i pěší výlety v krásné krajině horských masivů Jeseníků, Králického Sněžníku či Zlatých hor.",
+        "transportRating": 3,
+        "transportDesc": "Relativně slušné vlakové i autobusové spojení přes Olomouc a Šumperk vede do západní části regionu, a to dokonce i s několika přímými spoji z Brna ve vybrané denní časy. Obslužnost východní části regionu na Bruntálsku je již o poznání horší a vyžaduje větší množství přestupů.",
+        "cykloRating": 3,
+        "cykloTypes": ["M", "L", "MD"],
+        "pesiRating": 4,
+        "pesiTypes": ["M", "MD"],
+        "pois": "https://mapy.cz/s/fovejapafe"
+    },
+    {
+        "nazev": "Jižní Čechy",
+        "popis": "Krásná krajina plná rybníků a lesů poskytující ideální příležitosti primárně pro cyklovýlety. Nicméně s ohledem na nutnost dlouhé dopravy do regionu je zde vhodné mít především vícedenní výlety, aby se dlouhá cesta tam a zpět vůbec vyplatila.",
+        "transportRating": 2,
+        "transportDesc": "I přes relativně nevelkou vzdálenost neexistuje prakticky žádné dostatečně rychlé dopravní spojení s tímto regionem, ať už jde o vlaky, autobusy či auto.",
+        "cykloRating": 4,
+        "cykloTypes": ["MD"],
+        "pesiRating": 2,
+        "pesiTypes": ["MD"],
+        "pois": "https://mapy.cz/s/neradehoha"
+    },
+    {
+        "nazev": "Jižní Morava",
+        "popis": "Převážně rovinatý terén se spoustou cyklotras a výbornou dopravní obslužností poskytuje ideální příležitosti primárně pro cykloturistiku. Oblasti pro zajímavé pěší výlety se pak v tomto reginu soustředí do několika málo nerovinatých míst, jako např. Pálava či NP Podyjí.",
+        "transportRating": 4,
+        "transportDesc": "Velmi dobré možnosti hromadné dopravy díky zaintegrovanosti spojů IDS JMK s krátkými dojezdy.",
+        "cykloRating": 5,
+        "cykloTypes": ["S", "M", "L", "XL"],
+        "pesiRating": 2,
+        "pesiTypes": ["M", "L"],
+        "pois": "https://mapy.cz/s/jalepahube"
+    },
+    {
+        "nazev": "Krkonoše",
+        "popis": "Region s primárně horským charakterem a špatnou dopravní dostupností s nutností přestupů a přespání umožňuje spíše pěší treky v krásných horských oblastech Krkonoš či rozsáhlých skalních městech na Broumovsku. Vzhledem ke značně komplikované dopravě je zde však minimum možností pro cykloturistiku.",
+        "transportRating": 2,
+        "transportDesc": "Poměrně špatná dopravní dostupnost všemi prostředky s nutností přestupů přes Hradec Králové a okolní uzly. Prakticky nemožné realizovat výlety bez nutnosti přespání.",
+        "cykloRating": 1,
+        "cykloTypes": ["MD"],
+        "pesiRating": 3,
+        "pesiTypes": ["MD"],
+        "pois": "https://mapy.cz/s/julegomoro"
+    },
+    {
+        "nazev": "Krušnohoří",
+        "popis": "Primárním důvodem návštěvy by mohla být obnovující se příroda v pohoří Krušných hor, nicméně extrémně špatná dopravní dostupnost znamená, že možnosti využití tohoto regionu pro jakékoliv výlety budou spíše jen příležitostné.",
+        "transportRating": 1,
+        "transportDesc": "Extrémně dlouhé časy přesunů do regionu jak autem tak hromadnou dopravou zcela znemožňují jakékoliv jednodenní výlety.",
+        "cykloRating": 1,
+        "cykloTypes": ["MD"],
+        "pesiRating": 2,
+        "pesiTypes": ["MD"],
+        "pois": "https://mapy.cz/s/dararukoge"
+    },
+    {
+        "nazev": "Orlické hory",
+        "popis": "Krásná krajina jak na vrcholcích tak v podhůří Orlických hor nabízí příležitosti jak pro cyklovýlety tak i pro pěší treky (s využitím dopravy autem do jinak méně přístupných míst).",
+        "transportRating": 2,
+        "transportDesc": "Jakákoliv dopravní obslužnost v tomto regionu je diktována dopravním uzlem v Chocni, za nímž není možné do/z regionu najít jakýkoliv spoj bez přestupu.",
+        "cykloRating": 3,
+        "cykloTypes": ["M", "L"],
+        "pesiRating": 3,
+        "pesiTypes": ["M", "L"],
+        "pois": "https://mapy.cz/s/honomufupe"
+    },
+    {
+        "nazev": "Polabí",
+        "popis": "Oblast s překrásnou krajinou a nepřeberným množstvím přírodních zajímavostí je bohužel limitována relativně komplikovanou dopravní dostupností s dlouhými dojezdy. I přes skvělý mix nížinných a horských oblastí jsou pro tento region přeci jen vhodnější pěší treky, u nichž není nutné řešit leckdy specifické podmínky přepravy jízdních kol.",
+        "transportRating": 2,
+        "transportDesc": "Poměrně špatná dopravní obslužnost s téměř výhradní nutností přestupů přes Prahu či Kolín a dlouhými časovými dojezdy limituje možné výlety prakticky jen na vícedenní, aby se doprava do regionu vůbec vyplatila.",
+        "cykloRating": 2,
+        "cykloTypes": ["MD"],
+        "pesiRating": 3,
+        "pesiTypes": ["MD"],
+        "pois": "https://mapy.cz/s/musorudoma"
+    },
+    {
+        "nazev": "Rakousko",
+        "popis": "Z Rakouska je pro nás využitelná hlavně jeho severovýchodní část tvořená spolkovou zemí Dolní Rakousy, která je celkem dobře dopravně dostupná. Vzhledem k vysoce nížínnému charakteru je ale vhodná hlavně pro cykloturistiku.",
+        "transportRating": 2,
+        "transportDesc": "Poměrně slušná dopravní obslužnost jak z hlediska rychlosti tak jednoduchosti spojů. Vzhledem k nutnosti využití mezinárodních linek je ale cena dopravy poněkud vyšší.",
+        "cykloRating": 3,
+        "cykloTypes": ["L", "XL"],
+        "pesiRating": 1,
+        "pesiTypes": ["M", "L"],
+        "pois": "https://mapy.cz/s/jafeferota"
+    },
+    {
+        "nazev": "Slezsko",
+        "popis": "Rovinatý terén a dobrá dopravní obslužnost i přes delší vzdálenost umožňují regionu nabídnout slušné příležitosti primárně k cykloturistice.",
+        "transportRating": 3,
+        "transportDesc": "I přes relativně větší vzdálenot má tento region poměrně slušnou dopravní dostupnost díky železničnímu koridoru na Ostravu a Bohumín. Z této páteřní trasy je pak ale nutné již všude jinde přestupovat. Kapacitní a kvalitativní možnosti pro přepravu jízdních kol rychlíky Regiojetu, které tuto trať obsluhují, jsou však omezené ve srovnání s konkurencí ČD.",
+        "cykloRating": 3,
+        "cykloTypes": ["L", "XL", "MD"],
+        "pesiRating": 1,
+        "pesiTypes": ["M", "L"],
+        "pois": "https://mapy.cz/s/lojazebomu"
+    },
+    {
+        "nazev": "Slovensko",
+        "popis": "Využitelnost Slovenska spočívá primárně jen v jeho nejzápadnějších částech, které jsou relativně dopravně dostupné. Velké vzdálenosti středního nebo dokonce východního Slovenska jednoznačně znemožňují jakékoliv cyklo i pěší výlety. Nížinný charakter regionu na jihozápadě (severně od Bratislavy) je vhodný pro cyklovýlety. Hornaté masivy a překrásná divoká příroda spousty CHKO a národních parků na severozápadě Slovenska (v okolí Žiliny) jsou pak vhodné zase pro pěší treky.",
+        "transportRating": 2,
+        "transportDesc": "Jihozápadní Slovensko má dobré spojení bez přestupu až do Bratislavy s jednou zastávkou v Kútech hned za hranicemi, nicméně nikde jinde. Dál už je nutné s přestupy. Severozápad Slovenska má slušné vlakové spojení primárně přes Ostravu, lze nicméně nalézt i určité přímé autobusy do Žiliny.",
+        "cykloRating": 3,
+        "cykloTypes": ["L", "XL"],
+        "pesiRating": 3,
+        "pesiTypes": ["MD"],
+        "pois": "https://mapy.cz/s/jutojamedu"
+    },
+    {
+        "nazev": "Střední Čechy",
+        "popis": "Z tohoto regionu jsou pro nás vhodné oblasti hlavně ve východním Posázaví (západně od Havlíčkova Brodu), které jsou s jedním přestupem slušně dopravně dostupné. Ostatní atraktivní oblasti jako např. Křivoklátsko či Brdy však již vyžadují přestupy přes Prahu a komplikovanější dopravu s časově dlouhými přesuny, takže využitelnost regionu bude spíše příležitostná.",
+        "transportRating": 2,
+        "transportDesc": "Slušná dopravní dostupnost ve východní části regionu podél řeky Sázavy s nutností pouze jednoho přestupu (díky železničnímu uzlu v Havlíčkově Brodě). Ostatní části regionu jsou však již dostupné hůře a vyžadují přestupy přes Prahu a dlouhé časové přesuny.",
+        "cykloRating": 2,
+        "cykloTypes": ["M", "L", "MD"],
+        "pesiRating": 2,
+        "pesiTypes": ["M", "L", "MD"],
+        "pois": "https://mapy.cz/s/rabasutoge"
+    },
+    {
+        "nazev": "Svitavsko",
+        "popis": "Region vklíněný mezi ostatní zajímavé okolní oblasti nabízí příležitosti k cyklovýletům primárně podél toku řeky Svitavy.",
+        "transportRating": 3,
+        "transportDesc": "Poměrně slušná doprava v centrální a severozápadní části regionu díky hlavnímu vlakovému koridoru na Prahu v údolí řeky Svitavy. Okolní kopcovité oblasti pak vyžadují dodatečné přestupy.",
+        "cykloRating": 3,
+        "cykloTypes": ["M", "L"],
+        "pesiRating": 2,
+        "pesiTypes": ["M", "L"],
+        "pois": "https://mapy.cz/s/bodupozalu"
+    },
+    {
+        "nazev": "Šumava",
+        "popis": "Překrásná krajina na Šumavě skýtá spousty možností pro aktivity v divoké přírodě a unikátní zážitky. Nicméně s ohledem na nutnost dlouhé dopravy do regionu je zde vhodné mít především vícedenní výlety, aby se dlouhá cesta tam a zpět vůbec vyplatila.",
+        "transportRating": 2,
+        "transportDesc": "Poměrně dost špatná dostupnost všemi prostředky s dlouhými časovými přesuny a s nutností přestupů buď přes České Budějovice nebo přes Prahu.",
+        "cykloRating": 3,
+        "cykloTypes": ["MD"],
+        "pesiRating": 4,
+        "pesiTypes": ["MD"],
+        "pois": "https://mapy.cz/s/purojopuso"
+    },
+    {
+        "nazev": "Vysočina",
+        "popis": "Skvěle vyvážený region s dobrou dopravní obslužností a spoustou příležitostí jak pro cyklo tak pro pěší výlety. Díky zajímavé a různorodé krajině a relativně krátkým dojezdům je možné tento region řadit k primárním oblastem pro jakékoliv výlety.",
+        "transportRating": 4,
+        "transportDesc": "Velmi dobrá obslužnost regionu především vlakovou dopravou díky dvěma hlavním tratím na Žďár a Havlíčkův Brod a potom také na Náměšť a Jihlavu. Rychlíkové vlaky ČD na trati směr Havlíčkův Brod jsou ale bohužel stále zajišťovány výhradně soupravami, které nemají možnost přepravy jízdních kol pod vlastním dohledem.",
+        "cykloRating": 5,
+        "cykloTypes": ["M", "L", "XL"],
+        "pesiRating": 5,
+        "pesiTypes": ["M", "L", "MD"],
+        "pois": "https://mapy.cz/s/hozazutuzu"
+    },
+    {
+        "nazev": "Východní Čechy",
+        "popis": "S výjimkou Železných hor je tento region téměř výhradně rovinatý, což z něj spolu se slušnými možnostmi dopravy dělá relativně dobrou oblast pro cyklistické výlety.",
+        "transportRating": 3,
+        "transportDesc": "Východní část regionu je obsluhována rychlíky na páteřní vlakové trati na Prahu přes Pardubice. Jihozápad regionu je pak dostupný celkem slušně díky rychlíkům přes Havlíčkův Brod a Kutnou Horu.",
+        "cykloRating": 4,
+        "cykloTypes": ["M", "L", "XL"],
+        "pesiRating": 2,
+        "pesiTypes": ["M", "L"],
+        "pois": "https://mapy.cz/s/koteveveke"
+    },
+    {
+        "nazev": "Západní Čechy",
+        "popis": "Pro aktivity v přírodě je v tomto regionu nejatraktivnější oblast CHKO Český les, která však leží až na západních hranicích s Německem a dopravní spojení je sem tudíž vysoce časově náročné a praktické využití tak nepříliš reálné.",
+        "transportRating": 1,
+        "transportDesc": "I přes existenci přímého vlakového rychlíkového spoje do Plzně je spojení s tímto regionem značně časově náročné a jeho využití tak nanejvýš příležitostné.",
+        "cykloRating": 1,
+        "cykloTypes": ["MD"],
+        "pesiRating": 1,
+        "pesiTypes": ["MD"],
+        "pois": "https://mapy.cz/s/masanajopa"
+    }
+]
