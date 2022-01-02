@@ -86,13 +86,16 @@ h2 {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.8em;
     color: var(--themeColor);
-    margin-top: 10px;
+    margin-top: 60px;
     margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
     max-width: 900px;
 }
+    h2:first-child {
+        margin-top: 10px;
+    }
 
 /* nadpis využitý pro velikosti mapy regionů */
 h3 {
@@ -1700,68 +1703,89 @@ padding: 20px 0px 30px 0px;
     box-sizing: border-box;
 }
 
+/* wrapper div pro statistiky o rekordních trasách a regionech, který umožní flex zobrazení */
+.recordsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 855px;
+    margin: 0px auto;
+}
+    /* na displejích o malé šířce (např. na mobilech) */
+    @media (max-width: 762px) {
+        .recordsWrapper {
+            justify-content: center;
+        }
+    }
+
 /* container div pro každou z položek souhrnných dat zobrazujících rekordní trasy */
 .statsRecordsContainer {
     display: flex;
-    flex-wrap: nowrap;
-    margin: 20px auto;
-    width: 90%;
-    max-width: 855px;
+    flex-wrap: wrap;
+    width: 45%;
+    min-width: 300px;
     background-color: var(--bgLight);
     border-radius: 15px;
     justify-content: space-evenly;
+    padding: 15px;
 }
-    @media (max-width: 572px) {
+    /* na displejích o malé šířce (např. na mobilech) */
+    @media (max-width: 762px) {
         .statsRecordsContainer {
-            flex-wrap: wrap;
+            width: 100%;
+            margin: 10px 0px;
         }
     }
 
 /* textový popisek položky */
 /* defaultně se zobrazuje vlevo od číselného výsledku */
 .statsRecordsPopisek {
-    width: 50%;
+    width: 100%;
     min-width: 250px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
-    text-align: right;
+    justify-content: center;
+    text-align: center;
     align-items: center;
-    padding: 15px;
+    padding: 5px 0px 15px 0px;
     box-sizing: border-box;
     color: gray;
 }
-    /* na displejích o malé šířce (např. na mobilech) se zobrazí textový popisek nad hodnotami */
-    @media (max-width: 572px) {
-        .statsRecordsPopisek {
-            width: 100%;
-            justify-content: center;
-            text-align: center;
-            padding-bottom: 5px;
-        }
-    }
 
 /* hodnoty (názvy jednotlivých rekordních tras) */
 .statsRecordsVysledek {
-    width: 50%;
+    width: 100%;
     min-width: 250px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    text-align: left;
-    align-items: center;
-    padding: 15px;
+    justify-content: center;
+    text-align: center;
+    align-items: baseline;
+    padding: 5px 0px;
     box-sizing: border-box;
+    color: lightgray;
 }
-    /* na displejích o malé šířce (např. na mobilech) se zobrazí hodnoty pod popiskem */
-    @media (max-width: 572px) {
-        .statsRecordsVysledek {
-            width: 100%;
-            justify-content: center;
-            text-align: center;
-            padding-top: 10px;
-        }
+    /* speciální stylopis pro prvního v pořadí (zlatá medaile/hvězda) */
+    .statsRecordsContainer > div:nth-child(2) {
+        color: white;
+        font-size: 1.1em;
+        padding: 10px 0px 20px 0px;
     }
+
+svg[class^="rank"] {
+    margin-right: 12px;
+}
+.rankGold {
+    fill: rgb(240, 174, 9);
+}
+.rankSilver {
+    fill: rgb(174, 214, 224);
+}
+.rankBronze {
+    fill: rgb(235, 58, 34);
+}
 
 /* CYKLO / PĚŠÍ STATISTIKY */
 
@@ -1845,6 +1869,53 @@ padding: 20px 0px 30px 0px;
     padding: 5px;
 }
 
+/* wrapper div pro přepínací záložky/tlačítka pro jednotlivé kategorie tipy a triky */
+#cykloGrafyButtons, #pesiGrafyButtons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* společná pravidla pro všechny záložky/tlačítka */
+#cykloGrafTrasyBtn, #cykloGrafUnknownBtn, #cykloGrafKnownBtn, #cykloGrafKmBtn, #cykloGrafDnyBtn, 
+#pesiGrafTrasyBtn, #pesiGrafUnknownBtn, #pesiGrafKnownBtn, #pesiGrafKmBtn, #pesiGrafDnyBtn {
+    width: 60px;
+    height: 30px;
+    border: 1px solid white;
+    background-color: var(--bgDarker);
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    /* na mobilech dojde ke zmenšení přepínacích tlačítek na šířku, aby se všechna vešla */
+    @media (max-width: 572px) {
+        #cykloGrafTrasyBtn, #cykloGrafUnknownBtn, #cykloGrafKnownBtn, #cykloGrafKmBtn, #cykloGrafDnyBtn, 
+        #pesiGrafTrasyBtn, #pesiGrafUnknownBtn, #pesiGrafKnownBtn, #pesiGrafKmBtn, #pesiGrafDnyBtn {
+            width: 40px;
+        }
+    }
+    :is(#cykloGrafTrasyBtn, #cykloGrafUnknownBtn, #cykloGrafKnownBtn, #cykloGrafKmBtn, #cykloGrafDnyBtn, 
+    #pesiGrafTrasyBtn, #pesiGrafUnknownBtn, #pesiGrafKnownBtn, #pesiGrafKmBtn, #pesiGrafDnyBtn):hover {
+        border: 1px solid var(--themeColor);
+    }
+    #cykloGrafTrasyBtn.grafActive, #cykloGrafUnknownBtn.grafActive, #cykloGrafKnownBtn.grafActive, #cykloGrafKmBtn.grafActive, #cykloGrafDnyBtn.grafActive, 
+    #pesiGrafTrasyBtn.grafActive, #pesiGrafUnknownBtn.grafActive, #pesiGrafKnownBtn.grafActive, #pesiGrafKmBtn.grafActive, #pesiGrafDnyBtn.grafActive {
+        border: 1px solid var(--themeColor);
+        background-color: var(--themeColor);
+        cursor: default;
+    }
+
+#cykloGrafTrasy, #cykloGrafUnknown, #cykloGrafKnown, #cykloGrafKm, #cykloGrafDny, 
+#pesiGrafTrasy, #pesiGrafUnknown, #pesiGrafKnown, #pesiGrafKm, #pesiGrafDny {
+    margin-top: -20px;
+}
+
 /* wrapper div pro grafy s počty tras v regionech */
 .pageRegionsGraf {
     display: flex;
@@ -1876,9 +1947,15 @@ padding: 20px 0px 30px 0px;
     justify-content: flex-end;
     text-align: right;
     align-items: center;
-    padding: 5px 20px 5px 15px;
+    padding: 5px 20px 5px 5px;
     box-sizing: border-box;
 }
+    /* na displejích o malé šířce (např. na mobilech) */
+    @media (max-width: 762px) {
+        .pageRegionsText {
+            width: 50%;
+        }
+    }
 
 /* vedle regionu číslo s počtem tras v tom daném regionu */
 .pageRegionsNo {
@@ -1907,6 +1984,12 @@ padding: 20px 0px 30px 0px;
     align-items: center;
     height: 10px;
 }
+    /* na displejích o malé šířce (např. na mobilech) */
+    @media (max-width: 762px) {
+        .pageRegionsBarWrap {
+            width: calc(50% - 70px);
+        }
+    }
 
 /* a v tom wrapperu i ten sloupek graficky */
 /* JEHO WIDTH MUSÍ BÝT GENEROVÁNA JAVASCRIPTEM */
@@ -1925,7 +2008,7 @@ padding: 20px 0px 30px 0px;
 
 /* wrapper div pro Murphyho zákony */
 #murphyLaw {
-    margin-bottom: 60px;
+    margin-bottom: 10px;
 }
 
 /* odstavec, kam se JavaScriptem dynamicky vepisují jednotlivé Murphyho zákony */
@@ -1958,7 +2041,7 @@ padding: 20px 0px 30px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 60px;
+    margin-bottom: 10px;
 }
 
 /* container div pro každý jednotlivý update */
@@ -2035,6 +2118,12 @@ padding: 20px 0px 30px 0px;
     justify-content: center;
     align-items: center;
 }
+    /* na mobilech dojde ke zmenšení přepínacích tlačítek na šířku, aby se všechna vešla */
+    @media (max-width: 572px) {
+        #tipsTabCyklotreky, #tipsTabMapycz, #tipsTabDopravci {
+            width: 40px;
+        }
+    }
     #tipsTabCyklotreky:hover, #tipsTabMapycz:hover, #tipsTabDopravci:hover {
         border: 1px solid var(--themeColor);
     }
@@ -2047,7 +2136,7 @@ padding: 20px 0px 30px 0px;
 /* wrapper div pro tipy a triky */
 #tipsWrapper {
     text-align: justify;
-    margin-bottom: 60px;
+    margin-bottom: 10px;
 }
 
 /* puntíky (markery) jednotlivých bodů pro tipy a triky */

@@ -1,5 +1,15 @@
 [
     {
+        "verze": "23",
+        "datum": "2. ledna 2022",
+        "summary": "rozšířené zobrazení statistiky",
+        "detaily": [
+            "Bylo rozšířeno zobrazení statistik k trasám a regionům, kde se nyní zobrazuje více různých informací než předtím",
+            "Ve statistikách se tak nově objevují nejen počty tras, ale např. také součty kilometrů či dní tras apod.",
+            "Také již existující záznamy doznaly rozšíření (takže např. rekordní trasy v každé kategorii jsou uvedeny vždy první tři místo pouze jedné, v sekcích s cyklo a pěšími statistikami lze zobrazit více sloupcových grafů pro regiony atd.)"
+        ]
+    },
+    {
         "verze": "22",
         "datum": "28. prosince 2021",
         "summary": "modernizována a rozšířena sekce mapy regionů",
