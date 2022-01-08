@@ -1,5 +1,16 @@
 [
     {
+        "verze": "24",
+        "datum": "8. ledna 2022",
+        "summary": "interaktivní tlačítka pro pinup girls",
+        "detaily": [
+            "Nově se náhodně vygenerovaná pinup girl nemění při každém zobrazení hlavního menu, ale až do zavření záložky prohlížeče zůstane zobrazená pinup girl stále ta stejná, což zrychluje načítání hlavní stránky při návratu zpět do menu a snižuje nepříjemné problikávání obrázku pinup girl (způsobené časovou prodlevou při nutnosti stahování vždy nového obrázku ze serveru)",
+            "Pinup girls zároveň dostaly nová interaktivní tlačítka, díky nimž je možné si zobrazování pinup girls snadno přizpůsobit",
+            "Kliknutím tlačítka lze kdykoliv náhodně vygenerovat další pinup girl nebo si dokonce vybrat konkrétní pinup girl přímo z galerie",
+            "Navíc jakoukoliv aktuálně zobrazenou pinup girl lze \"uzamknout\", takže Cyklotreky budou následně (až do manuálního \"odemčení\") načítat vždy právě tuto pinup girl na hlavní stránce s menu, a to i po zavření prohlížeče nebo vypnutí PC (pokud je ale v prohlížeči nastaveno automatické mazání offline obsahu stránek při každém ukončení prohlížeče, nebude \"uzamykání\" pinup girls fungovat)"
+        ]
+    },
+    {
         "verze": "23",
         "datum": "2. ledna 2022",
         "summary": "rozšířené zobrazení statistiky",

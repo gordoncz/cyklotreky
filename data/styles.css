@@ -166,6 +166,7 @@ li {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 100px auto 1.7em;
+    z-index: 100;
 }
     /* na mobilu bude tento panel zabírat celou šířku obrazovky (tj. oba grid-columns) */
     @media (pointer: coarse) {
@@ -382,12 +383,135 @@ li {
     background-repeat: no-repeat;
     background-size: cover;
     grid-column: 2 / 3;
+    display: flex;
 }
     /* na mobilu tento panel nebude vůbec zobrazený */
     @media (pointer: coarse) {
         #panelPinup {
             display: none;
         }
+    }
+
+/* wrapper pro akční tlačítka pro pinup girls */
+#pinupButtons {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* společné styly pro akční tlačítka */
+#pinupBtnGallery, #pinupBtnNew, #pinupBtnLock, #pinupBtnUnlock {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0px;
+    padding: 0px;
+    user-select: none;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.400);
+    opacity: 0.5;
+}
+
+/* tlačítko na otevření galerie s pinup girls */
+#pinupBtnGallery {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+/* tlačítko na opětovné náhodné vygenerování nového pinup obrázku */
+#pinupBtnNew {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+/* tlačítko na "uzamčení" aktuálně zobrazené pinup girl do localStorage (aby se načetla opět tato i po zavření prohlížeče) */
+#pinupBtnLock {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+/* tlačítko na "odemčení" aktuálně zobrazené pinup girl do localStorage (aby se načetla opět tato i po zavření prohlížeče) */
+#pinupBtnUnlock {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0.200);
+    opacity: 1.0;
+}
+
+    :is(#pinupBtnGallery, #pinupBtnNew, #pinupBtnLock, #pinupBtnUnlock):hover {
+        background-color: var(--themeColor);
+        opacity: 1.0;
+    }
+
+/* wrapper div pro galerii miniatur obrázků pinup girls */
+#pinupGalleryWrapper {
+    width: calc(90% - 80px);
+    height: calc(90vh - 80px);
+    position: relative;
+    margin: auto;
+    text-align: center;
+    padding: 30px;
+    background-color: var(--bgDark);
+    border-radius: 25px;
+    filter: drop-shadow(5px 5px 10px var(--bgDarker));
+    z-index: 5;
+}
+
+/* flex container div uvnitř wrapperu pro galerii pinup girls, který zajistí správné chování pro flex */
+#pinupGalleryContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    height: 100%;
+    overflow-y: auto;
+    padding: 0px 10px;
+}
+
+/* jednotlivé divy s miniaturami */
+.pinupGalleryItem {
+    width: 150px;
+    height: 100px;
+    margin: 10px;
+    padding: 0px;
+}
+
+    .pinupGalleryItem img {
+        border-radius: 15px;
+        cursor: pointer;
+        user-select: none;
+    }
+        .pinupGalleryItem img:hover {
+            filter: brightness(120%);
+        }
+
+/* zavírací tlačítko galerie miniatur */
+#pinupGalleryCloseButton {
+    width: 40px;
+    height: 20px;
+    position: absolute;
+    top: 0px;
+    right: 35px;
+    z-index: 7;
+    border-radius: 0px 0px 10px 10px;
+    background-color: var(--themeColor);
+    cursor: pointer;
+    user-select: none;
+    font-size: 0.8em;
+}
+
+    #pinupGalleryCloseButton:hover {
+        background-color: var(--highlightColor);
     }
 
 
