@@ -3,9 +3,6 @@
 // hlavní div pro obsah přeměníme na variable pro usnadnění psaní kódu
 var seznamTras = document.getElementById("seznamTras");
 
-// obsah div obsahuje placeholder text "Načítám trasy...", takže tímto ten text smažeme
-seznamTras.innerHTML = "";
-
 
 // SUB načíst data tras ze správného JSON souboru podle typu (cyklo/pěší)
 // pozn. nově je s uvedením async funkce rozlišeno mezi cyklo a pěšími trasami už jen podle globální variable "slozka"...
@@ -27,56 +24,33 @@ function naplnitHTML(typtrasy) {
     for (i = 0; i < typtrasy.length; i++) {
 
         // ITEM celý wrapper div (i vč. infoboxu)
-        var trasaWrapperDiv = document.createElement("div");
-        trasaWrapperDiv.setAttribute("class", "trasaWrapper");
+        var trasaWrapperDiv = createDiv("trasaWrapper");
         seznamTras.appendChild(trasaWrapperDiv);
     
         // ITEM vytvoření hlavního container divu pro trasu
-        var trasaDiv = document.createElement("div");
-        trasaDiv.setAttribute("class", "trasaContainer");
+        var trasaDiv = createDiv("trasaContainer");
             if (typtrasy[i].new === true) {
                 trasaDiv.classList.add("new");
             }
         trasaWrapperDiv.appendChild(trasaDiv);
     
         // ITEM vytvoření a href wrapper odkazu na trasu, do kterého se pak bude vkládat většina ostatních sub-divů
-        var trasaUrlDiv = document.createElement("a");
-        trasaUrlDiv.setAttribute("class", "trasaUrlContainer");
-            // vložení rozdílného url podle toho, jestli je web zobrazen na desktopu nebo na mobilu
-            if (detekceMobilu.matches) {
-                var trasaUrlLink = typtrasy[i].urlmobile;
-            } else {
-                var trasaUrlLink = typtrasy[i].urldesktop;
-            }
-        trasaUrlDiv.href = trasaUrlLink;
-        trasaUrlDiv.target = "_blank";
+        // vložení rozdílného url podle toho, jestli je web zobrazen na desktopu nebo na mobilu (pomocí ternary operator)
+        var trasaUrlLink = detekceMobilu.matches ? typtrasy[i].urlmobile : typtrasy[i].urldesktop;
+        var trasaUrlDiv = createAnchor("trasaUrlContainer", trasaUrlLink);
         trasaDiv.appendChild(trasaUrlDiv);
     
         // ITEM vytvoření a naplnění sub-divu pro km
-        var kmDiv = document.createElement("div");
-        kmDiv.setAttribute("class", "kmContainer");
+        var kmDiv = createDiv("kmContainer");
             // podmíněné formátování barvy podle délky trasy (zvlášť conditions pro cyklo a pěší)
             var pocetDni = typtrasy[i].kmpd.length;
-            if (slozka == "cyklo") {
-                if (typtrasy[i].multiday === true) {
-                    kmDiv.classList.add("multi");
-                    kmDiv.classList.add(`days${pocetDni}`);
-                } else {
-                    if (typtrasy[i].km < 30) {kmDiv.classList.add("short");}
-                    if (typtrasy[i].km >= 30 && typtrasy[i].km < 40) {kmDiv.classList.add("medium");}
-                    if (typtrasy[i].km >= 40 && typtrasy[i].km < 50) {kmDiv.classList.add("long");}
-                    if (typtrasy[i].km >= 50) {kmDiv.classList.add("longest");}
-                }
-            } else if (slozka == "pesi") {
-                if (typtrasy[i].multiday === true) {
-                    kmDiv.classList.add("multi");
-                    kmDiv.classList.add(`days${pocetDni}`);
-                } else {
-                    if (typtrasy[i].km < 10) {kmDiv.classList.add("short");}
-                    if (typtrasy[i].km >= 10 && typtrasy[i].km < 15) {kmDiv.classList.add("medium");}
-                    if (typtrasy[i].km >= 15 && typtrasy[i].km < 20) {kmDiv.classList.add("long");}
-                    if (typtrasy[i].km >= 20) {kmDiv.classList.add("longest");}
-                }
+            if (typtrasy[i].multiday === true) {
+                kmDiv.classList.add("multi");
+                kmDiv.classList.add(`days${pocetDni}`);
+            } else {
+                // určování kategorie délky trasy bylo externalizováno do následující funkce delkaTrasy() v "hodnoty.js"
+                let kategorie = delkaTrasy(slozka, typtrasy[i].km);
+                kmDiv.classList.add(kategorie);
             }
             // dodatečný barevný filtr pro již známé trasy
             if (typtrasy[i].known === true) {
@@ -90,30 +64,24 @@ function naplnitHTML(typtrasy) {
             // pokud je zobrazeno na mobilu, skript přeskočí generování divů pro obrázky
             // takže se ani nebudou na mobilu načítat a ušetří jak místo na obrazovce, tak datové přenosy
         } else {
-            var pictureDiv = document.createElement("div");
-            pictureDiv.setAttribute("class", "pictureContainer");
-            var pictureDivSoubor = typtrasy[i].picture;
-            var pictureDivCesta = `<img src="${slozka}/img/${pictureDivSoubor}.jpg" alt="" loading="lazy">`;
-            pictureDiv.innerHTML = pictureDivCesta;
+            var pictureDiv = createDiv("pictureContainer");
+            pictureDiv.innerHTML = `<img src="${slozka}/img/${typtrasy[i].picture}.jpg" alt="" loading="lazy">`;
             trasaUrlDiv.appendChild(pictureDiv);
         }
     
         // ITEM vytvoření a naplnění sub-divu pro název
-        var nazevDiv = document.createElement("div");
-        nazevDiv.setAttribute("class", "nazevContainer");
+        var nazevDiv = createDiv("nazevContainer");
         nazevDiv.innerHTML = typtrasy[i].nazev;
         trasaUrlDiv.appendChild(nazevDiv);
     
         // ITEM vytvoření a naplnění sub-divu pro region
-        var regionDiv = document.createElement("div");
-        regionDiv.setAttribute("class", "regionContainer");
+        var regionDiv = createDiv("regionContainer");
         regionDiv.innerHTML = typtrasy[i].region;
         trasaUrlDiv.appendChild(regionDiv);
 
         // ITEM vytvoření a naplnění sub-divu pro autory tras
         // container div pro ikonky s autory trasy
-        var authorsDiv = document.createElement("div");
-        authorsDiv.setAttribute("class", "authorsContainer");
+        var authorsDiv = createDiv("authorsContainer");
         trasaUrlDiv.appendChild(authorsDiv);
         // vložení jednotlivých ikonek autorů podle toho, kdo je uveden u dané trasy v json datech
         // autoři tras jsou array, takže dané operace se musí provést vždy pro každého autora v array u každé trasy
@@ -135,16 +103,23 @@ function naplnitHTML(typtrasy) {
             // takže se ani nebudou na mobilu načítat (protože tam nejsou ani potřeba a ani by se neměly kde zobrazit)
         } else {
             // vytvořit container div pro gpx tlačítko (jako přesný wrapper pro anchor tag uvnitř nadřazeného gridu, aby anchor nepřetékal)
-            var gpxContainerDiv = document.createElement("div");
-            gpxContainerDiv.setAttribute("class", "pcGPXcontainer");
+            var gpxContainerDiv = createDiv("pcGPXcontainer");
             trasaDiv.appendChild(gpxContainerDiv);
             // anchor tag uvnitř gpx containeru utvářející odkaz samotného tlačítka
-            var gpxAnchorTag = document.createElement("a");
-            gpxAnchorTag.setAttribute("class", "pcGPXanchor");
-            gpxAnchorTag.href = typtrasy[i].urlmobile;
-            gpxAnchorTag.target = "_blank";
+            var gpxAnchorTag = createAnchor("pcGPXanchor", typtrasy[i].urlmobile);
             gpxAnchorTag.innerHTML = '<img src="img/pcgpx.svg" alt="GPX">';
             gpxContainerDiv.appendChild(gpxAnchorTag);
+        }
+
+        // ITEM vytvoření sub-divu pro skrytý odkaz na trasu ve formátu Plánovače na mobilech (překrývající sub-div s kilometry)
+        // následující if statement zajistí, že tento sub-div bude generovaný jen pro mobily a na PC vůbec nebude (rozbil by tam strukturu divů)
+        if (detekceMobilu.matches) {
+            // vytvořit container div (jako přesný wrapper pro anchor tag uvnitř nadřazeného gridu, aby anchor nepřetékal)
+            var mobilPlanovacContainerDiv = createDiv("mobilPlanovacContainer");
+            trasaDiv.appendChild(mobilPlanovacContainerDiv);
+            // anchor tag uvnitř containeru utvářející odkaz samotného tlačítka
+            var mobilPlanovacAnchorTag = createAnchor("mobilPlanovacAnchor", typtrasy[i].urldesktop);
+            mobilPlanovacContainerDiv.appendChild(mobilPlanovacAnchorTag);
         }
 
         // ITEM podmíněné vytvoření tlačítka pro otevírání/zavírání infoboxu
@@ -154,8 +129,7 @@ function naplnitHTML(typtrasy) {
             // zde prázdné místo, tzn. že když nemá trasa textový obsah pro infobox, nevytvoří se ani žádné tlačítko
         } else {
             // vytvořit infobox
-            var infoboxDiv = document.createElement("div");
-            infoboxDiv.setAttribute("class", "infoboxContainer");
+            var infoboxDiv = createDiv("infoboxContainer");
             trasaWrapperDiv.appendChild(infoboxDiv);
             // přiřadit každému infoboxu unikátní ID
             var iboxID = "ibox" + i;
@@ -180,18 +154,8 @@ function naplnitHTML(typtrasy) {
                 var dailiesStart = '<div class="mdDailies">';
                 var dailies = "";
                 for (let d = 0; d < pocetDni; d++) {
-                    let trip = "";
-                    if (slozka == "cyklo") {
-                        if (typtrasy[i].kmpd[d] < 30) { trip = "short" }
-                        if (typtrasy[i].kmpd[d] >= 30 && typtrasy[i].kmpd[d] < 40) { trip = "medium" }
-                        if (typtrasy[i].kmpd[d] >= 40 && typtrasy[i].kmpd[d] < 50) { trip = "long" }
-                        if (typtrasy[i].kmpd[d] >= 50) { trip = "longest" }
-                    } else if (slozka == "pesi") {
-                        if (typtrasy[i].kmpd[d] < 10) { trip = "short" }
-                        if (typtrasy[i].kmpd[d] >= 10 && typtrasy[i].kmpd[d] < 15) { trip = "medium" }
-                        if (typtrasy[i].kmpd[d] >= 15 && typtrasy[i].kmpd[d] < 20) { trip = "long" }
-                        if (typtrasy[i].kmpd[d] >= 20) { trip = "longest" }
-                    }
+                    // určování kategorie délky trasy bylo externalizováno do následující funkce delkaTrasy() v "hodnoty.js"
+                    let trip = delkaTrasy(slozka, typtrasy[i].kmpd[d]);
                     let newStop = `<p class="mdStop">${typtrasy[i].stops[d]}</p>`;
                     let newKm = `<p class="mdKm ${trip}">${typtrasy[i].kmpd[d]} km</p>`;
                     dailies = dailies + newStop + newKm;
@@ -204,12 +168,10 @@ function naplnitHTML(typtrasy) {
             }
 
             // toto je div pro klikatelnou oblast (aby byla větší než samotná ikona kvůli přístupnosti na mobilech)
-            var infoButtonWrapper = document.createElement("div");
-            infoButtonWrapper.setAttribute("class", "infoButtonContainer");
+            var infoButtonWrapper = createDiv("infoButtonContainer");
             trasaDiv.appendChild(infoButtonWrapper);
             // toto je vložený div, který slouží jako grafické znázornění toho buttonu
-            var infoButtonIcon = document.createElement("div");
-            infoButtonIcon.setAttribute("class", "infoButtonVisual");
+            var infoButtonIcon = createDiv("infoButtonVisual");
             infoButtonWrapper.appendChild(infoButtonIcon);
             infoButtonIcon.innerHTML = "info";
     
@@ -225,7 +187,7 @@ function naplnitHTML(typtrasy) {
 nacistTrasy()
     // pokud se json data načtou v pořádku, spustí se callback funkce a v ní postupně dvě klasické funkce pro naplnění obsahu stránky a pak pro iniciaci filtrů
     // musí být v tomto pořadí, jinak se filtry nedokáží iniciovat korektně
-    .then((typtrasy) => { naplnitHTML(typtrasy); spustitFiltry(); })
+    .then((typtrasy) => { seznamTras.innerHTML = ""; naplnitHTML(typtrasy); spustitFiltry(); })
     // pokud se json data nenačtou, vypíše tato catch funkce error zprávu do hlavního divu stránky
     .catch((err) => { console.log(err); seznamTras.innerHTML = "chyba při načítání dat"; });
 

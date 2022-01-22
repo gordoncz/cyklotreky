@@ -121,6 +121,10 @@ h4 {
     color: lightgray;
 }
 
+.poznamka {
+    color: gray;
+}
+
 ul {
     padding-left: 20px;
 }
@@ -1056,7 +1060,7 @@ padding: 20px 0px 30px 0px;
         /* dodatečné css stylování pro mobily, reflektující fakt, že na mobilech se u tras nezobrazují miniatury reprezentujících fotek */
         @media (pointer: coarse) {
             .trasaContainer {
-                grid-template-columns: minmax(auto, 280px) 70px;
+                grid-template-columns: 50px minmax(auto, 230px) 70px;
                 grid-template-rows: minmax(72px, auto);
             }
         }
@@ -1080,7 +1084,7 @@ padding: 20px 0px 30px 0px;
             /* dodatečné css stylování pro mobily, reflektující fakt, že na mobilech se u tras nezobrazují miniatury reprezentujících fotek */
             @media (pointer: coarse) {
                 .trasaUrlContainer {
-                    grid-column: 1 / 3;
+                    grid-column: 1 / 4;
                     grid-template-columns: 50px minmax(auto, 300px);
                     grid-template-rows: 1fr auto;
                     grid-template-areas: 
@@ -1257,6 +1261,41 @@ padding: 20px 0px 30px 0px;
                 align-items: center;
             }
 
+        /* skryté tlačítko pro zobrazení trasy ve formátu Plánovače i na mobilu */
+        /* ujistit se, že na PC se nikdy nezobrazí (i když v JavaScriptu by neměl být div ani vygenerován) */
+        .mobilPlanovacContainer {
+            display: none;
+        }
+            /* veškeré stylování tak bude jen pro mobil */
+            @media (pointer: coarse) {
+                .mobilPlanovacContainer {
+                    background-color: transparent;
+                    border-radius: 15px 0px 0px 15px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: stretch;
+                    grid-column: 1 / 2;
+                    grid-row: 1 / 2;
+                    z-index: 10;
+                }
+            }
+
+            /* odkaz pro trasu Plánovače na mobilu */
+            /* opět pro jistotu skrytí na PC */
+            .mobilPlanovacAnchor {
+                display: none;
+            }
+                /* stylování pro mobil */
+                @media (pointer: coarse) {
+                    .mobilPlanovacAnchor {
+                        text-decoration: none;
+                        flex-grow: 1;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+
         /* tlačítko pro zobrazení/skrytí infoboxu pod kartou trasy */
         .infoButtonContainer {
             background-color: transparent;
@@ -1270,7 +1309,7 @@ padding: 20px 0px 30px 0px;
         }
             @media (pointer: coarse) {
                 .infoButtonContainer {
-                    grid-column: 2 / 3;
+                    grid-column: 3 / 4;
                 }
             }
 
@@ -1447,6 +1486,53 @@ padding: 20px 0px 30px 0px;
 
 
 /* DETAILY K REGIONŮM */
+
+/* wrapper pro vysvětlivky ke kategoriím délek tras */
+.vysvetlivkyWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
+    width: 90%;
+    max-width: 855px;
+    margin: 0px auto;
+    background-color: var(--bgLight);
+    border-radius: 15px;
+}
+
+/* popisky vysvětlivek */
+.vysvetlivkaCykloPopisek, .vysvetlivkaKategoriePopisek, .vysvetlivkaPesiPopisek, 
+.vysvetlivkaCyklo, .vysvetlivkaKategorie, .vysvetlivkaPesi {
+    width: calc(100% / 3);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.vysvetlivkaCykloPopisek, .vysvetlivkaKategoriePopisek, .vysvetlivkaPesiPopisek {
+    color: gray;
+    padding: 10px;
+}
+.vysvetlivkaKategoriePopisek {
+    text-transform: uppercase;
+}
+
+/* prvky v řádcích pro vysvětlivky */
+.vysvetlivkaCyklo, .vysvetlivkaKategorie, .vysvetlivkaPesi {
+    border-top: 4px solid var(--bgDark);
+    padding: 15px;
+}
+
+/* patička vysvětlivek (prakticky jen pro stylování */
+.vysvetlivkyPatka {
+    width: 100%;
+    color: gray;
+    border-top: 4px solid var(--bgDark);
+    padding: 10px;
+    box-sizing: border-box;
+}
 
 /* container wrapper pro jednotlivé divy s různými typy detailů k regionům */
 .regionyDetailsContainer {
@@ -1993,8 +2079,43 @@ svg[class^="rank"] {
     padding: 5px;
 }
 
+/* speciální barvící css classy pro rozšířené koláčové grafy */
+
+/* vícedenní trasy podle počtu dní */
+.multi2 {
+    background-color: #1a3995;
+}
+.multi3 {
+    background-color: #4b1797;
+}
+.multi4 {
+    background-color: #791377;
+}
+.multi5 {
+    background-color: #9f1241;
+}
+
+/* neabsolvované vs. známé trasy */
+.neabsolvovane {
+    background-color: #005688;
+}
+.zname {
+    background-color: #19685c;
+}
+
+/* trasy podle autorství */
+.autorstviK {
+    background-color: var(--authorK);
+}
+.autorstviV {
+    background-color: var(--authorV);
+}
+.autorstviD {
+    background-color: var(--authorD);
+}
+
 /* wrapper div pro přepínací záložky/tlačítka pro jednotlivé kategorie tipy a triky */
-#cykloGrafyButtons, #pesiGrafyButtons {
+#cykloKolaceButtons, #pesiKolaceButtons, #cykloGrafyButtons, #pesiGrafyButtons {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -2002,6 +2123,8 @@ svg[class^="rank"] {
 }
 
 /* společná pravidla pro všechny záložky/tlačítka */
+#cykloKolacDelkyBtn, #cykloKolacMultiBtn, #cykloKolacKnownBtn, #cykloKolacAutorstviBtn, 
+#pesiKolacDelkyBtn, #pesiKolacMultiBtn, #pesiKolacKnownBtn, #pesiKolacAutorstviBtn, 
 #cykloGrafTrasyBtn, #cykloGrafUnknownBtn, #cykloGrafKnownBtn, #cykloGrafKmBtn, #cykloGrafDnyBtn, 
 #pesiGrafTrasyBtn, #pesiGrafUnknownBtn, #pesiGrafKnownBtn, #pesiGrafKmBtn, #pesiGrafDnyBtn {
     width: 60px;
@@ -2019,15 +2142,21 @@ svg[class^="rank"] {
 }
     /* na mobilech dojde ke zmenšení přepínacích tlačítek na šířku, aby se všechna vešla */
     @media (max-width: 572px) {
+        #cykloKolacDelkyBtn, #cykloKolacMultiBtn, #cykloKolacKnownBtn, #cykloKolacAutorstviBtn, 
+        #pesiKolacDelkyBtn, #pesiKolacMultiBtn, #pesiKolacKnownBtn, #pesiKolacAutorstviBtn, 
         #cykloGrafTrasyBtn, #cykloGrafUnknownBtn, #cykloGrafKnownBtn, #cykloGrafKmBtn, #cykloGrafDnyBtn, 
         #pesiGrafTrasyBtn, #pesiGrafUnknownBtn, #pesiGrafKnownBtn, #pesiGrafKmBtn, #pesiGrafDnyBtn {
             width: 40px;
         }
     }
-    :is(#cykloGrafTrasyBtn, #cykloGrafUnknownBtn, #cykloGrafKnownBtn, #cykloGrafKmBtn, #cykloGrafDnyBtn, 
+    :is(#cykloKolacDelkyBtn, #cykloKolacMultiBtn, #cykloKolacKnownBtn, #cykloKolacAutorstviBtn, 
+    #pesiKolacDelkyBtn, #pesiKolacMultiBtn, #pesiKolacKnownBtn, #pesiKolacAutorstviBtn, 
+    #cykloGrafTrasyBtn, #cykloGrafUnknownBtn, #cykloGrafKnownBtn, #cykloGrafKmBtn, #cykloGrafDnyBtn, 
     #pesiGrafTrasyBtn, #pesiGrafUnknownBtn, #pesiGrafKnownBtn, #pesiGrafKmBtn, #pesiGrafDnyBtn):hover {
         border: 1px solid var(--themeColor);
     }
+    #cykloKolacDelkyBtn.kolacActive, #cykloKolacMultiBtn.kolacActive, #cykloKolacKnownBtn.kolacActive, #cykloKolacAutorstviBtn.kolacActive, 
+    #pesiKolacDelkyBtn.kolacActive, #pesiKolacMultiBtn.kolacActive, #pesiKolacKnownBtn.kolacActive, #pesiKolacAutorstviBtn.kolacActive, 
     #cykloGrafTrasyBtn.grafActive, #cykloGrafUnknownBtn.grafActive, #cykloGrafKnownBtn.grafActive, #cykloGrafKmBtn.grafActive, #cykloGrafDnyBtn.grafActive, 
     #pesiGrafTrasyBtn.grafActive, #pesiGrafUnknownBtn.grafActive, #pesiGrafKnownBtn.grafActive, #pesiGrafKmBtn.grafActive, #pesiGrafDnyBtn.grafActive {
         border: 1px solid var(--themeColor);
@@ -2035,6 +2164,8 @@ svg[class^="rank"] {
         cursor: default;
     }
 
+#cykloKolacDelky, #cykloKolacMulti, #cykloKolacKnown, #cykloKolacAutorstvi, 
+#pesiKolacDelky, #pesiKolacMulti, #pesiKolacKnown, #pesiKolacAutorstvi, 
 #cykloGrafTrasy, #cykloGrafUnknown, #cykloGrafKnown, #cykloGrafKm, #cykloGrafDny, 
 #pesiGrafTrasy, #pesiGrafUnknown, #pesiGrafKnown, #pesiGrafKm, #pesiGrafDny {
     margin-top: -20px;

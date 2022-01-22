@@ -24,10 +24,10 @@ var nacistData = async () => {
 function naplnitHTML(odkazy) {
     for (i = 0; i < odkazy.length; i++) {
 
-        // kategorie tras (což je každý ten array object "mapy", "idos" atd.)
-        var kategorie = Object.keys(odkazy[i]);
         // jméno kategorie tras (což je to array object name před dvojtečkou ve formě string)
         var kategorieName = Object.keys(odkazy[i])[0];
+        // kategorie tras (což je každý ten array object "mapy", "idos" atd.)
+        var kategorieArr = Object.values(odkazy[i])[0];
     
         // vytvořit wrapper pro každou kategorii odkazů
         var linksWrapper = document.createElement("div");
@@ -37,7 +37,7 @@ function naplnitHTML(odkazy) {
         // do wrapperu vložit header, kde bude logo dané kategorie odkazů
         var linksHeader = document.createElement("div");
         linksHeader.setAttribute("class", "linksHeader");
-        linksHeader.style.backgroundImage = "url(\"img/links-" + kategorieName + ".svg\")";
+        linksHeader.style.backgroundImage = `url("img/links-${kategorieName}.svg")`;
         linksWrapper.appendChild(linksHeader);
     
         // pod header vložit div, ve kterém budou jednotlivé odkazy
@@ -46,12 +46,12 @@ function naplnitHTML(odkazy) {
         linksWrapper.appendChild(linksBody);
     
             // do linksBody vložit postupně jeden odkaz za druhým
-            for (x = 0; x < odkazy[i][kategorie].length; x++) {
+            for (x = 0; x < kategorieArr.length; x++) {
     
                 // variables pro jméno a url každého odkazu
                 // linkObject je každý object {} uvnitř každé kategorie array (jako "mapy", "idos" atd.)
                 // a tento linkObject má v sobě vždy dvě name:value (text a url)
-                var linkObject = odkazy[i][Object.keys(odkazy[i])][x];
+                var linkObject = kategorieArr[x];
     
                 // vytvořit odstavec, do něj a-href odkaz a naplnit ho textem a url adresou
                 var linkOdstavec = document.createElement("p");

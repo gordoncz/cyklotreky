@@ -174,20 +174,20 @@ howTo()
 function tipsPrepnuti(x) {
     // for loop prohledá global array object, aby zjistil, kde přesně je match
     for (i = 0; i < tipsPairs.length; i++) {
+        // nadefinování potřebných variables, se kterými se pracuje níže v rámci loopu
+        let identifikator = Object.keys(tipsPairs[i])[0];
+        let button = document.getElementById(identifikator);
+        let tab = document.getElementById(Object.values(tipsPairs[i])[0]);
         // sleduje se match hodnoty x (tj. id přeneseného html tagu tlačítka) s Key hodnotou objektu
         // pokud se neshodují, tak se element skryje přes inline style.display = none v html tagu
         // pokud už tato hodnota v html tagu je, tak jen zůstane takto
-        if (x !== Object.keys(tipsPairs[i])[0]) {
-            var button = document.getElementById(Object.keys(tipsPairs[i])[0]);
-            var hide = document.getElementById(Object.values(tipsPairs[i])[0]);
-            hide.style.display = "none";
+        if (x !== identifikator) {
+            tab.style.display = "none";
             button.classList.remove("tabActive");
         } else {
             // v opačném případě (pokud se hodnoty shodují), tak se příslušný obsahový div naopak zobrazí
             // díky tomu se vždy zobrazí ten obsahový div, jehož id má match na id tlačítka v rámci global array/objektu
-            var button = document.getElementById(Object.keys(tipsPairs[i])[0]);
-            var show = document.getElementById(Object.values(tipsPairs[i])[0]);
-            show.style.display = "block";
+            tab.style.display = "block";
             button.classList.add("tabActive");
         }
     }

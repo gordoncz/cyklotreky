@@ -1,5 +1,16 @@
 [
     {
+        "verze": "25",
+        "datum": "22. ledna 2022",
+        "summary": "nová možnost zobrazení trasy ve formátu Plánovače i na mobilu",
+        "detaily": [
+            "Nově lze nyní zobrazit trasu ve formátu Plánovače také na mobilu, stačí v panelu s trasou klepnout na políčko s počtem kilometrů",
+            "Do statistiky v podsekcích pro cyklo a pěší trasy byly přidány nové koláčové grafy",
+            "Na úvodní stránku sekce regiony byly přidány vysvětlivky, do jakých kategorií spadají trasy podle počtu kilometrů jejich délky",
+            "Aktualizována, opravena a přidána některá data v sekci užitečné odkazy a doplněny další informace v sekci tipy a triky"
+        ]
+    },
+    {
         "verze": "24",
         "datum": "8. ledna 2022",
         "summary": "interaktivní tlačítka pro pinup girls",

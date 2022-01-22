@@ -32,6 +32,10 @@
             {
                 "linktext": "Interaktivní mapa dopravních spojů",
                 "linkurl": "http://mapy.idos.cz/"
+            },
+            {
+                "linktext": "Přehledová mapa krajských integrovaných dopravních systémů",
+                "linkurl": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Integrovan%C3%A9_dopravn%C3%AD_syst%C3%A9my_2020.png"
             }
         ]
     },
@@ -74,6 +78,10 @@
                 "linkurl": "https://oneticket.cz/#/home"
             },
             {
+                "linktext": "Výjimky z platnosti OneTicket",
+                "linkurl": "https://asistence.oneticket.cz/files/rutinni-provoz-detail.jpg"
+            },
+            {
                 "linktext": "Mapa železniční sítě",
                 "linkurl": "files/mapa-zel-site.pdf"
             },
@@ -88,6 +96,10 @@
             {
                 "linktext": "Grafická prezentace polohy vlaků v ČR (GRAPP)",
                 "linkurl": "https://grapp.spravazeleznic.cz/"
+            },
+			{
+                "linktext": "Interaktivní mapa výluk na železnici",
+                "linkurl": "https://mapy.spravazeleznic.cz/mu"
             }
         ]
     },
@@ -130,12 +142,8 @@
                 "linkurl": "https://jizdenky.arriva.cz/"
             },
             {
-                "linktext": "Mapa linek cyklobusů v Orlických horách",
-                "linkurl": "https://www.arriva.cz/file/edee/avc/kde-jezdime/skibusy-a-cyklobusy/orlicke-hory/cyklo_oh.jpg"
-            },
-            {
-                "linktext": "Mapa linek cyklobusů v Krkonoších",
-                "linkurl": "https://www.arriva.cz/file/edee/avc/kde-jezdime/skibusy-a-cyklobusy/krkonose/cyklo_krk.jpg"
+                "linktext": "Mapa linek cyklobusů v Orlických horách (většina je ale od roku 2021 již bez Arrivy)",
+                "linkurl": "https://www.euro-glacensis.cz/files/jizdni_rady/mapa-cyklobusy-linky-2021-1.jpg"
             }
         ]
     },

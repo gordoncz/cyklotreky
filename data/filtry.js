@@ -85,23 +85,23 @@ function filterByDistance(x) {
     // pak se nastaví variable delka podle toho, co za volbu je vybráno v dropdown
     for (i = 0; i < trasa.length; i++) {
         if (x == "S") {
-            var delka = trasa[i].getElementsByClassName("short")[0];
+            var delka = trasa[i].querySelectorAll(".kmContainer.short")[0];
         } else if (x == "M") {
-            var delka = trasa[i].getElementsByClassName("medium")[0];
+            var delka = trasa[i].querySelectorAll(".kmContainer.medium")[0];
         } else if (x == "L") {
-            var delka = trasa[i].getElementsByClassName("long")[0];
+            var delka = trasa[i].querySelectorAll(".kmContainer.long")[0];
         } else if (x == "XL") {
-            var delka = trasa[i].getElementsByClassName("longest")[0];
+            var delka = trasa[i].querySelectorAll(".kmContainer.longest")[0];
         } else if (x == "MD") {
-            var delka = trasa[i].getElementsByClassName("multi")[0];
+            var delka = trasa[i].querySelectorAll(".kmContainer.multi")[0];
         } else if (x == "MD2") {
-            var delka = trasa[i].querySelectorAll(".multi.days2")[0];
+            var delka = trasa[i].querySelectorAll(".kmContainer.multi.days2")[0];
         } else if (x == "MD3") {
-            var delka = trasa[i].querySelectorAll(".multi.days3")[0];
+            var delka = trasa[i].querySelectorAll(".kmContainer.multi.days3")[0];
         } else if (x == "MD4") {
-            var delka = trasa[i].querySelectorAll(".multi.days4")[0];
+            var delka = trasa[i].querySelectorAll(".kmContainer.multi.days4")[0];
         } else if (x == "MD5") {
-            var delka = trasa[i].querySelectorAll(".multi.days5")[0];
+            var delka = trasa[i].querySelectorAll(".kmContainer.multi.days5")[0];
         }
 
         // a zde se nastaví skrývací class pro všechny trasy, jejichž délka NEodpovídá výběru v dropdown

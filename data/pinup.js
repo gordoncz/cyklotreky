@@ -115,48 +115,40 @@ function generatePinup() {
         return;
     } else {
 
-        // ITEM kontrola localStorage, jestli je v něm uložena nějaká pinup girl
+        let pinupLocationCss = "";
+
         if (localStorage.getItem('gczCT7pinupLocal')) {
+            // ITEM kontrola localStorage, jestli je v něm uložena nějaká pinup girl
             // jestli v localStorage už je záznam, pak se nastaví pinup girl podle něj
             var lGirl = localStorage.getItem('gczCT7pinupLocal');
 
             // variable pro celou složenou adresu toho náhodně zvoleného obrázku ve formátu CSS
-            var pinupLocationCss = "url('pinup/" + lGirl + ".jpg')";
+            pinupLocationCss = `url("pinup/${lGirl}.jpg")`;
 
-            // finální přidání vygenerovaného obrázku do html kódu divu panelPinup
-            pinupDiv.style.backgroundImage = pinupLocationCss;
-            return;
         } else if (sessionStorage.getItem('gczCT7pinupSession')) {
             // ITEM kontrola sessionStorage, jestli už zde byla načtena nějaká pinup girl
-
             // jestli v sessionStorage už je záznam, pak se nastaví pinup girl podle něj
             var sGirl = sessionStorage.getItem('gczCT7pinupSession');
 
             // variable pro celou složenou adresu toho náhodně zvoleného obrázku ve formátu CSS
-            var pinupLocationCss = "url('pinup/" + sGirl + ".jpg')";
-
-            // finální přidání vygenerovaného obrázku do html kódu divu panelPinup
-            pinupDiv.style.backgroundImage = pinupLocationCss;
-            return;
+            pinupLocationCss = `url("pinup/${sGirl}.jpg")`;
 
         } else {
             // ITEM pokud v sessionStorage žádný záznam není, tak se vygeneruje náhodně z array a následně uloží do sessionStorage
-
             // vygenerování náhodného čísla od 0 do pinupPool.length-1
             // to vybere číslo pro index v rámci výše definovaného array
             // a to index číslo pak určí, který string (obrázek) se z array vybere pro background-image
             var randomNumber = Math.floor(Math.random() * pinupPool.length);
 
             // variable pro celou složenou adresu toho náhodně zvoleného obrázku ve formátu CSS
-            var pinupLocationCss = "url('pinup/" + pinupPool[randomNumber] + ".jpg')";
+            pinupLocationCss = `url("pinup/${pinupPool[randomNumber]}.jpg")`;
 
             // uložit do sessionStorage pro případ reloadu
             sessionStorage.setItem('gczCT7pinupSession', pinupPool[randomNumber]);
-
-            // finální přidání vygenerovaného obrázku do html kódu divu panelPinup
-            pinupDiv.style.backgroundImage = pinupLocationCss;
-            return;
         }
+        
+        // finální přidání vygenerovaného obrázku do html kódu divu panelPinup
+        pinupDiv.style.backgroundImage = pinupLocationCss;
     }
 }
 

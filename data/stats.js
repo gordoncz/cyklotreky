@@ -22,7 +22,9 @@ var tlacitkoStatsPesi;
 var souhrnPage;
 var cykloPage;
 var pesiPage;
-// speciální arrays s HTML objekty pro přepínání záložek s grafy
+// speciální arrays s HTML objekty pro přepínání záložek s koláčovými a sloupcovými grafy
+var cykloKolace = [];
+var pesiKolace = [];
 var cykloGrafy = [];
 var pesiGrafy = [];
 // svg ikonka pro ranking (která pak bude vybarvovaná přes CSS)
@@ -110,11 +112,11 @@ function processData() {
     // počet tras celkem v celé databázi (cyklo a pěší dohromady)
     var pocetCelkem = pocetCyklo + pocetPesich;
 
-    // výpočet počtu dosud neabsolvovaných tras (s vloženým parametrem do funkce podle typu tras)
-    function neabsolvovaneTrasy(typ) {
+    // výpočet počtu dosud neabsolvovaných / již známých / nových tras
+    function zname_neabsolvovane_nove_Trasy(typTras, typDat, condition) {
         let x = 0;
-        for (i = 0; i < typ.length; i++) {
-            if (typ[i].known == false) {
+        for (i = 0; i < typTras.length; i++) {
+            if (typTras[i][typDat] == condition) {
                 x++;
             }
         }
@@ -122,40 +124,16 @@ function processData() {
     }
 
     // zde se do variables převedou výsledky výpočtu z funkce výše již právě podle typu tras
-    var neabsolvovaneCyklo = neabsolvovaneTrasy(cyklotrasy);
-    var neabsolvovanePesi = neabsolvovaneTrasy(pesitrasy);
+    var neabsolvovaneCyklo = zname_neabsolvovane_nove_Trasy(cyklotrasy, "known", false);
+    var neabsolvovanePesi = zname_neabsolvovane_nove_Trasy(pesitrasy, "known", false);
     var neabsolvovaneCelkem = neabsolvovaneCyklo + neabsolvovanePesi;
 
-    // výpočet počtu již známých tras (s vloženým parametrem do funkce podle typu tras)
-    function znameTrasy(typ) {
-        let x = 0;
-        for (i = 0; i < typ.length; i++) {
-            if (typ[i].known == true) {
-                x++;
-            }
-        }
-        return x;
-    }
-
-    // zde se do variables převedou výsledky výpočtu z funkce výše již právě podle typu tras
-    var znameCyklo = znameTrasy(cyklotrasy);
-    var znamePesi = znameTrasy(pesitrasy);
+    var znameCyklo = zname_neabsolvovane_nove_Trasy(cyklotrasy, "known", true);
+    var znamePesi = zname_neabsolvovane_nove_Trasy(pesitrasy, "known", true);
     var znameCelkem = znameCyklo + znamePesi;
 
-    // obdobný výpočet pro nově přidané trasy
-    function noveTrasy(typ) {
-        let x = 0;
-        for (i = 0; i < typ.length; i++) {
-            if (typ[i].new) {
-                x++;
-            }
-        }
-        return x;
-    }
-
-    // zde se do variables převedou výsledky výpočtu z funkce výše již právě podle typu tras
-    var noveCyklo = noveTrasy(cyklotrasy);
-    var novePesi = noveTrasy(pesitrasy);
+    var noveCyklo = zname_neabsolvovane_nove_Trasy(cyklotrasy, "new", true);
+    var novePesi = zname_neabsolvovane_nove_Trasy(pesitrasy, "new", true);
     var noveCelkem = noveCyklo + novePesi;
 
     // výpočet celkového počtu km tras
@@ -191,70 +169,43 @@ function processData() {
     /* SUB nejkratší a nejdelší trasy */
 
 
-    // funkce sloužící pro Array.filter() "method" níže
-    // (k tomu, aby se podle zadaných parametrů ve funkci vytvořil NOVÝ array jen s těmi objekty z původní array, které zadanou podmínku splňují)
-    function pouzeJednodenni(arr) {
-        // vybrat jen objekty z array, které nejsou vícedenní
-        return arr.multiday === false;
-    }
-
-    function pouzeVicedenni(arr) {
-        // vybrat jen objekty z array, které jsou vícedenní
-        return arr.multiday === true;
-    }
-
     // variables, ze kterých budou NOVÉ array(s) pro nejkratší a nejdelší trasy
     // (tento nový array bude vždy složený jen z jednodenních/vícedenních tras)
-    var jednodenniCyklo = cyklotrasy.filter(pouzeJednodenni);
-    var vicedenniCyklo = cyklotrasy.filter(pouzeVicedenni);
-    var jednodenniPesi = pesitrasy.filter(pouzeJednodenni);
-    var vicedenniPesi = pesitrasy.filter(pouzeVicedenni);
+    var jednodenniCyklo = cyklotrasy.filter(arr => !arr.multiday);
+    var vicedenniCyklo = cyklotrasy.filter(arr => arr.multiday);
+    var jednodenniPesi = pesitrasy.filter(arr => !arr.multiday);
+    var vicedenniPesi = pesitrasy.filter(arr => arr.multiday);
+
+    // funkce pro výběr vždy TOP 3 z arrays výše
+    function nejkratsiTop3(array) {
+        return [
+            {"value": array[0].km, "name": array[0].nazev},
+            {"value": array[1].km, "name": array[1].nazev},
+            {"value": array[2].km, "name": array[2].nazev}
+        ]
+    }
+    function nejdelsiTop3(array) {
+        return [
+            {"value": array[array.length - 1].km, "name": array[array.length - 1].nazev},
+            {"value": array[array.length - 2].km, "name": array[array.length - 2].nazev},
+            {"value": array[array.length - 3].km, "name": array[array.length - 3].nazev}
+        ]
+    }
 
     // zde z array(s) výše vyjmeme vždy 3 objekty podle kritéria, které zrovna hodnotíme
     // POZOR: POČÍTÁ SE S TÍM, ŽE JIŽ PŮVODNÍ ARRAY(S) JSOU OBĚ IMPLICITNĚ SPRÁVNĚ SEŘAZENÉ PODLE POČTU KM!!!
     // (pokud ne, nebudou kódy zde fungovat správně)
+
     // nej- cyklotrasy (název a km)
-    var nejkratsiJednoCyklo = [
-        {"value": jednodenniCyklo[0].km, "name": jednodenniCyklo[0].nazev},
-        {"value": jednodenniCyklo[1].km, "name": jednodenniCyklo[1].nazev},
-        {"value": jednodenniCyklo[2].km, "name": jednodenniCyklo[2].nazev}
-    ]
-    var nejdelsiJednoCyklo = [
-        {"value": jednodenniCyklo[jednodenniCyklo.length - 1].km, "name": jednodenniCyklo[jednodenniCyklo.length - 1].nazev},
-        {"value": jednodenniCyklo[jednodenniCyklo.length - 2].km, "name": jednodenniCyklo[jednodenniCyklo.length - 2].nazev},
-        {"value": jednodenniCyklo[jednodenniCyklo.length - 3].km, "name": jednodenniCyklo[jednodenniCyklo.length - 3].nazev}
-    ];
-    var nejkratsiViceCyklo = [
-        {"value": vicedenniCyklo[0].km, "name": vicedenniCyklo[0].nazev},
-        {"value": vicedenniCyklo[1].km, "name": vicedenniCyklo[1].nazev},
-        {"value": vicedenniCyklo[2].km, "name": vicedenniCyklo[2].nazev}
-    ];
-    var nejdelsiViceCyklo = [
-        {"value": vicedenniCyklo[vicedenniCyklo.length - 1].km, "name": vicedenniCyklo[vicedenniCyklo.length - 1].nazev},
-        {"value": vicedenniCyklo[vicedenniCyklo.length - 2].km, "name": vicedenniCyklo[vicedenniCyklo.length - 2].nazev},
-        {"value": vicedenniCyklo[vicedenniCyklo.length - 3].km, "name": vicedenniCyklo[vicedenniCyklo.length - 3].nazev}
-    ];
+    var nejkratsiJednoCyklo = nejkratsiTop3(jednodenniCyklo);
+    var nejdelsiJednoCyklo = nejdelsiTop3(jednodenniCyklo);
+    var nejkratsiViceCyklo = nejkratsiTop3(vicedenniCyklo);
+    var nejdelsiViceCyklo = nejdelsiTop3(vicedenniCyklo);
     // nej- pěší trasy (název a km)
-    var nejkratsiJednoPesi = [
-        {"value": jednodenniPesi[0].km, "name": jednodenniPesi[0].nazev},
-        {"value": jednodenniPesi[1].km, "name": jednodenniPesi[1].nazev},
-        {"value": jednodenniPesi[2].km, "name": jednodenniPesi[2].nazev}
-    ];
-    var nejdelsiJednoPesi = [
-        {"value": jednodenniPesi[jednodenniPesi.length - 1].km, "name": jednodenniPesi[jednodenniPesi.length - 1].nazev},
-        {"value": jednodenniPesi[jednodenniPesi.length - 2].km, "name": jednodenniPesi[jednodenniPesi.length - 2].nazev},
-        {"value": jednodenniPesi[jednodenniPesi.length - 3].km, "name": jednodenniPesi[jednodenniPesi.length - 3].nazev}
-    ];
-    var nejkratsiVicePesi = [
-        {"value": vicedenniPesi[0].km, "name": vicedenniPesi[0].nazev},
-        {"value": vicedenniPesi[1].km, "name": vicedenniPesi[1].nazev},
-        {"value": vicedenniPesi[2].km, "name": vicedenniPesi[2].nazev}
-    ];
-    var nejdelsiVicePesi = [
-        {"value": vicedenniPesi[vicedenniPesi.length - 1].km, "name": vicedenniPesi[vicedenniPesi.length - 1].nazev},
-        {"value": vicedenniPesi[vicedenniPesi.length - 2].km, "name": vicedenniPesi[vicedenniPesi.length - 2].nazev},
-        {"value": vicedenniPesi[vicedenniPesi.length - 3].km, "name": vicedenniPesi[vicedenniPesi.length - 3].nazev}
-    ];
+    var nejkratsiJednoPesi = nejkratsiTop3(jednodenniPesi);
+    var nejdelsiJednoPesi = nejdelsiTop3(jednodenniPesi);
+    var nejkratsiVicePesi = nejkratsiTop3(vicedenniPesi);
+    var nejdelsiVicePesi = nejdelsiTop3(vicedenniPesi);
 
 
     /* -------------------------------------------------------- */
@@ -265,21 +216,11 @@ function processData() {
     var poctyCykloRegiony = new Array;
     var poctyPesiRegiony = new Array;
 
-    // funkce pro výpočet počtu cyklotras v každém regionu
-    function vypocetCykloRegiony(region) {
+    // funkce pro výpočet počtu cyklo a pěších tras v každém regionu
+    function vypocetRegiony(typTras, region) {
         let x = 0;
-        for (i = 0; i < cyklotrasy.length; i++) {
-            if (cyklotrasy[i].region == region) {
-                x++;
-            }
-        }
-        return x;
-    }
-    // to samé pro pěší trasy
-    function vypocetPesiRegiony(region) {
-        let x = 0;
-        for (i = 0; i < pesitrasy.length; i++) {
-            if (pesitrasy[i].region == region) {
+        for (i = 0; i < typTras.length; i++) {
+            if (typTras[i].region == region) {
                 x++;
             }
         }
@@ -289,11 +230,11 @@ function processData() {
     // for loop, který prochází array s regiony v samostatném souboru "hodnoty.js"
     // a pro každý region spočítá počet cyklotras z originálního array
     for (e = 0; e < regiony.length; e++) {
-        poctyCykloRegiony.push({"value": vypocetCykloRegiony(regiony[e]), "name": regiony[e]});
+        poctyCykloRegiony.push({"value": vypocetRegiony(cyklotrasy, regiony[e]), "name": regiony[e]});
     }
     // to samé pro pěší trasy
     for (e = 0; e < regiony.length; e++) {
-        poctyPesiRegiony.push({"value": vypocetPesiRegiony(regiony[e]), "name": regiony[e]});
+        poctyPesiRegiony.push({"value": vypocetRegiony(pesitrasy, regiony[e]), "name": regiony[e]});
     }
 
     // seřadit tyto Array(s) podle počtů tras v regionech (od nejvíce po nejméně)
@@ -302,28 +243,21 @@ function processData() {
 
 
     /* -------------------------------------------------------- */
-    /* SUB počty dosud neabsolvovaných tras v regionech */
+    /* SUB počty dosud neabsolvovaných / již známých tras v regionech */
 
 
     // vytvořit nový Array, který bude sloužit pro tabulku/graf s počtem tras pro jednotlivé regiony
     var poctyUnknownCykloRegiony = new Array;
     var poctyUnknownPesiRegiony = new Array;
 
+    var poctyKnownCykloRegiony = new Array;
+    var poctyKnownPesiRegiony = new Array;
+
     // funkce pro výpočet počtu dosud neabsolvovaných cyklotras v každém regionu
-    function vypocetUnknownCykloRegiony(region) {
+    function vypocet_known_unknown_Regiony(typTras, region, condition) {
         let x = 0;
-        for (i = 0; i < cyklotrasy.length; i++) {
-            if ((cyklotrasy[i].region == region) && (cyklotrasy[i].known == false)) {
-                x++;
-            }
-        }
-        return x;
-    }
-    // to samé pro pěší trasy
-    function vypocetUnknownPesiRegiony(region) {
-        let x = 0;
-        for (i = 0; i < pesitrasy.length; i++) {
-            if ((pesitrasy[i].region == region) && (pesitrasy[i].known == false)) {
+        for (i = 0; i < typTras.length; i++) {
+            if ((typTras[i].region == region) && (typTras[i].known == condition)) {
                 x++;
             }
         }
@@ -333,11 +267,11 @@ function processData() {
     // for loop, který prochází array s regiony v samostatném souboru "hodnoty.js"
     // a pro každý region spočítá počet dosud neabsolvovaných cyklotras z originálního array
     for (e = 0; e < regiony.length; e++) {
-        poctyUnknownCykloRegiony.push({"value": vypocetUnknownCykloRegiony(regiony[e]), "name": regiony[e]});
+        poctyUnknownCykloRegiony.push({"value": vypocet_known_unknown_Regiony(cyklotrasy, regiony[e], false), "name": regiony[e]});
     }
     // to samé pro pěší trasy
     for (e = 0; e < regiony.length; e++) {
-        poctyUnknownPesiRegiony.push({"value": vypocetUnknownPesiRegiony(regiony[e]), "name": regiony[e]});
+        poctyUnknownPesiRegiony.push({"value": vypocet_known_unknown_Regiony(pesitrasy, regiony[e], false), "name": regiony[e]});
     }
 
     // seřadit tyto Array(s) podle počtů dosud neabsolvovaných tras v regionech (od nejvíce po nejméně)
@@ -345,43 +279,14 @@ function processData() {
     poctyUnknownPesiRegiony.sort(function(a,b) {return b.value - a.value});
 
 
-    /* -------------------------------------------------------- */
-    /* SUB počty již známých tras v regionech */
-
-
-    // vytvořit nový Array, který bude sloužit pro tabulku/graf s počtem tras pro jednotlivé regiony
-    var poctyKnownCykloRegiony = new Array;
-    var poctyKnownPesiRegiony = new Array;
-
-    // funkce pro výpočet počtu již známých cyklotras v každém regionu
-    function vypocetKnownCykloRegiony(region) {
-        let x = 0;
-        for (i = 0; i < cyklotrasy.length; i++) {
-            if ((cyklotrasy[i].region == region) && (cyklotrasy[i].known == true)) {
-                x++;
-            }
-        }
-        return x;
-    }
-    // to samé pro pěší trasy
-    function vypocetKnownPesiRegiony(region) {
-        let x = 0;
-        for (i = 0; i < pesitrasy.length; i++) {
-            if ((pesitrasy[i].region == region) && (pesitrasy[i].known == true)) {
-                x++;
-            }
-        }
-        return x;
-    }
-
     // for loop, který prochází array s regiony v samostatném souboru "hodnoty.js"
     // a pro každý region spočítá počet již známých cyklotras z originálního array
     for (e = 0; e < regiony.length; e++) {
-        poctyKnownCykloRegiony.push({"value": vypocetKnownCykloRegiony(regiony[e]), "name": regiony[e]});
+        poctyKnownCykloRegiony.push({"value": vypocet_known_unknown_Regiony(cyklotrasy, regiony[e], true), "name": regiony[e]});
     }
     // to samé pro pěší trasy
     for (e = 0; e < regiony.length; e++) {
-        poctyKnownPesiRegiony.push({"value": vypocetKnownPesiRegiony(regiony[e]), "name": regiony[e]});
+        poctyKnownPesiRegiony.push({"value": vypocet_known_unknown_Regiony(pesitrasy, regiony[e], true), "name": regiony[e]});
     }
 
     // seřadit tyto Array(s) podle počtů již známých tras v regionech (od nejvíce po nejméně)
@@ -398,21 +303,11 @@ function processData() {
     var poctyKmPesiRegiony = new Array;
 
     // funkce pro výpočet počtu km cyklotras v každém regionu
-    function vypocetKmCykloRegiony(region) {
+    function vypocetKmRegiony(typTras, region) {
         let x = 0;
-        for (i = 0; i < cyklotrasy.length; i++) {
-            if (cyklotrasy[i].region == region) {
-                x = x + cyklotrasy[i].km;
-            }
-        }
-        return x;
-    }
-    // to samé pro pěší trasy
-    function vypocetKmPesiRegiony(region) {
-        let x = 0;
-        for (i = 0; i < pesitrasy.length; i++) {
-            if (pesitrasy[i].region == region) {
-                x = x + pesitrasy[i].km;
+        for (i = 0; i < typTras.length; i++) {
+            if (typTras[i].region == region) {
+                x = x + typTras[i].km;
             }
         }
         return x;
@@ -421,11 +316,11 @@ function processData() {
     // for loop, který prochází array s regiony v samostatném souboru "hodnoty.js"
     // a pro každý region spočítá počet km cyklotras z originálního array
     for (e = 0; e < regiony.length; e++) {
-        poctyKmCykloRegiony.push({"value": vypocetKmCykloRegiony(regiony[e]), "name": regiony[e]});
+        poctyKmCykloRegiony.push({"value": vypocetKmRegiony(cyklotrasy, regiony[e]), "name": regiony[e]});
     }
     // to samé pro pěší trasy
     for (e = 0; e < regiony.length; e++) {
-        poctyKmPesiRegiony.push({"value": vypocetKmPesiRegiony(regiony[e]), "name": regiony[e]});
+        poctyKmPesiRegiony.push({"value": vypocetKmRegiony(pesitrasy, regiony[e]), "name": regiony[e]});
     }
 
     // seřadit tyto Array(s) podle počtů km tras v regionech (od nejvíce po nejméně)
@@ -442,21 +337,11 @@ function processData() {
     var poctyDniPesiRegiony = new Array;
 
     // funkce pro výpočet počtu dní cyklotras v každém regionu
-    function vypocetDniCykloRegiony(region) {
+    function vypocetDniRegiony(typTras, region) {
         let x = 0;
-        for (i = 0; i < cyklotrasy.length; i++) {
-            if (cyklotrasy[i].region == region) {
-                x = x + cyklotrasy[i].kmpd.length;
-            }
-        }
-        return x;
-    }
-    // to samé pro pěší trasy
-    function vypocetDniPesiRegiony(region) {
-        let x = 0;
-        for (i = 0; i < pesitrasy.length; i++) {
-            if (pesitrasy[i].region == region) {
-                x = x + pesitrasy[i].kmpd.length;
+        for (i = 0; i < typTras.length; i++) {
+            if (typTras[i].region == region) {
+                x = x + typTras[i].kmpd.length;
             }
         }
         return x;
@@ -465,11 +350,11 @@ function processData() {
     // for loop, který prochází array s regiony v samostatném souboru "hodnoty.js"
     // a pro každý region spočítá počet dní cyklotras z originálního array
     for (e = 0; e < regiony.length; e++) {
-        poctyDniCykloRegiony.push({"value": vypocetDniCykloRegiony(regiony[e]), "name": regiony[e]});
+        poctyDniCykloRegiony.push({"value": vypocetDniRegiony(cyklotrasy, regiony[e]), "name": regiony[e]});
     }
     // to samé pro pěší trasy
     for (e = 0; e < regiony.length; e++) {
-        poctyDniPesiRegiony.push({"value": vypocetDniPesiRegiony(regiony[e]), "name": regiony[e]});
+        poctyDniPesiRegiony.push({"value": vypocetDniRegiony(pesitrasy, regiony[e]), "name": regiony[e]});
     }
 
     // seřadit tyto Array(s) podle počtů dní tras v regionech (od nejvíce po nejméně)
@@ -481,7 +366,7 @@ function processData() {
     /* SUB podíl tras podle jejich délky */
 
 
-    // definování prázdných (s úvodní hodnotou 0) variables pro počty jednotlivých délek tras
+    // definování prázdných (s úvodní hodnotou 0) variables pro počty jednotlivých tras
     // jejich hodnoty pak naplní následující dva for loopy...
     var cykloShort = 0, cykloMedium = 0, cykloLong = 0, cykloLongest = 0, cykloMulti = 0;
     var pesiShort = 0, pesiMedium = 0, pesiLong = 0, pesiLongest = 0, pesiMulti = 0;
@@ -492,10 +377,12 @@ function processData() {
         if (cyklotrasy[i].multiday === true) {
             cykloMulti++;
         } else {
-            if (cyklotrasy[i].km < 30) {cykloShort++;}
-            if (cyklotrasy[i].km >= 30 && cyklotrasy[i].km < 40) {cykloMedium++;}
-            if (cyklotrasy[i].km >= 40 && cyklotrasy[i].km < 50) {cykloLong++;}
-            if (cyklotrasy[i].km >= 50) {cykloLongest++;}
+            // určování kategorie délky trasy bylo externalizováno do následující funkce delkaTrasy() v "hodnoty.js"
+            let delka = delkaTrasy("cyklo", cyklotrasy[i].km);
+            if (delka == delkyCSS[0]) {cykloShort++;}
+            if (delka == delkyCSS[1]) {cykloMedium++;}
+            if (delka == delkyCSS[2]) {cykloLong++;}
+            if (delka == delkyCSS[3]) {cykloLongest++;}
         }
     }
     // to stejné pro pěší trasy
@@ -503,12 +390,19 @@ function processData() {
         if (pesitrasy[i].multiday === true) {
             pesiMulti++;
         } else {
-            if (pesitrasy[i].km < 10) {pesiShort++;}
-            if (pesitrasy[i].km >= 10 && pesitrasy[i].km < 15) {pesiMedium++;}
-            if (pesitrasy[i].km >= 15 && pesitrasy[i].km < 20) {pesiLong++;}
-            if (pesitrasy[i].km >= 20) {pesiLongest++;}
+            // určování kategorie délky trasy bylo externalizováno do následující funkce delkaTrasy() v "hodnoty.js"
+            let delka = delkaTrasy("pesi", pesitrasy[i].km);
+            if (delka == delkyCSS[0]) {pesiShort++;}
+            if (delka == delkyCSS[1]) {pesiMedium++;}
+            if (delka == delkyCSS[2]) {pesiLong++;}
+            if (delka == delkyCSS[3]) {pesiLongest++;}
         }
     }
+
+    // zachycení počtu vícedenních tras pro potřeby výpočtů v dalším grafu
+    // (aby absolutní hodnota nebyla ztracena přepisem na procenta níže)
+    var pocetCykloMulti = cykloMulti;
+    var pocetPesiMulti = pesiMulti;
 
     // zde budou variables přepsány znovu, a to z absolutních čísel na čísla odpovídající procentům z celku
     cykloShort = cykloShort / pocetCyklo * 100;
@@ -522,6 +416,100 @@ function processData() {
     pesiLong = pesiLong / pocetPesich * 100;
     pesiLongest = pesiLongest / pocetPesich * 100;
     pesiMulti = pesiMulti / pocetPesich * 100;
+
+
+    /* -------------------------------------------------------- */
+    /* SUB podíl jen vícedenních tras podle počtu dní */
+
+
+    // definování prázdných (s úvodní hodnotou 0) variables pro počty jednotlivých tras
+    // jejich hodnoty pak naplní následující dva for loopy...
+    var cykloMulti2 = 0, cykloMulti3 = 0, cykloMulti4 = 0, cykloMulti5 = 0;
+    var pesiMulti2 = 0, pesiMulti3 = 0, pesiMulti4 = 0, pesiMulti5 = 0;
+
+    // for loop pro incremental přidávání hodnot do jednotlivých variables podle dní cyklotras
+    // výsledkem bude, že tyto variables tak budou mít taková čísla, kolik je tras v dané kategorii
+    for (i = 0; i < cyklotrasy.length; i++) {
+        if (cyklotrasy[i].multiday === true) {
+            // prochází hlavní datový array s trasami
+            // a pokud je daná trasa vícedenní, tak použije následující conditional (alternativa k if statement)
+            cyklotrasy[i].kmpd.length === 2 && cykloMulti2++;
+            cyklotrasy[i].kmpd.length === 3 && cykloMulti3++;
+            cyklotrasy[i].kmpd.length === 4 && cykloMulti4++;
+            cyklotrasy[i].kmpd.length === 5 && cykloMulti5++;
+        }
+    }
+    // to stejné pro pěší trasy
+    for (i = 0; i < pesitrasy.length; i++) {
+        if (pesitrasy[i].multiday === true) {
+            // prochází hlavní datový array s trasami
+            // a pokud je daná trasa vícedenní, tak použije následující conditional (alternativa k if statement)
+            pesitrasy[i].kmpd.length === 2 && pesiMulti2++;
+            pesitrasy[i].kmpd.length === 3 && pesiMulti3++;
+            pesitrasy[i].kmpd.length === 4 && pesiMulti4++;
+            pesitrasy[i].kmpd.length === 5 && pesiMulti5++;
+        }
+    }
+
+    // zde budou variables přepsány znovu, a to z absolutních čísel na čísla odpovídající procentům z celku
+    cykloMulti2 = cykloMulti2 / pocetCykloMulti * 100;
+    cykloMulti3 = cykloMulti3 / pocetCykloMulti * 100;
+    cykloMulti4 = cykloMulti4 / pocetCykloMulti * 100;
+    cykloMulti5 = cykloMulti5 / pocetCykloMulti * 100;
+    // to samé pro pěší
+    pesiMulti2 = pesiMulti2 / pocetPesiMulti * 100;
+    pesiMulti3 = pesiMulti3 / pocetPesiMulti * 100;
+    pesiMulti4 = pesiMulti4 / pocetPesiMulti * 100;
+    pesiMulti5 = pesiMulti5 / pocetPesiMulti * 100;
+
+
+    /* -------------------------------------------------------- */
+    /* SUB podíl známých vs. neabsolvovaných tras */
+
+
+    // re-definování příslušných variables jako procentuálních podílů z celku
+    // nejsou potřeba žádné funkce ani loopy, protože variables byly definovány už výše v rámci elementárních výpočtů
+    var neabsolvovaneCykloPodil = neabsolvovaneCyklo / pocetCyklo * 100;
+    var neabsolvovanePesiPodil = neabsolvovanePesi / pocetPesich * 100;
+    var znameCykloPodil = znameCyklo / pocetCyklo * 100;
+    var znamePesiPodil = znamePesi / pocetPesich * 100;
+
+
+    /* -------------------------------------------------------- */
+    /* SUB podíl tras podle jejich spoluautorů */
+
+
+    // definování prázdných (s úvodní hodnotou 0) variables pro počty jednotlivých tras
+    // jejich hodnoty pak naplní následující dva for loopy...
+    var cykloAutorK = 0, cykloAutorV = 0, cykloAutorD = 0;
+    var pesiAutorK = 0, pesiAutorV = 0, pesiAutorD = 0;
+
+    // for loop pro incremental přidávání hodnot do jednotlivých variables podle spoluautorství cyklotras
+    // výsledkem bude, že tyto variables tak budou mít taková čísla, kolik je tras v dané kategorii
+    for (i = 0; i < cyklotrasy.length; i++) {
+        cyklotrasy[i].authors.includes("k") && cykloAutorK++;
+        cyklotrasy[i].authors.includes("v") && cykloAutorV++;
+        cyklotrasy[i].authors.includes("d") && cykloAutorD++;
+    }
+    // to stejné pro pěší trasy
+    for (i = 0; i < pesitrasy.length; i++) {
+        pesitrasy[i].authors.includes("k") && pesiAutorK++;
+        pesitrasy[i].authors.includes("v") && pesiAutorV++;
+        pesitrasy[i].authors.includes("d") && pesiAutorD++;
+    }
+
+    // celkové součty, které budou sloužit pro výpočet procentuálního podílu níže
+    var cykloAutori = cykloAutorK + cykloAutorV + cykloAutorD;
+    var pesiAutori = pesiAutorK + pesiAutorV + pesiAutorD;
+
+    // zde budou variables přepsány znovu, a to z absolutních čísel na čísla odpovídající procentům z celku
+    cykloAutorK = cykloAutorK / cykloAutori * 100;
+    cykloAutorV = cykloAutorV / cykloAutori * 100;
+    cykloAutorD = cykloAutorD / cykloAutori * 100;
+    // to samé pro pěší
+    pesiAutorK = pesiAutorK / pesiAutori * 100;
+    pesiAutorV = pesiAutorV / pesiAutori * 100;
+    pesiAutorD = pesiAutorD / pesiAutori * 100;
 
     // !CHAPTER
 
@@ -570,6 +558,9 @@ function processData() {
     /* SUB sekce: celkový souhrn/přehled */
 
 
+    // nutno zde vytvořit práznou variable pro stats wrapper, aby se předešlo undefined errorům ve funkcích níže
+    var statsAmountsWrapper;
+
     // funkce pro vytvoření nadpisů jednotlivých pod-oddílů
     function pododdilNadpis(podstranka, text) {
         var pododdil = document.createElement("h4");
@@ -579,86 +570,65 @@ function processData() {
 
     // funkce pro vytvoření jednotlivých položek se souhrnnými daty
     function tvorbaSouhrnItem(popis, hodnota) {
-        var statsAmountsContainer = document.createElement("div");
-        statsAmountsContainer.setAttribute("class", "statsAmountsContainer");
-        var statsAmountsPopisek = document.createElement("div");
-        statsAmountsPopisek.setAttribute("class", "statsAmountsPopisek");
+        var statsAmountsContainer = createDiv("statsAmountsContainer");
+        var statsAmountsPopisek = createDiv("statsAmountsPopisek");
         statsAmountsPopisek.innerHTML = popis;
         statsAmountsContainer.appendChild(statsAmountsPopisek);
-        var statsAmountsVysledek = document.createElement("div");
-        statsAmountsVysledek.setAttribute("class", "statsAmountsVysledek");
+        var statsAmountsVysledek = createDiv("statsAmountsVysledek");
         statsAmountsVysledek.innerHTML = hodnota;
         statsAmountsContainer.appendChild(statsAmountsVysledek);
         statsAmountsWrapper.appendChild(statsAmountsContainer);
     }
 
-    // function call, kterým dynamicky naplníme jednotlivé položky pro souhrnná data
-    // každý function call pustí do funkce jiná vstupní data (parameters)
-    // a to zajistí tvorbu více položek, každou s jinou statistikou
-    // POZN: pořadí function calls po sobě zde potom vytváří stejné pořadí html elementů na stránce
+    // funkce pro vytvoření wrapperu pro jednotlivé položky výše
+    function tvorbaSouhrnWrapper(cyklo, pesi, celkem) {
+        // function call, kterým dynamicky naplníme jednotlivé položky pro souhrnná data
+        // každý function call pustí do funkce jiná vstupní data (parameters)
+        // a to zajistí tvorbu více položek, každou s jinou statistikou
+        // POZN: pořadí function calls po sobě zde potom vytváří stejné pořadí html elementů na stránce
+        statsAmountsWrapper = createDiv("statsAmountsWrapper");
+        tvorbaSouhrnItem("cyklo", cyklo);
+        tvorbaSouhrnItem("pěší", pesi);
+        tvorbaSouhrnItem("celkem", celkem);
+        // zde se vždy zabalí celá jedna sekce do speciálního wrapperu
+        // který pak umožní flex zobrazení
+        souhrnPage.appendChild(statsAmountsWrapper);
+    }
+
+    // zde se spustí jednotlivé funkce po sobě
     pododdilNadpis(souhrnPage, "Počet tras v databázi");
-    var statsAmountsWrapper = document.createElement("div");
-    statsAmountsWrapper.setAttribute("class", "statsAmountsWrapper");
-    tvorbaSouhrnItem("cyklo", pocetCyklo);
-    tvorbaSouhrnItem("pěší", pocetPesich);
-    tvorbaSouhrnItem("celkem", pocetCelkem);
-    // zde se vždy zabalí celá jedna sekce do speciálního wrapperu
-    // který pak umožní flex zobrazení
-    souhrnPage.appendChild(statsAmountsWrapper);
+    tvorbaSouhrnWrapper(pocetCyklo, pocetPesich, pocetCelkem);
 
-    var statsAmountsWrapper = document.createElement("div");
-    statsAmountsWrapper.setAttribute("class", "statsAmountsWrapper");
-    pododdilNadpis(souhrnPage, "Dosud neabsolvované trasy k dispozici");
-    tvorbaSouhrnItem("cyklo", neabsolvovaneCyklo);
-    tvorbaSouhrnItem("pěší", neabsolvovanePesi);
-    tvorbaSouhrnItem("celkem", neabsolvovaneCelkem);
-    souhrnPage.appendChild(statsAmountsWrapper);
-
-    var statsAmountsWrapper = document.createElement("div");
-    statsAmountsWrapper.setAttribute("class", "statsAmountsWrapper");
     pododdilNadpis(souhrnPage, "Již známé trasy");
-    tvorbaSouhrnItem("cyklo", znameCyklo);
-    tvorbaSouhrnItem("pěší", znamePesi);
-    tvorbaSouhrnItem("celkem", znameCelkem);
-    souhrnPage.appendChild(statsAmountsWrapper);
+    tvorbaSouhrnWrapper(znameCyklo, znamePesi, znameCelkem);
 
-    var statsAmountsWrapper = document.createElement("div");
-    statsAmountsWrapper.setAttribute("class", "statsAmountsWrapper");
+    pododdilNadpis(souhrnPage, "Dosud neabsolvované trasy k dispozici");
+    tvorbaSouhrnWrapper(neabsolvovaneCyklo, neabsolvovanePesi, neabsolvovaneCelkem);
+
     pododdilNadpis(souhrnPage, "Nově přidané trasy");
-    tvorbaSouhrnItem("cyklo", noveCyklo);
-    tvorbaSouhrnItem("pěší", novePesi);
-    tvorbaSouhrnItem("celkem", noveCelkem);
-    souhrnPage.appendChild(statsAmountsWrapper);
+    tvorbaSouhrnWrapper(noveCyklo, novePesi, noveCelkem);
 
-    var statsAmountsWrapper = document.createElement("div");
-    statsAmountsWrapper.setAttribute("class", "statsAmountsWrapper");
     pododdilNadpis(souhrnPage, "Počet kilometrů tras v databázi");
-    tvorbaSouhrnItem("cyklo", celkemKmCyklo);
-    tvorbaSouhrnItem("pěší", celkemKmPesi);
-    tvorbaSouhrnItem("celkem", celkemKmCelkem);
-    souhrnPage.appendChild(statsAmountsWrapper);
+    tvorbaSouhrnWrapper(celkemKmCyklo, celkemKmPesi, celkemKmCelkem);
 
-    var statsAmountsWrapper = document.createElement("div");
-    statsAmountsWrapper.setAttribute("class", "statsAmountsWrapper");
     pododdilNadpis(souhrnPage, "Počet dní tras v databázi");
-    tvorbaSouhrnItem("cyklo", celkemDniCyklo);
-    tvorbaSouhrnItem("pěší", celkemDniPesi);
-    tvorbaSouhrnItem("celkem", celkemDniCelkem);
-    souhrnPage.appendChild(statsAmountsWrapper);
+    tvorbaSouhrnWrapper(celkemDniCyklo, celkemDniPesi, celkemDniCelkem);
+
 
     // další velký nadpis pro lepší vizuální oddělení sekce
     var nadpis = document.createElement("h2");
     nadpis.innerText = "Rekordní trasy";
     souhrnPage.appendChild(nadpis);
 
+    // prázdná variable opět pro zabránění undefined errorům
+    var recordsWrapper;
+
     // druhá funkce pro vytvoření jednotlivých položek se souhrnnými daty
     // tentokrát zaměřená na nejkratší a nejdelší trasy
     function tvorbaSouhrnRecordsItem(popis, array, jednotky) {
         // vytvořit container Div s popiskem
-        var statsRecordsContainer = document.createElement("div");
-        statsRecordsContainer.setAttribute("class", "statsRecordsContainer");
-        var statsRecordsPopisek = document.createElement("div");
-        statsRecordsPopisek.setAttribute("class", "statsRecordsPopisek");
+        var statsRecordsContainer = createDiv("statsRecordsContainer");
+        var statsRecordsPopisek = createDiv("statsRecordsPopisek");
         statsRecordsPopisek.innerHTML = popis;
         statsRecordsContainer.appendChild(statsRecordsPopisek);
         // while loop vloží 3 nej trasy do containeru
@@ -676,8 +646,7 @@ function processData() {
                 // ...tudíž není možné, aby po např. čísle 3 následovalo číslo 7 atd. až do konce loopu
             }
             // samotný loop
-            var statsRecordsVysledek = document.createElement("div");
-            statsRecordsVysledek.setAttribute("class", "statsRecordsVysledek");
+            var statsRecordsVysledek = createDiv("statsRecordsVysledek");
             var rank = rankingStar.replace("rank", ranks[i]);
             statsRecordsVysledek.innerHTML = rank + array[i].name + " (" + array[i].value + " " + jednotky + ")";
             statsRecordsContainer.appendChild(statsRecordsVysledek);
@@ -686,35 +655,28 @@ function processData() {
         recordsWrapper.appendChild(statsRecordsContainer);
     }
 
+    // funkce na tvorbu wrapperu pro oddíly z funkce výše
+    function tvorbaSouhrnRecordsWrapper(cyklo, pesi, pocetCeho) {
+        recordsWrapper = createDiv("recordsWrapper");
+        tvorbaSouhrnRecordsItem("cyklo", cyklo, pocetCeho);
+        tvorbaSouhrnRecordsItem("pěší", pesi, pocetCeho);
+        souhrnPage.appendChild(recordsWrapper);
+    }
+
     // a opět function call(s)
     // nejprve pro rekordní trasy...
     pododdilNadpis(souhrnPage, "Nejkratší jednodenní trasy");
-    var recordsWrapper = document.createElement("div");
-    recordsWrapper.setAttribute("class", "recordsWrapper");
-    tvorbaSouhrnRecordsItem("cyklo", nejkratsiJednoCyklo, "km");
-    tvorbaSouhrnRecordsItem("pěší", nejkratsiJednoPesi, "km");
-    souhrnPage.appendChild(recordsWrapper);
+    tvorbaSouhrnRecordsWrapper(nejkratsiJednoCyklo, nejkratsiJednoPesi, "km");
 
     pododdilNadpis(souhrnPage, "Nejdelší jednodenní trasy");
-    var recordsWrapper = document.createElement("div");
-    recordsWrapper.setAttribute("class", "recordsWrapper");
-    tvorbaSouhrnRecordsItem("cyklo", nejdelsiJednoCyklo, "km");
-    tvorbaSouhrnRecordsItem("pěší", nejdelsiJednoPesi, "km");
-    souhrnPage.appendChild(recordsWrapper);
+    tvorbaSouhrnRecordsWrapper(nejdelsiJednoCyklo, nejdelsiJednoPesi, "km");
 
     pododdilNadpis(souhrnPage, "Nejkratší vícedenní trasy");
-    var recordsWrapper = document.createElement("div");
-    recordsWrapper.setAttribute("class", "recordsWrapper");
-    tvorbaSouhrnRecordsItem("cyklo", nejkratsiViceCyklo, "km");
-    tvorbaSouhrnRecordsItem("pěší", nejkratsiVicePesi, "km");
-    souhrnPage.appendChild(recordsWrapper);
+    tvorbaSouhrnRecordsWrapper(nejkratsiViceCyklo, nejkratsiVicePesi, "km");
 
     pododdilNadpis(souhrnPage, "Nejdelší vícedenní trasy");
-    var recordsWrapper = document.createElement("div");
-    recordsWrapper.setAttribute("class", "recordsWrapper");
-    tvorbaSouhrnRecordsItem("cyklo", nejdelsiViceCyklo, "km");
-    tvorbaSouhrnRecordsItem("pěší", nejdelsiVicePesi, "km");
-    souhrnPage.appendChild(recordsWrapper);
+    tvorbaSouhrnRecordsWrapper(nejdelsiViceCyklo, nejdelsiVicePesi, "km");
+
 
     // další velký nadpis pro lepší vizuální oddělení sekce
     var nadpis = document.createElement("h2");
@@ -723,37 +685,44 @@ function processData() {
 
     // ...potom také pro rekordní regiony
     pododdilNadpis(souhrnPage, "Regiony s nejvíce trasami");
-    var recordsWrapper = document.createElement("div");
-    recordsWrapper.setAttribute("class", "recordsWrapper");
-    tvorbaSouhrnRecordsItem("cyklo", poctyCykloRegiony, "tras");
-    tvorbaSouhrnRecordsItem("pěší", poctyPesiRegiony, "tras");
-    souhrnPage.appendChild(recordsWrapper);
+    tvorbaSouhrnRecordsWrapper(poctyCykloRegiony, poctyPesiRegiony, "tras");
 
     pododdilNadpis(souhrnPage, "Kde máme nejvíce ještě neabsolvovaných tras k dispozici");
-    var recordsWrapper = document.createElement("div");
-    recordsWrapper.setAttribute("class", "recordsWrapper");
-    tvorbaSouhrnRecordsItem("cyklo", poctyUnknownCykloRegiony, "tras");
-    tvorbaSouhrnRecordsItem("pěší", poctyUnknownPesiRegiony, "tras");
-    souhrnPage.appendChild(recordsWrapper);
+    tvorbaSouhrnRecordsWrapper(poctyUnknownCykloRegiony, poctyUnknownPesiRegiony, "tras");
 
     pododdilNadpis(souhrnPage, "Kde máme nejvíce již známých tras");
-    var recordsWrapper = document.createElement("div");
-    recordsWrapper.setAttribute("class", "recordsWrapper");
-    tvorbaSouhrnRecordsItem("cyklo", poctyKnownCykloRegiony, "tras");
-    tvorbaSouhrnRecordsItem("pěší", poctyKnownPesiRegiony, "tras");
-    souhrnPage.appendChild(recordsWrapper);
+    tvorbaSouhrnRecordsWrapper(poctyKnownCykloRegiony, poctyKnownPesiRegiony, "tras");
 
 
     /* -------------------------------------------------------- */
-    /* SUB koláčový graf pro počty tras podle délky */
+    /* SUB koláčový graf pro počty tras podle délky a vysvětlivky ke koláčovému grafu */
 
+
+    // funkce na dynamické vytváření wrapper divu a přidělení příslušného ID
+    function tvorbaKolacWrapperu(podstranka, id) {
+        let kolacWrapper = document.createElement("div");
+        kolacWrapper.setAttribute("id", `${id}`);
+        kolacWrapper.style.display = "none";
+        // updatovat globální array o zde nově definovaný HTML objekt
+        id.startsWith("cyklo") ? cykloKolace.push(kolacWrapper) : pesiKolace.push(kolacWrapper);
+        podstranka.appendChild(kolacWrapper);
+    }
+
+    // funkce pro vytvoření nadpisů jednotlivých pod-sekcí
+    function podsekceKolacNadpis(wrapperDiv, text) {
+        // lokalizovat wrapperDiv pro následné umístění obsahu
+        var umisteni = document.getElementById(wrapperDiv);
+        var pododdil = document.createElement("h4");
+        pododdil.innerHTML = text;
+        umisteni.appendChild(pododdil);
+    }
 
     // funkce na tvorbu koláčového grafu o jednotlivých segmentech pro každou kategorii délky tras
-    function tvorbaKolacGraf(misto, S, M, L, XL, MD) {
+    function tvorbaKolacGraf(wrapperDiv, vysece, barvy) {
         // wrapper div
-        var kolacDiv = document.createElement("div");
-        kolacDiv.setAttribute("class", "kolacWrapper");
-        misto.appendChild(kolacDiv);
+        var umisteni = document.getElementById(wrapperDiv);
+        var kolacDiv = createDiv("kolacWrapper");
+        umisteni.appendChild(kolacDiv);
         // canvas
         var kolacCanvas = document.createElement("canvas");
         kolacCanvas.setAttribute("class", "kolacovyGrafCyklo");
@@ -787,185 +756,246 @@ function processData() {
             return deg * Math.PI / 180;
         }
 
-        // každá výseč musí začínat tam, kde končí ta před ní (proto ty součty v parametrech pro toRadians() funkce)
-        // pokud by tam ty součty nebyly, počítalo by to výchozí pozici jen podle procent a ne jejich vzájemného vztahu
-        // což by pak akorát způsobilo, že největší procenta by překryla ta menší a ne, že by na sebe navazovala, jak mají
-        // první výseč koláčového grafu (pro krátké trasy)
-        kolac.fillStyle = "#144a14"; /* short */
-        kolac.beginPath();
-        kolac.moveTo(cX, cY);
-        // první výseč bude z 0% (přepočteno == -90°) do procentní hodnoty podílu krátkých tras (cykloShort) atd. atd.
-        kolac.arc(cX, cY, kolacPolomer, toRadians(0), toRadians(S));
-        kolac.lineTo(cX, cY);
-        kolac.closePath();
-        kolac.fill();
-        // druhá výseč koláčového grafu (pro střední trasy)
-        kolac.fillStyle = "#875807"; /* medium */
-        kolac.beginPath();
-        kolac.moveTo(cX, cY);
-        kolac.arc(cX, cY, kolacPolomer, toRadians(S), toRadians(S + M));
-        kolac.lineTo(cX, cY);
-        kolac.closePath();
-        kolac.fill();
-        // třetí výseč koláčového grafu (pro dlouhé trasy)
-        kolac.fillStyle = "#a23604"; /* long */
-        kolac.beginPath();
-        kolac.moveTo(cX, cY);
-        kolac.arc(cX, cY, kolacPolomer, toRadians(S + M), toRadians(S + M + L));
-        kolac.lineTo(cX, cY);
-        kolac.closePath();
-        kolac.fill();
-        // čtvrtá výseč koláčového grafu (pro extra dlouhé trasy)
-        kolac.fillStyle = "#710606"; /* longest */
-        kolac.beginPath();
-        kolac.moveTo(cX, cY);
-        kolac.arc(cX, cY, kolacPolomer, toRadians(S + M + L), toRadians(S + M + L + XL));
-        kolac.lineTo(cX, cY);
-        kolac.closePath();
-        kolac.fill();
-        // pátá výseč koláčového grafu (pro vícedenní trasy)
-        kolac.fillStyle = "#13264d"; /* multi */
-        kolac.beginPath();
-        kolac.moveTo(cX, cY);
-        kolac.arc(cX, cY, kolacPolomer, toRadians(S + M + L + XL), toRadians(S + M + L + XL + MD));
-        kolac.lineTo(cX, cY);
-        kolac.closePath();
-        kolac.fill();
+        // arrays, se kterými bude pracovat následující loop na tvorbu koláčového grafu
+        // CSS hash barvy jednotlivých délek tras (short, medium, long, longest a multi)
+        // jsou passed-in jako array "barvy"
+        // hraniční úhly jednotlivých výsečí v koláči (s převzatými hodnotami v argumentech funkce)
+        // jsou passed-in jako array "vysece"
+        // počáteční hodnoty variables zodpovídající za úhel výseče, které bude následující for loop postupně měnit při každé iteraci
+        var a = 0, b = 0;
+
+        // v následujícím loopu musí číslo "X" v deklaraci "k < X" souhlasit s array.length pro "barvy" a "vysece"
+        // protože to bude určovat počet výsečí v koláčovém grafu, tak aby tam byly reprezentovány všechny typy tras
+        for (let i = 0; i < vysece.length; i++) {
+            // každá výseč musí začínat tam, kde končí ta před ní (proto následující přepočty variables "a" a "b")
+            // pokud by tam ty součty nebyly, počítalo by to výchozí pozici jen podle procent a ne jejich vzájemného vztahu
+            // což by pak akorát způsobilo, že největší procenta by překryla ta menší a ne, že by na sebe navazovala, jak mají
+            a = b;
+            b = a + vysece[i];
+            kolac.fillStyle = barvy[i];
+            kolac.beginPath();
+            kolac.moveTo(cX, cY);
+            kolac.arc(cX, cY, kolacPolomer, toRadians(a), toRadians(b));
+            kolac.lineTo(cX, cY);
+            kolac.closePath();
+            kolac.fill();
+        }
 
         // pozn: další kružnice či jiný prvek v tom stejném <canvas> tagu lze renderovat opakováním stejných methods na stejné variable "kruznice", jen s jinými parametry
         // takže by to bylo znovu to stejné od kruznice.fillStyle až po kruznice.fill();
     }
 
-    // function call na vygenerování koláčového grafu
-    pododdilNadpis(cykloPage, "Podíl cyklotras podle jejich délky");
-    tvorbaKolacGraf(cykloPage, cykloShort, cykloMedium, cykloLong, cykloLongest, cykloMulti);
-    pododdilNadpis(pesiPage, "Podíl pěších tras podle jejich délky");
-    tvorbaKolacGraf(pesiPage, pesiShort, pesiMedium, pesiLong, pesiLongest, pesiMulti);
-
-
-    /* -------------------------------------------------------- */
-    /* SUB vysvětlivky ke koláčovému grafu */
-
-
-    // wrapper div pro celé vysvětlivky (první pro cyklotrasy)
-    var kolacNotes = document.createElement("div");
-    kolacNotes.setAttribute("class", "kolacVysvetlivky");
-    cykloPage.appendChild(kolacNotes);
 
     // vytvoření divu pro vysvětlivky ke koláčovému grafu (aby někde byla zobrazena přesná procenta k těm různým délkám tras)
-    // nejdříve pro cyklotrasy
-    function tvorbaKolacVysvetlivkyCyklo(delka) {
-        // container div pro každou vysvětlivku zvlášť
-        var kolacNotesContainer = document.createElement("div");
-        kolacNotesContainer.setAttribute("class", "kolacNotesContainer");
-        kolacNotes.appendChild(kolacNotesContainer);
-        // vysvětlivka - délková kategorie tras
-        var kolacNotesKategorie = document.createElement("div");
-        kolacNotesKategorie.setAttribute("class", "kolacNotesKategorie");
-        kolacNotesContainer.appendChild(kolacNotesKategorie);
-        // vysvětlivka - délková kategorie procentní podíl
-        var kolacNotesProcenta = document.createElement("div");
-        kolacNotesProcenta.setAttribute("class", "kolacNotesProcenta");
-        kolacNotesContainer.appendChild(kolacNotesProcenta);
+    function tvorbaKolacVysvetlivky(wrapperDiv, footnotesKategorieData, footnotesKategorieNazvy, footnotesBarvyJakoClassCSS) {
+        // wrapper div
+        var umisteni = document.getElementById(wrapperDiv);
+        var kolacNotes = createDiv("kolacVysvetlivky");
+        umisteni.appendChild(kolacNotes);
+        // jednotlivé kategorie vysvětlivek tras převzaté z argumentů k funkci jako array(s) "footnotes..."
+        // následně se tyto jednotlivé kategorie uplatní v loopu
+        for (let i = 0; i < footnotesKategorieData.length; i++) {
+            // container div pro každou vysvětlivku zvlášť
+            var kolacNotesContainer = createDiv("kolacNotesContainer");
+            kolacNotes.appendChild(kolacNotesContainer);
+            // vysvětlivka - délková kategorie tras
+            var kolacNotesKategorie = createDiv("kolacNotesKategorie");
+            kolacNotesContainer.appendChild(kolacNotesKategorie);
+            // vysvětlivka - délková kategorie procentní podíl
+            var kolacNotesProcenta = createDiv("kolacNotesProcenta");
+            kolacNotesContainer.appendChild(kolacNotesProcenta);
 
-        // zaokrouhlení procentuálního podílu na celá čísla
-        var delkaZaokrouhleno = Math.round(delka);
+            // zaokrouhlení procentuálního podílu na celá čísla
+            var procentaZaokrouhleno = Math.round(footnotesKategorieData[i]);
 
-        // a naplnění výše vytvořených divů odpovídajícími daty
-        if (delka == cykloShort) {
-            kolacNotesKategorie.innerHTML = "krátké";
-            kolacNotesProcenta.innerHTML = `${delkaZaokrouhleno}%`;
-            kolacNotesContainer.classList.add("short");
-        }
-        if (delka == cykloMedium) {
-            kolacNotesKategorie.innerHTML = "střední";
-            kolacNotesProcenta.innerHTML = `${delkaZaokrouhleno}%`;
-            kolacNotesContainer.classList.add("medium");
-        }
-        if (delka == cykloLong) {
-            kolacNotesKategorie.innerHTML = "dlouhé";
-            kolacNotesProcenta.innerHTML = `${delkaZaokrouhleno}%`;
-            kolacNotesContainer.classList.add("long");
-        }
-        if (delka == cykloLongest) {
-            kolacNotesKategorie.innerHTML = "extra dlouhé";
-            kolacNotesProcenta.innerHTML = `${delkaZaokrouhleno}%`;
-            kolacNotesContainer.classList.add("longest");
-        }
-        if (delka == cykloMulti) {
-            kolacNotesKategorie.innerHTML = "vícedenní";
-            kolacNotesProcenta.innerHTML = `${delkaZaokrouhleno}%`;
-            kolacNotesContainer.classList.add("multi");
+            // a naplnění výše vytvořených divů odpovídajícími daty
+            kolacNotesKategorie.innerHTML = footnotesKategorieNazvy[i];
+            kolacNotesProcenta.innerHTML = `${procentaZaokrouhleno}%`;
+            kolacNotesContainer.classList.add(footnotesBarvyJakoClassCSS[i]);
         }
 
     }
 
-    // function call pro každou délku tras zvlášť
-    tvorbaKolacVysvetlivkyCyklo(cykloShort);
-    tvorbaKolacVysvetlivkyCyklo(cykloMedium);
-    tvorbaKolacVysvetlivkyCyklo(cykloLong);
-    tvorbaKolacVysvetlivkyCyklo(cykloLongest);
-    tvorbaKolacVysvetlivkyCyklo(cykloMulti);
 
-    // wrapper div pro celé vysvětlivky (znovu pro pěší trasy)
-    var kolacNotes = document.createElement("div");
-    kolacNotes.setAttribute("class", "kolacVysvetlivky");
-    pesiPage.appendChild(kolacNotes);
+    // vytvoření wrapperDivů pro přepínací tlačítka
+    var cykloKolaceButtons = document.createElement("div");
+    cykloKolaceButtons.setAttribute("id", "cykloKolaceButtons");
+    cykloPage.appendChild(cykloKolaceButtons);
 
-    // vytvoření divu pro vysvětlivky ke koláčovému grafu (aby někde byla zobrazena přesná procenta k těm různým délkám tras)
-    // a následně i pro pěší trasy
-    function tvorbaKolacVysvetlivkyPesi(delka) {
-        // container div pro každou vysvětlivku zvlášť
-        var kolacNotesContainer = document.createElement("div");
-        kolacNotesContainer.setAttribute("class", "kolacNotesContainer");
-        kolacNotes.appendChild(kolacNotesContainer);
-        // vysvětlivka - délková kategorie tras
-        var kolacNotesKategorie = document.createElement("div");
-        kolacNotesKategorie.setAttribute("class", "kolacNotesKategorie");
-        kolacNotesContainer.appendChild(kolacNotesKategorie);
-        // vysvětlivka - délková kategorie procentní podíl
-        var kolacNotesProcenta = document.createElement("div");
-        kolacNotesProcenta.setAttribute("class", "kolacNotesProcenta");
-        kolacNotesContainer.appendChild(kolacNotesProcenta);
+    var pesiKolaceButtons = document.createElement("div");
+    pesiKolaceButtons.setAttribute("id", "pesiKolaceButtons");
+    pesiPage.appendChild(pesiKolaceButtons);
 
-        // zaokrouhlení procentuálního podílu na celá čísla
-        var delkaZaokrouhleno = Math.round(delka);
+    // spuštění funkce na generování koláčového grafu
+    // vždy pro cyklo a pro pěší
 
-        // a naplnění výše vytvořených divů odpovídajícími daty
-        if (delka == pesiShort) {
-            kolacNotesKategorie.innerHTML = "krátké";
-            kolacNotesProcenta.innerHTML = `${delkaZaokrouhleno}%`;
-            kolacNotesContainer.classList.add("short");
-        }
-        if (delka == pesiMedium) {
-            kolacNotesKategorie.innerHTML = "střední";
-            kolacNotesProcenta.innerHTML = `${delkaZaokrouhleno}%`;
-            kolacNotesContainer.classList.add("medium");
-        }
-        if (delka == pesiLong) {
-            kolacNotesKategorie.innerHTML = "dlouhé";
-            kolacNotesProcenta.innerHTML = `${delkaZaokrouhleno}%`;
-            kolacNotesContainer.classList.add("long");
-        }
-        if (delka == pesiLongest) {
-            kolacNotesKategorie.innerHTML = "extra dlouhé";
-            kolacNotesProcenta.innerHTML = `${delkaZaokrouhleno}%`;
-            kolacNotesContainer.classList.add("longest");
-        }
-        if (delka == pesiMulti) {
-            kolacNotesKategorie.innerHTML = "vícedenní";
-            kolacNotesProcenta.innerHTML = `${delkaZaokrouhleno}%`;
-            kolacNotesContainer.classList.add("multi");
-        }
+    // podíly tras podle délky
 
+    // speciální array pro hash barvy kategorií délek tras pro canvas fill (nelze použít CSS class, protože ta je pro background)
+    var delkyColors = ["#144a14", "#875807", "#a23604", "#710606", "#13264d"];
+    // cyklo
+    tvorbaKolacWrapperu(cykloPage, "cykloKolacDelky");
+    podsekceKolacNadpis("cykloKolacDelky", "Podíl cyklotras podle jejich délky");
+    tvorbaKolacGraf(
+        "cykloKolacDelky",
+        [cykloShort, cykloMedium, cykloLong, cykloLongest, cykloMulti],
+        delkyColors
+    );
+    tvorbaKolacVysvetlivky(
+        "cykloKolacDelky",
+        [cykloShort, cykloMedium, cykloLong, cykloLongest, cykloMulti],
+        delkyNames,
+        delkyCSS
+    );
+    // pěší
+    tvorbaKolacWrapperu(pesiPage, "pesiKolacDelky");
+    podsekceKolacNadpis("pesiKolacDelky", "Podíl pěších tras podle jejich délky");
+    tvorbaKolacGraf(
+        "pesiKolacDelky",
+        [pesiShort, pesiMedium, pesiLong, pesiLongest, pesiMulti],
+        delkyColors
+    );
+    tvorbaKolacVysvetlivky(
+        "pesiKolacDelky",
+        [pesiShort, pesiMedium, pesiLong, pesiLongest, pesiMulti],
+        delkyNames,
+        delkyCSS
+    );
+
+    // podíly jen vícedenních tras podle počtu dní
+
+    // speciální arrays pro použití jako argumentů ve function calls níže
+    var multiNames = ["dvoudenní", "třídenní", "čtyřdenní", "pětidenní"];
+    var multiColors = ["#1a3995", "#4b1797", "#791377", "#9f1241"];
+    var multiClassesCSS = ["multi2", "multi3", "multi4", "multi5"];
+    // cyklo
+    tvorbaKolacWrapperu(cykloPage, "cykloKolacMulti");
+    podsekceKolacNadpis("cykloKolacMulti", "Podíl vícedenních cyklotras podle počtu dní");
+    tvorbaKolacGraf(
+        "cykloKolacMulti",
+        [cykloMulti2, cykloMulti3, cykloMulti4, cykloMulti5],
+        multiColors
+    );
+    tvorbaKolacVysvetlivky(
+        "cykloKolacMulti",
+        [cykloMulti2, cykloMulti3, cykloMulti4, cykloMulti5],
+        multiNames,
+        multiClassesCSS
+    );
+    // pěší
+    tvorbaKolacWrapperu(pesiPage, "pesiKolacMulti");
+    podsekceKolacNadpis("pesiKolacMulti", "Podíl vícedenních pěších tras podle počtu dní");
+    tvorbaKolacGraf(
+        "pesiKolacMulti",
+        [pesiMulti2, pesiMulti3, pesiMulti4, pesiMulti5],
+        multiColors
+    );
+    tvorbaKolacVysvetlivky(
+        "pesiKolacMulti",
+        [pesiMulti2, pesiMulti3, pesiMulti4, pesiMulti5],
+        multiNames,
+        multiClassesCSS
+    );
+
+    // podíly neabsolvovaných vs. známých tras
+
+    // speciální arrays pro použití jako argumentů ve function calls níže
+    var knownNames = ["neabsolvované", "známé"];
+    var knownColors = ["#005688", "#19685c"];
+    var knownClassesCSS = ["neabsolvovane", "zname"];
+    // cyklo
+    tvorbaKolacWrapperu(cykloPage, "cykloKolacKnown");
+    podsekceKolacNadpis("cykloKolacKnown", "Podíl neabsolvovaných vs. známých cyklotras");
+    tvorbaKolacGraf(
+        "cykloKolacKnown",
+        [neabsolvovaneCykloPodil, znameCykloPodil],
+        knownColors
+    );
+    tvorbaKolacVysvetlivky(
+        "cykloKolacKnown",
+        [neabsolvovaneCykloPodil, znameCykloPodil],
+        knownNames,
+        knownClassesCSS
+    );
+    // pěší
+    tvorbaKolacWrapperu(pesiPage, "pesiKolacKnown");
+    podsekceKolacNadpis("pesiKolacKnown", "Podíl neabsolvovaných vs. známých pěších tras");
+    tvorbaKolacGraf(
+        "pesiKolacKnown",
+        [neabsolvovanePesiPodil, znamePesiPodil],
+        knownColors
+    );
+    tvorbaKolacVysvetlivky(
+        "pesiKolacKnown",
+        [neabsolvovanePesiPodil, znamePesiPodil],
+        knownNames,
+        knownClassesCSS
+    );
+
+    // podíly tras podle spoluautorství
+
+    // speciální arrays pro použití jako argumentů ve function calls níže
+    var autorstviNames = ["autor K", "autor V", "autor D"];
+    var autorstviColors = ["#ea284e", "#37B978", "#EA7649"];
+    var autorstviClassesCSS = ["autorstviK", "autorstviV", "autorstviD"];
+    // cyklo
+    tvorbaKolacWrapperu(cykloPage, "cykloKolacAutorstvi");
+    podsekceKolacNadpis("cykloKolacAutorstvi", "Relativní podíl spoluautorství na cyklotrasách");
+    tvorbaKolacGraf(
+        "cykloKolacAutorstvi",
+        [cykloAutorK, cykloAutorV, cykloAutorD],
+        autorstviColors
+    );
+    tvorbaKolacVysvetlivky(
+        "cykloKolacAutorstvi",
+        [cykloAutorK, cykloAutorV, cykloAutorD],
+        autorstviNames,
+        autorstviClassesCSS
+    );
+    // pěší
+    tvorbaKolacWrapperu(pesiPage, "pesiKolacAutorstvi");
+    podsekceKolacNadpis("pesiKolacAutorstvi", "Relativní podíl spoluautorství na pěších trasách");
+    tvorbaKolacGraf(
+        "pesiKolacAutorstvi",
+        [pesiAutorK, pesiAutorV, pesiAutorD],
+        autorstviColors
+    );
+    tvorbaKolacVysvetlivky(
+        "pesiKolacAutorstvi",
+        [pesiAutorK, pesiAutorV, pesiAutorD],
+        autorstviNames,
+        autorstviClassesCSS
+    );
+
+
+    // naplnění wrapperDivů samotnými přepínacími tlačítky
+    // cyklo
+    for (const kolacKategorie of cykloKolace) {
+        let btn = document.createElement("div");
+        btn.setAttribute("id", kolacKategorie.id + 'Btn');
+        btn.setAttribute("onclick", `prepnoutCykloKolac("${kolacKategorie.id}")`);
+        let stub = kolacKategorie.id.slice(5);
+        btn.innerHTML = `<img src="img/tabs-${stub}.svg" alt="${stub}">`;
+        cykloKolaceButtons.appendChild(btn);
+    }
+    // pěší
+    for (const kolacKategorie of pesiKolace) {
+        let btn = document.createElement("div");
+        btn.setAttribute("id", kolacKategorie.id + 'Btn');
+        btn.setAttribute("onclick", `prepnoutPesiKolac("${kolacKategorie.id}")`);
+        let stub = kolacKategorie.id.slice(4);
+        btn.innerHTML = `<img src="img/tabs-${stub}.svg" alt="${stub}">`;
+        pesiKolaceButtons.appendChild(btn);
     }
 
-    // function call pro každou délku tras zvlášť
-    tvorbaKolacVysvetlivkyPesi(pesiShort);
-    tvorbaKolacVysvetlivkyPesi(pesiMedium);
-    tvorbaKolacVysvetlivkyPesi(pesiLong);
-    tvorbaKolacVysvetlivkyPesi(pesiLongest);
-    tvorbaKolacVysvetlivkyPesi(pesiMulti);
+    // odkrýt první kategorie grafů (jak pro cyklo tak pěší)
+    cykloKolace[0].style.display = "block";
+    pesiKolace[0].style.display = "block";
+    // plus vyznačit příslušná přepínací tlačítka jako aktivní
+    var initBtnCykloKolac = document.getElementById("cykloKolacDelkyBtn");
+    initBtnCykloKolac.classList.add("kolacActive");
+    var initBtnPesiKolac = document.getElementById("pesiKolacDelkyBtn");
+    initBtnPesiKolac.classList.add("kolacActive");
 
 
     /* -------------------------------------------------------- */
@@ -983,7 +1013,7 @@ function processData() {
     }
 
     // funkce pro vytvoření nadpisů jednotlivých pod-sekcí
-    function podsekceNadpis(wrapperDiv, text) {
+    function podsekceGrafNadpis(wrapperDiv, text) {
         // lokalizovat wrapperDiv pro následné umístění obsahu
         var umisteni = document.getElementById(wrapperDiv);
         var pododdil = document.createElement("h4");
@@ -997,8 +1027,7 @@ function processData() {
         // lokalizovat wrapperDiv pro následné umístění obsahu
         var umisteni = document.getElementById(wrapperDiv);
         // vytvořit container div obalující celý graf
-        var pageRegionsGraf = document.createElement("div");
-        pageRegionsGraf.setAttribute("class", "pageRegionsGraf");
+        var pageRegionsGraf = createDiv("pageRegionsGraf");
         umisteni.appendChild(pageRegionsGraf);
 
         for (i = 0; i < typTras.length; i++) {
@@ -1007,12 +1036,10 @@ function processData() {
             var grafBarSizeString = `${grafBarSizeValue}%`
             
             // potom jeden div pro každý řádek (jeden řádek pro každý region)
-            var pageRegionsRow = document.createElement("div");
-            pageRegionsRow.setAttribute("class", "pageRegionsRow");
+            var pageRegionsRow = createDiv("pageRegionsRow");
             pageRegionsGraf.appendChild(pageRegionsRow);
             // a do řádku jednotlivé sub-divy (pro název regionu, počet tras v regionu a div znázorňující ten sloupec grafu)
-            var pageRegionsText = document.createElement("div");
-            pageRegionsText.setAttribute("class", "pageRegionsText");
+            var pageRegionsText = createDiv("pageRegionsText");
             if (i < 3) {
                 var rank = rankingStar.replace("rank", ranks[i]);
                 pageRegionsText.innerHTML = `${rank}${i + 1}. ${typTras[i].name}`;
@@ -1020,15 +1047,12 @@ function processData() {
                 pageRegionsText.innerHTML = `${i + 1}. ${typTras[i].name}`;
             }
             pageRegionsRow.appendChild(pageRegionsText);
-            var pageRegionsNo = document.createElement("div");
-            pageRegionsNo.setAttribute("class", "pageRegionsNo");
+            var pageRegionsNo = createDiv("pageRegionsNo");
             pageRegionsNo.innerHTML = typTras[i].value;
             pageRegionsRow.appendChild(pageRegionsNo);
-            var pageRegionsBarWrap = document.createElement("div");
-            pageRegionsBarWrap.setAttribute("class", "pageRegionsBarWrap");
+            var pageRegionsBarWrap = createDiv("pageRegionsBarWrap");
             pageRegionsRow.appendChild(pageRegionsBarWrap);
-            var pageRegionsBar = document.createElement("div");
-            pageRegionsBar.setAttribute("class", "pageRegionsBar");
+            var pageRegionsBar = createDiv("pageRegionsBar");
             pageRegionsBar.style.width = grafBarSizeString;
             pageRegionsBarWrap.appendChild(pageRegionsBar);
         }
@@ -1049,46 +1073,47 @@ function processData() {
     var cykloGrafyButtons = document.createElement("div");
     cykloGrafyButtons.setAttribute("id", "cykloGrafyButtons");
     cykloPage.appendChild(cykloGrafyButtons);
+
     var pesiGrafyButtons = document.createElement("div");
     pesiGrafyButtons.setAttribute("id", "pesiGrafyButtons");
     pesiPage.appendChild(pesiGrafyButtons);
 
     // spuštění funkce na generování grafu
-    // zvlášť pro cyklo a pro pěší
+    // vždy pro cyklo a pro pěší
     // počet tras
     tvorbaGrafWrapperu(cykloPage, "cykloGrafTrasy");
-    podsekceNadpis("cykloGrafTrasy", "Počet cyklotras v jednotlivých regionech");
+    podsekceGrafNadpis("cykloGrafTrasy", "Počet cyklotras v jednotlivých regionech");
     tvorbaRegionsGraf("cykloGrafTrasy", poctyCykloRegiony);
     tvorbaGrafWrapperu(pesiPage, "pesiGrafTrasy");
-    podsekceNadpis("pesiGrafTrasy", "Počet pěších tras v jednotlivých regionech");
+    podsekceGrafNadpis("pesiGrafTrasy", "Počet pěších tras v jednotlivých regionech");
     tvorbaRegionsGraf("pesiGrafTrasy", poctyPesiRegiony);
-    // počet dosud neabsolvovaných tras
-    tvorbaGrafWrapperu(cykloPage, "cykloGrafUnknown");
-    podsekceNadpis("cykloGrafUnknown", "Počet dosud neabsolvovaných cyklotras v regionech");
-    tvorbaRegionsGraf("cykloGrafUnknown", poctyUnknownCykloRegiony);
-    tvorbaGrafWrapperu(pesiPage, "pesiGrafUnknown");
-    podsekceNadpis("pesiGrafUnknown", "Počet dosud neabsolvovaných pěších tras v regionech");
-    tvorbaRegionsGraf("pesiGrafUnknown", poctyUnknownPesiRegiony);
     // počet již známých tras
     tvorbaGrafWrapperu(cykloPage, "cykloGrafKnown");
-    podsekceNadpis("cykloGrafKnown", "Počet již známých cyklotras v regionech");
+    podsekceGrafNadpis("cykloGrafKnown", "Počet již známých cyklotras v regionech");
     tvorbaRegionsGraf("cykloGrafKnown", poctyKnownCykloRegiony);
     tvorbaGrafWrapperu(pesiPage, "pesiGrafKnown");
-    podsekceNadpis("pesiGrafKnown", "Počet již známých pěších tras v regionech");
+    podsekceGrafNadpis("pesiGrafKnown", "Počet již známých pěších tras v regionech");
     tvorbaRegionsGraf("pesiGrafKnown", poctyKnownPesiRegiony);
+    // počet dosud neabsolvovaných tras
+    tvorbaGrafWrapperu(cykloPage, "cykloGrafUnknown");
+    podsekceGrafNadpis("cykloGrafUnknown", "Počet dosud neabsolvovaných cyklotras v regionech");
+    tvorbaRegionsGraf("cykloGrafUnknown", poctyUnknownCykloRegiony);
+    tvorbaGrafWrapperu(pesiPage, "pesiGrafUnknown");
+    podsekceGrafNadpis("pesiGrafUnknown", "Počet dosud neabsolvovaných pěších tras v regionech");
+    tvorbaRegionsGraf("pesiGrafUnknown", poctyUnknownPesiRegiony);
     // počet km tras
     tvorbaGrafWrapperu(cykloPage, "cykloGrafKm");
-    podsekceNadpis("cykloGrafKm", "Počet kilometrů cyklotras v regionech");
+    podsekceGrafNadpis("cykloGrafKm", "Počet kilometrů cyklotras v regionech");
     tvorbaRegionsGraf("cykloGrafKm", poctyKmCykloRegiony);
     tvorbaGrafWrapperu(pesiPage, "pesiGrafKm");
-    podsekceNadpis("pesiGrafKm", "Počet kilometrů pěších tras v regionech");
+    podsekceGrafNadpis("pesiGrafKm", "Počet kilometrů pěších tras v regionech");
     tvorbaRegionsGraf("pesiGrafKm", poctyKmPesiRegiony);
     // počet dní tras
     tvorbaGrafWrapperu(cykloPage, "cykloGrafDny");
-    podsekceNadpis("cykloGrafDny", "Počet dní cyklotras v regionech");
+    podsekceGrafNadpis("cykloGrafDny", "Počet dní cyklotras v regionech");
     tvorbaRegionsGraf("cykloGrafDny", poctyDniCykloRegiony);
     tvorbaGrafWrapperu(pesiPage, "pesiGrafDny");
-    podsekceNadpis("pesiGrafDny", "Počet dní pěších tras v regionech");
+    podsekceGrafNadpis("pesiGrafDny", "Počet dní pěších tras v regionech");
     tvorbaRegionsGraf("pesiGrafDny", poctyDniPesiRegiony);
 
     // naplnění wrapperDivů samotnými přepínacími tlačítky
@@ -1138,6 +1163,36 @@ function processData() {
 /* CHAPTER finální přepínání viditelnosti html elementů pomocí tlačítek */
 /* ================================================================================================================================== */
 
+
+// funkce přepínající jednotlivé kategorie koláčových grafů na stránkách s cyklo a pěšími statistikami
+// cyklo
+function prepnoutCykloKolac(x) {
+    // identifikace tlačítka
+    let button = document.getElementById(`${x}Btn`);
+    for (const kolacKategorie of cykloKolace) {
+        let deselectBtn = document.getElementById(`${kolacKategorie.id}Btn`);
+        deselectBtn.classList.remove("kolacActive");
+        kolacKategorie.style.display = "none";
+        if (x == kolacKategorie.id) {
+            kolacKategorie.style.display = "block";
+            button.classList.add("kolacActive");
+        }
+    }
+}
+// pěší
+function prepnoutPesiKolac(x) {
+    // identifikace tlačítka
+    let button = document.getElementById(`${x}Btn`);
+    for (const kolacKategorie of pesiKolace) {
+        let deselectBtn = document.getElementById(`${kolacKategorie.id}Btn`);
+        deselectBtn.classList.remove("kolacActive");
+        kolacKategorie.style.display = "none";
+        if (x == kolacKategorie.id) {
+            kolacKategorie.style.display = "block";
+            button.classList.add("kolacActive");
+        }
+    }
+}
 
 // funkce přepínající jednotlivé kategorie grafů na stránkách s cyklo a pěšími statistikami
 // cyklo

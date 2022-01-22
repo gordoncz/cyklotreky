@@ -59,8 +59,110 @@ function naplnitHTMLHome() {
 
     // odkaz na rastrový obrázek s mapou (staré zobrazení)
     var info = document.createElement("p");
-    info.innerHTML = `<span style="color: gray;">Hranice regionů v turistické mapě:</span><br><a href="img/mapa-regionu.jpg" target="_blank">Obrázek s mapou</a>`;
+    info.innerHTML = `<span class="poznamka">Hranice regionů v turistické mapě:</span><br><a href="img/mapa-regionu.jpg" target="_blank">Obrázek s mapou</a>`;
     page.appendChild(info);
+
+    // vysvětlivky ke kategoriím délek tras
+    // nadpis a podtitul
+    var vysvetlivkyHeader = document.createElement("h4");
+    vysvetlivkyHeader.innerText = "Vysvětlivky pro kategorie délek tras";
+    page.appendChild(vysvetlivkyHeader);
+    var vysvetlivkyPodtitul = document.createElement("p");
+    vysvetlivkyPodtitul.innerText = "Do jaké kategorie spadají trasy podle počtu kilometrů jejich délky";
+    vysvetlivkyPodtitul.classList.add("podtitul");
+    page.appendChild(vysvetlivkyPodtitul);
+    // wrapper div, který obalí celé vysvětlivky
+    var vysvetlivkyWrapper = createDiv("vysvetlivkyWrapper");
+    page.appendChild(vysvetlivkyWrapper);
+    // úvodní řádek s popisky
+    var vysvetlivkaCykloPopisek = createDiv("vysvetlivkaCykloPopisek");
+    vysvetlivkaCykloPopisek.innerText = "cyklo";
+    vysvetlivkyWrapper.appendChild(vysvetlivkaCykloPopisek);
+    var vysvetlivkaKategoriePopisek = createDiv("vysvetlivkaKategoriePopisek");
+    vysvetlivkaKategoriePopisek.innerText = "kategorie";
+    vysvetlivkyWrapper.appendChild(vysvetlivkaKategoriePopisek);
+    var vysvetlivkaPesiPopisek = createDiv("vysvetlivkaPesiPopisek");
+    vysvetlivkaPesiPopisek.innerText = "pěší";
+    vysvetlivkyWrapper.appendChild(vysvetlivkaPesiPopisek);
+    // jednotlivé řádky s obsahem
+    var cykloDelky = ["1 až 29 km", "30 až 39 km", "40 až 49 km", "50 km a více"];
+    var pesiDelky = ["1 až 9 km", "10 až 14 km", "15 až 19 km", "20 km a více"];
+    for (let i = 0; i < 4; i++) {
+        var vysvetlivkaCyklo = createDiv("vysvetlivkaCyklo");
+        vysvetlivkaCyklo.innerText = cykloDelky[i];
+        vysvetlivkyWrapper.appendChild(vysvetlivkaCyklo);
+        var vysvetlivkaKategorie = createDiv("vysvetlivkaKategorie");
+        vysvetlivkaKategorie.innerText = delkyNames[i];
+        vysvetlivkaKategorie.classList.add(delkyCSS[i]);
+        vysvetlivkyWrapper.appendChild(vysvetlivkaKategorie);
+        var vysvetlivkaPesi = createDiv("vysvetlivkaPesi");
+        vysvetlivkaPesi.innerText = pesiDelky[i];
+        vysvetlivkyWrapper.appendChild(vysvetlivkaPesi);
+    }
+    // poslední řádek k uzavření vysvětlivek
+    var vysvetlivkyPatka = createDiv("vysvetlivkyPatka");
+    vysvetlivkyPatka.innerText = "Ve vícedenních trasách jsou jednotlivé denní příděly kilometrů řazeny podle stejných kategorií";
+    vysvetlivkyWrapper.appendChild(vysvetlivkyPatka);
+}
+
+// pomocná funkce na vyplnění obsahu panelu s hvězdičkami ratingu
+// tj. dopravní dostupnost a vhodnost pro cyklo / pěší výlety
+function vyplnitRatingPanel(nadpis, jsonRating, jsonDesc, tagsObj = null) {
+    // POZN: tagsObj je objekt obsahující array dat s tagy tras z JSONu, plus název regionu pro případný error v datech
+    // ale např. v případě dopravy žádné tagy tras v panelu nejsou, takže ani nejsou poslány jako argument do této funkce (proto default = null)
+    var panelContainer = createDiv("regionyDetailsContainer");
+    var panelHeader = createDiv("regionyDetailsPopisek");
+    panelHeader.innerHTML = `<h4>${nadpis}</h4>`;
+    panelContainer.appendChild(panelHeader);
+    var starRating = createDiv("regionyDetailsGrafika");
+    // vykreslení počtu plných hvězdiček podle ratingu v json souboru
+    var fullstar = `<span class="starRating-${jsonRating}">&#9733</span>`;
+    var fullstars = fullstar.repeat(jsonRating);
+    // doplnění prázdných hvězdiček do plného počtu pěti celkem
+    var emptystar = `<span class="starRatingFiller">&#9734</span>`;
+    var emptystars = emptystar.repeat(5 - jsonRating);
+    var rating = fullstars + emptystars;
+    starRating.innerHTML = rating;
+    panelContainer.appendChild(starRating);
+    var panelDesc = createDiv("regionyDetailsPodrobnosti");
+    panelDesc.innerHTML = jsonDesc;
+    panelContainer.appendChild(panelDesc);
+        // podmíněná část pro přiřazení tagů délek tras (jen pokud přijde jako argument do funkce)
+        if (tagsObj !== null) {
+            // speciální div pro štítky (tagy) doporučených délek tras v regionu
+            var panelTags = createDiv("regionyDetailsTagy");
+            // přečíst array s doporučenými délkami tras a podle toho přiřadit z default arrays text jednotlivých tagů
+            for (const item of tagsObj.tagArr) {
+                let tag = createDiv("tagDiv");
+                let index = delkyIDs.indexOf(item);
+                // console.log pro případný error, když nebude délka trasy v json array odpovídat žádné standartní délce tras (např. kvůli překlepu)
+                if (index < 0) { page.innerHTML = `POZOR: Špatná délka tras v JSONu pro region: ${tagsObj.tagErrName}`; }
+                // přiřazení barvy pozadí tagu podle délky tras, kterou daný tag reprezentuje
+                switch (index) {
+                    case 0:
+                        tag.classList.add(delkyCSS[0]);
+                        break;
+                    case 1:
+                        tag.classList.add(delkyCSS[1]);
+                        break;
+                    case 2:
+                        tag.classList.add(delkyCSS[2]);
+                        break;
+                    case 3:
+                        tag.classList.add(delkyCSS[3]);
+                        break;
+                    case 4:
+                        tag.classList.add(delkyCSS[4]);
+                        break;
+                    default:
+                        break;
+                }
+                tag.innerText = delkyNames[index];
+                panelTags.appendChild(tag);
+            }
+            panelContainer.appendChild(panelTags);
+        }
+    page.appendChild(panelContainer);
 }
 
 // naplnění obsahu stránky daty pro region z JSON souboru
@@ -80,159 +182,34 @@ function naplnitHTMLRegionem(regionNazev) {
             page.appendChild(popis);
 
             // shrnutí dopravní dostupnosti do regionu
-            var panelContainer = document.createElement("div");
-            panelContainer.setAttribute("class", "regionyDetailsContainer");
-            var panelHeader = document.createElement("div");
-            panelHeader.setAttribute("class", "regionyDetailsPopisek");
-            panelHeader.innerHTML = "<h4>Dopravní dostupnost</h4>";
-            panelContainer.appendChild(panelHeader);
-            var starRating = document.createElement("div");
-            starRating.setAttribute("class", "regionyDetailsGrafika");
-            // vykreslení počtu plných hvězdiček podle ratingu v json souboru
-            var fullstar = `<span class="starRating-${dataRegionu[i].transportRating}">&#9733</span>`;
-            var fullstars = fullstar.repeat(dataRegionu[i].transportRating);
-            // doplnění prázdných hvězdiček do plného počtu pěti celkem
-            var emptystar = `<span class="starRatingFiller">&#9734</span>`;
-            var emptystars = emptystar.repeat(5 - dataRegionu[i].transportRating);
-            var rating = fullstars + emptystars;
-            starRating.innerHTML = rating;
-            panelContainer.appendChild(starRating);
-            var panelDesc = document.createElement("div");
-            panelDesc.setAttribute("class", "regionyDetailsPodrobnosti");
-            panelDesc.innerText = dataRegionu[i].transportDesc;
-            panelContainer.appendChild(panelDesc);
-            page.appendChild(panelContainer);
+            vyplnitRatingPanel("Dopravní dostupnost", dataRegionu[i].transportRating, dataRegionu[i].transportDesc);
 
             // vhodnost pro cyklovýlety
-            var panelContainer = document.createElement("div");
-            panelContainer.setAttribute("class", "regionyDetailsContainer");
-            var panelHeader = document.createElement("div");
-            panelHeader.setAttribute("class", "regionyDetailsPopisek");
-            panelHeader.innerHTML = "<h4>Vhodnost pro cyklovýlety</h4>";
-            panelContainer.appendChild(panelHeader);
-            var starRating = document.createElement("div");
-            starRating.setAttribute("class", "regionyDetailsGrafika");
-            // vykreslení počtu plných hvězdiček podle ratingu v json souboru
-            var fullstar = `<span class="starRating-${dataRegionu[i].cykloRating}">&#9733</span>`;
-            var fullstars = fullstar.repeat(dataRegionu[i].cykloRating);
-            // doplnění prázdných hvězdiček do plného počtu pěti celkem
-            var emptystar = `<span class="starRatingFiller">&#9734</span>`;
-            var emptystars = emptystar.repeat(5 - dataRegionu[i].cykloRating);
-            var rating = fullstars + emptystars;
-            starRating.innerHTML = rating;
-            panelContainer.appendChild(starRating);
-            var panelDesc = document.createElement("div");
-            panelDesc.setAttribute("class", "regionyDetailsPodrobnosti");
-            panelDesc.innerHTML = '<span style="color: gray;">doporučené délky tras:</span>';
-            panelContainer.appendChild(panelDesc);
-            // speciální div pro štítky (tagy) doporučených délek tras v regionu
-            var panelTags = document.createElement("div");
-            panelTags.setAttribute("class", "regionyDetailsTagy");
-            // přečíst array s doporučenými délkami tras a podle toho přiřadit z default arrays text jednotlivých tagů
-            for (const typ of dataRegionu[i].cykloTypes) {
-                let tag = document.createElement("div");
-                tag.setAttribute("class", "tagDiv");
-                let index = delkyIDs.indexOf(typ);
-                // console.log pro případný error, když nebude délka trasy v json array odpovídat žádné standartní délce tras (např. kvůli překlepu)
-                if (index < 0) { page.innerHTML = `POZOR: Špatná délka tras v JSONu pro region: ${dataRegionu[i].nazev}`; }
-                // přiřazení barvy pozadí tagu podle délky tras, kterou daný tag reprezentuje
-                switch (index) {
-                    case 0:
-                        tag.classList.add("short");
-                        break;
-                    case 1:
-                        tag.classList.add("medium");
-                        break;
-                    case 2:
-                        tag.classList.add("long");
-                        break;
-                    case 3:
-                        tag.classList.add("longest");
-                        break;
-                    case 4:
-                        tag.classList.add("multi");
-                        break;
-                    default:
-                        break;
-                }
-                tag.innerText = delkyNames[index];
-                panelTags.appendChild(tag);
-            }
-            panelContainer.appendChild(panelTags);
-            page.appendChild(panelContainer);
+            vyplnitRatingPanel(
+                "Vhodnost pro cyklovýlety", 
+                dataRegionu[i].cykloRating, 
+                '<span class="poznamka">doporučené délky tras:</span>', 
+                {tagArr: dataRegionu[i].cykloTypes, tagErrName: dataRegionu[i].nazev}
+                );
 
             // vhodnost pro pěší treky
-            var panelContainer = document.createElement("div");
-            panelContainer.setAttribute("class", "regionyDetailsContainer");
-            var panelHeader = document.createElement("div");
-            panelHeader.setAttribute("class", "regionyDetailsPopisek");
-            panelHeader.innerHTML = "<h4>Vhodnost pro pěší treky</h4>";
-            panelContainer.appendChild(panelHeader);
-            var starRating = document.createElement("div");
-            starRating.setAttribute("class", "regionyDetailsGrafika");
-            // vykreslení počtu plných hvězdiček podle ratingu v json souboru
-            var fullstar = `<span class="starRating-${dataRegionu[i].pesiRating}">&#9733</span>`;
-            var fullstars = fullstar.repeat(dataRegionu[i].pesiRating);
-            // doplnění prázdných hvězdiček do plného počtu pěti celkem
-            var emptystar = `<span class="starRatingFiller">&#9734</span>`;
-            var emptystars = emptystar.repeat(5 - dataRegionu[i].pesiRating);
-            var rating = fullstars + emptystars;
-            starRating.innerHTML = rating;
-            panelContainer.appendChild(starRating);
-            var panelDesc = document.createElement("div");
-            panelDesc.setAttribute("class", "regionyDetailsPodrobnosti");
-            panelDesc.innerHTML = '<span style="color: gray;">doporučené délky tras:</span>';
-            panelContainer.appendChild(panelDesc);
-            // speciální div pro štítky (tagy) doporučených délek tras v regionu
-            var panelTags = document.createElement("div");
-            panelTags.setAttribute("class", "regionyDetailsTagy");
-            // přečíst array s doporučenými délkami tras a podle toho přiřadit z default arrays text jednotlivých tagů
-            for (const typ of dataRegionu[i].pesiTypes) {
-                let tag = document.createElement("div");
-                tag.setAttribute("class", "tagDiv");
-                let index = delkyIDs.indexOf(typ);
-                // console.log pro případný error, když nebude délka trasy v json array odpovídat žádné standartní délce tras (např. kvůli překlepu)
-                if (index < 0) { page.innerHTML = `POZOR: Špatná délka tras v JSONu pro region: ${dataRegionu[i].nazev}`; }
-                // přiřazení barvy pozadí tagu podle délky tras, kterou daný tag reprezentuje
-                switch (index) {
-                    case 0:
-                        tag.classList.add("short");
-                        break;
-                    case 1:
-                        tag.classList.add("medium");
-                        break;
-                    case 2:
-                        tag.classList.add("long");
-                        break;
-                    case 3:
-                        tag.classList.add("longest");
-                        break;
-                    case 4:
-                        tag.classList.add("multi");
-                        break;
-                    default:
-                        break;
-                }
-                tag.innerText = delkyNames[index];
-                panelTags.appendChild(tag);
-            }
-            panelContainer.appendChild(panelTags);
-            page.appendChild(panelContainer);
+            vyplnitRatingPanel(
+                "Vhodnost pro pěší treky", 
+                dataRegionu[i].pesiRating, 
+                '<span class="poznamka">doporučené délky tras:</span>', 
+                {tagArr: dataRegionu[i].pesiTypes, tagErrName: dataRegionu[i].nazev}
+                );
 
             // zajímavosti v regionu
-            var panelContainer = document.createElement("div");
-            panelContainer.setAttribute("class", "regionyDetailsContainer");
-            var panelHeader = document.createElement("div");
-            panelHeader.setAttribute("class", "regionyDetailsPopisek");
+            var panelContainer = createDiv("regionyDetailsContainer");
+            var panelHeader = createDiv("regionyDetailsPopisek");
             panelHeader.innerHTML = "<h4>Zajímavosti</h4>";
             panelContainer.appendChild(panelHeader);
-            var poisLink = document.createElement("div");
-            poisLink.setAttribute("class", "regionyDetailsGrafika");
+            var poisLink = createDiv("regionyDetailsGrafika");
             poisLink.innerHTML = `<a href="${dataRegionu[i].pois}" target="_blank"><img src="img/dev-mapy.svg" alt="zajímavosti v regionu"></a>`;
             panelContainer.appendChild(poisLink);
-            var panelDesc = document.createElement("div");
-            panelDesc.setAttribute("class", "regionyDetailsPodrobnosti");
-            panelDesc.innerHTML = '<span style="color: gray;">Odkaz na seznam různých zajímavostí v regionu pro inspiraci při plánování nových tras</span>';
+            var panelDesc = createDiv("regionyDetailsPodrobnosti");
+            panelDesc.innerHTML = '<span class="poznamka">Odkaz na seznam různých zajímavostí v regionu pro inspiraci při plánování nových tras</span>';
             panelContainer.appendChild(panelDesc);
             page.appendChild(panelContainer);
 
