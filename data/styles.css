@@ -669,7 +669,8 @@ padding: 20px 0px 30px 0px;
     /* na displejích o malé šířce (např. na mobilech) */
     @media (max-width: 572px) {
         #filtry {
-            justify-content: space-around;
+            justify-content: space-evenly;
+            gap: 0px 20px;
         }
     }
 
