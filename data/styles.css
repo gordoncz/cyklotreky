@@ -2059,7 +2059,7 @@ svg[class^="rank"] {
     border-radius: 15px;
     padding: 0px;
     width: 18%;
-    min-width: 120px;
+    min-width: 150px;
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
