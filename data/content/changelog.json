@@ -1,5 +1,15 @@
 [
     {
+        "verze": "26",
+        "datum": "15. února 2022",
+        "summary": "nové cyklotrasy",
+        "detaily": [
+            "Přidán velký balík nových cyklotras, přičemž největší část přídavku byla zaměřena na Brno a Jižní Moravu, tedy oblasti s kvalitním a levným dopravním spojením",
+            "Některé existující cyklotrasy byly optimalizovány pro lepší průběh terénem",
+            "Bylo odebráno pár již absolvovaných pěších treků, u nichž se již nepředpokládá další využití"
+        ]
+    },
+    {
         "verze": "25",
         "datum": "22. ledna 2022",
         "summary": "nová možnost zobrazení trasy ve formátu Plánovače i na mobilu",

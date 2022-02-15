@@ -45,6 +45,21 @@
         "authors": ["k"]
     },
     {
+        "km": 8,
+        "multiday": false,
+        "nazev": "Vápencové lomy nad Líšní",
+        "region": "Brno",
+        "picture": "vapencove-lomy-nad-lisni",
+        "urldesktop": "https://mapy.cz/s/lunosokebo",
+        "urlmobile": "https://mapy.cz/s/remodojusu",
+        "known": true,
+        "new": false,
+        "infobox": "",
+        "kmpd": [8],
+        "stops": [],
+        "authors": ["k", "v"]
+    },
+    {
         "km": 9,
         "multiday": false,
         "nazev": "Hády",
@@ -77,17 +92,17 @@
     {
         "km": 9,
         "multiday": false,
-        "nazev": "Vápencové lomy nad Líšní",
-        "region": "Brno",
-        "picture": "vapencove-lomy-nad-lisni",
-        "urldesktop": "https://mapy.cz/s/durozuhuzu",
-        "urlmobile": "https://mapy.cz/s/jojuhonove",
-        "known": true,
+        "nazev": "Peřeje Kalského potoka",
+        "region": "Brněnsko",
+        "picture": "pereje-kalskeho-potoka",
+        "urldesktop": "https://mapy.cz/s/fuvelaconu",
+        "urlmobile": "https://mapy.cz/s/heroronoka",
+        "known": false,
         "new": false,
-        "infobox": "",
+        "infobox": "<p class=\"ibTimelimit\">Tuto trasu je nejlepší absolvovat v zimě s vydatnou sněhovou pokrývkou (kdy se na Kalském potoku tvoří ledopády) nebo případně brzy na jaře v období jarního tání (kdy je průtok vody potokem na nejvyšších stavech). V dalších obdobích roku je totiž kvůli poměrně nízkému průtoku vody Kalským potokem tato trasa o poznání méně zajímavá.</p>",
         "kmpd": [9],
         "stops": [],
-        "authors": ["k", "v"]
+        "authors": ["k"]
     },
     {
         "km": 9,
@@ -103,21 +118,6 @@
         "kmpd": [9],
         "stops": [],
         "authors": ["v"]
-    },
-    {
-        "km": 10,
-        "multiday": false,
-        "nazev": "Helenčina studánka",
-        "region": "Brno",
-        "picture": "helencina-studanka",
-        "urldesktop": "https://mapy.cz/s/defubaloma",
-        "urlmobile": "https://mapy.cz/s/lovanaveda",
-        "known": true,
-        "new": false,
-        "infobox": "",
-        "kmpd": [10],
-        "stops": [],
-        "authors": ["k"]
     },
     {
         "km": 10,
@@ -270,21 +270,6 @@
         "authors": ["k"]
     },
     {
-        "km": 12,
-        "multiday": false,
-        "nazev": "Těsnohlídkovo údolí",
-        "region": "Brněnsko",
-        "picture": "tesnohlidkovo-udoli",
-        "urldesktop": "https://mapy.cz/s/regehenomu",
-        "urlmobile": "https://mapy.cz/s/heduzufuro",
-        "known": true,
-        "new": false,
-        "infobox": "",
-        "kmpd": [12],
-        "stops": [],
-        "authors": ["k", "v"]
-    },
-    {
         "km": 13,
         "multiday": false,
         "nazev": "Babí lom",
@@ -358,36 +343,6 @@
         "kmpd": [13],
         "stops": [],
         "authors": ["k", "v"]
-    },
-    {
-        "km": 13,
-        "multiday": false,
-        "nazev": "Peřeje Kalského potoka",
-        "region": "Brněnsko",
-        "picture": "pereje-kalskeho-potoka",
-        "urldesktop": "https://mapy.cz/s/nuhusunuhu",
-        "urlmobile": "https://mapy.cz/s/lehudotefe",
-        "known": false,
-        "new": false,
-        "infobox": "<p class=\"ibTimelimit\">Tuto trasu je nejlepší absolvovat v zimě s vydatnou sněhovou pokrývkou (kdy se na Kalském potoku tvoří ledopády) nebo případně brzy na jaře v období jarního tání (kdy je průtok vody potokem na nejvyšších stavech). V dalších obdobích roku je totiž kvůli poměrně nízkému průtoku vody Kalským potokem tato trasa o poznání méně zajímavá.</p>",
-        "kmpd": [13],
-        "stops": [],
-        "authors": ["k"]
-    },
-    {
-        "km": 13,
-        "multiday": false,
-        "nazev": "Z Nedvědice do Bystřice",
-        "region": "Vysočina",
-        "picture": "z-nedvedice-do-bystrice",
-        "urldesktop": "https://mapy.cz/s/lupuzefebu",
-        "urlmobile": "https://mapy.cz/s/fosazezezu",
-        "known": true,
-        "new": false,
-        "infobox": "",
-        "kmpd": [13],
-        "stops": [],
-        "authors": ["k", "d", "v"]
     },
     {
         "km": 13,
@@ -561,7 +516,7 @@
         "region": "Slovensko",
         "picture": "sulovske-skaly",
         "urldesktop": "https://mapy.cz/s/covududeru",
-        "urlmobile": "https://mapy.cz/s/bofohekucu",
+        "urlmobile": "https://mapy.cz/s/haboladuca",
         "known": false,
         "new": false,
         "infobox": "",
