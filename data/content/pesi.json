@@ -12,7 +12,8 @@
         "infobox": "<p class=\"ibTimelimit\">Ideální je trasu projít v druhé polovině března, kdy koniklece na Kamenném vrchu kvetou.</p>",
         "kmpd": [7],
         "stops": [],
-        "authors": ["k", "d"]
+        "authors": ["k", "d"],
+        "idsjmk": 2
     },
     {
         "km": 7,
@@ -27,7 +28,8 @@
         "infobox": "<p class=\"ibWarning\">Soutěska Koryto je v některých částech obtížněji prostupná jen po úzkých cestách posetých kluzkými kameny (zejména v úseku okolí zříceniny hradu Sokolov).</p>",
         "kmpd": [7],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 0
     },
     {
         "km": 8,
@@ -42,7 +44,8 @@
         "infobox": "<p class=\"ibTransport\">Pro zpáteční cestu lze využít také <a href=\"https://www.dpmb.cz/cs/novinky/all\" target=\"_blank\">lodní dopravu parníkem DPMB</a>.</p>",
         "kmpd": [8],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 2
     },
     {
         "km": 8,
@@ -57,7 +60,8 @@
         "infobox": "",
         "kmpd": [8],
         "stops": [],
-        "authors": ["k", "v"]
+        "authors": ["k", "v"],
+        "idsjmk": 2
     },
     {
         "km": 9,
@@ -72,7 +76,8 @@
         "infobox": "",
         "kmpd": [9],
         "stops": [],
-        "authors": ["k", "d", "v"]
+        "authors": ["k", "d", "v"],
+        "idsjmk": 2
     },
     {
         "km": 9,
@@ -87,7 +92,8 @@
         "infobox": "",
         "kmpd": [9],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 2
     },
     {
         "km": 9,
@@ -102,7 +108,8 @@
         "infobox": "<p class=\"ibTimelimit\">Tuto trasu je nejlepší absolvovat v zimě s vydatnou sněhovou pokrývkou (kdy se na Kalském potoku tvoří ledopády) nebo případně brzy na jaře v období jarního tání (kdy je průtok vody potokem na nejvyšších stavech). V dalších obdobích roku je totiž kvůli poměrně nízkému průtoku vody Kalským potokem tato trasa o poznání méně zajímavá.</p>",
         "kmpd": [9],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 2
     },
     {
         "km": 9,
@@ -117,7 +124,8 @@
         "infobox": "",
         "kmpd": [9],
         "stops": [],
-        "authors": ["v"]
+        "authors": ["v"],
+        "idsjmk": 2
     },
     {
         "km": 10,
@@ -132,7 +140,8 @@
         "infobox": "",
         "kmpd": [10],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 0
     },
     {
         "km": 10,
@@ -147,7 +156,8 @@
         "infobox": "",
         "kmpd": [10],
         "stops": [],
-        "authors": ["v", "k"]
+        "authors": ["v", "k"],
+        "idsjmk": 0
     },
     {
         "km": 10,
@@ -162,7 +172,8 @@
         "infobox": "",
         "kmpd": [10],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 2
     },
     {
         "km": 10,
@@ -177,7 +188,8 @@
         "infobox": "",
         "kmpd": [10],
         "stops": [],
-        "authors": ["d"]
+        "authors": ["d"],
+        "idsjmk": 0
     },
     {
         "km": 11,
@@ -192,7 +204,8 @@
         "infobox": "<p class=\"ibRestriction\">Průchod přes Nový hřbitov na Zelené hoře je omezen platnou otevírací dobou, která je v zimě 8-17, v létě 7-20.</p>",
         "kmpd": [11],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 0
     },
     {
         "km": 11,
@@ -207,7 +220,8 @@
         "infobox": "",
         "kmpd": [11],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 0
     },
     {
         "km": 11,
@@ -222,7 +236,8 @@
         "infobox": "<p class=\"ibTransport\">Pro cestu tam i zpět se počítá s využitím <a href=\"https://www.dpmb.cz/cs/novinky/all\" target=\"_blank\">lodní dopravy parníkem DPMB</a>.</p>",
         "kmpd": [11],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 2
     },
     {
         "km": 12,
@@ -237,7 +252,8 @@
         "infobox": "",
         "kmpd": [12],
         "stops": [],
-        "authors": ["d"]
+        "authors": ["d"],
+        "idsjmk": 0
     },
     {
         "km": 12,
@@ -252,7 +268,8 @@
         "infobox": "",
         "kmpd": [12],
         "stops": [],
-        "authors": ["v"]
+        "authors": ["v"],
+        "idsjmk": 2
     },
     {
         "km": 12,
@@ -267,7 +284,8 @@
         "infobox": "",
         "kmpd": [12],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 0
     },
     {
         "km": 13,
@@ -282,7 +300,8 @@
         "infobox": "<p class=\"ibTimelimit\">Vzhledem k tomu, že v úseku hřebene Babí lom vede trasa místy po nebezpečných kamenech, není vhodné ji absolvovat např. po dešti nebo v zimě.</p><p class=\"ibSlope\">Prudší stoupání o sklonu 19 % mezi koncem zástavby Lelekovic a rozhlednou Babí lom.</p>",
         "kmpd": [13],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 2
     },
     {
         "km": 13,
@@ -297,7 +316,8 @@
         "infobox": "<p class=\"ibTransport\">Jsou tři praktické možnosti dopravy do startu a z cíle trasy, všechny ale vyžadují kombinaci auta a autobusu. První možnost je přijet autem cca v 8 ráno do startu trasy v Olešnici a na konci z cíle trasy na Šerlichu odjet autobusem v 16:20 zpět k autu.</p><p class=\"ibTransport\">Druhá možnost je vyjet autem nahoru na Šerlich, odtud v 10:20 odjet autobusem do startu trasy v Olešnici (příjezd 10:45). V takovém případě je ale nutné počítat s pozdějším odjezdem zpět z Šerlichu, a to zhruba v 7 večer.</p><p class=\"ibTransport\">Nebo třetí možnost je zaparkovat auto buď v Dobrušce nebo v Novém Městě nad Metují, odkud po 7.&nbsp;hodině ráno jezdí autobusy do Olešnice (s příjezdem cca v 9 ráno). Po 17.&nbsp;hodině pak ze Šerlichu jezdí poslední přestupní autobusový spoj do obou těchto výchozích měst, kde se pak lze vrátit k autu.</p>",
         "kmpd": [13],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 0
     },
     {
         "km": 13,
@@ -312,7 +332,8 @@
         "infobox": "",
         "kmpd": [13],
         "stops": [],
-        "authors": ["k", "d"]
+        "authors": ["k", "d"],
+        "idsjmk": 0
     },
     {
         "km": 13,
@@ -327,7 +348,8 @@
         "infobox": "",
         "kmpd": [13],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 2
     },
     {
         "km": 13,
@@ -342,7 +364,8 @@
         "infobox": "",
         "kmpd": [13],
         "stops": [],
-        "authors": ["k", "v"]
+        "authors": ["k", "v"],
+        "idsjmk": 2
     },
     {
         "km": 13,
@@ -357,7 +380,8 @@
         "infobox": "",
         "kmpd": [13],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 2
     },
     {
         "km": 14,
@@ -372,7 +396,8 @@
         "infobox": "",
         "kmpd": [14],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 2
     },
     {
         "km": 14,
@@ -387,7 +412,8 @@
         "infobox": "",
         "kmpd": [14],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 0
     },
     {
         "km": 14,
@@ -402,7 +428,8 @@
         "infobox": "",
         "kmpd": [14],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 0
     },
     {
         "km": 14,
@@ -417,7 +444,8 @@
         "infobox": "",
         "kmpd": [14],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 2
     },
     {
         "km": 14,
@@ -432,7 +460,8 @@
         "infobox": "",
         "kmpd": [14],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 2
     },
     {
         "km": 14,
@@ -447,7 +476,8 @@
         "infobox": "",
         "kmpd": [14],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 2
     },
     {
         "km": 14,
@@ -462,7 +492,8 @@
         "infobox": "<p class=\"ibTimelimit\">Tato trasa je zamýšlena primárně pro absolvování během března, kdy v údolí kvetou doslova celé koberce chráněné bledule jarní. A vzhledem k opravdu vysoké návštěvnosti této krásy o víkendech je lepší si pro trasu vybrat raději všední den.</p>",
         "kmpd": [14],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 2
     },
     {
         "km": 15,
@@ -477,7 +508,8 @@
         "infobox": "",
         "kmpd": [15],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 0
     },
     {
         "km": 15,
@@ -492,7 +524,8 @@
         "infobox": "",
         "kmpd": [15],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 2
     },
     {
         "km": 15,
@@ -507,7 +540,8 @@
         "infobox": "<p class=\"ibRestriction\">Cesta podél pravého břehu bojkovické přehrady je v ochranném pásmu vodního zdroje a může být zrovna zavřená. Lze ji ale v případě nutnosti obejít po žluté turistické značce severozápadně od ní.</p>",
         "kmpd": [15],
         "stops": [],
-        "authors": ["d"]
+        "authors": ["d"],
+        "idsjmk": 0
     },
     {
         "km": 15,
@@ -522,7 +556,8 @@
         "infobox": "",
         "kmpd": [15],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 0
     },
     {
         "km": 15,
@@ -537,7 +572,8 @@
         "infobox": "",
         "kmpd": [15],
         "stops": [],
-        "authors": ["v", "k"]
+        "authors": ["v", "k"],
+        "idsjmk": 0
     },
     {
         "km": 15,
@@ -552,7 +588,8 @@
         "infobox": "",
         "kmpd": [15],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 0
     },
     {
         "km": 15,
@@ -567,7 +604,8 @@
         "infobox": "",
         "kmpd": [15],
         "stops": [],
-        "authors": ["d", "k"]
+        "authors": ["d", "k"],
+        "idsjmk": 0
     },
     {
         "km": 16,
@@ -582,7 +620,8 @@
         "infobox": "",
         "kmpd": [16],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 0
     },
     {
         "km": 16,
@@ -597,7 +636,8 @@
         "infobox": "",
         "kmpd": [16],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 2
     },
     {
         "km": 16,
@@ -612,7 +652,8 @@
         "infobox": "<p class=\"ibTransport\">Předpokládá se příjezd a odjezd asi nejlépe autem. Lze se do startu a z cíle trasy dopravit také vlakem s přestupem v Pardubicích, nicméně v takovém případě je potřeba k trase připočítat ještě 2 km navíc (pro přechod z/na nádraží Slatiňany).</p>",
         "kmpd": [16],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 0
     },
     {
         "km": 16,
@@ -627,7 +668,8 @@
         "infobox": "<p class=\"ibInfo\">Trasa provede okolo desítky bývalých vodních mlýnů na Bílém potoce. Žádný z nich již neslouží původnímu účelu, přičemž je příznačné, že většina z nich přestala plnit funkci mlýna nuceně v 50.&nbsp;letech 20.&nbsp;století během nástupu komunismu.</p>",
         "kmpd": [16],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 2
     },
     {
         "km": 16,
@@ -642,7 +684,8 @@
         "infobox": "",
         "kmpd": [16],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 2
     },
     {
         "km": 16,
@@ -657,7 +700,8 @@
         "infobox": "<p class=\"ibInfo\">Trasa je vedena po místech, na nichž zanechal své stopy \"velikán české politiky\", který dokázal povýšit primitivní buranství, neomalenost a lži na životní styl. Lze si tak prohlédnout pramen řeky Oslavy (který údajně objevil), kótu 575 u Matějovského rybníka (kde v únoru 2017 slavně stanul na běžkách), Veselský rybník (na němž s oblibou tráví letní dovolené, veslujíc ve svém žlutém nafukovacím člunu), Zámek Nové Veselí (který využívá jako letní \"daču\") nebo bývalou Restauraci U Prezidenta (s jeho papírovou podobiznou).</p>",
         "kmpd": [16],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 0
     },
     {
         "km": 16,
@@ -672,7 +716,8 @@
         "infobox": "",
         "kmpd": [16],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 0
     },
     {
         "km": 18,
@@ -687,7 +732,8 @@
         "infobox": "",
         "kmpd": [18],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 2
     },
     {
         "km": 20,
@@ -702,7 +748,8 @@
         "infobox": "",
         "kmpd": [20],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 0
     },
     {
         "km": 21,
@@ -717,7 +764,8 @@
         "infobox": "<p class=\"ibTimelimit\">Nejlepší je projít trasu buď v březnu, kdy je údolí poseté záplavou bílých květů bledulí, nebo v říjnu, kdy se zase okolní listnaté lesy rozehrají všemi barvami.</p>",
         "kmpd": [21],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 2
     },
     {
         "km": 27,
@@ -732,7 +780,8 @@
         "infobox": "",
         "kmpd": [27],
         "stops": [],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 2
     },
     {
         "km": 21,
@@ -747,7 +796,8 @@
         "infobox": "<p class=\"ibRestriction\">Žlutá trasa od horské chaty Markowe Szczawiny na vrchol Babia hora (tzv. \"Perc Akademikow\") může být uzavřena, proto je potřeba zkusit toto ověřit ještě z místních zdrojů pokud možno před výletem.</p><p class=\"ibSlope\">Poslední úsek žluté trasy \"Perc Akademikow\" cca 950 m před vrcholem (nad úrovní lesa) má extrémně prudké stoupání o sklonu 34%. Tato část trasy je proto na několika místech zajištěna řetězy, kovovými žebříky apod.</p>",
         "kmpd": [10, 11],
         "stops": ["Chata Slaná voda", "Schronisko na Markowych Szczawinach", "Chata Slaná voda"],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 0
     },
     {
         "km": 23,
@@ -762,7 +812,8 @@
         "infobox": "<p class=\"ibRestriction\">Část trasy po žluté od rozcestí Na paloučku po rozcestí Nad vodopády Bílé Opavy je průchozí pouze po dřevěných lávkách a schodech.</p>",
         "kmpd": [10, 13],
         "stops": ["Hvězda, rozcestí", "Praděd", "Kouty nad Desnou"],
-        "authors": ["k", "v"]
+        "authors": ["k", "v"],
+        "idsjmk": 0
     },
     {
         "km": 25,
@@ -777,7 +828,8 @@
         "infobox": "<p class=\"ibTransport\">Do startu trasy se předpokládá odjet vlakem v 7:18 z Brna hl.n. přes Olomouc do Krnova a odtud potom autobusem do Zlatých Hor. Lze odjet i v 9:18 čistě vlakovým spojením Brno hl.n. - Jeseník - Mikulovice - Zlaté Hory, v takovém případě ale bude trasa bez prohlídky města Zlaté Hory (a o cca 2&nbsp;km kratší).</p><p class=\"ibTransport\">Poslední přímý zpáteční vlak je rychlík Jeseník - Brno hl.n. v 17:01.</p><p class=\"ibInfo\">Vstup do <a href=\"http://www.jeseniky.net/naucna-stezka-rejviz-mechove-jezirko\" target=\"_blank\">Rašeliniště Rejvíz</a> k Mechovému jezírku je zpoplatněn.</p>",
         "kmpd": [11, 14],
         "stops": ["Zlaté Hory", "Rejvíz", "Jeseník"],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 0
     },
     {
         "km": 27,
@@ -792,7 +844,8 @@
         "infobox": "",
         "kmpd": [14, 13],
         "stops": ["Ostravice", "Lysá hora", "Ostravice"],
-        "authors": ["k", "v"]
+        "authors": ["k", "v"],
+        "idsjmk": 0
     },
     {
         "km": 29,
@@ -807,7 +860,8 @@
         "infobox": "<p class=\"ibInfo\">Unikátním lákadlem tohoto pěšího treku je možnost svézt se historickým parním vlakem na úzkokolejné trati v úseku Jindřichův Hradec - Kaproun. Nyní je ale tato atrakce výrazně dražší než v době vzniku treku, a to kvůli radikální změně systému jízdného JHMD. Nově totiž pro parní vlaky neplatí úsekové jízdenky, ale pouze celodenní jízdenka za 540&nbsp;Kč (podle předchozího úsekového tarifu přitom vycházela jízda na 270&nbsp;Kč). Pro srovnání, přeprava úzkokolejným motoráčkem na tomto úseku stojí 26&nbsp;Kč.</p><p class=\"ibTransport\"><a href=\"http://jhmd.cz/ceny-jizdenek/parni-vlaky\" target=\"_blank\">Parní vlak JHMD</a> jezdí pravidelně od května do září jen jednou denně a pouze v sobotu (v červenci a srpnu pak každý den).</p>",
         "kmpd": [15, 14],
         "stops": ["Kaproun, žel. st.", "Malý Ratmírov", "Jindřichův Hradec"],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 0
     },
     {
         "km": 29,
@@ -822,7 +876,8 @@
         "infobox": "<p class=\"ibTransport\">Pro zkrácení a zjednodušení cesty do startu a z cíle trasy je možné dojet autem do Horní Plané a odtud teprve pokračovat vlakem.</p><p class=\"ibSleep\">Nutné nést s sebou stan pro přespání v nouzovém nocovišti Pod Plešným jezerem.</p><p class=\"ibSlope\">Intenzivní stoupání se sklonem 24 % na cca 1 km dlouhém úseku od Plešného jezera k Pomníku Adalberta Stiftera.</p><p class=\"ibInfo\">Trasa je unikátní tím, že prochází hned třemi státy najednou.</p>",
         "kmpd": [13, 16],
         "stops": ["Ovesná", "Nouzové nocoviště Pod Plešným jezerem", "Nové Údolí"],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 0
     },
     {
         "km": 32,
@@ -837,7 +892,8 @@
         "infobox": "<p class=\"ibTransport\">Z důvodu úspory času a sil je potřeba využít <a href=\"http://www.bonera.cz/lanovky-vleky.php\" target=\"_blank\">lanovku Ramzová - Čerňava - Šerák</a>, aby se nemuselo převýšení více než 500 m (10%) na téměř 5 km cesty po červené turistické značce absolvovat pěšky.</p><p class=\"ibSlope\">Na krátkém úseku cca 500 m mezi vrcholem Malý Jezerník a chatou Švýcárna je prudší stoupání o sklonu 19 %.</p>",
         "kmpd": [20, 12],
         "stops": ["Ramzová", "Hotel Ovčárna pod Pradědem", "Motorest Skřítek"],
-        "authors": ["v", "k"]
+        "authors": ["v", "k"],
+        "idsjmk": 0
     },
     {
         "km": 32,
@@ -852,7 +908,8 @@
         "infobox": "<p class=\"ibTransport\">Předpokládá se příjezd autem do Trutnova a odtud potom do startu a z cíle trasy autobusem.</p><p class=\"ibTransport\">Z časových důvodů je nutné na začátku treku využít <a href=\"https://www.skiareal.cz/leto/lanove-drahy\" target=\"_blank\">lanovou dráhu Medvědín</a>, která mezi Špindlerovým mlýnem a vrchem Medvědín jezdí každou půlhodinu.</p><p class=\"ibInfo\">Do polské části Krkonošského národního parku je vstup placený, to se však nevztahuje na červenou hřebenovku <a href=\"https://www.krnap.cz/tiskove-zpravy/nezapomente-ze-do-polskeho-krkonosskeho-narodniho-parku-se-plati-vstupne/\" target=\"_blank\">\"Cesta česko-polského přátelství\"</a>, jejíž průchod je zdarma.</p>",
         "kmpd": [16, 16],
         "stops": ["Špindlerův mlýn", "Schronisko Odrodzenie", "Horní Malá Úpa, Pomezní Boudy"],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 0
     },
     {
         "km": 33,
@@ -867,7 +924,8 @@
         "infobox": "<p class=\"ibSleep\">Není špatné si s sebou přibalit také spacák. Ten lze pak využít při přenocování v horské chatě Schronisko Na Sniezniku, která je zařízená v poměrně nízkém komfortu stylu hromadné turistické ubytovny, takže spacák se zde hodí zejména z hygienických důvodů. Jiná alternativa přespání v okolí vrcholu Králického Sněžníku bohužel není.</p><p class=\"ibSlope\">Prudší stoupání o sklonu 15 % na úseku 1,4 km od Sedla Puchača na vrchol Goworek.</p>",
         "kmpd": [8, 13, 12],
         "stops": ["Prostřední Lipka", "Agropension Chřástal", "Schronisko Na Sniezniku", "Staré Město pod Sněžníkem"],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 0
     },
     {
         "km": 34,
@@ -882,7 +940,8 @@
         "infobox": "<p class=\"ibInfo\">Inspirací pro trasu byla úspěšná česká PC hra Kingdom Come (v překladu \"Přijď království tvé\" - z modlitby Otčenáš). Hra je zasazená do pozdního středověku v období před husitskými válkami a odehrává se právě <a href=\"https://www.centralbohemia.cz/filemanager/files/file.php?file=412720\" target=\"_blank\">v této části malebné krajiny Posázaví</a>. Lze si tak osobně projít vybraná místa stejně jako hlavní hrdina hry Jindřich - Rataje, Ledečko, Samopše či Sázavu.</p>",
         "kmpd": [19, 15],
         "stops": ["Kácov", "Rataje nad Sázavou", "Sázava"],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 0
     },
     {
         "km": 35,
@@ -897,7 +956,8 @@
         "infobox": "<p class=\"ibTransport\">Z důvodu úspory času a sil je potřeba využít <a href=\"http://www.bonera.cz/lanovky-vleky.php\" target=\"_blank\">lanovku Ramzová - Čerňava - Šerák</a>, aby se nemuselo převýšení více než 500 m (10%) na téměř 5 km cesty po červené turistické značce absolvovat pěšky.</p><p class=\"ibInfo\">Druhý den trasy zahrnuje jízdu lanovkou, takže ve skutečnosti je pěší trek ten den o 3 km kratší.</p>",
         "kmpd": [17, 18],
         "stops": ["Staré Město pod Sněžníkem", "Ramzová", "Branná"],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 0
     },
     {
         "km": 40,
@@ -912,7 +972,8 @@
         "infobox": "<p class=\"ibSleep\">Vzhledem k omezeným možnostem přespání pod střechou během druhé noci (jen jediný hotel nevalné kvality pod hradem Landštejn) je lepší mít s sebou na přespání stan. Podle pravidel přírodního parku Česká Kanada je v něm stanování povoleno (samozřejmě s výjimkou lesa, ve kterém se obecně nesmí stanovat nikde).</p>",
         "kmpd": [12, 15, 13],
         "stops": ["Slavonice", "Český Rudolec", "Vitíněves", "Slavonice"],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 0
     },
     {
         "km": 41,
@@ -927,7 +988,8 @@
         "infobox": "<p class=\"ibTimelimit\">Trasu lze projít pouze v období od 16. června do cca poloviny října. V zimě jsou totiž z důvodu bezpečnosti uzavřené Jánošíkovy diery a také hory samotné jsou příliš zasněžené a na jaře (od 1.3. do 15.6.) je každoročně zakázán výstup po červené turistické značce na Velký Rozsutec kvůli ochraně tamějších hnízdících ptáků.</p><p class=\"ibTimelimit\">Začátek trasy je potřeba naplánovat na všední den, protože o víkendech odpoledne nejezdí žádný spoj z Žiliny do startu trasy v Terchové.</p><p class=\"ibSlope\">Úsek 4,5 km od sedla Podžiar až na vrch Velký Rozsutec má velmi strmé stoupání 900 výškových metrů (což je v přepočtu 20%). Navíc je tento úsek (po rozcestí Pod Tanečnicou) výhradně jednosměrný a průchozí jen díky žebříkům, lávkám a schodům.</p><p class=\"ibSleep\">Na trase je sice možné přespat pod stanem, ale pouze na vyhrazených nocovištích, která jsou umístěna v těsné blízkosti horských chat. Jinak je v NP Malá Fatra stanování ve volné přírodě zakázáno. Pohodlnější je vzít si s sebou jen spacák, protože díky němu je pak přespání v horských chatách na trase o něco levnější (neúčtuje se potom poplatek za povlečení).</p>",
         "kmpd": [5, 17, 12, 7],
         "stops": ["Terchová, B.Potok h.Diery", "Dom horskej služby Štefanová", "Chata pod Chlebom", "Chata pod Suchým", "Nezbudská Lúčka-Strečno"],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 0
     },
     {
         "km": 43,
@@ -942,7 +1004,8 @@
         "infobox": "<p class=\"ibTimelimit\">Trasu lze absolvovat pouze v období od 15.7. do 15.11., protože červená turistická značka od zaniklé osady Javoří Pila až k Rozhledně Poledník je mimo toto období uzavřena z důvodu ochrany přírody.</p><p class=\"ibTimelimit\">Vzhledem ke značné komplikovanosti spojů je nejvýhodnější mít úterý jako příjezdový den, středu až pátek pro samotný trek a sobotu jako návratový den.</p><p class=\"ibTransport\">Pro snížení počtu přestupů na minimum je potřeba přijet autem do Vimperku, odtud potom odjet 11:35 busem směr Kvilda. Zpět z Prášil odjíždí v 10:29 bus přes Kvildu do Vimperku.</p><p class=\"ibInfo\">Při cestě tam je možné vystoupit 12:09 v zastávce \"Borová Lada, Svinná Lada\", prohlédnout si Chalupskou slať a Soví voliéry a poté v 18:01 z obce Borová Lada dojet na Kvildu.</p><p class=\"ibSleep\">Kromě první noci na Kvildě se pro přenocování počítá se stanem.</p>",
         "kmpd": [18, 16, 9],
         "stops": ["Kvilda", "Autocamping Antýgl", "Nouzové nocoviště Poledník", "Veřejné tábořiště Prášily"],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 0
     },
     {
         "km": 48,
@@ -957,7 +1020,8 @@
         "infobox": "<p class=\"ibTimelimit\">Začátek trasy je možné naplánovat jen na čtvrtek nebo pátek, protože zpáteční přímý autobusový spoj jezdí pouze o víkendech.</p><p class=\"ibTransport\">Pro cestu tam je nutné dojet autem do Vrchlabí a odtud v 9:22 autobusem do Pece pod Sněžkou. Pro cestu zpět pak z Kořenova v 16:44 odjíždí jediný přímý autobusový spoj do Vrchlabí, kde se lze zase vrátit k autu.</p><p class=\"ibTransport\">Jako alternativní cestu zpět lze volit i jízdu <a href=\"http://www.zubacka.cz/\" target=\"_blank\">historickým ozubnicovým motorovým vlakem</a> z železniční stanice Kořenov do Tanvaldu a odtud pak v 16:32 tím stejným přímým busem do Vrchlabí.</p><p class=\"ibSleep\">Jelikož jsou Krkonoše vyhlášené svými vysokými cenami, a to zejména za ubytovací služby, počítá se v obou městech (Špindlerův Mlýn i Harrachov) s přespáním v místních kempech. V obou jsou k dispozici kromě míst pro stany také chatky.</p><p class=\"ibSlope\">Prudké stoupání o sklonu 17&nbsp;% na 2,6&nbsp;km dlouhém úseku od \"Kaple v Obřím dole\" po Slezský dům.</p><p class=\"ibSlope\">Prudké stoupání přes 15&nbsp;% na úseku 1,3&nbsp;km od řeky Labe po rozcestník Labský vodopád.</p>",
         "kmpd": [17, 20, 11],
         "stops": ["Pec pod Sněžkou", "Autokemp Špindlerův Mlýn", "Camping Jiskra Harrachov", "Kořenov"],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 0
     },
     {
         "km": 49,
@@ -972,7 +1036,8 @@
         "infobox": "<p class=\"ibTransport\">Pro snazší cestování je nejlepší přijet autem do Vsetína a odtud potom do startu a z cíle trasy již vlakem.</p><p class=\"ibSleep\">Pro tuto trasu je lepší místo stanování raději zajistit ubytování v Pulčíně pod střechou. Druhou noc totiž není možné stan vůbec využít z důvodu zákazu stanování v CHKO Beskydy, takže jeho nošení by nebylo zrovna výhodné, jelikož v takto kopcovitém terénu je lepší mít batoh co nejlehčí.</p>",
         "kmpd": [15, 19, 15],
         "stops": ["Lužná u Vsetína", "Pulčín", "Horský hotel Portáš", "Velké Karlovice zastávka"],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 0
     },
     {
         "km": 50,
@@ -987,6 +1052,7 @@
         "infobox": "<p class=\"ibTimelimit\">Nejlepší je trasu jít v období od cca poloviny června do konce listopadu. V zimě totiž nemusí být kvůli sněhu a ledu průchozí Vlčí rokle (která je průchozí jen díky dřevěným povalovým lávkám, schodům a žebříkům) a na jaře od března do cca poloviny června bývá část Teplických skal uzavřena z důvodu ochrany hnízdících sokolů.</p><p class=\"ibSleep\">Nelze přespat ve stanu. Na trase nejsou žádná nocoviště ani kempy a stanování je v CHKO Broumovsko zakázáno. Je ale možnost vzít si s sebou alespoň spacák, přinejmenším na zámku Skály (Bischofstein) je díky tomu pak přespání levnější (neúčtují v takovém případě poplatek za povlečení).</p><p class=\"ibInfo\">Vstup do <a href=\"https://www.adrspasskeskaly.cz/\" target=\"_blank\">Adršpašských skal</a> i do <a href=\"https://www.teplickeskaly.eu/\" target=\"_blank\">Teplických skal</a> je zpoplatněn. Pro vstup do obou skalních měst ale stačí koupit vstupenku pouze do jednoho z nich, vstupenka pak platí ve stejný den i pro přístup do druhého skalního města.</p>",
         "kmpd": [13, 14, 18, 5],
         "stops": ["Adršpach", "Zámek Skály-Bischofstein", "Hlavňov", "Machov", "Vysoká Srbská, obecní úřad"],
-        "authors": ["k"]
+        "authors": ["k"],
+        "idsjmk": 0
     }
 ]

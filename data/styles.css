@@ -5,6 +5,8 @@
 :root {
     --themeColor: #0a7fe2;
     --highlightColor: #ffa608;
+    --dimmedHighlight: #c38e4f;
+    --dimmedLightOrange: #EB9D55;
     --linkColor: #6cbaf9;
     --iblinkColor: #0d83e1;
     --bgLighter: #3c3f46;
@@ -69,6 +71,7 @@ em {
     font-style: normal;
 }
 
+
 /* nadpisy každé stránky */
 h1 {
     margin: 0px;
@@ -97,11 +100,7 @@ h2 {
         margin-top: 10px;
     }
 
-/* nadpis využitý pro velikosti mapy regionů */
-h3 {
-    font-family: 'Open Sans', sans-serif;
-    color: var(--linkColor);
-}
+/* h3 byl využit v boxech pro odkazy na jednotlivé velikosti mapy regionů, momentálně je nevyužitý */
 
 /* menší nadpisy, hodící se např. pro sub-sekce ve statistikách */
 h4 {
@@ -116,6 +115,15 @@ h4 {
     width: 90%;
     max-width: 900px;
 }
+
+/* taktéž nadpis pro podsekce, ale méně výrazný než žlutý h4 */
+h5 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.0em;
+    font-weight: normal;
+    color: var(--dimmedLightOrange);
+}
+
 
 .podtitul {
     color: lightgray;
@@ -1011,6 +1019,8 @@ padding: 20px 0px 30px 0px;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    align-content: flex-start;
+    align-items: flex-start;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: auto;
@@ -1023,6 +1033,17 @@ padding: 20px 0px 30px 0px;
         .noTracks::before {
             content: "žádná trasa";
             color: var(--highlightColor);
+        }
+    }
+    /* speciální výška pro malé obrazovky (mobilů) k zajištění, že bude moct být textový filtr scrollovatelný vždy nahoru */
+    @media (pointer: coarse) and (max-width: 572px) {
+        #seznamTras {
+            /* 100vh - 40px patka - 80px div padding - 50px titulka - 30px 1/2 počítadla - 50px textový filtr - 10px margin od filtrů - 11px korekce */
+            min-height: calc(100vh - 271px);
+        }
+        #seznamTras.noTracks {
+            /* vše předtím, ale ještě dalších - 10px kvůli změněnému paddingu při .noTracks aplikované class */
+            min-height: calc(100vh - 281px);
         }
     }
     /* při zobrazení 0 tras na PC se zobrazí EasterEgg pinup girl jako pozadí takto prázdné stránky */
@@ -1049,7 +1070,7 @@ padding: 20px 0px 30px 0px;
 
     /* zde jsou specifické classy, které zařizují skrývání/zobrazování trasaWrapper v seznamu tras pro každý filtr zvlášť */
     /* aby se spolu tyto jednotlivé filtry mohly kombinovat */
-    .filtrDelka, .filtrRegion, .filtrKnown, .filtrNew, .filtrNazev, .filtrAuthors {
+    .filtrDelka, .filtrRegion, .filtrKnown, .filtrNew, .filtrNazev, .filtrAuthors, .filtrIDSJMK {
         display: none;
     }
 
@@ -1215,6 +1236,19 @@ padding: 20px 0px 30px 0px;
                     margin-right: 5px;
                 }
 
+            /* div pro zobrazení ikonky IDSJMK */
+            .idsjmkContainer {
+                width: 14px;
+                height: 14px;
+                background-color: transparent;
+                grid-area: region;
+                z-index: 10;
+                user-select: none;
+                padding: 0px;
+                margin: auto 80px 4px auto;
+                font-size: 0px;
+            }
+
             /* div pro zobrazení ikonek autorů trasy */
             .authorsContainer {
                 background-color: transparent;
@@ -1323,14 +1357,14 @@ padding: 20px 0px 30px 0px;
 
             /* viditelná grafická část tlačítka */
             .infoButtonVisual {
-                background-color: #c38e4f;
+                background-color: var(--dimmedHighlight);
                 color: black;
                 border-radius: 15px 0px 15px 0px;
                 padding: 2px 0px;
                 user-select: none;
             }
             .infoButtonVisual:hover {
-                background-color: #ffa608;
+                background-color: var(--highlightColor);
                 filter: brightness(80%);
             }
 
@@ -1687,6 +1721,7 @@ padding: 20px 0px 30px 0px;
         background-position: center center;
         background-repeat: no-repeat;
         border-radius: 5px;
+        cursor: help;
     }
         .pravidloDiv:hover {
             background-color: var(--highlightColor);
@@ -1755,18 +1790,18 @@ padding: 20px 0px 30px 0px;
         /* to následně zajistí, že bude tooltip zobrazený přesně uprostřed své šířky nad prostředkem dané ikony */
         /* krátký */
         .pANO::after, .pNE::after {
-            left: -61px;
-            width: 150px;
+            left: -41px;
+            width: 110px;
         }
         /* střední */
         .pVsude::after, .pCesty::after, .pLaw::after {
-            left: -86px;
-            width: 200px;
+            left: -61px;
+            width: 150px;
         }
         /* dlouhý */
         .pTrasy::after, .pNekde::after {
-            left: -111px;
-            width: 250px;
+            left: -101px;
+            width: 230px;
         }
         /* texty v jednotlivých typech tooltip boxů */
         .pANO::after {
@@ -2122,7 +2157,7 @@ svg[class^="rank"] {
     background-color: var(--authorD);
 }
 
-/* wrapper div pro přepínací záložky/tlačítka pro jednotlivé kategorie tipy a triky */
+/* wrapper div pro přepínací záložky/tlačítka pro jednotlivé kategorie statistických koláčů */
 #cykloKolaceButtons, #pesiKolaceButtons, #cykloGrafyButtons, #pesiGrafyButtons {
     display: flex;
     flex-wrap: wrap;
@@ -2345,7 +2380,7 @@ svg[class^="rank"] {
 
 /* tlačítko pro zobrazení starších updatů (nejen toho posledního nejnovějšího) */
 #starsiUpdatyTlacitko {
-    background-color: #c38e4f;
+    background-color: var(--dimmedHighlight);
     color: black;
     border-radius: 15px;
     cursor: pointer;
@@ -2353,7 +2388,7 @@ svg[class^="rank"] {
     padding: 5px 15px;
 }
     #starsiUpdatyTlacitko:hover {
-        background-color: #ffa608;
+        background-color: var(--highlightColor);
         filter: brightness(80%);
     }
 
@@ -2367,7 +2402,7 @@ svg[class^="rank"] {
 }
 
 /* společná pravidla pro všechny záložky/tlačítka */
-#tipsTabCyklotreky, #tipsTabMapycz, #tipsTabDopravci {
+#tipsTabCyklotreky, #tipsTabMapycz, #tipsTabDopravci, #tipsTabIDSJMK {
     width: 60px;
     height: 30px;
     border: 1px solid white;
@@ -2383,14 +2418,14 @@ svg[class^="rank"] {
 }
     /* na mobilech dojde ke zmenšení přepínacích tlačítek na šířku, aby se všechna vešla */
     @media (max-width: 572px) {
-        #tipsTabCyklotreky, #tipsTabMapycz, #tipsTabDopravci {
+        #tipsTabCyklotreky, #tipsTabMapycz, #tipsTabDopravci, #tipsTabIDSJMK {
             width: 40px;
         }
     }
-    #tipsTabCyklotreky:hover, #tipsTabMapycz:hover, #tipsTabDopravci:hover {
+    #tipsTabCyklotreky:hover, #tipsTabMapycz:hover, #tipsTabDopravci:hover, #tipsTabIDSJMK:hover {
         border: 1px solid var(--themeColor);
     }
-    #tipsTabCyklotreky.tabActive, #tipsTabMapycz.tabActive, #tipsTabDopravci.tabActive {
+    #tipsTabCyklotreky.tabActive, #tipsTabMapycz.tabActive, #tipsTabDopravci.tabActive, #tipsTabIDSJMK.tabActive {
         border: 1px solid var(--themeColor);
         background-color: var(--themeColor);
         cursor: default;
@@ -2428,7 +2463,7 @@ svg[class^="rank"] {
 
 /* tlačítko pro zobrazení textového bloku informací k Cyklotrekům */
 #showInfoTlacitko {
-    background-color: #c38e4f;
+    background-color: var(--dimmedHighlight);
     color: black;
     border-radius: 15px;
     cursor: pointer;
@@ -2436,7 +2471,7 @@ svg[class^="rank"] {
     padding: 5px 15px;
 }
     #showInfoTlacitko:hover {
-        background-color: #ffa608;
+        background-color: var(--highlightColor);
         filter: brightness(80%);
     }
 

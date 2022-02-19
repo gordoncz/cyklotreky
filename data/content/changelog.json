@@ -1,5 +1,17 @@
 [
     {
+        "verze": "27",
+        "datum": "19. února 2022",
+        "summary": "speciální vylepšení zaměřená na IDS JMK",
+        "detaily": [
+            "Trasy v databázi nyní dostaly nový vizuální indikátor, zda je u nich možné pro dopravu využít tarif IDS JMK (zelená ikonka - lze využít IDS JMK pro dopravu tam i zpět, šedá ikonka - pouze pro dopravu buď tam, nebo zpět)",
+            "V souvislosti s tím byl přidán nový filtr, který umožňuje filtrovat trasy, na kterých je možné využít dopravu plně pod tarifem IDS JMK (tj. tam i zpět)",
+            "Na stránku Informace byla přidána nová záložka s tipy a triky právě pro IDS JMK",
+            "Drobně vylepšena funkcionalita textového filtru tras na mobilech, takže nyní se při klepnutí do pole textového filtru celá stránka posune tak, aby byl tento textový filtr úplně nahoře, což umožňuje zobrazení co největšího počtu vyfiltrovaných tras, aniž by byly překryty virtuální klávesnicí Androidu (což na PC není nutné řešit)",
+            "Pravidla v přírodě byla doplněna o další informace, lokality a zdroje"
+        ]
+    },
+    {
         "verze": "26",
         "datum": "15. února 2022",
         "summary": "nové cyklotrasy",

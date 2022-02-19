@@ -194,17 +194,17 @@ function filterByKnown(x) {
 
 // ITEM funkce zobrazení jen nově přidaných tras
 function filterByNew() {
-    var checkbox = document.getElementById("onlyNew");
+    var checkboxNew = document.getElementById("onlyNew");
 
     for (i = 0; i < trasa.length; i++) {
         var newTrack = trasa[i].getElementsByClassName("new")[0];
 
         // pokud trasa[i] nemá v sub-divu classu "new", tak ji skryje při zaškrtnutí checkboxu
-        if ((checkbox.checked == true) && (newTrack == undefined)) {
+        if ((checkboxNew.checked == true) && (newTrack == undefined)) {
             trasa[i].classList.add("filtrNew");
         }
 
-        if (checkbox.checked == false) {
+        if (checkboxNew.checked == false) {
             trasa[i].classList.remove("filtrNew");
         }
     }
@@ -299,6 +299,29 @@ function filterByOriginalAuthor() {
     filterByAuthors(preservedAuthor);
 }
 
+// ITEM funkce pro filtrování tras, na kterých lze využít jízdenky IDS JMK...
+// ...ale jen plně (oboje jak do startu, tak z cíle trasy)...
+// ...trasy s možností využití IDS JMK částečně (buď do startu nebo z cíle trasy, ale ne oboje) budou mít sice ikonku, ale ne filtr
+function filterByIDSJMK() {
+    var checkboxIDSJMK = document.getElementById("onlyIDSJMK");
+
+    for (i = 0; i < trasa.length; i++) {
+        var fullIDSJMK = trasa[i].getElementsByClassName("idsjmk2")[0];
+
+        // pokud trasa[i] nemá v sub-divu classu "idsjmk2" (plné využití IDS JMK), tak ji skryje při zaškrtnutí checkboxu
+        if ((checkboxIDSJMK.checked == true) && (fullIDSJMK == undefined)) {
+            trasa[i].classList.add("filtrIDSJMK");
+        }
+
+        if (checkboxIDSJMK.checked == false) {
+            trasa[i].classList.remove("filtrIDSJMK");
+        }
+    }
+
+    // vždy po aplikování filtru znovu spustit funkci na přepočet čísla v počítadle zobrazených tras
+    countTracks();
+}
+
 // ITEM funkce vyhledávání/filtrování tras podle názvu
 function filterByName() {
     var input = document.getElementById("hledatNazev");
@@ -333,7 +356,7 @@ function resetTextu() {
 // ITEM funkce pro výpočet počtu aktuálně zobrazených tras a zobrazení tohoto čísla na stránce
 function countTracks() {
     // variable, do níž se zapíše počet tras, které nemají žádný skrývací filtr (tj. ty, které jsou aktuálně vidět na stránce)
-    var trasyZobrazeno = document.querySelectorAll(".trasaWrapper:not(.filtrDelka):not(.filtrRegion):not(.filtrKnown):not(.filtrNew):not(.filtrNazev):not(.filtrAuthors)").length
+    var trasyZobrazeno = document.querySelectorAll(".trasaWrapper:not(.filtrDelka):not(.filtrRegion):not(.filtrKnown):not(.filtrNew):not(.filtrNazev):not(.filtrAuthors):not(.filtrIDSJMK)").length
 
     // funkce vezme hodnotu této variable a vloží ji jako obsah divu počítadla na stránce
     pocitadloDiv.innerText = trasyZobrazeno;
@@ -418,6 +441,8 @@ function resetFilters() {
     filterByNew();
     document.getElementById("originalAuthor").checked = false;
     filterByOriginalAuthor();
+    document.getElementById("onlyIDSJMK").checked = false;
+    filterByIDSJMK();
 
     // reset textového vyhledávání
     // podobně jako předchozí dva případy...

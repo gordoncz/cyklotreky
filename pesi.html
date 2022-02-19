@@ -140,6 +140,10 @@
             <img class="filtrySVG" src="img/filtry-original.svg" alt="Jen originální autor" title="Pouze jako originální autor tras (ne jako spoluautor)">
             <label for="originalAuthor" class="zatrzitkoContainer"><input type="checkbox" id="originalAuthor" onclick="filterByOriginalAuthor()"><span class="zatrzitko"></span></label>
         </div>
+        <div class="filtrZatrzitko">
+            <img class="filtrySVG" src="img/filtry-idsjmk.svg" alt="Jen v rámci IDS JMK" title="Jen trasy se startem i cílem v rámci IDS JMK">
+            <label for="onlyIDSJMK" class="zatrzitkoContainer"><input type="checkbox" id="onlyIDSJMK" onclick="filterByIDSJMK()"><span class="zatrzitko"></span></label>
+        </div>
         <div class="filtrText"><input type="text" id="hledatNazev" onkeyup="filterByName()" onclick="resetTextu()" placeholder="Filtrovat podle názvu trasy..."></div>
         <div id="pocitadloWrapper">
             <div id="pocitadloKruhPozadi"></div>

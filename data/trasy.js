@@ -97,6 +97,17 @@ function naplnitHTML(typtrasy) {
             authorsDiv.classList.add(authorsNames[author]);
         });
 
+        // ITEM vytvoření a naplnění sub-divu pro ikonku IDS JMK
+        // (jen u tras, na kterých lze využít jízdenky IDS JMK)
+        if (typtrasy[i].idsjmk !== 0) {
+            var idsjmkDiv = createDiv("idsjmkContainer");
+            trasaUrlDiv.appendChild(idsjmkDiv);
+            // vizuální ikonka IDS JMK
+            var idsjmkIcon = `<img src="img/idsjmk${typtrasy[i].idsjmk}.svg" width="14px" height="14px" alt="idsjmk${typtrasy[i].idsjmk}">`;
+            idsjmkDiv.innerHTML = idsjmkIcon;
+            idsjmkDiv.classList.add(`idsjmk${typtrasy[i].idsjmk}`);
+        }
+
         // ITEM vytvoření a naplnění sub-divu pro GPX tlačítko na PC (zobrazování onhover v místě přes obrázky)
         if (detekceMobilu.matches) {
             // pokud je zobrazeno na mobilu, skript přeskočí generování divů pro GPX tlačítka
