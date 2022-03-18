@@ -1,5 +1,13 @@
 [
     {
+        "verze": "28",
+        "datum": "18. března 2022",
+        "summary": "nové pěší trasy",
+        "detaily": [
+            "Přidán velký balík nových pěších tras, přičemž hlavní část updatu byla zaměřena na krátké trasy pro Brno a okolí plus vícedenní trasy v oblasti Českého ráje"
+        ]
+    },
+    {
         "verze": "27",
         "datum": "19. února 2022",
         "summary": "speciální vylepšení zaměřená na IDS JMK",
